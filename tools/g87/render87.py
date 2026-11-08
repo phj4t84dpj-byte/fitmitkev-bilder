@@ -63,8 +63,8 @@ body{{width:1080px;height:1350px;overflow:hidden;position:relative;font-family:P
 .t-fi{{position:relative;color:#fff;z-index:3}}
 .t-ol{{position:absolute;left:0;top:0;color:{BLUE};-webkit-text-stroke:11px {BLUE};z-index:2}}
 .t-sh{{position:absolute;left:6px;top:7px;color:{DARK};-webkit-text-stroke:11px {DARK};z-index:1}}
-.sub{{font-size:34px;font-weight:700;color:{NAVY};margin-top:14px;line-height:1.1}}
-.kc{{font-size:37px;font-weight:700;color:{RED};margin-top:2px;line-height:1.15}}
+.sub{{font-size:34px;font-weight:700;color:{NAVY};margin-top:14px;line-height:1.1;text-shadow:0 0 8px rgba(255,255,255,.95),0 0 18px rgba(255,255,255,.8),0 0 30px rgba(255,255,255,.5)}}
+.kc{{font-size:37px;font-weight:700;color:{RED};margin-top:2px;line-height:1.15;text-shadow:0 0 8px rgba(255,255,255,.95),0 0 18px rgba(255,255,255,.8),0 0 30px rgba(255,255,255,.5)}}
 .kc s{{color:{RED};opacity:.72;margin-right:8px;font-size:31px}}
 .kc .amp{{color:{NAVY}}}
 .arrow{{position:absolute;left:296px;top:588px}}
