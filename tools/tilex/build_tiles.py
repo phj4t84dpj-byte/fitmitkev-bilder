@@ -16,8 +16,10 @@ for f in glob.glob(f'{D}/crops/*__G8[1-6]-*.png'):
 def pick(name):
     c=[m for m in meta if m['name']==name and m['w']<=235 and m['h']<=235]
     if not c: return None
-    areas=sorted(m['w']*m['h'] for m in c); med=areas[len(areas)//2]
-    c.sort(key=lambda m:abs(m['w']*m['h']-med))
+    unclipped=[m for m in c if not m.get('clip')]
+    if unclipped: c=unclipped
+    # größte Fläche = am wenigsten beschnitten (zusammengewachsene Doppel-Crops sind oben schon ausgefiltert)
+    c.sort(key=lambda m:-(m['w']*m['h']))
     m=c[0]; return f"{D}/crops/{m['name']}__{m['board']}_{m['i']}.png"
 
 names=sorted({m['name'] for m in meta})

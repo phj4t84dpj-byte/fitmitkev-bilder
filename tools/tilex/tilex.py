@@ -84,41 +84,58 @@ def split_to(rows,n,diff,x0,x1):
     return rows
 
 def cut(im,bg,diff,row,pad=14,tx1=268,ytop=0,ybot=None):
+    """Objekt = von Kanten umschlossene Fläche (Sobel auf der Luminanz + deutliche Farbabweichung, Löcher gefüllt);
+    so werden auch weiße Schalen auf hellgrauem Grund vollständig deckend. Der weiche dunkle Schein um die
+    Original-Kacheln wird als multiplikativer Schatten übernommen (Alpha = relative Abdunklung, Farbe schwarz).
+    Kantenpixel: Alpha relativ zum lokalen Objektkontrast, Farbe entmischt."""
     y0,y1,x0,x1=row
     if ybot is None: ybot=im.shape[0]
     y0=max(ytop,y0-pad); y1=min(ybot,y1+pad); x0=max(0,x0-pad); x1=min(tx1,x1+pad)
     d=diff[y0:y1,x0:x1]; p=im[y0:y1,x0:x1]; b=bg[y0:y1][:,None,:]
-    dm0=ndi.median_filter(d,size=3)
-    a=np.clip((dm0-14)/(HI-14),0,1)
-    hard=ndi.binary_fill_holes(d>HI)
-    hard=ndi.binary_opening(hard,iterations=2)
-    allowed=ndi.binary_dilation(hard,iterations=34)      # Schattenzone um das Objekt
-    core=ndi.binary_erosion(hard,iterations=1)
-    # innerhalb der konvexen Hülle des Objekts reicht eine kleine Differenz (helle Schalen, Skyr, Zucker)
-    try:
-        from skimage.morphology import convex_hull_image
-        hull=convex_hull_image(hard) if hard.any() else hard
-    except Exception: hull=hard
     dm=ndi.median_filter(d,size=3)
-    a_in=np.clip((dm-12)/(25-12),0,1)
-    edge=ndi.binary_dilation(hard,iterations=3)
-    # Schattenzone außerhalb: nur Abdunklung zählt (kein heller Schleier)
-    dark=np.clip((ndi.median_filter((b-p).mean(2),size=3)-7)/40.0,0,1)*0.65
-    shadowzone=(~hull)&(~edge)
-    a=np.where(core,1.0,np.where(hull,np.maximum(a,a_in),np.where(edge,a,dark)))*allowed
-    a=ndi.gaussian_filter(a,0.7)
-    a=np.where(a<0.08,0,a)
+    lum=ndi.median_filter(p.mean(2),size=3); blum=b.mean(2)
+    gx=ndi.sobel(lum,axis=1); gy=ndi.sobel(lum,axis=0); g=np.hypot(gx,gy)
+    sat=p.max(2)-p.min(2)
+    edges=(g>38)|(d>60)|(sat>40)
+    edges=ndi.binary_closing(edges,iterations=2)
+    obj=ndi.binary_fill_holes(edges)
+    obj=ndi.binary_opening(obj,iterations=2)
+    # größte Komponenten behalten (Krümel/Rauschen weg), alles >= 1 % der größten
+    lab,n=ndi.label(obj)
+    if n>1:
+        sizes=ndi.sum(obj,lab,range(1,n+1)); big=sizes.max()
+        keep=[i+1 for i,sz in enumerate(sizes) if sz>=0.01*big and sz>=40]
+        obj=np.isin(lab,keep)
+    core=ndi.binary_erosion(obj,iterations=1)
+    edge=ndi.binary_dilation(obj,iterations=3)&~core
+    allowed=ndi.binary_dilation(obj,iterations=40)
+    a_shadow=np.clip(1-lum/np.maximum(blum,1)-0.015,0,1)          # relative Abdunklung -> Schatten (schwarz)
+    if core.any():
+        dsm=ndi.median_filter(d,size=5)
+        idxc=ndi.distance_transform_edt(~core,return_distances=False,return_indices=True)
+        D=np.maximum(dsm[idxc[0],idxc[1]],24)
+        a_edge=np.clip(dm/D,0,1)
+    else:
+        a_edge=np.clip((dm-12)/(HI-12),0,1)
+    a=a_shadow.copy()
+    a=np.where(edge,np.maximum(a_edge,a_shadow*0.5),a)
+    a=np.where(core,1.0,a)*allowed
+    a=ndi.gaussian_filter(a,0.6)
+    a=np.where(a<0.03,0,a)
     a3=a[:,:,None]
     unmixed=np.clip((p-(1-a3)*b)/np.maximum(a3,0.05),0,255)
-    col=np.where(a3>0.45,unmixed,p)
-    shade=np.zeros_like(p); shade[...,0]=70; shade[...,1]=55; shade[...,2]=40
-    col=np.where(shadowzone[:,:,None],shade,col)            # Schatten dunkelt warm ab statt grau zu schleiern
+    isobj=core|(edge&(a_edge>=a_shadow*0.5))
+    col=np.where(isobj[:,:,None],np.where(a3>0.1,unmixed,p),np.zeros_like(p))   # Schatten = schwarz mit Alpha
+    # Kantenpixel zur Farbe des nächsten Kernpixels ziehen (weiße Anti-Aliasing-Säume der Originalkacheln dämpfen)
+    if core.any():
+        colcore=col[idxc[0],idxc[1]]
+        band=(edge&isobj)[:,:,None]
+        col=np.where(band,0.45*col+0.55*colcore,col)
     col=np.clip(col,0,255)
-    # transparente Pixel bekommen die Farbe des nächsten sichtbaren Pixels (keine hellen Säume beim Skalieren)
-    tr=a<=0.02
+    tr=~isobj
     if tr.any() and (~tr).any():
         idx=ndi.distance_transform_edt(tr,return_distances=False,return_indices=True)
-        col=np.where(tr[:,:,None],col[idx[0],idx[1]],col)
+        col=np.where(tr[:,:,None]&(a3<=0.03),col[idx[0],idx[1]],col)
     rgba=np.dstack([col,a*255]).astype(np.uint8)
     return Image.fromarray(rgba,'RGBA')
 
@@ -156,7 +173,7 @@ if __name__=='__main__':
             ybot=rows[i+1][0] if i+1<len(rows) else im.shape[0]
             t=cut(im,bg,diff,row,tx1=tx1,ytop=ytop,ybot=ybot)
             fn=f'{OUT}/{name}__{base}_{i}.png'; t.save(fn)
-            meta.append(dict(name=name,zutat=z['zutat'],board=base,i=i,row=row,w=t.width,h=t.height))
+            meta.append(dict(name=name,zutat=z['zutat'],board=base,i=i,row=row,w=t.width,h=t.height,clip=bool(row[3]+14>=tx1)))
         log.write(f'{base}\tok {len(rows)}\n')
     json.dump(meta,open(f'{OUT}/../meta.json','w'),ensure_ascii=False)
     print('crops',len(meta))

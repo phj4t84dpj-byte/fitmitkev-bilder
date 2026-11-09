@@ -25,6 +25,11 @@ def tile_img(tile, scale):
 def board_html(r,hero):
     k,p,c,f=G.macros4(r)
     n=len(r['zutaten']); scale=1.2 if n<=7 else 1.1
+    colh=704 if n>=8 else 690
+    # Kacheln so skalieren, dass alle Reihen in die Spalte passen (Zeilenhöhe = max(Kachel, Textblock 58 px))
+    hs=[Image.open(f"{TL}/{MAP.get(z['tile'],z['tile'])}.png").size[1]/2 for z in r['zutaten']]
+    def total(sc): return sum(max(h*sc,58)+4 for h in hs)
+    while total(scale)>colh-6 and scale>0.7: scale-=0.02
     rows=""
     for z in r['zutaten']:
         src,w,h=tile_img(z['tile'],scale)
@@ -48,7 +53,7 @@ body{{width:1080px;height:1350px;overflow:hidden;position:relative;font-family:P
 .fadeT{{position:absolute;left:0;top:0;width:1080px;height:820px;background:linear-gradient(to bottom,rgba(181,157,132,.82) 0%,rgba(181,157,132,.62) 38%,rgba(181,157,132,.25) 70%,rgba(181,157,132,0) 100%)}}
 .fadeL{{position:absolute;left:0;top:0;width:520px;height:1100px;background:linear-gradient(to right,rgba(181,157,132,.85) 0%,rgba(181,157,132,.7) 55%,rgba(181,157,132,0) 100%)}}
 .fadeB{{position:absolute;left:0;top:850px;width:420px;height:500px;background:linear-gradient(to right,rgba(181,157,132,.55) 0%,rgba(181,157,132,0) 100%)}}
-.col{{position:absolute;left:40px;top:38px;width:380px;height:{704 if n>=8 else 690}px;display:flex;flex-direction:column;justify-content:space-evenly}}
+.col{{position:absolute;left:40px;top:38px;width:380px;height:{colh}px;display:flex;flex-direction:column;justify-content:space-evenly}}
 .row{{display:flex;align-items:center;gap:14px}}
 .tb{{width:100px;flex:none;display:flex;justify-content:center;align-items:center}}
 .tx{{flex:1;min-width:0}}
