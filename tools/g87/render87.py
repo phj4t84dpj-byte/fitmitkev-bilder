@@ -13,6 +13,7 @@ TL=f"{S}/tilex/tiles_orig"
 MAP=json.load(open(f"{TL}/_map_g87.json"))
 os.makedirs(f"{D}/out",exist_ok=True)
 NAVY="#12213f"; BLUE="#163b7d"; DARK="#0d1d42"; RED="#c1202b"; BADGE="#c61f27"
+HERO_SHIFT={'SpekOats':(130,40)}   # Hero nach rechts/unten schieben, wenn das Gericht sonst unter die Kachelspalte läuft
 PLURAL={'Quarkbroetchen','ZimtschneckenPancakes','Pizzabroetchen','ApfelQuarkbaellchen','LaugenKnoten','SpekOats'}
 XMP='''<?xpacket begin="﻿" id="W5M0MpCehiHzreSzNTczkc9d"?><x:xmpmeta xmlns:x="adobe:ns:meta/"><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"><rdf:Description rdf:about="" xmlns:Iptc4xmpExt="http://iptc.org/std/Iptc4xmpExt/2008-02-29/" xmlns:photoshop="http://ns.adobe.com/photoshop/1.0/" xmlns:dc="http://purl.org/dc/elements/1.1/" photoshop:Credit="Fitmitkev"><Iptc4xmpExt:DigitalSourceType>http://cv.iptc.org/newscodes/digitalsourcetype/trainedAlgorithmicMedia</Iptc4xmpExt:DigitalSourceType><dc:creator><rdf:Seq><rdf:li>Fitmitkev</rdf:li></rdf:Seq></dc:creator><dc:description><rdf:Alt><rdf:li xml:lang="x-default">Rezeptgrafik, Foto KI-generiert</rdf:li></rdf:Alt></dc:description></rdf:Description></rdf:RDF></x:xmpmeta><?xpacket end="w"?>'''
 
@@ -42,6 +43,7 @@ def board_html(r,hero,herocut):
     verb='haben' if r['key'] in PLURAL else 'hat'
     title_layers=''.join(f'<div class="{cls}">{t1}<br>{t2}</div>' for cls in ('t-sh','t-ol','t-fi'))
     hook=html.escape(r['hook'])
+    dx,dy=HERO_SHIFT.get(r['key'],(0,0)); shift=f'left:{dx}px;top:{dy}px' if (dx or dy) else ''
     return f"""<!doctype html><html><head><meta charset="utf-8"><style>
 @font-face{{font-family:A;src:url('{F}/anton/Anton-Regular.ttf')}}
 @font-face{{font-family:K;src:url('{F}/kaushanscript/KaushanScript-Regular.ttf')}}
@@ -77,7 +79,7 @@ body{{width:1080px;height:1350px;overflow:hidden;position:relative;font-family:P
 .photo{{position:absolute;left:43px;top:968px;width:280px;height:288px;border-radius:20px;border:6px solid #fff;object-fit:cover;box-shadow:0 6px 16px rgba(0,0,0,.18)}}
 .ig{{position:absolute;left:118px;top:1258px;font-family:K;font-size:36px;color:{NAVY}}}
 </style></head><body>
-<img class="hero" src="{hero}"><div class="fadeT"></div><div class="fadeL"></div><div class="fadeB"></div><img class="hero" src="{herocut}">
+<img class="hero" src="{hero}" style="{shift}"><div class="fadeT"></div><div class="fadeL"></div><div class="fadeB"></div><img class="hero" src="{herocut}" style="{shift}">
 <div class="col">{rows}</div>
 <div class="title"><div class="hookw"><div class="hookb">{hook}</div><div class="hook">{hook}</div></div>
 <div class="tw">{title_layers}</div>
