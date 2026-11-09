@@ -22,7 +22,7 @@ def tile_img(tile, scale):
     w,h=Image.open(p).size
     return p, round(w/2*scale), round(h/2*scale)
 
-def board_html(r,hero):
+def board_html(r,hero,herocut):
     k,p,c,f=G.macros4(r)
     n=len(r['zutaten']); scale=1.2 if n<=7 else 1.1
     colh=704 if n>=8 else 690
@@ -77,7 +77,7 @@ body{{width:1080px;height:1350px;overflow:hidden;position:relative;font-family:P
 .photo{{position:absolute;left:43px;top:968px;width:280px;height:288px;border-radius:20px;border:6px solid #fff;object-fit:cover;box-shadow:0 6px 16px rgba(0,0,0,.18)}}
 .ig{{position:absolute;left:118px;top:1258px;font-family:K;font-size:36px;color:{NAVY}}}
 </style></head><body>
-<img class="hero" src="{hero}"><div class="fadeT"></div><div class="fadeL"></div><div class="fadeB"></div>
+<img class="hero" src="{hero}"><div class="fadeT"></div><div class="fadeL"></div><div class="fadeB"></div><img class="hero" src="{herocut}">
 <div class="col">{rows}</div>
 <div class="title"><div class="hookw"><div class="hookb">{hook}</div><div class="hook">{hook}</div></div>
 <div class="tw">{title_layers}</div>
@@ -96,7 +96,8 @@ def render(keys):
         for key in keys:
             r=by[key]; hero=f"{D}/hero/{key}.jpg"
             if not os.path.exists(hero): print("kein Hero:",key); continue
-            h=board_html(r,hero); open(f"{D}/out/{key}.html","w").write(h)
+            from foodcut import food_cut
+            h=board_html(r,hero,food_cut(key)); open(f"{D}/out/{key}.html","w").write(h)
             pg.goto('file://'+f"{D}/out/{key}.html"); pg.wait_for_timeout(350)
             pg.evaluate('''()=>{const ds=[...document.querySelectorAll('.tw div')];let fs=parseFloat(getComputedStyle(ds[0]).fontSize);
               const w=()=>{const r=document.createRange();r.selectNodeContents(ds[2]);return r.getBoundingClientRect().width;};
