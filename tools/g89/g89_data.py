@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# G89 – Mittwoch 11.11.2026, 20 Beiträge 6:00–20:15 alle 45 Minuten
+# G89 – Mittwoch 11.11.2026, 20 Beiträge 6:10–20:45 (Kev 10.11.: „lieber ab 6:10 bis 20:45“; Zeiten in texte89.py, die Uhrzeiten in den Kommentaren unten sind der erste Entwurf)
 # Reset Tag 3: keine Werbung, KEIN Höflich-Titel mehr (Kev 10.11.), Hashtag-Test 2–3 gegen 4–5 (Kev 10.11.)
 # Auswahl: bewährte Volltreffer, die mindestens 10 Tage nicht liefen (Mutzen, Zimtsterne, Zitronenkuchen-Bowl,
 # Gewürzkuchen, Schoko-Käsekuchen, Gebratener Reis, Zimtschnecken) + neue Varianten der Gewinner-Themen

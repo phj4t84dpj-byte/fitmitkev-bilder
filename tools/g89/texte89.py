@@ -5,7 +5,11 @@ from datetime import datetime, timedelta
 import g89_data as G
 D=os.path.dirname(os.path.abspath(__file__)); os.makedirs(f"{D}/out",exist_ok=True)
 URL="https://raw.githubusercontent.com/phj4t84dpj-byte/fitmitkev-bilder/main/boards/G89-{}.jpg"
-t0=datetime(2026,11,11,6,0); STEP=45
+t0=datetime(2026,11,11,6,10); T_END=datetime(2026,11,11,20,45)
+# Kev 10.11.: „lieber ab 6:10 bis 20:45“ → 20 Beiträge gleichmäßig von 6:10 bis 20:45, auf volle 5 Minuten gerundet (Abstände 45–50 Minuten)
+N_POSTS=len(G.R); SPAN=(T_END-t0).total_seconds()/60
+OFFS=[int(round(i*SPAN/(N_POSTS-1)/5.0))*5 for i in range(N_POSTS)]
+assert OFFS[0]==0 and OFFS[-1]==SPAN and all(45<=b-a<=50 for a,b in zip(OFFS,OFFS[1:])),OFFS
 NAME={'NusseckenOats':'Nussecken-Overnight-Oats','Kaesebroetchen':'Käsebrötchen aus Skyr-Teig','Weckmann':'Weckmann ohne Hefe',
  'Bauernfruehstueck':'Bauernfrühstück wie bei Oma','Mutzen':'Mutzen ohne Fritteuse','PizzaMuffins':'Pizza-Muffins','Zimtschnecken':'Zimtschnecken ohne Hefe',
  'KoenigsbergerKlopse':'Königsberger Klopse mit Kartoffeln','ZitronenBowl':'Zitronenkuchen-Bowl nur für dich','Schinkennudeln':'Schinkennudeln wie bei Oma',
@@ -45,12 +49,12 @@ for i,r in enumerate(G.R):
     fc=f"{NAME[key]}\n\n{r['intro'].format(k=k,p=p)}\n\nZutaten ({anzahl_label(r)}):\n{zut}\n\nSo geht's:\n{steps}\n\nNährwerte {portion_label(r)}: ca. {k} kcal | {p} g Eiweiß | {c} g Kohlenhydrate | {f} g Fett\n\n"
     if r['suess']: fc+="Schmeckt nach Sünde, zählt wie Salat 😉\n"
     fc+=f"Bleib satt! 💪\n\n{r['frage']}"
-    dt=t0+timedelta(minutes=STEP*i); nt=len(r['tags'].split())
+    dt=t0+timedelta(minutes=OFFS[i]); nt=len(r['tags'].split())
     posts.append(dict(n=n,key=key,date=dt.strftime('%Y-%m-%dT%H:%M:%S'),text=text,fc=fc,media=URL.format(key),alt=NAME[key],kcal=k,suess=r['suess'],hoeflich=False,
                       hashtags=nt,gruppe='A (2–3)' if nt<=3 else 'B (4–5)'))
 json.dump(posts,open(f"{D}/out/mittwoch_posts.json","w"),ensure_ascii=False,indent=1)
 with open(f"{D}/out/posting-plan-mittwoch.txt","w") as fh:
-    fh.write("Posting-Plan Mittwoch 11.11.2026 – 20 Beiträge 6:00–20:15 alle 45 Minuten\n")
+    fh.write("Posting-Plan Mittwoch 11.11.2026 – 20 Beiträge 6:10–20:45, alle 45–50 Minuten\n")
     fh.write("Keine Werbung, kein Höflich-Titel. Hashtag-Test: Gruppe A = 2–3 Hashtags, Gruppe B = 4–5 (je 10 Beiträge, 5 süß + 5 herzhaft).\n\n")
     for p_ in posts:
         fh.write(f"{p_['n']:02d} · {p_['date'][11:16]} · {'süß ' if p_['suess'] else 'herz'} · {NAME[p_['key']]} · {p_['kcal']} kcal · {p_['hashtags']} Hashtags (Gruppe {p_['gruppe'][0]})\n")
