@@ -1,0 +1,276 @@
+# -*- coding: utf-8 -*-
+# G89 – Mittwoch 11.11.2026, 20 Beiträge 6:00–20:15 alle 45 Minuten
+# Reset Tag 3: keine Werbung, KEIN Höflich-Titel mehr (Kev 10.11.), Hashtag-Test 2–3 gegen 4–5 (Kev 10.11.)
+# Auswahl: bewährte Volltreffer, die mindestens 10 Tage nicht liefen (Mutzen, Zimtsterne, Zitronenkuchen-Bowl,
+# Gewürzkuchen, Schoko-Käsekuchen, Gebratener Reis, Zimtschnecken) + neue Varianten der Gewinner-Themen
+# + Tagesbezug St. Martin / 11.11. (Weckmann, Mutzen) + Community-Wunsch Kokos-Mandel-Tiramisu.
+import sys, os
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'g88'))
+from g88_data import NUT, PIECE, nut, Z, macros4
+NUT.update({
+ 'fruchtaufstrich':(160,0.5,38,0.1), 'kochsahne':(170,3,4,15), 'zitrone':(0,0,0,0), 'erbsen':(80,6,10,0.5),
+ 'karotten':(35,1,7,0.2),
+})
+PIECE.update({'butterkeks':(5.5,(24,0.4,3.9,0.8))})
+
+BOWL=('A single portion in a small rectangular clear glass baking dish with handles and intact transparent glass walls, '
+      'the front glass wall clearly visible and closed, both handles of the dish fully visible, layers visible through the glass; '
+      'about one quarter eaten from the back corner, an empty clean teaspoon resting inside, plain and simple, nothing on the spoon. ')
+
+R = [
+# 1 · 06:00 · süß · Oats (neu: Nussecken × Overnight Oats)
+dict(key='NusseckenOats', suess=True, hook='Frühstück wie vom Bäcker:', titel=['NUSSECKEN-','OVERNIGHT OATS'], portion='pro Glas', anzahl=2, vs=650,
+ zutaten=[Z('80 g','Zarte Haferflocken','zarte_haferflocken','haferflocken',80), Z('250 g','Skyr','skyr','skyr',250), Z('200 ml','Milch (1,5 %)','milch','milch',200),
+          Z('20 g','Gemahlene Haselnüsse','gemahlene_haselnuesse','haselnuesse',20), Z('15 g','Haselnüsse (gehackt)','haselnuesse_ganz','haselnuesse',15),
+          Z('30 g','Aprikosen-Fruchtaufstrich','aprikosen_fruchtaufstrich','fruchtaufstrich',30), Z('10 g','Zartbitterschokolade','zartbitterschokolade','schokolade',10),
+          Z('20 g','Erythrit','erythrit','erythrit',20)],
+ ex=[],
+ intro='Nussecken zum Frühstück: Haferflocken, Skyr und Milch mit gemahlenen Haselnüssen über Nacht quellen lassen, morgens ein Klecks Aprikose, geröstete Haselnüsse und Schokoraspel obendrauf. Abends in 5 Minuten gerührt, morgens fertig: {k} kcal und {p} g Eiweiß pro Glas statt 650 für zwei Nussecken vom Bäcker!',
+ schritte=['Haferflocken, Skyr, Milch, gemahlene Haselnüsse und Erythrit verrühren und auf 2 Gläser verteilen.',
+           'Über Nacht (mindestens 4 Stunden) in den Kühlschrank stellen.',
+           'Morgens je 1 EL Aprikosen-Fruchtaufstrich daraufgeben, die gehackten Haselnüsse ohne Fett kurz anrösten und mit der geraspelten Schokolade darüber streuen.'],
+ frage='Nussecken: lieber die Ecke mit viel Schokolade oder die mit viel Nuss?', tags='#overnightoats #nussecken #fitmitkev',
+ prompt='Two glass jars with overnight oats seen from the side at eye level, creamy light brown hazelnut oats with skyr, each topped with a spoonful of orange apricot jam, roasted chopped hazelnuts and dark chocolate shavings, a few whole hazelnuts and a small piece of dark chocolate beside the jars, a spoon beside.'),
+# 2 · 06:45 · herzhaft · Brötchen (Wiederholung 30.10.)
+dict(key='Kaesebroetchen', suess=False, hook='Käse geht immer:', titel=['KÄSE-','BRÖTCHEN'], portion='pro Stück', anzahl=8, vs=300,
+ zutaten=[Z('300 g','Dinkelmehl','dinkelmehl','dinkelmehl',300), Z('300 g','Skyr','skyr','skyr',300), Z('80 g','Käse light (gerieben)','reibekaese_light','reibekaese',80),
+          Z('1 Stück','Ei (zum Bestreichen)','ei','ei',st=0.5), Z('2 TL','Backpulver','backpulver','backpulver',0), Z('1 TL','Salz','salz','salz',0)],
+ ex=[],
+ intro='Käsebrötchen wie vom Bäcker, mit Käse im Teig und einer knusprig überbackenen Käsehaube. Ohne Hefe und ohne Gehzeit, nur Skyr und Dinkelmehl, in 35 Minuten fertig: {k} kcal und {p} g Eiweiß pro Brötchen statt 300 für das Käsebrötchen vom Bäcker!',
+ schritte=['Mehl, Backpulver, Salz und 40 g Käse mischen, Skyr dazugeben und zu einem glatten Teig kneten (klebt er, 1–2 EL Mehl dazu).',
+           '8 runde Brötchen formen, auf ein Backblech mit Backpapier setzen, mit verquirltem Ei bestreichen und mit dem restlichen Käse bestreuen.',
+           'Bei 200 °C Ober-/Unterhitze 20–22 Minuten backen, bis der Käse goldbraun ist.'],
+ frage='Käsebrötchen: warm aus dem Ofen oder kalt mit Butter?', tags='#käsebrötchen #brötchen #fitmitkev',
+ prompt='Homemade round cheese bread rolls on baking paper on a light wooden board, golden brown crust with a crispy melted golden cheese topping, one roll in front cut open showing a soft white fluffy crumb, a small dish of butter beside.'),
+# 3 · 07:30 · süß · Tagesbezug St. Martin
+dict(key='Weckmann', suess=True, hook='Zu St. Martin:', titel=['WECKMANN','OHNE HEFE'], portion='pro Stück', anzahl=6, vs=450,
+ zutaten=[Z('400 g','Dinkelmehl','dinkelmehl','dinkelmehl',400), Z('250 g','Magerquark','magerquark','quark',250), Z('60 ml','Milch (1,5 %)','milch','milch',60),
+          Z('1 Stück','Ei','ei','ei',st=1), Z('30 g','Butter','butter','butter',30), Z('50 g','Erythrit','erythrit','erythrit',50),
+          Z('1 Päckchen','Backpulver','backpulver','backpulver',0), Z('30 g','Rosinen','rosinen','rosinen',30)],
+ ex=['Prise Salz', '1 Eigelb + 1 EL Milch zum Bestreichen'],
+ intro='Ohne Weckmann ist St. Martin nicht komplett! Dieser hier kommt ohne Hefe und ohne Gehzeit aus: Quark-Teig kneten, Männchen formen, Rosinen als Augen und Knöpfe, ab in den Ofen. In 35 Minuten fertig für den Laternenumzug: {k} kcal und {p} g Eiweiß pro Weckmann statt 450 für den vom Bäcker!',
+ schritte=['Mehl, Backpulver, Erythrit und Salz mischen, Quark, Milch, Ei und die weiche Butter dazugeben und zu einem glatten Teig kneten.',
+           'Teig in 6 Stücke teilen, jeweils zu einem länglichen Oval formen, den Kopf rund abdrehen, Arme und Beine mit einem Messer einschneiden und auf ein Backblech mit Backpapier legen.',
+           'Rosinen als Augen und Knöpfe eindrücken, mit Eigelb-Milch bestreichen und bei 180 °C Ober-/Unterhitze 18–20 Minuten goldbraun backen.'],
+ frage='Wie heißt er bei euch: Weckmann, Stutenkerl oder Klausenmann?', tags='#weckmann #stutenkerl #stmartin #backen #fitmitkev',
+ prompt='Three homemade golden baked sweet bread men (German Weckmann: soft sweet bread figures shaped like a simple person with a round head, two short arms and two legs) lying side by side on baking paper on a light wooden board, shiny golden egg-washed crust, each with two raisins as eyes and three raisins as buttons down the body, a few raisins beside.'),
+# 4 · 08:15 · herzhaft · Variante von „Bratkartoffeln mit Spiegelei“ (6.11., Tagesbester)
+dict(key='Bauernfruehstueck', suess=False, hook='Wie bei Oma:', titel=['BAUERN-','FRÜHSTÜCK'], portion='pro Portion', anzahl=2, vs=750,
+ zutaten=[Z('500 g','Kartoffeln (gekocht)','kartoffeln','kartoffeln',500), Z('4 Stück','Eier','eier','ei',st=4), Z('100 g','Putenschinken','putenschinken','putenschinken',100),
+          Z('1 Stück','Zwiebel','zwiebel','zwiebel',st=1), Z('1 TL','Öl','oel','oel',5), Z('2 EL','Schnittlauch','schnittlauch','schnittlauch',0),
+          Z('2 Stück','Gewürzgurken','gewuerzgurken','gurken',60)],
+ ex=['Salz, Pfeffer, Paprikapulver'],
+ intro='Bauernfrühstück wie bei Oma: Kartoffeln vom Vortag goldbraun braten, Zwiebel und Schinken dazu, die Eier als Spiegeleier darauf stocken lassen, mit Schnittlauch und Gewürzgurke servieren. Ein Löffel Öl reicht, in 15 Minuten fertig: {k} kcal und {p} g Eiweiß pro Portion statt 750 für Bauernfrühstück mit Speck und Butter!',
+ schritte=['Kartoffeln in Scheiben schneiden und im Öl in einer beschichteten Pfanne goldbraun braten.',
+           'Zwiebel und Schinken würfeln und 3 Minuten mitbraten.',
+           'Die Eier als Spiegeleier direkt auf die Kartoffeln schlagen, mit Salz, Pfeffer und Paprikapulver würzen, bei mittlerer Hitze mit Deckel 4–5 Minuten stocken lassen und mit Schnittlauch und Gewürzgurken servieren.'],
+ frage='Bauernfrühstück: mit Gewürzgurke oder ohne?', tags='#bauernfrühstück #bratkartoffeln #omasrezepte #lecker #fitmitkev',
+ prompt='A black cast iron skillet with a German farmer\'s breakfast: golden fried potato slices with diced ham and onions, three sunny-side-up fried eggs set on top, sprinkled with chopped chives, two pickled gherkins on a small white plate beside, a fork beside.'),
+# 5 · 09:00 · süß · Kirmes (Wiederholung 19.10., 170 k) – Tagesbezug 11.11.
+dict(key='Mutzen', suess=True, hook='Wie von der Kirmes:', titel=['MUTZEN','OHNE FRITTEUSE'], portion='pro Stück', anzahl=20, vs=120,
+ zutaten=[Z('250 g','Magerquark','magerquark','quark',250), Z('2 Stück','Eier','eier','ei',st=2), Z('250 g','Dinkelmehl','dinkelmehl','dinkelmehl',250),
+          Z('70 g','Erythrit','erythrit','erythrit',70), Z('2 TL','Backpulver','backpulver','backpulver',0), Z('1 TL','Zimt','zimt','zimt',0),
+          Z('1 TL','Vanilleextrakt','vanilleextrakt','vanille',0)],
+ ex=['Prise Salz'],
+ intro='Mutzen wie von der Kirmes: fluffig, zimtig, in Puder gewälzt, nur aus dem Ofen statt aus dem Fett. Der Quark-Teig ist in 5 Minuten gerührt, pünktlich zum 11.11.: {k} kcal und {p} g Eiweiß pro Stück statt 120 für die frittierten vom Stand!',
+ schritte=['Quark, Eier, 50 g Erythrit, Vanille und Salz glatt rühren, Mehl und Backpulver unterrühren.',
+           'Mit zwei Teelöffeln 20 kleine Häufchen auf ein Backblech mit Backpapier setzen und bei 180 °C Ober-/Unterhitze 12–14 Minuten goldbraun backen (im Airfryer 8–10 Minuten).',
+           '20 g Erythrit fein mahlen, mit Zimt mischen und die warmen Mutzen darin wälzen.'],
+ frage='Mutzen oder Quarkbällchen: Was holt ihr euch auf der Kirmes?', tags='#mutzen #fitmitkev',
+ prompt='A white bowl piled high with small golden brown irregular rustic dough nuggets (German Mutzen, bite-sized baked quark doughnut pieces), generously dusted with white powdered sugar and a little cinnamon, one piece in front broken open showing a fluffy light inside, a little powdered sugar dusted on the wooden table, a cinnamon stick beside.'),
+# 6 · 09:45 · herzhaft · Wiederholung 28.10. (49 k)
+dict(key='PizzaMuffins', suess=False, hook='Ohne Hefe:', titel=['PIZZA-','MUFFINS'], portion='pro Stück', anzahl=12, vs=250,
+ zutaten=[Z('200 g','Dinkelmehl','dinkelmehl','dinkelmehl',200), Z('250 g','Skyr','skyr','skyr',250), Z('2 Stück','Eier','eier','ei',st=2),
+          Z('2 TL','Backpulver','backpulver','backpulver',0), Z('80 g','Geflügelsalami','salami','salami',80), Z('1 Stück','Rote Paprika','rote_paprika','paprika_st',st=1),
+          Z('100 g','Mais','mais','mais',100), Z('100 g','Mozzarella light','mozzarella_light','mozzarella',100)],
+ ex=['1 TL Oregano', 'Salz, Pfeffer'],
+ intro='Pizza zum Mitnehmen: saftige Muffins mit Salami, Paprika, Mais und Käse, ohne Hefe, in 35 Minuten fertig. Für Brotdose, Büro und Partybuffet: {k} kcal und {p} g Eiweiß pro Muffin statt 250 für ein Stück Salamipizza!',
+ schritte=['Skyr, Eier, Oregano, ½ TL Salz und Pfeffer verrühren, Mehl und Backpulver unterheben.',
+           'Salami und Paprika würfeln und mit Mais und der Hälfte vom Käse unter den Teig heben.',
+           'In ein gefettetes Muffinblech (12 Mulden) füllen, mit dem restlichen Käse bestreuen und bei 180 °C Ober-/Unterhitze 22–25 Minuten goldbraun backen.'],
+ frage='Pizza-Muffins: für die Brotdose oder fürs Partybuffet?', tags='#pizzamuffins #fitmitkev',
+ prompt='Homemade savory pizza muffins on a light wooden board, golden brown tops with melted cheese, visible pieces of red bell pepper, yellow corn and salami, one muffin in front broken open showing the fluffy savory inside with corn and pepper pieces, a small dish of red tomato dip beside.'),
+# 7 · 10:30 · süß · Zimtschnecken pur (Wiederholung des Treffers vom 18.10., 181 k)
+dict(key='Zimtschnecken', suess=True, hook='Ohne Hefe, ohne Gehzeit:', titel=['ZIMT-','SCHNECKEN'], portion='pro Stück', anzahl=12, vs=350,
+ zutaten=[Z('350 g','Dinkelmehl','dinkelmehl','dinkelmehl',350), Z('300 g','Skyr','skyr','skyr',300), Z('1 Päckchen','Backpulver','backpulver','backpulver',0),
+          Z('60 g','Erythrit','erythrit','erythrit',60), Z('30 g','Butter (weich)','butter','butter',30), Z('2 TL','Zimt','zimt','zimt',0),
+          Z('60 g','Frischkäse light','frischkaese_light','frischkaese',60), Z('1 TL','Vanilleextrakt','vanilleextrakt','vanille',0)],
+ ex=['Prise Salz', '1–2 EL Milch für den Guss'],
+ intro='Zimtschnecken ohne Hefe und ohne Warten: Skyr-Teig ausrollen, Zimt-Butter darauf, aufrollen, schneiden, backen, Frischkäse-Guss drüber. In 40 Minuten stehen 12 Schnecken auf dem Tisch: {k} kcal und {p} g Eiweiß pro Schnecke statt 350 für die Zimtschnecke vom Bäcker!',
+ schritte=['Mehl, Skyr, Backpulver, 20 g Erythrit, Vanille und Salz zu einem glatten Teig kneten und auf bemehlter Fläche zu einem Rechteck (30 × 40 cm) ausrollen.',
+           'Weiche Butter daraufstreichen, 40 g Erythrit mit Zimt mischen und darüber streuen, von der langen Seite aufrollen, in 12 Scheiben schneiden und in eine Auflaufform (20 × 30 cm) mit Backpapier setzen.',
+           'Bei 180 °C Ober-/Unterhitze 22–25 Minuten backen. Frischkäse mit Milch glatt rühren und über die warmen Schnecken geben.'],
+ frage='Zimtschnecken: mit Guss oder ohne?', tags='#zimtschnecken #ohnehefe #backen #fitmitkev',
+ prompt='Homemade cinnamon rolls baked close together in a white rectangular baking dish, golden brown spirals with clearly visible dark cinnamon swirls, drizzled with white cream cheese glaze, one cinnamon roll lifted out onto a small white plate in front showing the swirl, a cinnamon stick beside.'),
+# 8 · 11:15 · herzhaft · Omas Klassiker
+dict(key='KoenigsbergerKlopse', suess=False, hook='Omas Klassiker:', titel=['KÖNIGSBERGER','KLOPSE'], portion='pro Portion', anzahl=4, vs=700,
+ zutaten=[Z('500 g','Rinderhack (mager)','rinderhack','hack',500), Z('1 Stück','Ei','ei','ei',st=1), Z('30 g','Zarte Haferflocken','zarte_haferflocken','haferflocken',30),
+          Z('1 Stück','Zwiebel','zwiebel','zwiebel',st=1), Z('600 g','Kartoffeln','kartoffeln','kartoffeln',600), Z('150 ml','Kochsahne (15 %)','kochsahne','kochsahne',150),
+          Z('20 g','Dinkelmehl','dinkelmehl','dinkelmehl',20), Z('1 Stück','Zitrone','zitrone','zitrone',0)],
+ ex=['1 l Gemüsebrühe', '2 EL Kapern', 'Salz, Pfeffer, 1 Lorbeerblatt', 'Petersilie zum Garnieren'],
+ intro='Königsberger Klopse wie bei Oma: zarte Klopse, in Brühe gegart, in heller Kapernsoße mit einem Spritzer Zitrone, dazu Salzkartoffeln. Mit magerem Hack und Kochsahne statt Butter und Sahne: {k} kcal und {p} g Eiweiß pro Portion statt 700 für Klopse mit Sahnesoße!',
+ schritte=['Hack mit Ei, Haferflocken, fein gewürfelter Zwiebel, Salz und Pfeffer verkneten und 12 Klopse formen. Kartoffeln schälen und in Salzwasser 20 Minuten kochen.',
+           'Brühe mit Lorbeerblatt aufkochen und die Klopse darin bei schwacher Hitze 15 Minuten gar ziehen lassen, dann herausnehmen.',
+           '500 ml Brühe abmessen, Mehl mit etwas kaltem Wasser glatt rühren, einrühren und 3 Minuten köcheln. Kochsahne, Kapern und 1–2 EL Zitronensaft zugeben, Klopse in die Soße legen und mit den Kartoffeln servieren.'],
+ frage='Königsberger Klopse: mit oder ohne Kapern?', tags='#königsbergerklopse #omasrezepte #food #fitmitkev',
+ prompt='A white deep plate with three tender pale boiled meatballs (German Königsberger Klopse, not browned) in a creamy white sauce with small green capers, served next to boiled peeled yellow potatoes, a fork beside, the pot blurred in the background.'),
+# 9 · 12:00 · süß · Bowl (Wiederholung 30.10., 171 k)
+dict(key='ZitronenBowl', suess=True, hook='Nur für dich:', titel=['ZITRONENKUCHEN-','BOWL'], portion='die ganze Bowl', anzahl=1, vs=550,
+ zutaten=[Z('1 Stück','Ei','ei','ei',st=1), Z('60 g','Skyr','skyr','skyr',60), Z('30 g','Dinkelmehl','dinkelmehl','dinkelmehl',30),
+          Z('15 g','Gemahlene Mandeln','gemahlene_mandeln','mandeln',15), Z('25 g','Erythrit','erythrit','erythrit',25), Z('1 Stück','Zitrone','zitrone','zitrone',0),
+          Z('½ TL','Backpulver','backpulver','backpulver',0)],
+ ex=[],
+ intro='Saftiger Zitronenkuchen mit dickem Zitronenguss, nur für dich allein, direkt aus der Glasform gelöffelt. Ohne Butter, mit Erythrit statt Zucker, in 25 Minuten fertig und perfekt zum Mitnehmen: {k} kcal und {p} g Eiweiß die ganze Bowl statt 550 für zwei Stücke Zitronenkuchen vom Bäcker!',
+ schritte=['Ei mit 15 g Erythrit schaumig schlagen, Skyr, Zitronenabrieb und 1 EL Zitronensaft unterrühren, dann Mehl, gemahlene Mandeln und Backpulver unterheben.',
+           'Teig in eine kleine gefettete Glasform (15 × 10 cm) füllen, bei 180 °C Ober-/Unterhitze 18–20 Minuten backen und abkühlen lassen.',
+           '10 g Erythrit fein mahlen, mit 1–2 TL Zitronensaft zu einem dicken Guss rühren und über den Kuchen ziehen.'],
+ frage='Zitronenkuchen: mit dickem Guss oder ohne?', tags='#zitronenkuchen #bowl #fitmitkev',
+ prompt=BOWL+'Inside: a golden yellow fluffy lemon sponge cake covered with a thick white lemon icing glaze and a little fine yellow lemon zest on top, half a lemon beside the dish.'),
+# 10 · 12:45 · herzhaft · Variante von „Schinken-Käse-Nudeln“ (5.11., 34 k)
+dict(key='Schinkennudeln', suess=False, hook='Wie früher:', titel=['SCHINKEN-','NUDELN'], portion='pro Portion', anzahl=4, vs=750,
+ zutaten=[Z('280 g','Nudeln (roh)','nudeln','nudeln',280), Z('200 g','Putenschinken','putenschinken','putenschinken',200), Z('4 Stück','Eier','eier','ei',st=4),
+          Z('150 ml','Milch (1,5 %)','milch','milch',150), Z('1 Stück','Zwiebel','zwiebel','zwiebel',st=1), Z('80 g','Reibekäse light','reibekaese_light','reibekaese',80),
+          Z('100 g','Skyr','skyr','skyr',100), Z('2 EL','Petersilie','petersilie','petersilie',0)],
+ ex=['1 TL Öl', 'Salz, Pfeffer, Muskat'],
+ intro='Schinkennudeln wie bei Oma: aus einer Pfanne, mit Ei gestockt und mit Käse überbacken. Mit Putenschinken, Milch und Skyr statt Sahne, in 20 Minuten auf dem Tisch: {k} kcal und {p} g Eiweiß pro Portion statt 750 für Schinkennudeln mit Sahne!',
+ schritte=['Nudeln in Salzwasser bissfest kochen und abgießen. Zwiebel und Schinken würfeln und in einer großen beschichteten Pfanne im Öl 3 Minuten anbraten, Nudeln dazugeben.',
+           'Eier mit Milch, Skyr, Salz, Pfeffer und Muskat verquirlen, über die Nudeln gießen und bei mittlerer Hitze mit Deckel 5 Minuten stocken lassen.',
+           'Käse darüber streuen, Deckel wieder drauf, 2 Minuten schmelzen lassen und mit Petersilie bestreuen.'],
+ frage='Schinkennudeln: Gab es die bei euch früher auch?', tags='#schinkennudeln #omasrezepte #fitmitkev',
+ prompt='A large pan with German ham noodles: short pasta with diced pink ham bound with set egg, topped with melted golden cheese and chopped parsley, one portion served on a white plate in front, a fork beside.'),
+# 11 · 13:30 · süß · Community-Wunsch
+dict(key='KokosMandelTiramisu', suess=True, hook='Wie die weißen Kugeln:', titel=['KOKOS-MANDEL-','TIRAMISU'], portion='die ganze Bowl', anzahl=1, vs=600,
+ zutaten=[Z('6 Stück','Löffelbiskuits','loeffelbiskuit','loeffelbiskuit',st=6), Z('150 g','Skyr','skyr','skyr',150), Z('40 g','Frischkäse light','frischkaese_light','frischkaese',40),
+          Z('60 ml','Kokosmilch light','kokosmilch_light','kokosmilch',60), Z('10 g','Kokosraspel','kokosraspel','kokosraspel',10), Z('15 g','Erythrit','erythrit','erythrit',15),
+          Z('5 Stück','Mandeln','mandeln','mandeln',6), Z('1 TL','Vanilleextrakt','vanilleextrakt','vanille',0)],
+ ex=[],
+ intro='Euer Wunsch aus den Kommentaren: Tiramisu, das nach den weißen Kokoskugeln aus der Pralinenschachtel schmeckt. Löffelbiskuits in Kokosmilch getränkt, darauf eine Kokos-Skyr-Creme, obendrauf geröstete Kokosraspel und Mandeln. Ohne Mascarpone, ohne Backen, nur für dich: {k} kcal und {p} g Eiweiß die ganze Bowl statt 600 für eine Portion Tiramisu mit Mascarpone!',
+ schritte=['Skyr, Frischkäse, 30 ml Kokosmilch, Erythrit, Vanille und die Hälfte der Kokosraspel cremig rühren.',
+           'Löffelbiskuits kurz in der restlichen Kokosmilch wenden. Die Hälfte in eine kleine Glasform (15 × 10 cm) legen, die Hälfte der Creme darauf, dann die zweite Schicht Biskuits und die restliche Creme.',
+           'Restliche Kokosraspel in der Pfanne ohne Fett goldgelb rösten, mit den Mandeln darüber streuen und mindestens 2 Stunden kalt stellen.'],
+ frage='Tiramisu: klassisch mit Kaffee oder so mit Kokos?', tags='#tiramisu #kokos #mandel #dessert #fitmitkev',
+ prompt=BOWL+'Inside: a tiramisu with two layers of pale ladyfinger sponge biscuits alternating with thick white coconut cream, the top covered with toasted golden shredded coconut and a few whole almonds, a few shredded coconut flakes and two ladyfinger biscuits beside the dish.'),
+# 12 · 14:15 · herzhaft · Wiederholung des letzten Volltreffers (4.11., 187 k)
+dict(key='GebratenerReis', suess=False, hook='Wie vom Asia-Imbiss:', titel=['GEBRATENER','REIS'], portion='pro Portion', anzahl=4, vs=750,
+ zutaten=[Z('200 g','Reis (roh)','reis','reis',200), Z('400 g','Hähnchenbrust','haehnchenbrust','haehnchen',400), Z('3 Stück','Eier','eier','ei',st=3),
+          Z('150 g','Erbsen (TK)','erbsen','erbsen',150), Z('2 Stück','Karotten','karotten','karotten',150), Z('1 Stück','Zwiebel','zwiebel','zwiebel',st=1),
+          Z('1 EL','Öl','oel','oel',10), Z('2 Zehen','Knoblauch','knoblauch','knoblauch',0)],
+ ex=['4 EL Sojasauce', '2 Frühlingszwiebeln', 'Pfeffer'],
+ intro='Gebratener Reis wie vom Asia-Imbiss, nur ohne Fett-Schwimmbad: Reis vom Vortag mit Hähnchen, Ei, Erbsen und Karotten scharf anbraten, Sojasauce dazu, fertig. Eine Pfanne, 20 Minuten: {k} kcal und {p} g Eiweiß pro Portion statt 750 für die Box vom Imbiss!',
+ schritte=['Reis nach Packung kochen und abkühlen lassen (am besten vom Vortag). Hähnchen würfeln, im Öl in einer großen Pfanne scharf anbraten und herausnehmen.',
+           'Zwiebel, Knoblauch und Karottenwürfel 4 Minuten braten, Erbsen und Reis zugeben und 3 Minuten mitbraten. Alles an den Rand schieben, Eier in der Mitte verquirlen und stocken lassen.',
+           'Hähnchen zurück in die Pfanne, mit Sojasauce und Pfeffer abschmecken und mit Frühlingszwiebeln bestreuen.'],
+ frage='Gebratener Reis: mit Hähnchen, mit Ei oder mit beidem?', tags='#gebratenerreis #asiatisch #hähnchen #food #fitmitkev',
+ prompt='A black wok pan with Asian fried rice with golden seared chicken breast cubes with browned edges clearly visible, scrambled egg pieces, green peas, small orange carrot cubes and sliced green spring onions, one portion served in a white bowl in front, wooden chopsticks beside.'),
+# 13 · 15:00 · süß · Kevs Blitz-Käsekuchen (Treffer 24.10., 215 k) als Skyr-Kuchen-Grundrezept
+dict(key='BlitzKaesekuchen', suess=True, hook='Nur 10 Minuten Arbeit:', titel=['BLITZ-','KÄSEKUCHEN'], portion='pro Stück', anzahl=8, vs=350,
+ zutaten=[Z('750 g','Skyr','skyr','skyr',750), Z('3 Stück','Eier','eier','ei',st=3), Z('1 Päckchen','Vanillepudding-Pulver','vanillepudding_pulver','puddingpulver',37),
+          Z('70 g','Erythrit','erythrit','erythrit',70), Z('1 TL','Vanilleextrakt','vanilleextrakt','vanille',0), Z('6 Stück','Butterkekse','butterkekse','butterkeks',st=6)],
+ ex=['1 TL Backpulver', 'Prise Salz'],
+ intro='Blitz-Käsekuchen mit dünnem Keksboden: Kekse zerbröseln, Skyr, Eier, Puddingpulver und Süße verrühren, drübergießen, fertig. 10 Minuten Arbeit, eine Schüssel, ohne Sahne und ohne Mixer, und er schmeckt wie bei Oma: {k} kcal und {p} g Eiweiß pro Stück statt 350 für ein Stück Käsekuchen vom Bäcker!',
+ schritte=['6 Butterkekse fein zerbröseln, mit 1 EL Skyr verkneten und als dünnen Boden in eine Springform (20 cm) mit Backpapier drücken.',
+           'Skyr, Eier, Puddingpulver, Erythrit, Vanille, Backpulver und Salz mit dem Schneebesen glatt rühren, auf den Boden gießen und bei 170 °C Ober-/Unterhitze 50 Minuten backen.',
+           'Im ausgeschalteten Ofen bei leicht geöffneter Tür 30 Minuten abkühlen lassen, dann mindestens 3 Stunden kalt stellen.'],
+ frage='Käsekuchen: mit Boden oder ohne?', tags='#käsekuchen #fitmitkev',
+ prompt='A round baked cheesecake with a thin cookie crumb base, about 5 cm tall, on a white cake stand seen from the side, smooth golden-brown top, one slice cut and placed on a small white plate in front showing the creamy white smooth filling from the side, a fork beside.'),
+# 14 · 15:45 · herzhaft · Wiederholung 31.10. (34 k)
+dict(key='Frikadellen', suess=False, hook='Aus dem Ofen:', titel=['FRIKADELLEN MIT','RAHMSOSSE'], portion='pro Portion', anzahl=4, vs=600,
+ zutaten=[Z('500 g','Rinderhack (mager)','rinderhack','hack',500), Z('1 Stück','Zwiebel','zwiebel','zwiebel',st=1), Z('1 Stück','Ei','ei','ei',st=1),
+          Z('40 g','Zarte Haferflocken','zarte_haferflocken','haferflocken',40), Z('1 EL','Senf','senf','senf',15), Z('250 g','Champignons','champignons','champignons',250),
+          Z('200 g','Skyr','skyr','skyr',200), Z('200 ml','Rinderbrühe','rinderbruehe','bruehe',0)],
+ ex=['Salz, Pfeffer, Paprikapulver', 'frische Kräuter zum Garnieren'],
+ intro='Frikadellen ohne Fettspritzer: aus dem Ofen, mit Haferflocken statt Brötchen, dazu eine cremige Champignon-Rahmsoße aus Skyr statt Sahne. 2 Frikadellen mit Soße: {k} kcal und {p} g Eiweiß pro Portion statt 600 für Frikadellen aus der Pfanne mit Sahnesoße!',
+ schritte=['Hack, gewürfelte Zwiebel, Ei, Haferflocken und Senf verkneten, kräftig mit Salz, Pfeffer und Paprikapulver würzen und 8 Frikadellen formen.',
+           'Auf ein Backblech mit Backpapier legen und bei 200 °C Ober-/Unterhitze 20 Minuten backen.',
+           'Champignons in Scheiben in einer Pfanne anbraten, Brühe angießen, 3 Minuten köcheln, vom Herd nehmen, Skyr unterrühren und mit Salz und Pfeffer abschmecken.'],
+ frage='Frikadellen: mit Kartoffelpüree oder im Brötchen?', tags='#frikadellen #fitmitkev',
+ prompt='A white plate with two juicy browned oven-baked meat patties (German Frikadellen) covered with a creamy light brown mushroom sauce with sliced mushrooms, nothing else on the plate, a fork beside, a pan with more meat patties in mushroom sauce blurred in the background.'),
+# 15 · 16:30 · süß · Blechkuchen (Wiederholung 20.10., 110 k)
+dict(key='Gewuerzkuchen', suess=True, hook='Omas Rezept:', titel=['GEWÜRZKUCHEN','VOM BLECH'], portion='pro Stück', anzahl=16, vs=300,
+ zutaten=[Z('250 g','Dinkelmehl','dinkelmehl','dinkelmehl',250), Z('200 g','Skyr','skyr','skyr',200), Z('3 Stück','Eier','eier','ei',st=3),
+          Z('100 g','Erythrit','erythrit','erythrit',100), Z('100 g','Apfelmus','apfelmus','apfelmus',100), Z('20 g','Backkakao','backkakao','kakao',20),
+          Z('3 TL','Lebkuchengewürz','lebkuchengewuerz','zimt',0), Z('80 g','Zartbitterschokolade','zartbitterschokolade','schokolade',80)],
+ ex=['1 Päckchen Backpulver', 'Prise Salz'],
+ intro='Omas Gewürzkuchen vom Blech mit Schokoglasur: saftig durch Apfelmus und Skyr, duftet nach Lebkuchen, ohne Butter und ohne Zucker im Teig. 16 Stücke in 35 Minuten: {k} kcal und {p} g Eiweiß pro Stück statt 300 für den Gewürzkuchen vom Bäcker!',
+ schritte=['Eier mit Erythrit schaumig schlagen, Skyr und Apfelmus unterrühren, dann Mehl, Kakao, Lebkuchengewürz, Backpulver und Salz unterheben.',
+           'Auf ein Blech (30 × 40 cm) mit Backpapier streichen, bei 180 °C Ober-/Unterhitze 20–25 Minuten backen und auskühlen lassen.',
+           'Schokolade schmelzen, darüber streichen, fest werden lassen und in 16 Stücke schneiden.'],
+ frage='Gewürzkuchen: mit Schokoglasur oder mit Zuckerguss?', tags='#gewürzkuchen #blechkuchen #backen #fitmitkev',
+ prompt='A rectangular dark brown spice sheet cake on a baking tray lined with baking paper, covered with a glossy dark chocolate glaze, cut into squares, one square piece lifted out onto a small white plate in front showing the moist dark brown crumb from the side, a cinnamon stick and a star anise beside.'),
+# 16 · 17:15 · herzhaft · Weihnachtsmarkt-Klassiker
+dict(key='Reibekuchen', suess=False, hook='Wie vom Weihnachtsmarkt:', titel=['REIBEKUCHEN','AUS DEM OFEN'], portion='pro Portion', anzahl=4, vs=650,
+ zutaten=[Z('1 kg','Kartoffeln','kartoffeln','kartoffeln',1000), Z('1 Stück','Zwiebel','zwiebel','zwiebel',st=1), Z('2 Stück','Eier','eier','ei',st=2),
+          Z('30 g','Zarte Haferflocken','zarte_haferflocken','haferflocken',30), Z('1 EL','Öl','oel','oel',10), Z('400 g','Apfelmus','apfelmus','apfelmus',400),
+          Z('1 TL','Salz','salz','salz',0)],
+ ex=['Pfeffer, Muskat'],
+ intro='Reibekuchen mit Apfelmus wie vom Weihnachtsmarkt, nur ohne Fettbad: aus dem Ofen, außen knusprig, innen saftig. 3 Reibekuchen mit Apfelmus: {k} kcal und {p} g Eiweiß pro Portion statt 650 für die frittierten vom Stand!',
+ schritte=['Kartoffeln und Zwiebel fein reiben und in einem sauberen Tuch kräftig ausdrücken. Mit Eiern, Haferflocken, Salz, Pfeffer und Muskat vermengen.',
+           'Ein Backblech mit Backpapier mit dem Öl einpinseln, 12 flache Puffer daraufsetzen und bei 220 °C Ober-/Unterhitze 15 Minuten backen.',
+           'Wenden, weitere 10–15 Minuten knusprig backen und mit Apfelmus servieren.'],
+ frage='Reibekuchen: mit Apfelmus oder herzhaft mit Lachs?', tags='#reibekuchen #kartoffelpuffer #weihnachtsmarkt #fitmitkev',
+ prompt='A white plate with three crispy golden brown potato pancakes (German Reibekuchen, flat round grated potato fritters with crispy lacy edges) slightly overlapping, a small white bowl of pale yellow apple sauce beside the plate, a fork beside.'),
+# 17 · 18:00 · süß · Plätzchen (Wiederholung 1.11., 257 k)
+dict(key='Zimtsterne', suess=True, hook='Ohne Mandeln:', titel=['ZIMTSTERNE AUS','HAFERFLOCKEN'], portion='pro Stück', anzahl=30, vs=100,
+ zutaten=[Z('250 g','Zarte Haferflocken','zarte_haferflocken','haferflocken',250), Z('2 Stück','Eiweiß','eiweiss','eiweiss',70), Z('120 g','Erythrit','erythrit','erythrit',120),
+          Z('2 TL','Zimt','zimt','zimt',0), Z('50 g','Skyr','skyr','skyr',50)],
+ ex=[],
+ intro='Zimtsterne ohne Mandeln: gemahlene Haferflocken statt teurer Nüsse, dadurch nur ein Drittel der Kalorien vom Original. Mit weißem Eiweiß-Guss wie vom Weihnachtsteller: {k} kcal und {p} g Eiweiß pro Stern statt 100 für den Zimtstern vom Bäcker!',
+ schritte=['Haferflocken im Mixer fein mahlen. Mit 1 Eiweiß, 100 g Erythrit, Zimt und Skyr zu einem festen Teig kneten und 30 Minuten kalt stellen.',
+           'Teig zwischen Backpapier 7 mm dick ausrollen, 30 Sterne ausstechen und auf ein Backblech mit Backpapier legen.',
+           '1 Eiweiß steif schlagen, 20 g fein gemahlenes Erythrit unterrühren, die Sterne damit bestreichen und bei 150 °C Ober-/Unterhitze 15 Minuten backen.'],
+ frage='Zimtsterne: kaufen oder selbst backen?', tags='#zimtsterne #plätzchen #fitmitkev',
+ prompt='Homemade cinnamon star cookies (German Zimtsterne): brown six-pointed star-shaped cookies, each covered with a smooth white icing glaze on top, piled on a white plate, a few stars lying on the wooden table in front, two cinnamon sticks beside.'),
+# 18 · 18:45 · herzhaft · Wiederholung „Gyros-Kartoffel-Auflauf“ (3.11., 37 k)
+dict(key='GyrosAuflauf', suess=False, hook='Wie vom Griechen:', titel=['GYROS-','AUFLAUF'], portion='pro Portion', anzahl=4, vs=800,
+ zutaten=[Z('500 g','Hähnchenbrust','haehnchenbrust','haehnchen',500), Z('700 g','Kartoffeln','kartoffeln','kartoffeln',700), Z('2 Stück','Paprika','paprika','paprika_st',st=2),
+          Z('1 Stück','Zwiebel','zwiebel','zwiebel',st=1), Z('2 EL','Gyrosgewürz','gyrosgewuerz','gyrosgewuerz',0), Z('250 g','Skyr','skyr','skyr',250),
+          Z('½ Stück','Salatgurke','salatgurke','gurke',150), Z('80 g','Reibekäse light','reibekaese_light','reibekaese',80)],
+ ex=['1 EL Öl', '1 Zehe Knoblauch', 'Salz, Pfeffer', 'Petersilie zum Garnieren'],
+ intro='Gyros-Teller als Auflauf: Hähnchen in Gyrosgewürz, Kartoffelwürfel, Paprika und Zwiebeln aus einer Form, mit Käse überbacken, dazu frisches Tzatziki aus Skyr. Kein Fett-Spieß, keine Pommes: {k} kcal und {p} g Eiweiß pro Portion statt 800 für den Gyros-Teller vom Griechen!',
+ schritte=['Kartoffeln schälen, in 2 cm große Würfel schneiden und 8 Minuten vorkochen. Hähnchen in Streifen schneiden und mit Gyrosgewürz und Öl mischen.',
+           'Kartoffeln, Hähnchen, Paprikastreifen und Zwiebelringe in eine Auflaufform (20 × 30 cm) schichten, salzen, mit Käse bestreuen und bei 200 °C Ober-/Unterhitze 25 Minuten backen.',
+           'Gurke raspeln und ausdrücken, mit Skyr, Knoblauch, Salz und Pfeffer zu Tzatziki verrühren und zum Auflauf servieren.'],
+ frage='Gyros: mit Tzatziki oder mit Zwiebeln und Krautsalat?', tags='#gyros #auflauf #fitmitkev',
+ prompt='A white ceramic rectangular baking dish with a gyros casserole: potato cubes, seasoned browned chicken pieces, red bell pepper strips and onion rings, topped with melted golden cheese, one portion served on a white plate in front with a dollop of white tzatziki with grated cucumber on the side, a fork beside.'),
+# 19 · 19:30 · süß · Wiederholung „Käsekuchen für Schoko-Fans“ (31.10., 156 k)
+dict(key='SchokoKaesekuchen', suess=True, hook='Für Schoko-Fans:', titel=['SCHOKO-','KÄSEKUCHEN'], portion='pro Stück', anzahl=8, vs=400,
+ zutaten=[Z('750 g','Skyr','skyr','skyr',750), Z('3 Stück','Eier','eier','ei',st=3), Z('1 Päckchen','Vanillepudding-Pulver','vanillepudding_pulver','puddingpulver',37),
+          Z('70 g','Erythrit','erythrit','erythrit',70), Z('30 g','Backkakao','backkakao','kakao',30), Z('30 g','Zartbitter-Schokodrops','zartbitter_schokodrops','schokolade',30),
+          Z('4 Stück','Butterkekse','butterkekse','butterkeks',st=4)],
+ ex=[],
+ intro='Käsekuchen für Schoko-Fans: cremige Skyr-Masse mit Backkakao auf dünnem Keksboden, obendrauf Zartbitter-Drops. Ohne Sahne und ohne Mehl: {k} kcal und {p} g Eiweiß pro Stück statt 400 für den Schoko-Käsekuchen vom Konditor!',
+ schritte=['4 Butterkekse fein zerbröseln, mit 1 EL Skyr verkneten und als dünnen Boden in eine Springform (20 cm) mit Backpapier drücken.',
+           'Skyr, Eier, Puddingpulver, Erythrit und Kakao glatt rühren, auf den Boden füllen und die Schokodrops darüber streuen.',
+           'Bei 170 °C Ober-/Unterhitze 50 Minuten backen, im Ofen abkühlen lassen und mindestens 3 Stunden kalt stellen.'],
+ frage='Käsekuchen: klassisch hell oder in Schoko?', tags='#käsekuchen #schokokuchen #skyrkuchen #backen #fitmitkev',
+ prompt='A round dark chocolate cheesecake about 5 cm tall on a white cake stand seen from the side, with a thin light brown cookie crumb base and dark chocolate drops on top, one slice cut and placed on a small white plate in front showing the creamy dark brown chocolate filling and the thin base from the side, a few chocolate drops beside, a fork beside.'),
+# 20 · 20:15 · herzhaft · Abend-Snack
+dict(key='Flammkuchen', suess=False, hook='In 20 Minuten:', titel=['FLAMMKUCHEN','AUS SKYR-TEIG'], portion='pro Stück', anzahl=2, vs=750,
+ zutaten=[Z('250 g','Skyr','skyr','skyr',250), Z('150 g','Dinkelmehl','dinkelmehl','dinkelmehl',150), Z('1 TL','Backpulver','backpulver','backpulver',0),
+          Z('50 g','Frischkäse light','frischkaese_light','frischkaese',50), Z('1 Stück','Rote Zwiebel','rote_zwiebel','zwiebel',st=1), Z('100 g','Putenschinken','putenschinken','putenschinken',100),
+          Z('100 g','Champignons','champignons','champignons',100)],
+ ex=['½ TL Salz', 'Pfeffer, Muskat'],
+ intro='Flammkuchen in 20 Minuten: hauchdünner Skyr-Dinkel-Boden ohne Hefe, Skyr-Frischkäse-Creme statt Crème fraîche, Zwiebeln, Schinken und Champignons. Ein ganzer Flammkuchen für dich: {k} kcal und {p} g Eiweiß statt 750 für den Flammkuchen im Restaurant!',
+ schritte=['150 g Skyr, Mehl, Backpulver und Salz verkneten, halbieren und auf Backpapier hauchdünn zu 2 Ovalen ausrollen.',
+           '100 g Skyr mit Frischkäse, Salz, Pfeffer und Muskat verrühren und auf den Teig streichen. Zwiebel in dünne Ringe, Champignons in Scheiben, Schinken in Streifen schneiden und darauf verteilen.',
+           'Auf dem Backblech bei 230 °C Ober-/Unterhitze 10–12 Minuten knusprig backen.'],
+ frage='Flammkuchen: klassisch mit Zwiebeln und Schinken oder süß mit Apfel und Zimt?', tags='#flammkuchen #skyrteig #ohnehefe #food #fitmitkev',
+ prompt='A thin crispy oval flatbread tart (Alsatian Flammkuchen) on a wooden board, very thin crust with browned crispy edges, topped with white cream, thin red onion rings, strips of pink ham and sliced mushrooms, one piece cut off in front, a pizza cutter beside.'),
+]
+
+# Extras (Öl, Eigelb, Sojasauce …) in kcal/Eiweiß/KH/Fett pro Rezept gesamt
+EXN={'Weckmann':(55,2.7,0.1,5), 'Schinkennudeln':(45,0,0,5), 'GebratenerReis':(24,3,2,0), 'GyrosAuflauf':(90,0,0,10), 'Zimtschnecken':(10,0.5,1,0.3)}
+for r in R: r['exnut']=[EXN[r['key']]] if r['key'] in EXN else []
+
+# Hashtag-Test (Kev 10.11.): Gruppe A = 2–3 Hashtags, Gruppe B = 4–5; paarweise im Wechsel (1–2 A, 3–4 B, …),
+# damit beide Gruppen gleich viele süße/herzhafte Beiträge und ähnliche Uhrzeiten haben. #fitmitkev immer zuletzt.
+HASHTAG_SOLL={1:3,2:3,3:5,4:5,5:2,6:2,7:4,8:4,9:3,10:3,11:5,12:5,13:2,14:2,15:4,16:4,17:3,18:3,19:5,20:5}
+
+if __name__=='__main__':
+    for i,r in enumerate(R,1):
+        k,p,c,f=macros4(r); nt=len(r['tags'].split())
+        assert nt==HASHTAG_SOLL[i], (i,r['key'],nt)
+        assert r['tags'].split()[-1]=='#fitmitkev'
+        assert r['suess']==(i%2==1), ('süß/herzhaft-Wechsel',i)
+        assert r['vs']>k and len(r['zutaten'])<=8 and len(r['schritte'])==3
+        print(f"{i:2d} {r['key']:22s} {'süß ' if r['suess'] else 'herz'} {k:4d} kcal {p:3d}P {c:3d}C {f:3d}F  {r['portion']:15s} vs {r['vs']}  {len(r['zutaten'])} Kacheln  {nt} #")
