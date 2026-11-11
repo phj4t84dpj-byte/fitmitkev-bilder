@@ -12,7 +12,7 @@ SER=[('g87/montag_posts.json','G87'),('g88/dienstag_posts.json','G88'),('g89/mit
 B_K='Leichte Kuchen & Desserts'; B_B='Bowls'; B_H='Herzhaft unter 500 kcal'; B_F='Frühstück'; B_W='Weihnachtsbäckerei'
 FRUEH={'SpekOats','Quarkbroetchen','ZimtschneckenPancakes','BratapfelPorridge','KoernerBroetchen','Kaiserschmarrn','KaeseSchinkenWaffeln','NusseckenOats','Kaesebroetchen','Bauernfruehstueck','ZimtschneckenOats','Fruehstuecksbroetchen','StrammerMax'}
 WEIH={'Zimtsterne','Engelsaugen','Kokosmakronen','Weckmann'}
-TAGS={B_K:'#leichtbacken #kalorienarm #kuchenrezepte',B_B:'#kuchenbowl #kalorienarm #proteinreich',B_H:'#kalorienarmkochen #leichterezepte #familienessen',B_F:'#gesundesfrühstück #kalorienarm #proteinfrühstück',B_W:'#weihnachtsbäckerei #plätzchen #kalorienarm'}
+TAGS={'BowlH':'#mealprep #kalorienarm #proteinreich',B_K:'#leichtbacken #kalorienarm #kuchenrezepte',B_B:'#kuchenbowl #kalorienarm #proteinreich',B_H:'#kalorienarmkochen #leichterezepte #familienessen',B_F:'#gesundesfrühstück #kalorienarm #proteinfrühstück',B_W:'#weihnachtsbäckerei #plätzchen #kalorienarm'}
 def board(p):
     k=p['key']
     if 'Bowl' in k or k=='KokosMandelTiramisu': return B_B
@@ -30,15 +30,16 @@ def first_sentence(t):
     m=re.match(r'(.+?[.!:])(\s|$)',t); return (m.group(1) if m else t).rstrip(':')+'.' if m and m.group(1).endswith(':') else (m.group(1) if m else t)
 def desc(p,b):
     hook,steps,nw=parse(p['fc'])
+    if b==B_B and not p['suess']: b='BowlH'
     tail=f" {"P"+nw.group(1)[1:]} ca. {nw.group(2)} kcal und {nw.group(3)} g Eiweiß. {TAGS[b]}" if nw else ' '+TAGS[b]
     st=' '.join(f'{i}. {s}' for i,s in enumerate(steps,1))
     hs=first_sentence(hook)
     for cand in [f"{hs} Zutaten mit Mengen siehe Bild. So geht's: {st}{tail}", f"Zutaten mit Mengen siehe Bild. So geht's: {st}{tail}"]:
         if len(cand)<=500: return cand
-    # Schritte auf den ersten Satzteil kürzen
-    st=' '.join(f"{i}. {re.split(r'(?<=[.])\s',s)[0]}" for i,s in enumerate(steps,1))
-    c=f"Zutaten mit Mengen siehe Bild. So geht's: {st}{tail}"
-    return c if len(c)<=500 else c[:497].rsplit(' ',1)[0]+' …'
+    pre="Zutaten mit Mengen siehe Bild. So geht's: "
+    room=500-len(pre)-len(tail)-2
+    st=st[:room].rsplit(' ',1)[0].rstrip(',.;')+' …'
+    return pre+st+tail
 def pin_image(p,g):
     src=Image.open(f"{R}/boards/{p['media'].split('/')[-1]}").convert('RGB').resize((1000,1250),Image.LANCZOS)
     im=Image.new('RGB',(1000,1500),(233,219,199))
@@ -67,7 +68,7 @@ for f,g in SER:
         title=f"{name} – nur {p['kcal']} kcal {unit(p)}"
         assert len(title)<=100,title
         fn=f"PIN-{g}-{p['key']}.jpg"
-        im=pin_image(p,g); im.save(f'{OUT}/{fn}',quality=90)
+        if not os.path.exists(f'{OUT}/{fn}'): pin_image(p,g).save(f'{OUT}/{fn}',quality=90)
         rows.append(dict(serie=g,key=p['key'],name=name,kcal=p['kcal'],suess=p['suess'],board=b,title=title,desc=desc(p,b),file=fn))
 # Zeitplan: 12 Pins/Tag ab Fr 13.11., Pinnwände gemischt, Abendspitze
 TIMES=['07:05','09:10','11:15','12:40','14:05','15:30','17:05','18:20','19:35','20:30','21:25','22:15']
