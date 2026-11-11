@@ -8,6 +8,7 @@ NAVY=(18,33,63); RED=(193,32,43)
 fA=lambda n: ImageFont.truetype(f'{F}/anton/Anton-Regular.ttf',n)
 fP=lambda n: ImageFont.truetype(f'{F}/poppins/Poppins-Bold.ttf',n)
 fS=lambda n: ImageFont.truetype(f'{F}/poppins/Poppins-SemiBold.ttf',n)
+KURZ=json.load(open('kurz.json',encoding='utf-8'))
 SER=[('g87/montag_posts.json','G87'),('g88/dienstag_posts.json','G88'),('g89/mittwoch_posts.json','G89'),('g90/donnerstag_posts.json','G90')]
 B_K='Leichte Kuchen & Desserts'; B_B='Bowls'; B_H='Herzhaft unter 500 kcal'; B_F='Frühstück'; B_W='Weihnachtsbäckerei'
 FRUEH={'SpekOats','Quarkbroetchen','ZimtschneckenPancakes','BratapfelPorridge','KoernerBroetchen','Kaiserschmarrn','KaeseSchinkenWaffeln','NusseckenOats','Kaesebroetchen','Bauernfruehstueck','ZimtschneckenOats','Fruehstuecksbroetchen','StrammerMax'}
@@ -30,16 +31,23 @@ def first_sentence(t):
     m=re.match(r'(.+?[.!:])(\s|$)',t); return (m.group(1) if m else t).rstrip(':')+'.' if m and m.group(1).endswith(':') else (m.group(1) if m else t)
 def desc(p,b):
     hook,steps,nw=parse(p['fc'])
+    if p['key'] in KURZ: steps=KURZ[p['key']]
     if b==B_B and not p['suess']: b='BowlH'
-    tail=f" {"P"+nw.group(1)[1:]} ca. {nw.group(2)} kcal und {nw.group(3)} g Eiweiß. {TAGS[b]}" if nw else ' '+TAGS[b]
-    st=' '.join(f'{i}. {s}' for i,s in enumerate(steps,1))
-    hs=first_sentence(hook)
-    for cand in [f"{hs} Zutaten mit Mengen siehe Bild. So geht's: {st}{tail}", f"Zutaten mit Mengen siehe Bild. So geht's: {st}{tail}"]:
-        if len(cand)<=500: return cand
+    nwt=f" {'P'+nw.group(1)[1:]} ca. {nw.group(2)} kcal und {nw.group(3)} g Eiweiß." if nw else ''
+    tags=' '+TAGS[b]
     pre="Zutaten mit Mengen siehe Bild. So geht's: "
-    room=500-len(pre)-len(tail)-2
-    st=st[:room].rsplit(' ',1)[0].rstrip(',.;')+' …'
-    return pre+st+tail
+    hs=first_sentence(hook)+' '
+    def S(st): return ' '.join(f'{i}. {x}' for i,x in enumerate(st,1))
+    clean=[re.sub(r'\s*\([^)]*\)','',x).replace(' Ober-/Unterhitze','') for x in steps]
+    for c in [hs+pre+S(steps)+nwt+tags, pre+S(steps)+nwt+tags, pre+S(steps)+nwt, pre+S(clean)+nwt+tags, pre+S(clean)+nwt]:
+        if len(c)<=500: return c
+    # Schritte 1 und 2 kürzen, Schritt 3 (Backzeit/Temperatur) bleibt ganz
+    st=list(clean)
+    while len(pre+S(st)+nwt)>500:
+        i=0 if len(st[0])>=len(st[1]) else 1
+        w=st[i].rstrip(' …').rsplit(' ',1)[0].rstrip(',;')
+        st[i]=w+' …'
+    return pre+S(st)+nwt
 def pin_image(p,g):
     src=Image.open(f"{R}/boards/{p['media'].split('/')[-1]}").convert('RGB').resize((1000,1250),Image.LANCZOS)
     im=Image.new('RGB',(1000,1500),(233,219,199))
