@@ -9,6 +9,7 @@ fA=lambda n: ImageFont.truetype(f'{F}/anton/Anton-Regular.ttf',n)
 fP=lambda n: ImageFont.truetype(f'{F}/poppins/Poppins-Bold.ttf',n)
 fS=lambda n: ImageFont.truetype(f'{F}/poppins/Poppins-SemiBold.ttf',n)
 KURZ=json.load(open('kurz.json',encoding='utf-8'))
+HOOK={'Weckmann':'Weckmann ohne Hefe und ohne Gehzeit.','MaulwurfBowl':'Maulwurfkuchen als Bowl nur für dich.','KokosMandelTiramisu':'Tiramisu mit Kokos und Mandeln als Bowl nur für dich.'}
 SER=[('g87/montag_posts.json','G87'),('g88/dienstag_posts.json','G88'),('g89/mittwoch_posts.json','G89'),('g90/donnerstag_posts.json','G90')]
 B_K='Leichte Kuchen & Desserts'; B_B='Bowls'; B_H='Herzhaft unter 500 kcal'; B_F='Frühstück'; B_W='Weihnachtsbäckerei'
 FRUEH={'SpekOats','Quarkbroetchen','ZimtschneckenPancakes','BratapfelPorridge','KoernerBroetchen','Kaiserschmarrn','KaeseSchinkenWaffeln','NusseckenOats','Kaesebroetchen','Bauernfruehstueck','ZimtschneckenOats','Fruehstuecksbroetchen','StrammerMax'}
@@ -36,7 +37,7 @@ def desc(p,b):
     nwt=f" {'P'+nw.group(1)[1:]} ca. {nw.group(2)} kcal und {nw.group(3)} g Eiweiß." if nw else ''
     tags=' '+TAGS[b]
     pre="Zutaten mit Mengen siehe Bild. So geht's: "
-    hs=first_sentence(hook)+' '
+    hs=HOOK.get(p['key'],first_sentence(hook))+' '
     def S(st): return ' '.join(f'{i}. {x}' for i,x in enumerate(st,1))
     clean=[re.sub(r'\s*\([^)]*\)','',x).replace(' Ober-/Unterhitze','') for x in steps]
     for c in [hs+pre+S(steps)+nwt+tags, pre+S(steps)+nwt+tags, pre+S(steps)+nwt, pre+S(clean)+nwt+tags, pre+S(clean)+nwt]:
