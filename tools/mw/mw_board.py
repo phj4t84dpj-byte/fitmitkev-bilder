@@ -48,7 +48,7 @@ body{{margin:0;width:1080px;height:1350px;overflow:hidden;position:relative;font
 {T(['SO VIEL SIND 100 KCAL'],96)}</div>
 <div class="lab" style="top:252px;background:{GREEN}">MACHT LANGE SATT</div>
 <div class="row" style="top:324px">{cards(ROW1)}</div>
-<div class="lab" style="top:712px;background:{RED}">IST IN EINER MINUTE WEG</div>
+<div class="lab" style="top:712px;background:{RED}">IST IN EINER SEKUNDE WEG</div>
 <div class="row" style="top:784px">{cards(ROW2)}</div>
 <div class="foot"><img class="ph" src="{VN}"><div class="bd"><div class="badge">-50 kg</div><div class="ig">@fitmitkev</div></div>
 <div class="msg"><div>Satt wirst du von <span>Menge</span>,<br>nicht von Verzicht.</div></div></div>
