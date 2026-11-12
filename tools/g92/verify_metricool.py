@@ -1,42 +1,24 @@
-import json,sys,re
-T='/root/.claude/projects/-home-claude/62a14d94-6bfc-5e5c-b2da-15988fbe030e.jsonl'
-best=None
-def walk(o):
-    if isinstance(o,str):
-        if o.startswith('{"data":[{"id":424243447') : yield o
-    elif isinstance(o,dict):
-        for v in o.values(): yield from walk(v)
-    elif isinstance(o,list):
-        for v in o: yield from walk(v)
-for line in open(T,encoding='utf-8'):
-    if '424245593' not in line or '424243447' not in line: continue
-    try: j=json.loads(line)
-    except Exception: continue
-    for s in walk(j):
-        try:
-            d=json.loads(s)
-            if len(d['data'])>=16: best=d
-        except Exception as e: pass
-assert best, 'Antwort nicht gefunden'
-live=best['data']
+# Prüft die Samstags-Beiträge in Metricool (Antwort von getScheduledPosts als Datei) Feld für Feld gegen out/samstag_posts.json
+import json,sys,collections
+raw=json.load(open(sys.argv[1],encoding='utf-8')); data=raw['data'] if isinstance(raw,dict) else raw
+fb=[p for p in data if [x['network'] for x in p['providers']]==['facebook']]
+pins=[p for p in data if any(x['network']=='pinterest' for x in p['providers'])]
 soll=json.load(open('out/samstag_posts.json',encoding='utf-8'))
-print('live',len(live),'soll',len(soll))
-assert len(live)==16==len(soll)
-live=sorted(live,key=lambda p:p['publicationDate']['dateTime'])
-ids=[]
-ok=True
-for p,s in zip(live,soll):
-    dt=p['publicationDate']['dateTime']
-    sd=s['date'][:19]
-    chk=dict(zeit=dt==sd, text=p['text']==s['text'], fc=p['firstCommentText']==s['fc'], alt=p['mediaAltText']==[s['alt']],
-             status=p['providers'][0]['status']=='PENDING' and p['providers'][0]['network']=='facebook' and len(p['providers'])==1,
+by=collections.defaultdict(list)
+for p in fb: by[p['publicationDate']['dateTime'][:19]].append(p)
+ids=[]; ok=True
+for s in soll:
+    L=by.get(s['date'][:19],[])
+    rez=[p for p in L if p['text']==s['text']]
+    if len(rez)!=1: ok=False; print(s['n'],s['date'][11:16],s['key'],'ANZAHL',len(rez)); continue
+    p=rez[0]
+    chk=dict(fc=p['firstCommentText']==s['fc'], alt=p['mediaAltText']==[s['alt']], status=p['providers'][0]['status']=='PENDING',
              auto=p['autoPublish'] is True and p['draft'] is False, media=len(p['media'])==1 and p['media'][0].startswith('https://static.metricool.com/'),
-             typ=p['facebookData']['type']=='POST', tz=p['publicationDate']['timezone']=='Europe/Berlin')
-    bad=[k for k,v in chk.items() if not v]
-    if bad: ok=False
-    print(f"{s['n']:>2} {dt[11:16]} {s['key']:<22} id={p['id']} {'OK' if not bad else 'FEHLER '+str(bad)}")
-    ids.append(dict(n=s['n'],key=s['key'],date=dt,id=p['id'],uuid=p['uuid'],media=p['media'][0],hashtags=s.get('hashtags'),gruppe=s.get('gruppe'),kcal=s.get('kcal'),suess=s.get('suess')))
-assert len({i['id'] for i in ids})==16 and len({i['uuid'] for i in ids})==16
-assert len({p['text'] for p in live})==16
-print('ALLES OK' if ok else 'ABWEICHUNGEN')
-json.dump(ids,open('out/donnerstag_metricool_ids.json','w',encoding='utf-8'),ensure_ascii=False,indent=1)
+             typ=p['facebookData']['type']=='POST')
+    bad=[k for k,v in chk.items() if not v]; ok&=not bad
+    print(f"{s['n']:>2} {s['date'][11:16]} {s['key']:<16} id={p['id']} {'OK' if not bad else 'FEHLER '+str(bad)}")
+    ids.append(dict(n=s['n'],key=s['key'],date=s['date'],id=p['id'],uuid=p['uuid'],media=p['media'][0],hashtags=s['hashtags'],gruppe=s['gruppe'],kcal=s['kcal'],suess=s['suess']))
+rest=[p for p in fb if p['text'] not in {s['text'] for s in soll}]
+print('Facebook gesamt',len(fb),'· Rezepte',len(ids),'· sonstige FB:',[(p['publicationDate']['dateTime'][11:16],p['id'],p['text'][:30]) for p in rest],'· Pins',len(pins))
+assert ok and len(ids)==20 and len({i['id'] for i in ids})==20
+json.dump(ids,open('out/samstag_metricool_ids.json','w'),ensure_ascii=False,indent=1); print('alles OK')
