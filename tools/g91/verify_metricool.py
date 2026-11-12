@@ -19,7 +19,7 @@ for line in open(T,encoding='utf-8'):
         except Exception as e: pass
 assert best, 'Antwort nicht gefunden'
 live=best['data']
-soll=json.load(open('out/donnerstag_posts.json',encoding='utf-8'))
+soll=json.load(open('out/freitag_posts.json',encoding='utf-8'))
 print('live',len(live),'soll',len(soll))
 assert len(live)==16==len(soll)
 live=sorted(live,key=lambda p:p['publicationDate']['dateTime'])

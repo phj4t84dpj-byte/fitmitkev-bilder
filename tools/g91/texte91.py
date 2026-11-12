@@ -30,7 +30,7 @@ def _anzahl_base(r):
     if 'Bowl' in p: return '1 Portion, Glasform 15 × 10 cm'
     if p.startswith('pro Glas'): return f'{n} Gläser'
     if p.startswith('pro Teller'): return f'{n} Teller'
-    if p.startswith('pro Portion'): return f'{n} Portionen'
+    if p.startswith('pro Portion'): return '1 Portion' if n==1 else f'{n} Portionen'
     return f'{n} Stück' if (r['key'] in EINZELN or n<12) else f'{n} Stücke'
 def anzahl_label(r):
     f=FORM.get(r['key']); base=_anzahl_base(r)
