@@ -112,6 +112,7 @@ body{{width:1080px;height:1350px;overflow:hidden;position:relative;font-family:P
 </body></html>"""
 
 BOX={}
+OHNE=os.environ.get('OHNE_BOX')=='1'   # Box-Test: gleiches Board ohne „So geht's“-Box, Datei G92-<Key>-ohneBox.jpg
 def render(keys):
     by={r['key']:r for r in G.R}
     with sync_playwright() as pw:
@@ -140,9 +141,11 @@ def render(keys):
               const col=document.querySelector('.col').getBoundingClientRect();let ov=0;document.querySelectorAll('.row').forEach(e=>{const b=e.getBoundingClientRect();if(b.bottom>col.bottom+2||b.top<col.top-2)ov++;});
               if(ov)hits.push('SPALTE LÄUFT ÜBER');return hits;}''')
             if hits: print('  !! Pfeil/Spalte kollidiert mit:',hits)
-            pg.screenshot(path=f"{D}/out/G92-{key}.png")
-            Image.open(f"{D}/out/G92-{key}.png").convert("RGB").save(f"{D}/out/G92-{key}.jpg",quality=92,xmp=XMP.encode())
-            os.remove(f"{D}/out/G92-{key}.png"); print("ok",key)
+            if OHNE: pg.evaluate("()=>{document.querySelector('.rib').style.display='none'}")
+            nm=f"G92-{key}"+('-ohneBox' if OHNE else '')
+            pg.screenshot(path=f"{D}/out/{nm}.png")
+            Image.open(f"{D}/out/{nm}.png").convert("RGB").save(f"{D}/out/{nm}.jpg",quality=92,xmp=XMP.encode())
+            os.remove(f"{D}/out/{nm}.png"); print("ok",nm)
         b.close()
     json.dump(BOX,open(f"{D}/out/_box.json","w"))
     print('Box oben/unten:',BOX)
