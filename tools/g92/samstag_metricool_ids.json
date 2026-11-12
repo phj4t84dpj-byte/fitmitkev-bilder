@@ -9,19 +9,21 @@
   "hashtags": 5,
   "gruppe": "B (4–5)",
   "kcal": 165,
-  "suess": true
+  "suess": true,
+  "box": true
  },
  {
   "n": 2,
   "key": "Hoernchen",
   "date": "2026-11-14T06:55:00",
-  "id": 426011904,
+  "id": 426181907,
   "uuid": "1068457839173848657",
-  "media": "https://static.metricool.com/planner/202611/7765790-file-684638286378516044.jpeg",
+  "media": "https://static.metricool.com/planner/202611/7765790-file-914463178410516914.jpeg",
   "hashtags": 5,
   "gruppe": "B (4–5)",
   "kcal": 220,
-  "suess": false
+  "suess": false,
+  "box": false
  },
  {
   "n": 3,
@@ -33,31 +35,34 @@
   "hashtags": 3,
   "gruppe": "A (2–3)",
   "kcal": 480,
-  "suess": true
+  "suess": true,
+  "box": true
  },
  {
   "n": 4,
   "key": "Zwiebelkuchen",
   "date": "2026-11-14T08:30:00",
-  "id": 426012190,
+  "id": 426182000,
   "uuid": "-5220227518779406279",
-  "media": "https://static.metricool.com/planner/202611/7765790-file-13762930163034185132.jpeg",
+  "media": "https://static.metricool.com/planner/202611/7765790-file-1453021619798986469.jpeg",
   "hashtags": 3,
   "gruppe": "A (2–3)",
   "kcal": 165,
-  "suess": false
+  "suess": false,
+  "box": false
  },
  {
   "n": 5,
   "key": "Marzipan",
   "date": "2026-11-14T09:15:00",
-  "id": 426012400,
+  "id": 426182097,
   "uuid": "9154645487155302340",
-  "media": "https://static.metricool.com/planner/202611/7765790-file-17931375642213368334.jpeg",
+  "media": "https://static.metricool.com/planner/202611/7765790-file-6425876620860610100.jpeg",
   "hashtags": 4,
   "gruppe": "B (4–5)",
   "kcal": 185,
-  "suess": true
+  "suess": true,
+  "box": false
  },
  {
   "n": 6,
@@ -69,31 +74,34 @@
   "hashtags": 4,
   "gruppe": "B (4–5)",
   "kcal": 445,
-  "suess": false
+  "suess": false,
+  "box": true
  },
  {
   "n": 7,
   "key": "Vanillekipferl",
   "date": "2026-11-14T10:45:00",
-  "id": 426012649,
+  "id": 426182205,
   "uuid": "3319044593967056669",
-  "media": "https://static.metricool.com/planner/202611/7765790-file-8822614142826490087.jpeg",
+  "media": "https://static.metricool.com/planner/202611/7765790-file-12658580263965686803.jpeg",
   "hashtags": 2,
   "gruppe": "A (2–3)",
   "kcal": 70,
-  "suess": true
+  "suess": true,
+  "box": false
  },
  {
   "n": 8,
   "key": "PizzaHawaii",
   "date": "2026-11-14T11:30:00",
-  "id": 426012762,
+  "id": 426182375,
   "uuid": "5698287844403859134",
-  "media": "https://static.metricool.com/planner/202611/7765790-file-1049334918089139209.jpeg",
+  "media": "https://static.metricool.com/planner/202611/7765790-file-8143389459859192627.jpeg",
   "hashtags": 2,
   "gruppe": "A (2–3)",
   "kcal": 500,
-  "suess": false
+  "suess": false,
+  "box": false
  },
  {
   "n": 9,
@@ -105,19 +113,21 @@
   "hashtags": 5,
   "gruppe": "B (4–5)",
   "kcal": 180,
-  "suess": true
+  "suess": true,
+  "box": true
  },
  {
   "n": 10,
   "key": "Pastitsio",
   "date": "2026-11-14T13:05:00",
-  "id": 426013141,
+  "id": 426182492,
   "uuid": "-2340315364873648444",
-  "media": "https://static.metricool.com/planner/202611/7765790-file-11565890794840367315.jpeg",
+  "media": "https://static.metricool.com/planner/202611/7765790-file-3782961501268288403.jpeg",
   "hashtags": 5,
   "gruppe": "B (4–5)",
   "kcal": 485,
-  "suess": false
+  "suess": false,
+  "box": false
  },
  {
   "n": 11,
@@ -129,7 +139,8 @@
   "hashtags": 3,
   "gruppe": "A (2–3)",
   "kcal": 85,
-  "suess": true
+  "suess": true,
+  "box": true
  },
  {
   "n": 12,
@@ -141,19 +152,21 @@
   "hashtags": 3,
   "gruppe": "A (2–3)",
   "kcal": 470,
-  "suess": false
+  "suess": false,
+  "box": true
  },
  {
   "n": 13,
   "key": "Rotweinkuchen",
   "date": "2026-11-14T15:25:00",
-  "id": 426013651,
+  "id": 426182640,
   "uuid": "3668992770361672609",
-  "media": "https://static.metricool.com/planner/202611/7765790-file-15350687103005634738.jpeg",
+  "media": "https://static.metricool.com/planner/202611/7765790-file-18198513673153073904.jpeg",
   "hashtags": 4,
   "gruppe": "B (4–5)",
   "kcal": 140,
-  "suess": true
+  "suess": true,
+  "box": false
  },
  {
   "n": 14,
@@ -165,19 +178,21 @@
   "hashtags": 4,
   "gruppe": "B (4–5)",
   "kcal": 340,
-  "suess": false
+  "suess": false,
+  "box": true
  },
  {
   "n": 15,
   "key": "Butterstollen",
   "date": "2026-11-14T16:55:00",
-  "id": 426013925,
+  "id": 426182753,
   "uuid": "5742752756906542538",
-  "media": "https://static.metricool.com/planner/202611/7765790-file-1468143640513498966.jpeg",
+  "media": "https://static.metricool.com/planner/202611/7765790-file-11337633810908560091.jpeg",
   "hashtags": 2,
   "gruppe": "A (2–3)",
   "kcal": 195,
-  "suess": true
+  "suess": true,
+  "box": false
  },
  {
   "n": 16,
@@ -189,7 +204,8 @@
   "hashtags": 2,
   "gruppe": "A (2–3)",
   "kcal": 445,
-  "suess": false
+  "suess": false,
+  "box": true
  },
  {
   "n": 17,
@@ -201,31 +217,34 @@
   "hashtags": 5,
   "gruppe": "B (4–5)",
   "kcal": 50,
-  "suess": true
+  "suess": true,
+  "box": true
  },
  {
   "n": 18,
   "key": "KaeseNudeln",
   "date": "2026-11-14T19:15:00",
-  "id": 426014405,
+  "id": 426182854,
   "uuid": "6539093157258414014",
-  "media": "https://static.metricool.com/planner/202611/7765790-file-5309521973372088420.jpeg",
+  "media": "https://static.metricool.com/planner/202611/7765790-file-17465248825568322146.jpeg",
   "hashtags": 5,
   "gruppe": "B (4–5)",
   "kcal": 475,
-  "suess": false
+  "suess": false,
+  "box": false
  },
  {
   "n": 19,
   "key": "Rumkugeln",
   "date": "2026-11-14T20:00:00",
-  "id": 426014508,
+  "id": 426182930,
   "uuid": "2319635553015580211",
-  "media": "https://static.metricool.com/planner/202611/7765790-file-10227578308090235340.jpeg",
+  "media": "https://static.metricool.com/planner/202611/7765790-file-5672604395393302498.jpeg",
   "hashtags": 3,
   "gruppe": "A (2–3)",
   "kcal": 55,
-  "suess": true
+  "suess": true,
+  "box": false
  },
  {
   "n": 20,
@@ -237,6 +256,7 @@
   "hashtags": 3,
   "gruppe": "A (2–3)",
   "kcal": 380,
-  "suess": false
+  "suess": false,
+  "box": true
  }
 ]
