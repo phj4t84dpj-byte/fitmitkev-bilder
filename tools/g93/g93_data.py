@@ -250,7 +250,7 @@ dict(key='Lahmacun', suess=False, hook='Türkische Pizza:', titel=['LAHMACUN','A
           Z('250 g','Rinderhack','rinderhack','hack',250), Z('150 g','Passierte Tomaten','passierte_tomaten','tomaten',150), Z('1 Stück','Zwiebel','zwiebel','zwiebel',st=1),
           Z('1 Stück','Rote Paprika','rote_paprika','paprika_st',st=1), Z('1 Bund','Petersilie','petersilie','petersilie',0)],
  ex=['Salz, Pfeffer, 1 TL Paprikapulver, 1 Prise Chili','Salat, Tomate, Zwiebelringe und Zitrone zum Belegen'],
- intro='Lahmacun wie vom Türken um die Ecke: hauchdünner Teig, würzige Hack-Tomaten-Paprika-Auflage, dazu Salat, Zwiebeln und ein Spritzer Zitrone, dann aufrollen. Der Teig aus Skyr braucht keine Hefe: {k} kcal und {p} g Eiweiß pro Stück statt 550 für eine gefüllte Lahmacun vom Imbiss!',
+ intro='Lahmacun wie vom türkischen Imbiss um die Ecke: hauchdünner Teig, würzige Hack-Tomaten-Paprika-Auflage, dazu Salat, Zwiebeln und ein Spritzer Zitrone, dann aufrollen. Der Teig aus Skyr braucht keine Hefe: {k} kcal und {p} g Eiweiß pro Stück statt 550 für eine gefüllte Lahmacun vom Imbiss!',
  schritte=['Den Ofen auf 250 °C Ober-/Unterhitze vorheizen. Mehl, Skyr, Backpulver und eine Prise Salz zu einem Teig kneten, vierteln und jeweils sehr dünn oval ausrollen.',
            'Zwiebel, Paprika und die halbe Petersilie sehr fein hacken und mit Hack, passierten Tomaten, Salz, Pfeffer, Paprikapulver und Chili verkneten. Die Masse dünn auf den Fladen verstreichen.',
            'Auf einem Backblech mit Backpapier 8–10 Minuten knusprig backen, mit Salat, Tomate, Zwiebelringen, Petersilie und Zitrone belegen und aufrollen.'],
