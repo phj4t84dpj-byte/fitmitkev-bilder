@@ -7,7 +7,7 @@ import cv2, numpy as np, json, os, sys
 D=os.path.dirname(os.path.abspath(__file__))
 import n2_data as _N; KEYS=[r['key'] for r in _N.R]
 T={k:dict(s=(0.8 if k.startswith('HH') else 1.0)) for k in KEYS}
-T.update({})
+T.update({'HHToastkoerbchen':dict(s=0.74,dy=-60),'HHLachs':dict(s=0.74,dy=-70)})
 def prep(key):
     sel=json.load(open(f'{D}/hero/_auswahl.json'))[key]
     im=cv2.imread(f'{D}/raw/{sel}.jpg'); t=T.get(key,{})
