@@ -94,7 +94,7 @@ P('KH',1,3,'KHZimtsterne','Omas Zimtsterne','Omas Zimtsterne',['Saftig mit Mande
  ['3 Eiweiß','250 g Puderzucker','1 Prise Salz','1 TL Zitronensaft','2 TL Zimt','350 g gem. Mandeln'],['Puderzucker zum Ausrollen'],
  'ca. 40 Stück, Backblech','ca. 1 Std. + 1 Std. Kühlzeit',
  'Saftige Mandelsterne mit Zimt und einer schneeweißen Baiser-Haube. Zimtsterne sind ein bisschen Arbeit, aber ohne sie ist kein Plätzchenteller komplett.',
- ['Eiweiß mit Salz steif schlagen, den Puderzucker nach und nach einrieseln lassen und den Zitronensaft unterrühren. 6 EL davon für die Glasur abnehmen.',
+ ['Eiweiß mit Salz steif schlagen, den Puderzucker nach und nach einrieseln lassen und den Zitronensaft unterrühren. 6 EL davon für die Glasur beiseitestellen.',
   'Mandeln und Zimt unter den Rest heben. Der Teig ist klebrig: 1 Stunde kalt stellen.',
   'Auf Puderzucker 1 cm dick ausrollen, Sterne ausstechen, auf ein Backblech mit Backpapier legen und dünn mit der Glasur bestreichen.',
   'Bei 150 °C Ober-/Unterhitze 10–12 Minuten backen. Die Glasur soll weiß bleiben.'],
