@@ -10,7 +10,15 @@ TOK=os.environ["HF_TOKEN"]; api=HfApi(token=TOK); REPO="kevrsztorm/fitmitkev-bil
 src=urllib.request.urlopen("https://raw.githubusercontent.com/phj4t84dpj-byte/fitmitkev-bilder/main/tools/n2/n2_data.py").read()
 ns={}; exec(src.decode(),ns); R=ns['R']
 files=set(api.list_repo_files(REPO,repo_type="dataset"))
-def get(p): return Image.open(hf_hub_download(REPO,p,repo_type="dataset",token=TOK)).convert("RGB")
+def get(p):
+    import time
+    for a in range(4):
+        try:
+            req=urllib.request.Request(f"https://huggingface.co/datasets/{REPO}/resolve/main/{p}",headers={"Authorization":f"Bearer {TOK}"})
+            return Image.open(io.BytesIO(urllib.request.urlopen(req,timeout=60).read())).convert("RGB")
+        except Exception as e:
+            print("retry",p,repr(e)[:150],flush=True); time.sleep(5)
+    raise SystemExit("FAIL "+p)
 def up(im,p,q=90):
     b=io.BytesIO(); im.save(b,"JPEG",quality=q); b.seek(0); api.upload_file(path_or_fileobj=b,path_in_repo=p,repo_id=REPO,repo_type="dataset"); print("ok",p,flush=True)
 try: font=ImageFont.truetype("/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf",22)
