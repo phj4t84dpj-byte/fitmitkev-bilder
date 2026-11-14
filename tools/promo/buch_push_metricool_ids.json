@@ -1,0 +1,24 @@
+{
+ "sa_promo": {
+  "date": "2026-11-14T19:15:00",
+  "id": 428002166,
+  "uuid": "8275065547669913800",
+  "bild": "verkaufsseite/Promo-Rezeptbuecher-v2.jpg"
+ },
+ "so_blick": {
+  "date": "2026-11-15T19:15:00",
+  "id": 428025941,
+  "uuid": "7050244488175894702",
+  "bild": "verkaufsseite/Buch-Blick-ins-Buch.jpg"
+ },
+ "buch_zeile": {
+  "So 15.11.": [
+   "SpekSkyr 09:15"
+  ],
+  "Mo 16.11. (geplant, noch nicht eingetragen)": [
+   "Quarkbaellchen 09:15",
+   "Kartoffelgratin 16:10"
+  ]
+ },
+ "link": "https://fitmitkev.de/rezeptbuecher"
+}

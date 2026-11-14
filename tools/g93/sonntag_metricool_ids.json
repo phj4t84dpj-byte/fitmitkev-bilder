@@ -55,14 +55,15 @@
   "n": 5,
   "key": "SpekSkyr",
   "date": "2026-11-15T09:15:00",
-  "id": 426637936,
+  "id": 428025880,
   "uuid": "-6667905067494653699",
   "media": "https://static.metricool.com/planner/202611/7765790-file-16172409881959164901.jpeg",
   "box": true,
   "hashtags": 2,
   "gruppe": "A (2–3)",
   "kcal": 130,
-  "suess": true
+  "suess": true,
+  "hinweis": "seit 14.11. Buch-Zeile mit Link am Ende des 1. Kommentars (Weihnachtsbäckerei in leicht)"
  },
  {
   "n": 6,
@@ -223,15 +224,16 @@
  {
   "n": 18,
   "key": "Tortellini",
-  "date": "2026-11-15T19:15:00",
-  "id": 426639273,
+  "date": "2026-11-15T21:30:00",
+  "id": 428025802,
   "uuid": "5879501258349432100",
   "media": "https://static.metricool.com/planner/202611/7765790-file-10502392380657770547.jpeg",
   "box": true,
   "hashtags": 3,
   "gruppe": "A (2–3)",
   "kcal": 475,
-  "suess": false
+  "suess": false,
+  "hinweis": "am 14.11. von 19:15 auf 21:30 verschoben (19:15 = Buch-Beitrag „Ein Blick ins Buch“); außerhalb des Fensters, bei der Auswertung getrennt betrachten"
  },
  {
   "n": 19,
