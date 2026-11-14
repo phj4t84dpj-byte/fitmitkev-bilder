@@ -107,41 +107,44 @@
  {
   "n": 9,
   "key": "ZimtBowl",
-  "date": "2026-11-15T12:20:00",
-  "id": 426638322,
+  "date": "2026-11-16T12:20:00",
+  "id": 428377521,
   "uuid": "4077093360576187433",
   "media": "https://static.metricool.com/planner/202611/7765790-file-2478561152682854453.jpeg",
   "box": false,
   "hashtags": 3,
   "gruppe": "A (2–3)",
   "kcal": 435,
-  "suess": true
+  "suess": true,
+  "hinweis": "am 14.11. abends auf Montag 16.11. (gleiche Uhrzeit) verschoben; Platz am Sonntag hat jetzt G93N"
  },
  {
   "n": 10,
   "key": "HackPfannkuchen",
-  "date": "2026-11-15T13:05:00",
-  "id": 426638396,
+  "date": "2026-11-16T13:05:00",
+  "id": 428377586,
   "uuid": "8615758911080450409",
   "media": "https://static.metricool.com/planner/202611/7765790-file-10237797345865345039.jpeg",
   "box": true,
   "hashtags": 3,
   "gruppe": "A (2–3)",
   "kcal": 460,
-  "suess": false
+  "suess": false,
+  "hinweis": "am 14.11. abends auf Montag 16.11. (gleiche Uhrzeit) verschoben; Platz am Sonntag hat jetzt G93N"
  },
  {
   "n": 11,
   "key": "Windbeutel",
-  "date": "2026-11-15T13:50:00",
-  "id": 426638474,
+  "date": "2026-11-16T13:50:00",
+  "id": 428377655,
   "uuid": "4993618051963110399",
   "media": "https://static.metricool.com/planner/202611/7765790-file-10747001660642409688.jpeg",
   "box": false,
   "hashtags": 5,
   "gruppe": "B (4–5)",
   "kcal": 130,
-  "suess": true
+  "suess": true,
+  "hinweis": "am 14.11. abends auf Montag 16.11. (gleiche Uhrzeit) verschoben; Platz am Sonntag hat jetzt G93N"
  },
  {
   "n": 12,
@@ -185,15 +188,16 @@
  {
   "n": 15,
   "key": "Waffeln",
-  "date": "2026-11-15T16:55:00",
-  "id": 426638870,
+  "date": "2026-11-16T16:55:00",
+  "id": 428377712,
   "uuid": "-1008277536946434776",
   "media": "https://static.metricool.com/planner/202611/7765790-file-3585633173393373390.jpeg",
   "box": true,
   "hashtags": 4,
   "gruppe": "B (4–5)",
   "kcal": 120,
-  "suess": true
+  "suess": true,
+  "hinweis": "am 14.11. abends auf Montag 16.11. (gleiche Uhrzeit) verschoben; Platz am Sonntag hat jetzt G93N"
  },
  {
   "n": 16,
@@ -211,15 +215,16 @@
  {
   "n": 17,
   "key": "Spritzgebaeck",
-  "date": "2026-11-15T18:25:00",
-  "id": 426639171,
+  "date": "2026-11-16T18:25:00",
+  "id": 428377784,
   "uuid": "6021709586325720479",
   "media": "https://static.metricool.com/planner/202611/7765790-file-3330024319083822967.jpeg",
   "box": false,
   "hashtags": 3,
   "gruppe": "A (2–3)",
   "kcal": 60,
-  "suess": true
+  "suess": true,
+  "hinweis": "am 14.11. abends auf Montag 16.11. (gleiche Uhrzeit) verschoben; Platz am Sonntag hat jetzt G93N"
  },
  {
   "n": 18,
@@ -238,15 +243,16 @@
  {
   "n": 19,
   "key": "MandarinenQuark",
-  "date": "2026-11-15T20:00:00",
-  "id": 426639373,
+  "date": "2026-11-16T20:00:00",
+  "id": 428377840,
   "uuid": "-8436938900745531466",
   "media": "https://static.metricool.com/planner/202611/7765790-file-17693842269739208546.jpeg",
   "box": true,
   "hashtags": 5,
   "gruppe": "B (4–5)",
   "kcal": 180,
-  "suess": true
+  "suess": true,
+  "hinweis": "am 14.11. abends auf Montag 16.11. (gleiche Uhrzeit) verschoben; Platz am Sonntag hat jetzt G93N"
  },
  {
   "n": 20,

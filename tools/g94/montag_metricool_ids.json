@@ -107,34 +107,36 @@
  {
   "n": 9,
   "key": "BrownieBowl",
-  "date": "2026-11-16T12:20:00",
-  "id": 427891052,
+  "date": "2026-11-17T12:20:00",
+  "id": 428377083,
   "uuid": "627792285437020472",
   "media": "https://static.metricool.com/planner/202611/7765790-file-1921661084631651145.jpeg",
   "box": true,
   "hashtags": 4,
   "gruppe": "B (4–5)",
   "kcal": 365,
-  "suess": true
+  "suess": true,
+  "hinweis": "am 14.11. abends auf Dienstag 17.11. (gleiche Uhrzeit) verschoben"
  },
  {
   "n": 10,
   "key": "CordonBleuAuflauf",
-  "date": "2026-11-16T13:05:00",
-  "id": 427891135,
+  "date": "2026-11-17T13:05:00",
+  "id": 428377156,
   "uuid": "2707210696623737366",
   "media": "https://static.metricool.com/planner/202611/7765790-file-18252724915151735617.jpeg",
   "box": false,
   "hashtags": 4,
   "gruppe": "B (4–5)",
   "kcal": 435,
-  "suess": false
+  "suess": false,
+  "hinweis": "am 14.11. abends auf Dienstag 17.11. (gleiche Uhrzeit) verschoben"
  },
  {
   "n": 11,
   "key": "HuettenEis",
-  "date": "2026-11-16T13:50:00",
-  "id": 428027492,
+  "date": "2026-11-17T13:50:00",
+  "id": 428377221,
   "uuid": "-6629152788275900941",
   "media": "https://static.metricool.com/planner/202611/7765790-file-17782880663572378561.jpeg",
   "box": true,
@@ -142,7 +144,7 @@
   "gruppe": "A (2–3)",
   "kcal": 210,
   "suess": true,
-  "hinweis": "ESN-Zeile am 14.11. entfernt (ESN-Phase erst ab Do 19.11.)"
+  "hinweis": "ESN-Zeile am 14.11. entfernt (ESN-Phase erst ab Do 19.11.); am 14.11. abends auf Dienstag 17.11. (gleiche Uhrzeit) verschoben"
  },
  {
   "n": 12,
@@ -186,15 +188,16 @@
  {
   "n": 15,
   "key": "Haferplaetzchen",
-  "date": "2026-11-16T16:55:00",
-  "id": 427891447,
+  "date": "2026-11-17T16:55:00",
+  "id": 428377276,
   "uuid": "-3750194065914511247",
   "media": "https://static.metricool.com/planner/202611/7765790-file-6666497016208511758.jpeg",
   "box": false,
   "hashtags": 2,
   "gruppe": "A (2–3)",
   "kcal": 50,
-  "suess": true
+  "suess": true,
+  "hinweis": "am 14.11. abends auf Dienstag 17.11. (gleiche Uhrzeit) verschoben"
  },
  {
   "n": 16,
@@ -212,15 +215,16 @@
  {
   "n": 17,
   "key": "ApfelStreusel",
-  "date": "2026-11-16T18:25:00",
-  "id": 427891599,
+  "date": "2026-11-17T18:25:00",
+  "id": 428377365,
   "uuid": "9018757898621239904",
   "media": "https://static.metricool.com/planner/202611/7765790-file-8800869563830628214.jpeg",
   "box": true,
   "hashtags": 4,
   "gruppe": "B (4–5)",
   "kcal": 150,
-  "suess": true
+  "suess": true,
+  "hinweis": "am 14.11. abends auf Dienstag 17.11. (gleiche Uhrzeit) verschoben"
  },
  {
   "n": 18,
@@ -238,15 +242,16 @@
  {
   "n": 19,
   "key": "RoteGruetze",
-  "date": "2026-11-16T20:00:00",
-  "id": 427891730,
+  "date": "2026-11-17T20:00:00",
+  "id": 428377422,
   "uuid": "-7998290868888122560",
   "media": "https://static.metricool.com/planner/202611/7765790-file-8369875011371112610.jpeg",
   "box": true,
   "hashtags": 3,
   "gruppe": "A (2–3)",
   "kcal": 130,
-  "suess": true
+  "suess": true,
+  "hinweis": "am 14.11. abends auf Dienstag 17.11. (gleiche Uhrzeit) verschoben"
  },
  {
   "n": 20,

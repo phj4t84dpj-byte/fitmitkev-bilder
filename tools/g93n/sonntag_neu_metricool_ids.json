@@ -1,0 +1,80 @@
+[
+ {
+  "n": 9,
+  "key": "HanutaBowl",
+  "date": "2026-11-15T12:20:00",
+  "id": 428377980,
+  "uuid": "-1152181533774231777",
+  "box": false,
+  "hashtags": 3,
+  "gruppe": "A (2–3)",
+  "kcal": 440,
+  "suess": true,
+  "ersetzt": "ZimtBowl"
+ },
+ {
+  "n": 10,
+  "key": "BigMacSalat",
+  "date": "2026-11-15T13:05:00",
+  "id": 428378041,
+  "uuid": "-6972626434725229291",
+  "box": true,
+  "hashtags": 3,
+  "gruppe": "A (2–3)",
+  "kcal": 310,
+  "suess": false,
+  "ersetzt": "HackPfannkuchen"
+ },
+ {
+  "n": 11,
+  "key": "SpekKirschGlas",
+  "date": "2026-11-15T13:50:00",
+  "id": 428378106,
+  "uuid": "-5121769427384974228",
+  "box": false,
+  "hashtags": 5,
+  "gruppe": "B (4–5)",
+  "kcal": 335,
+  "suess": true,
+  "ersetzt": "Windbeutel"
+ },
+ {
+  "n": 15,
+  "key": "BiscoffBowl",
+  "date": "2026-11-15T16:55:00",
+  "id": 428378159,
+  "uuid": "1416188015492416086",
+  "box": true,
+  "hashtags": 4,
+  "gruppe": "B (4–5)",
+  "kcal": 415,
+  "suess": true,
+  "ersetzt": "Waffeln"
+ },
+ {
+  "n": 17,
+  "key": "BratapfelSpekGlas",
+  "date": "2026-11-15T18:25:00",
+  "id": 428378235,
+  "uuid": "8331036015550287579",
+  "box": false,
+  "hashtags": 3,
+  "gruppe": "A (2–3)",
+  "kcal": 240,
+  "suess": true,
+  "ersetzt": "Spritzgebaeck"
+ },
+ {
+  "n": 19,
+  "key": "MilchschnitteBowl",
+  "date": "2026-11-15T20:00:00",
+  "id": 428378291,
+  "uuid": "2048717825713062055",
+  "box": true,
+  "hashtags": 5,
+  "gruppe": "B (4–5)",
+  "kcal": 335,
+  "suess": true,
+  "ersetzt": "MandarinenQuark"
+ }
+]
