@@ -1,5 +1,6 @@
 # Mehrwert-Board 5 (1080x1350, Ausgabe 2160x2700) im warmen Board-Look: "Wie viel Eiweiß brauchst du am Tag?" (Eiweiß-Woche, ohne Marke)
 # Oben: Tabelle Bedarf nach Körpergewicht (DGE-Referenzwerte: 0,8 g/kg für Erwachsene bis 64, 1,0 g/kg ab 65; DGE-Position Sport: 1,2–2,0 g/kg).
+# Dazu Kevs Coaching-Tipp (14.11.): bei starkem Übergewicht Eiweißziel nach der Körpergröße, Beispiel 160 cm / 110 kg = ca. 140–160 g.
 # Unten: Eiweiß je Portion (Werte aus der Nährwert-Tabelle der Rezepte; Eiweißpulver 22–24 g je 30 g).
 import os, sys, random
 from PIL import Image
@@ -45,11 +46,14 @@ td{{border-top:2px solid #e3d9cb;padding:11px 0;font-size:25px;font-weight:600;c
 td.rl{{white-space:nowrap}}
 td.rl b{{display:inline-block;min-width:112px;text-align:center;font-family:A;font-weight:400;font-size:28px;letter-spacing:1px;color:#fff;border-radius:10px;padding:1px 10px 3px;margin-right:14px}}
 td.v{{text-align:center;font-weight:700;font-size:29px}}
-.fr{{display:flex;align-items:center;margin:9px 0;font-size:25px;font-weight:600;color:{NAVY}}}
+.fr{{display:flex;align-items:center;margin:4px 0;font-size:25px;font-weight:600;color:{NAVY}}}
 .fn{{width:330px;flex:none}}
 .fb{{flex:1;height:26px;background:#efe7db;border-radius:8px;overflow:hidden}}
 .fb i{{display:block;height:100%;background:{RED};border-radius:8px}}
 .fv{{width:86px;flex:none;text-align:right;font-weight:700;font-size:28px}}
+.tip{{position:absolute;left:40px;width:1000px;box-sizing:border-box;background:#fff6e0;border:3px solid #e9a23b;border-radius:22px;padding:14px 26px 16px;font-size:25px;font-weight:600;color:{NAVY};line-height:1.32;box-shadow:0 8px 22px rgba(60,40,20,.18)}}
+.tip b{{font-weight:700;color:{RED}}}
+.tip u{{text-decoration:none;font-weight:700;background:{GREEN};color:#fff;border-radius:8px;padding:0 10px 2px;white-space:nowrap}}
 .mid{{position:absolute;left:40px;width:1000px;text-align:center;font-size:27px;font-weight:700;color:{NAVY};line-height:1.25}}
 .mid span{{color:{RED}}}
 .foot{{position:absolute;left:40px;top:1188px;width:1000px;height:136px;display:flex;align-items:center;gap:18px}}
@@ -66,7 +70,8 @@ td.v{{text-align:center;font-weight:700;font-size:29px}}
 <div class="card" id="c1" style="top:288px">{table}</div>
 <div class="lab" id="l2" style="top:590px;background:{RED}">SO VIEL EIWEISS STECKT DRIN</div>
 <div class="card" id="c2" style="top:652px">{bars}</div>
-<div class="mid" id="mid" style="top:1060px">Mit 20 bis 30 g pro Mahlzeit kommst du locker hin.<br><span>Eiweiß trägt zum Erhalt deiner Muskeln bei.</span></div>
+<div class="tip" id="tip" style="top:980px"><b>Mein Tipp bei starkem Übergewicht:</b> Rechne mit deiner Körpergröße statt mit dem Gewicht. Beispiel aus dem Coaching: 160 cm und 110 kg = etwa <u>140 bis 160 g</u> Eiweiß am Tag.</div>
+<div class="mid" id="mid" style="top:1134px">Mit 20 bis 30 g pro Mahlzeit kommst du gut hin.</div>
 <div class="foot"><img class="ph" src="{VN}"><div class="bd"><div class="badge">-50 kg</div><div class="ig">@fitmitkev</div></div>
 <div class="msg"><div>Dein Gewicht mal 0,8:<br><span>Das ist dein Minimum am Tag.</span></div></div></div>
 </body></html>"""
@@ -76,6 +81,6 @@ with sync_playwright() as pw:
     b_=pw.chromium.launch(); pg=b_.new_page(viewport={'width':1080,'height':1350},device_scale_factor=2)
     pg.goto('file://'+f'{D}/mw5.html'); pg.wait_for_timeout(500)
     print(pg.evaluate('''()=>{const g=id=>document.getElementById(id).getBoundingClientRect();const t=document.querySelector('.top').getBoundingClientRect();
-      return {titelUnten:Math.round(t.bottom),l1:Math.round(g('l1').top),c1:[Math.round(g('c1').top),Math.round(g('c1').bottom)],l2:Math.round(g('l2').top),c2:[Math.round(g('c2').top),Math.round(g('c2').bottom)],mid:[Math.round(g('mid').top),Math.round(g('mid').bottom)],fuss:Math.round(document.querySelector('.foot').getBoundingClientRect().top)};}'''))
+      return {titelUnten:Math.round(t.bottom),l1:Math.round(g('l1').top),c1:[Math.round(g('c1').top),Math.round(g('c1').bottom)],l2:Math.round(g('l2').top),c2:[Math.round(g('c2').top),Math.round(g('c2').bottom)],tip:[Math.round(g('tip').top),Math.round(g('tip').bottom)],mid:[Math.round(g('mid').top),Math.round(g('mid').bottom)],fuss:Math.round(document.querySelector('.foot').getBoundingClientRect().top)};}'''))
     pg.screenshot(path=f'{D}/_b.png'); b_.close()
 Image.open(f'{D}/_b.png').convert('RGB').save(out,quality=92); os.remove(f'{D}/_b.png')
