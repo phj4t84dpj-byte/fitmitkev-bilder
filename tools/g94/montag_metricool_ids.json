@@ -3,14 +3,15 @@
   "n": 1,
   "key": "KipferlOats",
   "date": "2026-11-16T06:10:00",
-  "id": 427890509,
+  "id": 428027403,
   "uuid": "-3986950511484452688",
   "media": "https://static.metricool.com/planner/202611/7765790-file-8552200855429267065.jpeg",
   "box": false,
   "hashtags": 4,
   "gruppe": "B (4–5)",
   "kcal": 460,
-  "suess": true
+  "suess": true,
+  "hinweis": "ESN-Zeile am 14.11. entfernt (ESN-Phase erst ab Do 19.11.)"
  },
  {
   "n": 2,
@@ -133,14 +134,15 @@
   "n": 11,
   "key": "HuettenEis",
   "date": "2026-11-16T13:50:00",
-  "id": 427891200,
+  "id": 428027492,
   "uuid": "-6629152788275900941",
   "media": "https://static.metricool.com/planner/202611/7765790-file-17782880663572378561.jpeg",
   "box": true,
   "hashtags": 3,
   "gruppe": "A (2–3)",
   "kcal": 210,
-  "suess": true
+  "suess": true,
+  "hinweis": "ESN-Zeile am 14.11. entfernt (ESN-Phase erst ab Do 19.11.)"
  },
  {
   "n": 12,
