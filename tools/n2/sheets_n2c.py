@@ -1,5 +1,5 @@
 # /// script
-# dependencies = ["huggingface_hub>=0.30", "pillow"]
+# dependencies = ["huggingface_hub>=0.30", "pillow", "requests"]
 # ///
 # Baut aus n2/*_s1/_s2.jpg Prüfbögen (klein, beschriftet) und Mosaike in voller Auflösung (zum verlustfreien Zerlegen),
 # lädt sie nach n2sheets/ hoch. Mosaik: 5 × 3 Bilder à 1024 × 1280, Reihenfolge siehe n2sheets/_index.json.
@@ -14,8 +14,9 @@ def get(p):
     import time
     for a in range(4):
         try:
-            req=urllib.request.Request(f"https://huggingface.co/datasets/{REPO}/resolve/main/{p}",headers={"Authorization":f"Bearer {TOK}"})
-            return Image.open(io.BytesIO(urllib.request.urlopen(req,timeout=60).read())).convert("RGB")
+            import requests
+            r=requests.get(f"https://huggingface.co/datasets/{REPO}/resolve/main/{p}",headers={"Authorization":f"Bearer {TOK}"},timeout=60); r.raise_for_status()
+            return Image.open(io.BytesIO(r.content)).convert("RGB")
         except Exception as e:
             print("retry",p,repr(e)[:150],flush=True); time.sleep(5)
     raise SystemExit("FAIL "+p)
