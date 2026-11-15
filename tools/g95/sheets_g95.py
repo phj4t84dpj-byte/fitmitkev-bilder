@@ -8,7 +8,7 @@ from huggingface_hub import HfApi, hf_hub_download
 from PIL import Image, ImageDraw, ImageFont
 TOK=os.environ["HF_TOKEN"]; api=HfApi(token=TOK); REPO="kevrsztorm/fitmitkev-bilder"
 src=urllib.request.urlopen("https://raw.githubusercontent.com/phj4t84dpj-byte/fitmitkev-bilder/main/tools/g95/jobs_g95.py").read()
-import re; src=src.decode(); P=json.loads(src[src.index('P=json.loads(r"""')+15:src.index('""")')]); R=[dict(key=k) for k in P]
+import re; src=src.decode(); P=json.loads(src[src.index('P=json.loads(r"""')+17:src.index('""")')]); R=[dict(key=k) for k in P]
 files=set(api.list_repo_files(REPO,repo_type="dataset"))
 def get(p):
     import time
