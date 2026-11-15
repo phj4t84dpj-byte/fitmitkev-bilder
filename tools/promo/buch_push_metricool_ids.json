@@ -39,5 +39,23 @@
    "id": 428679706,
    "uuid": "-3688025534390973842"
   }
+ },
+ "dienstag_17_11": {
+  "Buch-Beitrag Fragen 1915": {
+   "id": 428694141,
+   "uuid": "7920453449074885904"
+  },
+  "Buch-Zeile Elisenlebkuchen 0740": {
+   "id": 428693423,
+   "uuid": "5492203082164356566"
+  },
+  "Buch-Zeile Haehnchen-Nudelauflauf 1130": {
+   "id": 428693713,
+   "uuid": "-3904187770070676701"
+  },
+  "MW6 Fruehstueck 1730": {
+   "id": 428694112,
+   "uuid": "6635334846655057880"
+  }
  }
 }
