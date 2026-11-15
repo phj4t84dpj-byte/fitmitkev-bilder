@@ -20,5 +20,24 @@
    "Kartoffelgratin 16:10"
   ]
  },
- "link": "https://fitmitkev.de/rezeptbuecher"
+ "link": "https://fitmitkev.de/rezeptbuecher",
+ "montag_16_11": {
+  "buch_beitrag_1915": {
+   "id": 428679758,
+   "uuid": "-5689448374047781107",
+   "bild": "verkaufsseite/Buch-Persoenlich.jpg"
+  },
+  "quarkbaellchen_0915_buchzeile": {
+   "id": 428679587,
+   "uuid": "-7109287141736365693"
+  },
+  "kartoffelgratin_1610_buchzeile": {
+   "id": 428679665,
+   "uuid": "3066328721566878244"
+  },
+  "pizzabroetchen_verschoben_2130": {
+   "id": 428679706,
+   "uuid": "-3688025534390973842"
+  }
+ }
 }

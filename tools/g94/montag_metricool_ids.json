@@ -56,14 +56,15 @@
   "n": 5,
   "key": "Quarkbaellchen",
   "date": "2026-11-16T09:15:00",
-  "id": 427890773,
+  "id": 428679587,
   "uuid": "-7109287141736365693",
   "media": "https://static.metricool.com/planner/202611/7765790-file-6840127182056564658.jpeg",
   "box": false,
   "hashtags": 5,
   "gruppe": "B (4–5)",
   "kcal": 65,
-  "suess": true
+  "suess": true,
+  "buchzeile": true
  },
  {
   "n": 6,
@@ -176,14 +177,15 @@
   "n": 14,
   "key": "Kartoffelgratin",
   "date": "2026-11-16T16:10:00",
-  "id": 427891388,
+  "id": 428679665,
   "uuid": "3066328721566878244",
   "media": "https://static.metricool.com/planner/202611/7765790-file-10264544531035244454.jpeg",
   "box": true,
   "hashtags": 5,
   "gruppe": "B (4–5)",
   "kcal": 385,
-  "suess": false
+  "suess": false,
+  "buchzeile": true
  },
  {
   "n": 15,
@@ -229,8 +231,8 @@
  {
   "n": 18,
   "key": "Pizzabroetchen",
-  "date": "2026-11-16T19:15:00",
-  "id": 427891664,
+  "date": "2026-11-16T21:30:00",
+  "id": 428679706,
   "uuid": "-3688025534390973842",
   "media": "https://static.metricool.com/planner/202611/7765790-file-13807786766465602056.jpeg",
   "box": false,
