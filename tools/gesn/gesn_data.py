@@ -157,6 +157,7 @@ TILES={'pflaumen':'Several dark purple plums, two whole and two halved showing t
 TAGE=['2026-11-19','2026-11-20','2026-11-21','2026-11-22','2026-11-23','2026-11-24','2026-11-25','2026-11-26','2026-11-27','2026-11-28','2026-11-29','2026-11-30','2026-12-01','2026-12-02']
 KEYS=[r['key'] for r in R]
 PLAN=[(TAGE[i], KEYS[2*(i%7)], KEYS[2*(i%7)+1]) for i in range(14)]
+for _r in R: _r.setdefault('kurz',['–','–','–'])
 OHNE_BOX=set(range(1,15)); GRUPPE_A={i+1 for i,r in enumerate(R) if len(r['tags'].split())<=3}; HASHTAG_SOLL={i+1:len(r['tags'].split()) for i,r in enumerate(R)}; ZEITEN=['06:10','13:00']*7
 if __name__=='__main__':
     assert len(R)==14 and len(set(KEYS))==14
