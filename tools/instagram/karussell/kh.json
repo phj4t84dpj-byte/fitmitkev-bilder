@@ -1,0 +1,57 @@
+{
+ "slug": "IG-KalterHund",
+ "name": "Kalter Hund mit Skyr",
+ "info": "Einkaufsliste · 14 Scheiben · Kastenform 25 cm · ohne Backen",
+ "zutaten": [
+  [
+   "200 g",
+   "Butterkekse"
+  ],
+  [
+   "250 g",
+   "Skyr"
+  ],
+  [
+   "40 g",
+   "Backkakao"
+  ],
+  [
+   "60 g",
+   "Erythrit"
+  ],
+  [
+   "100 g",
+   "Zartbitterschokolade"
+  ],
+  [
+   "50 ml",
+   "Milch (1,5 %)"
+  ]
+ ],
+ "naehr": "Pro Scheibe: 125 kcal · 4 g Eiweiß",
+ "listen_bild": "kh0_hook",
+ "pos": "50% 45%",
+ "slides": [
+  {
+   "img": "kh0_hook",
+   "text": "Ich wette, so einfach\nwar Kalter Hund\nnoch nie."
+  },
+  {
+   "img": "kh1_kakao",
+   "text": "Skyr in die Schüssel.\nKakao und Erythrit dazu."
+  },
+  {
+   "img": "kh2_creme",
+   "text": "Geschmolzene Schokolade\nmit Milch dazu.\nGlatt rühren."
+  },
+  {
+   "img": "kh3_form",
+   "text": "Kastenform mit Folie auslegen.\nCreme und Kekse\nabwechselnd schichten.",
+   "size": 68
+  },
+  {
+   "img": "kh4_scheiben",
+   "text": "Über Nacht kalt stellen.\nStürzen und in\nScheiben schneiden."
+  }
+ ]
+}

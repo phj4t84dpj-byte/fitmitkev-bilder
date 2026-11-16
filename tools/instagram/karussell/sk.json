@@ -1,0 +1,60 @@
+{
+ "slug": "IG-SpekKirschGlas",
+ "name": "Spekulatius-Kirsch im Glas",
+ "info": "Einkaufsliste · 2 Gläser · ohne Backen · 15 Minuten",
+ "zutaten": [
+  [
+   "400 g",
+   "Skyr"
+  ],
+  [
+   "250 g",
+   "Sauerkirschen (Glas)"
+  ],
+  [
+   "6",
+   "Spekulatius"
+  ],
+  [
+   "20 g",
+   "Erythrit"
+  ],
+  [
+   "5 g",
+   "Speisestärke"
+  ],
+  [
+   "1 TL",
+   "Vanilleextrakt"
+  ],
+  [
+   "1 Prise",
+   "Zimt"
+  ]
+ ],
+ "naehr": "Pro Glas: 335 kcal · 24 g Eiweiß",
+ "listen_bild": "sk0_hook",
+ "pos": "50% 40%",
+ "slides": [
+  {
+   "img": "sk0_hook",
+   "text": "Ich wette, so schnell\nhast du noch nie\nDessert gemacht."
+  },
+  {
+   "img": "sk1_skyr",
+   "text": "Skyr in die Schüssel.\nErythrit, Vanille und\nZimt dazu."
+  },
+  {
+   "img": "sk2_creme",
+   "text": "Glatt rühren."
+  },
+  {
+   "img": "sk3_kirschen",
+   "text": "Kirschen mit etwas Saft\nund Stärke kurz aufkochen."
+  },
+  {
+   "img": "sk4_broesel",
+   "text": "Spekulatius zerbröseln.\nDann schichten: Brösel,\nCreme, Kirschen."
+  }
+ ]
+}
