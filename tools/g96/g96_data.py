@@ -21,7 +21,7 @@ def alt(key, tags, kurz=None, **kw):
 BUCH_W='📖 Diese Zimtsterne findest du auch in meinem Rezeptbuch „Weihnachtsbäckerei in leicht“, zusammen mit 35 weiteren Rezepten: https://fitmitkev.de/rezeptbuecher'
 _w=_A['Weckmann']['intro']; _s=_w.index('!')+1
 R=[
- alt('Weckmann','#weckmann #stutenkerl #backen #ohnehefe #fitmitkev', hook='Wie vom Bäcker:', intro='Weckmann wie vom Bäcker, im Advent ein Muss!'+_w[_s:]),
+ alt('Weckmann','#weckmann #stutenkerl #backen #ohnehefe #fitmitkev', hook='Wie vom Bäcker:', intro=('Weckmann wie vom Bäcker, im Advent ein Muss!'+_w[_s:]).replace(' fertig für den Laternenumzug',' fertig')),
  alt('KoernerBroetchen','#körnerbrötchen #brötchen #ohnehefe #fitmitkev',
      ['Mehl, Skyr, Ei, Backpulver, Salz, Honig, Leinsamen und halbe Kürbiskerne verkneten.',
       '8 Brötchen formen, mit Wasser bestreichen, in Haferflocken, Sesam und Kernen wälzen.',
@@ -41,7 +41,7 @@ R=[
      ['Skyr, Eier, Oregano, Salz und Pfeffer verrühren, Mehl und Backpulver unterheben.',
       'Salami und Paprika würfeln und mit Mais und halbem Käse unterheben.',
       'In 12 Muffinmulden füllen, Käse drauf, bei 180 °C 22–25 Min. backen.']),
- alt('Mutzen','#mutzen #kirmes #ohnefritteuse #fitmitkev'),
+ alt('Mutzen','#mutzen #kirmes #ohnefritteuse #fitmitkev', intro=_A['Mutzen']['intro'].replace(', pünktlich zum 11.11.:',':')),
  alt('GebratenerReis','#gebratenerreis #asiatisch #hähnchen #mealprep #fitmitkev',
      ['Reis kochen und abkühlen lassen. Hähnchen würfeln, scharf anbraten, herausnehmen.',
       'Zwiebel, Knoblauch, Karotten 4 Min. braten, Erbsen und Reis 3 Min. mitbraten.',
