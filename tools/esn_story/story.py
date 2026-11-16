@@ -15,7 +15,8 @@ NEU=[('extra-creamy-black-edition-ultra-dark.png','Ultra Dark<br>Chocolate'),
  ('extra-creamy-480g-strawberry-cream.png','Strawberry<br>Cream'),
  ('extra-creamy-480g-cinnamon-cereal.png','Cinnamon<br>Cereal'),
  ('designer-bar-mint-box.png','Bar Dark<br>Choc Mint')]
-rows=''.join(f'<div class="row{" l" if p=="20" else ""}"><div class="p">-{p}<span>%</span></div><div class="it">{"<br>".join(it)}</div></div>' for p,it in TIERS)
+COL={'50':'#f2231b','40':'#ff7a00','30':'#ffcc00','25':'#19c3a3','20':'#3d8bff'}
+rows=''.join(f'<div class="row{" l" if p=="20" else ""}"><div class="p" style="color:{COL[p]}">-{p}<span>%</span></div><div class="it">{"<br>".join(it)}</div></div>' for p,it in TIERS)
 cards=''.join(f'<div class="nc"><div class="im"><img src="file://{B}{f}"></div><div class="nn">{n}</div></div>' for f,n in NEU)
 html=f'''<html><head><style>
 @font-face{{font-family:BS;src:url(file://{F}BigShoulders-Bold.ttf)}}
