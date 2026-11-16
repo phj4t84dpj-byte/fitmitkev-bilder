@@ -29,25 +29,26 @@ body{{width:1080px;height:1920px;background:#0b0b0b;color:#fff;font-family:IN;ov
 .sub{{display:flex;justify-content:space-between;align-items:baseline;margin-top:18px;border-top:3px solid #fff;padding-top:16px}}
 .sub b{{font-size:31px;font-weight:600;letter-spacing:5px}}
 .sub span{{font-size:27px;color:#bdbdbd}}
+.gap{{height:34px}}
 .hero{{position:relative;height:262px;margin-top:14px}}
 .bis{{position:absolute;left:4px;top:18px;font-size:30px;font-weight:600;letter-spacing:5px;color:#bdbdbd}}
 .big{{position:absolute;left:0;top:72px;font-family:BS;font-size:205px;line-height:.85}}
 .big span{{font-size:115px}}
 .tub{{position:absolute;right:10px;top:8px;height:232px}}
-.row{{display:flex;border-top:1px solid #333;padding:11px 0 10px;align-items:center}}
+.row{{display:flex;border-top:1px solid #333;padding:17px 0 16px;align-items:center}}
 .row.l{{border-bottom:1px solid #333}}
-.p{{width:200px;font-family:BS;font-size:80px;line-height:.9}}
-.p span{{font-size:46px}}
-.it{{font-size:26px;line-height:1.3;color:#e6e6e6}}
-.neu{{display:flex;justify-content:space-between;align-items:baseline;margin-top:20px}}
+.p{{width:220px;font-family:BS;font-size:100px;line-height:.9;color:#f2231b}}
+.p span{{font-size:56px}}
+.it{{font-size:28px;line-height:1.32;color:#e6e6e6}}
+.neu{{display:flex;justify-content:space-between;align-items:baseline;margin-top:34px}}
 .neu b{{font-family:BS;font-size:52px;letter-spacing:1px}}
 .neu span{{font-size:25px;color:#bdbdbd}}
 .ncs{{display:flex;justify-content:space-between;margin-top:12px}}
 .nc{{width:180px;text-align:center}}
-.im{{height:112px;display:flex;align-items:flex-end;justify-content:center}}
-.im img{{max-height:112px;max-width:160px}}
+.im{{height:140px;display:flex;align-items:flex-end;justify-content:center}}
+.im img{{max-height:140px;max-width:170px}}
 .nn{{font-size:20px;line-height:1.2;margin-top:8px;color:#e6e6e6}}
-.ship{{margin-top:18px;font-size:24px;color:#bdbdbd;text-align:center}}
+.ship{{margin-top:26px;font-size:24px;color:#bdbdbd;text-align:center}}
 .ship b{{color:#fff;font-weight:600}}
 .code{{position:absolute;left:250px;right:250px;top:1625px;border:3px solid #fff;text-align:center;padding:10px 0 8px}}
 .code small{{display:block;font-size:20px;font-weight:600;letter-spacing:5px;color:#bdbdbd}}
@@ -56,7 +57,7 @@ body{{width:1080px;height:1920px;background:#0b0b0b;color:#fff;font-family:IN;ov
 <div class="top"><span>Werbung</span><span>@esncom</span></div>
 <div class="h">Black Week</div>
 <div class="sub"><b>RABATT-ÜBERSICHT</b><span>22.11., 12 Uhr – 02.12., 17:30 Uhr</span></div>
-<div class="hero"><div class="bis">BIS ZU</div><div class="big">-70<span>%</span></div><img class="tub" src="file://{B}extra-creamy-black-edition-ultra-dark.png"></div>
+<div class="gap"></div>
 {rows}
 <div class="neu"><b>NEU</b><span>Dosen 480 g: 19,53 € statt 27,90 €</span></div>
 <div class="ncs">{cards}</div>
