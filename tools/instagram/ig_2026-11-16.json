@@ -67,7 +67,8 @@
     "isAiGenerated": true
    }
   },
-  "metricool_id": 429714206
+  "metricool_id": 429938909,
+  "karussell": true
  },
  {
   "key": "KalterHund",
@@ -102,6 +103,7 @@
     "isAiGenerated": true
    }
   },
-  "metricool_id": 429714314
+  "metricool_id": 429985851,
+  "karussell": true
  }
 ]
