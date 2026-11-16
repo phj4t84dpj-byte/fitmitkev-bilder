@@ -76,7 +76,7 @@ R=[
 ZEITEN=['06:10','06:50','07:30','08:10','08:50','09:30','10:10','10:50','11:30','12:15','13:00','13:45','14:30','15:15','16:00','16:45','18:05','18:45','19:25','20:05','20:45']
 GRUPPE_A={3,4,7,8,11,12,15,16,19,20}
 HASHTAG_SOLL={i+1:len(r['tags'].split()) for i,r in enumerate(R)}
-OHNE_BOX={i+1 for i,r in enumerate(R) if r['suess']}   # Kev 16.11.: süß ohne Box, herzhaft mit Box
+OHNE_BOX=set(range(1,22))   # Kev 16.11., 11:5x: „Lass die Boxen bitte ganz weg“ (vorher: süß ohne, herzhaft mit)
 VORHANDEN=set()
 
 if __name__=='__main__':

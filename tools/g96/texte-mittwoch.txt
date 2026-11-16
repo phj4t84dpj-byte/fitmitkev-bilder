@@ -72,7 +72,7 @@ Bleib satt! 💪
 
 Körnerbrötchen: mit Frischkäse oder mit Käse und Gurke?
 
-BILD: https://raw.githubusercontent.com/phj4t84dpj-byte/fitmitkev-bilder/main/boards/G96-KoernerBroetchen.jpg
+BILD: https://raw.githubusercontent.com/phj4t84dpj-byte/fitmitkev-bilder/main/boards/G96-KoernerBroetchen-ohneBox.jpg
 
 
 ===== 03 · 07:30 · Zimtsterne aus Haferflocken
@@ -144,7 +144,7 @@ Bleib satt! 💪
 
 Bauernfrühstück: mit Gewürzgurke oder ohne?
 
-BILD: https://raw.githubusercontent.com/phj4t84dpj-byte/fitmitkev-bilder/main/boards/G96-Bauernfruehstueck.jpg
+BILD: https://raw.githubusercontent.com/phj4t84dpj-byte/fitmitkev-bilder/main/boards/G96-Bauernfruehstueck-ohneBox.jpg
 
 
 ===== 05 · 08:50 · Omas Gewürzkuchen vom Blech
@@ -219,7 +219,7 @@ Bleib satt! 💪
 
 Laugengebäck: Brezel, Brötchen oder Knoten?
 
-BILD: https://raw.githubusercontent.com/phj4t84dpj-byte/fitmitkev-bilder/main/boards/G96-LaugenKnoten.jpg
+BILD: https://raw.githubusercontent.com/phj4t84dpj-byte/fitmitkev-bilder/main/boards/G96-LaugenKnoten-ohneBox.jpg
 
 
 ===== 07 · 10:10 · Blitz-Käsekuchen mit Keksboden
@@ -294,7 +294,7 @@ Bleib satt! 💪
 
 Pizza-Muffins: für die Brotdose oder fürs Partybuffet?
 
-BILD: https://raw.githubusercontent.com/phj4t84dpj-byte/fitmitkev-bilder/main/boards/G96-PizzaMuffins.jpg
+BILD: https://raw.githubusercontent.com/phj4t84dpj-byte/fitmitkev-bilder/main/boards/G96-PizzaMuffins-ohneBox.jpg
 
 
 ===== 09 · 11:30 · Mutzen ohne Fritteuse
@@ -370,7 +370,7 @@ Bleib satt! 💪
 
 Gebratener Reis: mit Hähnchen, mit Ei oder mit beidem?
 
-BILD: https://raw.githubusercontent.com/phj4t84dpj-byte/fitmitkev-bilder/main/boards/G96-GebratenerReis.jpg
+BILD: https://raw.githubusercontent.com/phj4t84dpj-byte/fitmitkev-bilder/main/boards/G96-GebratenerReis-ohneBox.jpg
 
 
 ===== 11 · 13:00 · Zitronenkuchen-Bowl nur für dich
@@ -444,7 +444,7 @@ Bleib satt! 💪
 
 Schinkennudeln: Gab es die bei euch früher auch?
 
-BILD: https://raw.githubusercontent.com/phj4t84dpj-byte/fitmitkev-bilder/main/boards/G96-Schinkennudeln.jpg
+BILD: https://raw.githubusercontent.com/phj4t84dpj-byte/fitmitkev-bilder/main/boards/G96-Schinkennudeln-ohneBox.jpg
 
 
 ===== 13 · 14:30 · Kokos-Mandel-Tiramisu nur für dich
@@ -518,7 +518,7 @@ Bleib satt! 💪
 
 Gyros: mit Tzatziki oder mit Knoblauchsoße?
 
-BILD: https://raw.githubusercontent.com/phj4t84dpj-byte/fitmitkev-bilder/main/boards/G96-GyrosBowl.jpg
+BILD: https://raw.githubusercontent.com/phj4t84dpj-byte/fitmitkev-bilder/main/boards/G96-GyrosBowl-ohneBox.jpg
 
 
 ===== 15 · 16:00 · Milchschnitte-Bowl nur für dich
@@ -595,7 +595,7 @@ Bleib satt! 💪
 
 Hackbraten: mit Püree oder mit Nudeln?
 
-BILD: https://raw.githubusercontent.com/phj4t84dpj-byte/fitmitkev-bilder/main/boards/G96-Hackbraten.jpg
+BILD: https://raw.githubusercontent.com/phj4t84dpj-byte/fitmitkev-bilder/main/boards/G96-Hackbraten-ohneBox.jpg
 
 
 ===== 17 · 18:05 · Russischer Zupfkuchen
@@ -674,7 +674,7 @@ Bleib satt! 💪
 
 Geschnetzeltes: mit Reis, Nudeln oder Rösti?
 
-BILD: https://raw.githubusercontent.com/phj4t84dpj-byte/fitmitkev-bilder/main/boards/G96-ZuercherGeschnetzeltes.jpg
+BILD: https://raw.githubusercontent.com/phj4t84dpj-byte/fitmitkev-bilder/main/boards/G96-ZuercherGeschnetzeltes-ohneBox.jpg
 
 
 ===== 19 · 19:25 · Brownie-Käsekuchen
@@ -752,7 +752,7 @@ Bleib satt! 💪
 
 Jägersoße: zu Nudeln, Pommes oder Kartoffeln?
 
-BILD: https://raw.githubusercontent.com/phj4t84dpj-byte/fitmitkev-bilder/main/boards/G96-HaehnchenJaegersosse.jpg
+BILD: https://raw.githubusercontent.com/phj4t84dpj-byte/fitmitkev-bilder/main/boards/G96-HaehnchenJaegersosse-ohneBox.jpg
 
 
 ===== 21 · 20:45 · Zimtschnecken-Skyr-Kuchen

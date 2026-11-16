@@ -51,13 +51,13 @@ for i,r in enumerate(G.R):
                       hashtags=nt,gruppe='A (2–3)' if nt<=3 else 'B (4–5)',vorhanden=r.get('vorhanden'),buch=bool(r.get('hinweis'))))
 ga=[p_ for p_ in posts if p_['gruppe'][0]=='A']; gb=[p_ for p_ in posts if p_['gruppe'][0]=='B']
 assert len(ga)==10 and len(gb)==11 and sum(p_['suess'] for p_ in ga)==5
-assert all(p_['box']!=p_['suess'] for p_ in posts) and sum(p_['buch'] for p_ in posts)==1
+assert not any(p_['box'] for p_ in posts) and sum(p_['buch'] for p_ in posts)==1
 json.dump(posts,open(f"{D}/out/mittwoch_posts.json","w"),ensure_ascii=False,indent=1)
 neu=[p_ for p_ in posts if not p_['vorhanden']]
 json.dump(neu,open(f"{D}/out/mittwoch_posts.json","w"),ensure_ascii=False,indent=1)
 with open(f"{D}/out/posting-plan-mittwoch.txt","w") as fh:
     fh.write("Posting-Plan Mittwoch 18.11.2026 – 21 Rezepte 6:10–20:45, dazu 17:30 Mehrwert-Post MW7 „Proteinpulver ist Chemie?“ = 22 Beiträge.\n")
-    fh.write("Süß ohne Box, herzhaft mit Box (Kev 16.11.). Keine ESN-Zeile, kein Buch-Beitrag, kein Höflich-Titel. Buch-Zeile unter 3 (Zimtsterne).\n\n")
+    fh.write("Alle ohne Box (Kev 16.11.: „Lass die Boxen bitte ganz weg“). Keine ESN-Zeile, kein Buch-Beitrag, kein Höflich-Titel. Buch-Zeile unter 3 (Zimtsterne).\n\n")
     for p_ in sorted(posts,key=lambda x:x['date']):
         fh.write(f"{p_['n']:02d} · {p_['date'][11:16]} · {'süß ' if p_['suess'] else 'herz'} · {NAME[p_['key']]} · {p_['kcal']} kcal · {p_['hashtags']} Hashtags (Gruppe {p_['gruppe'][0]}) · {'mit Box' if p_['box'] else 'ohne Box'}{' · BUCH' if p_['buch'] else ''}{' · schon angelegt' if p_['vorhanden'] else ''}\n")
 with open(f"{D}/out/texte-mittwoch.txt","w") as fh:

@@ -9,7 +9,7 @@ fH=ImageFont.truetype(FB,36); fL=ImageFont.truetype(FS,24)
 for s in range(0,len(posts),PER):
     chunk=posts[s:s+PER]; rows=(len(chunk)+3)//4
     sheet=Image.new('RGB',(2160,HEAD+rows*(LAB+CH+M)+M),(246,243,238)); d=ImageDraw.Draw(sheet)
-    d.text((M,18),f"Dienstag 17.11.2026 – Kontaktbogen {s//PER+1} von {(len(posts)+PER-1)//PER} (Beiträge {chunk[0]['n']}–{chunk[-1]['n']})",font=fH,fill=(20,30,60))
+    d.text((M,18),f"Mittwoch 18.11.2026 – Kontaktbogen {s//PER+1} von {(len(posts)+PER-1)//PER} (Beiträge {chunk[0]['n']}–{chunk[-1]['n']})",font=fH,fill=(20,30,60))
     for i,p in enumerate(chunk):
         r,c=divmod(i,4); x=M+c*(CW+M); y=HEAD+r*(LAB+CH+M)
         lab=('BUCH · ' if p.get('buch') else '')+f"{p['n']:02d} · {p['date'][11:16]} · {p['alt']}"+('' if p.get('box',True) else ' · ohne Box'); fs=24; fl=fL
