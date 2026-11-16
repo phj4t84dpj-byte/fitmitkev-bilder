@@ -27,7 +27,7 @@ html=f'''<html><head><style>
 body{{width:1080px;height:1920px;background:#0b0b0b;color:#fff;font-family:IN;overflow:hidden}}
 .w{{position:absolute;left:64px;right:64px;top:168px}}
 .top{{display:flex;justify-content:space-between;font-size:23px;font-weight:600;letter-spacing:3px;color:#8c8c8c;text-transform:uppercase}}
-.h{{font-family:BS;font-size:116px;line-height:.82;margin-top:20px;text-transform:uppercase;white-space:nowrap}}
+.h{{font-family:BS;font-size:108px;line-height:.82;margin-top:20px;text-transform:uppercase;white-space:nowrap}}
 .sub{{display:flex;justify-content:space-between;align-items:baseline;margin-top:16px;border-top:3px solid #fff;padding-top:14px}}
 .sub b{{font-size:29px;font-weight:600;letter-spacing:5px}}
 .sub span{{font-size:26px;color:#bdbdbd}}
@@ -57,7 +57,7 @@ body{{width:1080px;height:1920px;background:#0b0b0b;color:#fff;font-family:IN;ov
 .code div{{font-family:BS;font-size:80px;line-height:1;letter-spacing:4px}}
 </style></head><body><div class="w">
 <div class="top"><span>Werbung</span><span>@esncom</span></div>
-<div class="h">Kevs Empfehlungen</div>
+<div class="h">Meine Empfehlungen</div>
 <div class="sub"><b>BLACK WEEK BUNDLES</b><span>22.11., 12 Uhr – 02.12., 17:30 Uhr</span></div>
 {sec}
 <div class="all"><div class="l">Alles zusammen<small>statt 248,10 €</small></div><div class="r"><div class="n">173,38 €</div><div class="s">74,72 € gespart</div></div></div>
@@ -70,5 +70,5 @@ async def main():
         b=await p.chromium.launch(); pg=await b.new_page(viewport={'width':1080,'height':1920})
         await pg.goto('file://'+D+'/bundle_story.html'); await pg.wait_for_timeout(500)
         print(await pg.evaluate("[document.querySelector('.all').getBoundingClientRect().bottom,document.querySelector('.code').getBoundingClientRect().bottom]"))
-        await pg.screenshot(path=D+'/ESN-BlackWeek-Kevs-Empfehlungen-Story.png'); await b.close()
+        await pg.screenshot(path=D+'/ESN-BlackWeek-Meine-Empfehlungen-Story.png'); await b.close()
 asyncio.run(main())
