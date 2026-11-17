@@ -49,7 +49,9 @@ body{{width:1080px;height:1920px;background:#0b0b0b;color:#fff;font-family:IN;ov
 .im{{height:140px;display:flex;align-items:flex-end;justify-content:center}}
 .im img{{max-height:140px;max-width:170px}}
 .nn{{font-size:20px;line-height:1.2;margin-top:8px;color:#e6e6e6}}
-.ship{{margin-top:26px;font-size:24px;color:#bdbdbd;text-align:center}}
+.dd{{display:flex;justify-content:space-between;align-items:baseline;margin-top:26px;border-top:1px solid #333;border-bottom:1px solid #333;padding:14px 0 12px;font-size:26px;color:#e6e6e6}}
+.dd b{{font-weight:700;color:#fff}}
+.ship{{margin-top:22px;font-size:24px;color:#bdbdbd;text-align:center}}
 .ship b{{color:#fff;font-weight:600}}
 .code{{position:absolute;left:250px;right:250px;top:1625px;border:3px solid #fff;text-align:center;padding:10px 0 8px}}
 .code small{{display:block;font-size:20px;font-weight:600;letter-spacing:5px;color:#bdbdbd}}
@@ -62,6 +64,7 @@ body{{width:1080px;height:1920px;background:#0b0b0b;color:#fff;font-family:IN;ov
 {rows}
 <div class="neu"><b>NEU</b><span>Dosen 480 g: 19,53 € statt 27,90 €</span></div>
 <div class="ncs">{cards}</div>
+<div class="dd"><b>+ DAILY DEALS</b><span>täglich neu ab 8 Uhr, bis zu <b>-70 %</b></span></div>
 <div class="ship">Ab der 2. Bestellung versandkostenfrei ab 30 € mit <b>SHIPAGAIN</b></div>
 </div>
 <div class="code"><small>CODE</small><div>FITMITKEV</div></div>
