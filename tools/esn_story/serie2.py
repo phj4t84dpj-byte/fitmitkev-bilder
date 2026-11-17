@@ -60,7 +60,7 @@ S['7-Riegel-Duell']=f'''<style>.h{{font-size:150px}}
 <div class="nm"><span>Designer Bar</span><span>GOAT Bar</span></div><div class="hr" style="margin-top:14px"></div>
 <div>{tab}</div><div class="q">Team Designer oder Team GOAT?</div></div>{CODE}'''
 # 3 Kreatin
-KR=[('kreatin-pulver.png','Pulver','250 g, 62 Portionen','11,34','18,90','0,18'),('kreatin-kapseln.png','Kapseln','300 Stück, 100 Portionen','21,54','35,90','0,22'),('kreatin-gummies.png','Gummies','120 Stück, 30 Portionen','16,74','27,90','0,56')]
+KR=[('kreatin-pulver.png','Pulver','250 g, 71 Portionen','11,34','18,90','0,16'),('kreatin-kapseln.png','Kapseln','300 Stück, 100 Portionen','21,54','35,90','0,22'),('kreatin-gummies.png','Gummies','120 Stück, 30 Portionen','16,74','27,90','0,56')]
 cols=''.join(f'''<div class="kc"><div class="ki"><img src="{u(n)}"></div><div class="kn">{t}</div><div class="ks">{s}</div>
 <div class="kp">{p} €</div><div class="st" style="font-size:24px">{a} €</div><div class="kpp"><b>{pp} €</b><br>pro Portion</div></div>''' for n,t,s,p,a,pp in KR)
 S['8-Kreatin']=f'''<style>.h{{font-size:112px}} .h em{{font-style:normal;color:{C[40]}}}

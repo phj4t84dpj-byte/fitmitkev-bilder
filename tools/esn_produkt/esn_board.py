@@ -64,12 +64,12 @@ SPEC={
    mid='Tipp: Ab der 2. Bestellung in der Black Week ist der Versand ab 30 € kostenlos<br><span>mit dem Code SHIPAGAIN.</span>',
    msg='Einmal im Jahr<br><span>fülle ich den Vorrat auf.</span>'),
  'P7':dict(out='ESN-P7-Abendsnacks', hook='Abends Hunger?', title=['4 EIWEISS-SNACKS','UNTER 200 KCAL'], size=80,
-   secs=[dict(lab='SATT ÜBER DEN ABEND', col=BLUE, type='rows', d=[
+   secs=[dict(lab='MEINE SNACKS FÜR DEN ABEND', col=BLUE, type='rows', d=[
       ('🥤','Shake','30 g Proteinpulver + 300 ml Wasser','115<br><small>kcal</small>'),
       ('🍮','Schoko-Creme','200 g Skyr + 15 g Proteinpulver Schoko','185<br><small>kcal</small>'),
       ('🍨','Schoko-Eis','1 Portion Eis aus Hüttenkäse','195<br><small>kcal</small>'),
       ('🍫','Proteinriegel','1 Riegel (45 g)','200<br><small>kcal</small>')])],
-   mid='Alle mit 14 bis 33 g Eiweiß.<br><span>Eiweiß hält lange satt, genau das brauche ich abends.</span>',
+   mid='Alle mit 14 bis 33 g Eiweiß.<br><span>Kalorien im Blick, Genuss inklusive.</span>',
    msg='Snacken ja.<br><span>Aber mit Plan.</span>'),
  'P8':dict(out='ESN-P8-Klumpen', hook='Tipp aus meiner Küche:', title=['PROTEINPULVER','OHNE KLUMPEN'], size=86,
    secs=[dict(lab='SO RÜHRE ICH ES EIN', col=GREEN, type='rows', d=[
@@ -89,7 +89,7 @@ SPEC={
  'P10':dict(out='ESN-P10-Fragen', hook='Eure Fragen:', title=['BLACK WEEK','KURZ ERKLÄRT'], size=90,
    secs=[dict(lab='DAS WERDE ICH AM HÄUFIGSTEN GEFRAGT', col=BLUE, type='rows', d=[
       ('❓','Wie lange läuft die Black Week?','bis Mittwoch, 2.12., um 17:30 Uhr','2.12.'),
-      ('❓','Wie viel Rabatt gibt es?','bis zu -70 %, Proteinpulver und Riegel -30 %','-70 %'),
+      ('❓','Wie viel Rabatt gibt es?','bis zu -70 %, Riegel und Extra Creamy -30 %, Whey und Isoclear -25 %','-70 %'),
       ('❓','Welche Sorte für deine Rezepte?','Vanilla Milk passt fast überall, für Desserts die neuen Sorten','🥄'),
       ('❓','Und der Versand?','ab der 2. Bestellung ab 30 € kostenlos mit SHIPAGAIN','📦')])],
    mid='Den Link mit meinem Code findest du im ersten Kommentar.',
