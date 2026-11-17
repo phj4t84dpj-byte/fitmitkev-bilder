@@ -1,0 +1,60 @@
+{
+ "slug": "IG-Hefezopf",
+ "name": "Hefezopf wie vom Bäcker",
+ "info": "Einkaufsliste · 16 Scheiben · Backblech",
+ "zutaten": [
+  [
+   "500 g",
+   "Dinkelmehl"
+  ],
+  [
+   "½ Würfel",
+   "Frische Hefe (21 g)"
+  ],
+  [
+   "200 ml",
+   "Milch (1,5 %)"
+  ],
+  [
+   "150 g",
+   "Skyr"
+  ],
+  [
+   "50 g",
+   "Butter + 70 g Erythrit"
+  ],
+  [
+   "1",
+   "Ei + ½ TL Salz"
+  ],
+  [
+   "20 g",
+   "Mandelblättchen"
+  ]
+ ],
+ "naehr": "Pro Scheibe: 155 kcal · 6 g Eiweiß",
+ "listen_bild": "hz0_hook",
+ "pos": "50% 45%",
+ "slides": [
+  {
+   "img": "hz0_hook",
+   "text": "Ich wette, so fluffig\nwar dein Hefezopf\nnoch nie."
+  },
+  {
+   "img": "hz1_zutaten",
+   "text": "Hefe in Milch lösen.\nMit Mehl, Skyr, Butter\nund Erythrit kneten."
+  },
+  {
+   "img": "hz2_teig",
+   "text": "1 Stunde\ngehen lassen."
+  },
+  {
+   "img": "hz3_zopf",
+   "text": "Zum Zopf flechten.\n30 Min. gehen lassen."
+  },
+  {
+   "img": "hz4_mandeln",
+   "text": "Mit Eigelb bestreichen,\nMandeln drauf.\n180 °C, 25–30 Minuten."
+  }
+ ]
+}

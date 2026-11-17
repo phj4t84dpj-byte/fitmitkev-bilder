@@ -1,0 +1,60 @@
+{
+ "slug": "IG-Eiersalat",
+ "name": "Eiersalat ohne Mayo",
+ "info": "Einkaufsliste · 4 Portionen · 15 Minuten",
+ "zutaten": [
+  [
+   "8",
+   "Eier"
+  ],
+  [
+   "200 g",
+   "Skyr"
+  ],
+  [
+   "100 g",
+   "Frischkäse light"
+  ],
+  [
+   "2 TL",
+   "Senf"
+  ],
+  [
+   "4",
+   "Gewürzgurken + 2 EL Gurkenwasser"
+  ],
+  [
+   "1 Bund",
+   "Schnittlauch"
+  ],
+  [
+   "",
+   "Salz, Pfeffer, Paprikapulver"
+  ]
+ ],
+ "naehr": "Pro Portion: 255 kcal · 23 g Eiweiß",
+ "listen_bild": "es0_hook",
+ "pos": "50% 45%",
+ "slides": [
+  {
+   "img": "es0_hook",
+   "text": "Eiersalat ganz\nohne Mayo.\nUnd trotzdem cremig."
+  },
+  {
+   "img": "es1_eier",
+   "text": "8 Eier 10 Minuten\nhart kochen."
+  },
+  {
+   "img": "es2_gewuerfelt",
+   "text": "Abschrecken, pellen\nund grob schneiden."
+  },
+  {
+   "img": "es3_creme",
+   "text": "Skyr, Frischkäse, Senf\nund Gurkenwasser\nglatt rühren."
+  },
+  {
+   "img": "es4_mix",
+   "text": "Gurken, Schnittlauch\nund Eier unterheben.\n30 Min. kalt stellen."
+  }
+ ]
+}

@@ -1,0 +1,60 @@
+{
+ "slug": "IG-Lahmacun",
+ "name": "Lahmacun aus Skyr-Teig",
+ "info": "Einkaufsliste · 4 Stück · Backblech · ohne Hefe",
+ "zutaten": [
+  [
+   "200 g",
+   "Dinkelmehl"
+  ],
+  [
+   "200 g",
+   "Skyr"
+  ],
+  [
+   "1 TL",
+   "Backpulver"
+  ],
+  [
+   "250 g",
+   "Rinderhack"
+  ],
+  [
+   "150 g",
+   "Passierte Tomaten"
+  ],
+  [
+   "1",
+   "Zwiebel + 1 rote Paprika"
+  ],
+  [
+   "1 Bund",
+   "Petersilie, dazu Salat & Zitrone"
+  ]
+ ],
+ "naehr": "Pro Stück: 310 kcal · 26 g Eiweiß",
+ "listen_bild": "lc0_hook",
+ "pos": "50% 45%",
+ "slides": [
+  {
+   "img": "lc0_hook",
+   "text": "Lahmacun wie vom Imbiss.\nNur ohne Hefe\nund ohne Gehzeit."
+  },
+  {
+   "img": "lc1_teig",
+   "text": "Mehl, Skyr, Backpulver\nund Salz verkneten."
+  },
+  {
+   "img": "lc2_hack",
+   "text": "Hack mit Tomaten, Zwiebel,\nPaprika und Petersilie\nverkneten und würzen."
+  },
+  {
+   "img": "lc3_fladen",
+   "text": "Teig hauchdünn ausrollen,\nHack dünn verstreichen."
+  },
+  {
+   "img": "lc4_gebacken",
+   "text": "250 °C, 8–10 Minuten.\nBelegen und aufrollen."
+  }
+ ]
+}
