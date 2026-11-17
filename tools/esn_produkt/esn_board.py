@@ -30,6 +30,16 @@ def card_prod(d):
     return '<div class="pw">'+''.join(f'<div class="pc">{pic(p[0])}<div class="p1">{H.escape(p[1])}</div><div class="p2">{p[2]}</div></div>' for p in d)+'</div>'
 CARD={'vs':card_vs,'rows':card_rows,'prod':card_prod}
 SPEC={
+ 'P1':dict(out='ESN-P1-Einkaufszettel', hook="Jetzt geht's los:", title=['MEIN EINKAUFSZETTEL','FÜR DIE BLACK WEEK'], size=76,
+   secs=[dict(lab='DAS KOMMT BEI MIR IN DEN WARENKORB', col=RED, type='rows', d=[
+      ('kev/sq-Kev-Flexpresso-3-Sorten.jpg','Flexpresso für morgens','White & Dark Chocolate Mocha, Chocolate','-25 %'),
+      ('kev/sq-Kev-ExtraCreamy-3-Dosen.jpg','Extra Creamy für meine Rezepte','Vanilla Milk, Cinnamon Cereal, neue Black Edition','-30 %'),
+      ('kev/sq-Kev-Riegel-angeschnitten.jpg','Designer Bar als 12er Box','quer durch die Sorten, neu: Dark Chocolate Mint','-30 %'),
+      ('kev/sq-Kev-Isoclear-3-Glaeser-vorn.jpg','Isoclear nach dem Training','Peach Iced Tea, Green Apple, Fresh Cherry','-25 %'),
+      ('kev/sq-Kev-FlavorPowder-oben.jpg','Designer Flavor Powder','zum Süßen von Skyr und Quark','-40 %')])],
+   mid='Dazu täglich neue Daily Deals mit bis zu -70 %.<br><span>Läuft bis Mittwoch, 2.12., 17:30 Uhr.</span>',
+   msg='Zum Speichern:<br><span>mein Vorrat für den Winter.</span>',
+   css='.ri{width:104px;height:104px;overflow:hidden}.ri img{max-width:104px;max-height:104px;border-radius:14px}.rw{padding:9px 0}'),
  'P2':dict(out='ESN-P2-Morgen', hook='Mein Morgen:', title=['ZWEI MINUTEN','STATT BÄCKER'], size=84,
    secs=[dict(lab='DAS FRÜHSTÜCK UNTERWEGS GEGEN MEINS', col=BLUE, type='vs', d=dict(
       l=dict(title='Coffee to go + Croissant', rows=[('☕','Latte Macchiato groß','ca. 220 kcal'),('🥐','Butter-Croissant','ca. 230 kcal')], sum='ca. 450 kcal · 10 g Eiweiß'),
@@ -149,7 +159,7 @@ def build(k):
     s=SPEC[k]; random.seed(hash(k)%1000)
     bok=''.join(f'<div class="b" style="left:{random.randint(-40,1060)}px;top:{random.randint(-40,1300)}px;width:{(z:=random.randint(30,110))}px;height:{z}px;opacity:{random.uniform(.15,.45):.2f};filter:blur({random.randint(2,9)}px)"></div>' for _ in range(40))
     secs=''.join(f'<div class="lab" style="background:{x["col"]}">{H.escape(x["lab"])}</div><div class="card">{CARD[x["type"]](x["d"])}</div>' for x in s['secs'])
-    return f"""<!doctype html><html><head><meta charset="utf-8"><style>{CSS}</style></head><body>{bok}
+    return f"""<!doctype html><html><head><meta charset="utf-8"><style>{CSS}{s.get('css','')}</style></head><body>{bok}
 <div class="top"><div class="hookw"><div class="hookb">{H.escape(s['hook'])}</div><div class="hook">{H.escape(s['hook'])}</div></div>{T(s['title'],s['size'])}</div>
 <div class="body" id="bd">{secs}<div class="mid">{s['mid']}</div></div>
 <div class="foot"><div class="ig">@fitmitkev</div><div class="msg"><div>{s['msg']}</div></div></div></body></html>"""
