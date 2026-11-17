@@ -11,3 +11,4 @@ Je Tag eine Datei ig_<Datum>.json mit info, id, uuid.
 - Renderer `tools/instagram/karussell/ig_karussell.py <rezept.json>` (Beispiele sk.json, kh.json), Slides im Repo unter `instagram/karussell/`.
 - Veröffentlichung automatisch, ohne Musik (Kev per Dialog). Caption: „Na, Hunger? <Hook>“ + Rezepttext, ohne „Schmeckt nach Sünde, zählt wie Salat“.
 - Erste Karussells: 16.11. 16:00 Spekulatius-Kirsch im Glas (id 429938909), 19:00 Kalter Hund (id 429985851); 12:00 Hanuta-Bowl lief noch als Einzelbild.
+- 17.11.: Montagszahlen fehlten bis 10:10 → Ersatz aus So 15.11. Platz 4–6: 12:00 Hefezopf (431185838), 16:00 Eiersalat (431185952), 19:00 Lahmacun (431186409). Bilder `jobs/jobs_ig2.py`; Rendern im Scratchpad-Ordner `ig/` (dort liegen die Schriften), Einkaufsliste max. 7 Zeilen, sonst stößt sie an die Folgen-Leiste.

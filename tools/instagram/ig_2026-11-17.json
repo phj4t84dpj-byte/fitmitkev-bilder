@@ -43,7 +43,9 @@
    }
   },
   "karussell": true,
-  "quelle": "Fallback: So 15.11. Plätze 4–6 (Montagszahlen fehlten)"
+  "quelle": "Fallback: So 15.11. Plätze 4–6 (Montagszahlen fehlten)",
+  "metricool_id": 431185838,
+  "uuid": "1894723237467475270"
  },
  {
   "key": "Eiersalat",
@@ -89,7 +91,9 @@
    }
   },
   "karussell": true,
-  "quelle": "Fallback: So 15.11. Plätze 4–6 (Montagszahlen fehlten)"
+  "quelle": "Fallback: So 15.11. Plätze 4–6 (Montagszahlen fehlten)",
+  "metricool_id": 431185952,
+  "uuid": "4579180451225618059"
  },
  {
   "key": "Lahmacun",
@@ -135,6 +139,8 @@
    }
   },
   "karussell": true,
-  "quelle": "Fallback: So 15.11. Plätze 4–6 (Montagszahlen fehlten)"
+  "quelle": "Fallback: So 15.11. Plätze 4–6 (Montagszahlen fehlten)",
+  "metricool_id": 431186409,
+  "uuid": "8214067304434518938"
  }
 ]
