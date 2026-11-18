@@ -72,7 +72,7 @@ body{{margin:0;width:1080px;height:1350px;overflow:hidden;position:relative;font
   background:linear-gradient(135deg,{CYAN},{PINK} 50%,{CYAN}) border-box;-webkit-mask:linear-gradient(#000 0 0) padding-box,linear-gradient(#000 0 0);
   -webkit-mask-composite:xor;mask-composite:exclude;filter:drop-shadow(0 0 10px rgba(255,46,154,.8))}}
 </style></head><body>
-<div class="top"><div class="hook">Der GTA-6-Abend:</div>{T(['LIEFERDIENST GEGEN','SELBST GEMACHT'],84)}</div>
+<div class="top"><div class="hook">Der GTA-VI-Abend:</div>{T(['LIEFERDIENST GEGEN','SELBST GEMACHT'],84)}</div>
 <div class="card c1"><div class="ch"><small>🎮 SPIELER 1</small><b>BESTELLT</b></div>{rows(L,False)}
 <div class="sum"><div class="a">ZUSAMMEN</div><div class="b">{fm(sl)} kcal</div></div></div>
 <div class="vs">VS</div>
@@ -84,7 +84,7 @@ body{{margin:0;width:1080px;height:1350px;overflow:hidden;position:relative;font
 <div class="frame"></div>
 </body></html>"""
 open(f'{D}/out/mwgta.html','w').write(H)
-out=f'{D}/out/GTA-Abend-Vergleich.jpg'
+out=f'{D}/out/GTAVI-Abend-Vergleich.jpg'
 with sync_playwright() as pw:
     b=pw.chromium.launch(); pg=b.new_page(viewport={'width':1080,'height':1350},device_scale_factor=2)
     pg.goto('file://'+f'{D}/out/mwgta.html'); pg.wait_for_timeout(500)

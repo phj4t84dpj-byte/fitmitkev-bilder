@@ -33,11 +33,12 @@ body{{background:rgb({BG})}}
 .tag{{position:absolute;right:40px;bottom:36px;background:rgba({BG},.82);border:3px solid {CYAN};border-radius:16px;padding:6px 18px 7px;
   font-family:A;font-size:30px;letter-spacing:1.5px;color:#fff;box-shadow:0 0 16px rgba(25,227,255,.6)}}
 .tag b{{color:{GREEN};font-weight:400}}
+.tag i{{color:{PINK};font-style:normal;text-shadow:0 0 10px rgba(255,46,154,.8)}}
 """
 def gamer_html(r,hero,herocut):
     h=RG.board_html(r,hero,herocut)
     h=h.replace('</style>',CSS+'</style>').replace(f'stroke="{RG.NAVY}"',f'stroke="{CYAN}"')
-    h=h.replace('</body>','<div class="tag">🎮 ZOCKER-FUTTER <b>IN LEICHT</b></div><div class="frame"></div></body>')
+    h=h.replace('</body>','<div class="tag">🎮 <i>GTA VI</i> ZOCKER-FUTTER <b>IN LEICHT</b></div><div class="frame"></div></body>')
     return h
 def render(keys):
     by={r['key']:r for r in G.R}
@@ -58,6 +59,7 @@ def render(keys):
               while(kc.scrollWidth>650&&ks>26){ks-=1;kc.style.fontSize=ks+'px';}
               document.querySelector('.rib').style.display='none';}''')
             pg.wait_for_timeout(200)
+            assert 'GTA VI' in r['hook'] or 'GTA-VI' in r['hook'], key
             hits=pg.evaluate('''()=>{const A=document.querySelector('.arrow').getBoundingClientRect();const P=[[6,14],[50,2],[100,20],[118,78]];const pts=[];
               for(let i=0;i<=40;i++){const t=i/40,u=1-t;pts.push([A.left+u*u*u*P[0][0]+3*u*u*t*P[1][0]+3*u*t*t*P[2][0]+t*t*t*P[3][0],A.top+u*u*u*P[0][1]+3*u*u*t*P[1][1]+3*u*t*t*P[2][1]+t*t*t*P[3][1]]);}
               [[96,70],[120,84],[124,56]].forEach(p=>pts.push([A.left+p[0],A.top+p[1]]));const hits=[];
@@ -66,7 +68,7 @@ def render(keys):
               const col=document.querySelector('.col').getBoundingClientRect();let ov=0;document.querySelectorAll('.row').forEach(e=>{const b=e.getBoundingClientRect();if(b.bottom>col.bottom+2||b.top<col.top-2)ov++;});
               if(ov)hits.push('SPALTE LÄUFT ÜBER');return hits;}''')
             if hits: print('  !! Pfeil/Spalte kollidiert mit:',hits)
-            nm=f"GTA-{key}-Gamer"
+            nm=f"GTAVI-{key}"
             pg.screenshot(path=f"{D}/out/{nm}.png")
             Image.open(f"{D}/out/{nm}.png").convert("RGB").save(f"{D}/out/{nm}.jpg",quality=92,xmp=RG.XMP.encode())
             os.remove(f"{D}/out/{nm}.png"); print("ok",nm)

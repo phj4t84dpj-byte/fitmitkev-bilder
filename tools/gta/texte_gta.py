@@ -3,12 +3,12 @@
 import json, os
 import gta_data as G
 D=os.path.dirname(os.path.abspath(__file__)); os.makedirs(f'{D}/out',exist_ok=True)
-URL="https://raw.githubusercontent.com/phj4t84dpj-byte/fitmitkev-bilder/main/boards/GTA-{}-Gamer.jpg"
+URL="https://raw.githubusercontent.com/phj4t84dpj-byte/fitmitkev-bilder/main/boards/GTAVI-{}.jpg"
 EMO=['🤤','😍','😋','🥰','🤗']
 out=[]; sched=[]
 for i,r in enumerate(G.R):
     k,p,c,f=G.macros4(r); key=r['key']; t,nl=G.LAB[key]; zeit=G.ZEITEN[i]
-    pre='Heute erscheint GTA 6 🎮' if zeit<'12:00' else 'GTA 6 ist da 🎮'
+    pre='Heute erscheint GTA VI 🎮' if zeit<'12:00' else 'GTA VI ist da 🎮'
     text=f"{pre} {k} kcal {t} {EMO[i%5]} Rezept im 1. Kommentar ⤵️\n\n{r['tags']}"
     zut="\n".join(f"• {z['menge']} {z['name']}" for z in r['zutaten'])+("\n"+"\n".join(f"• {e}" for e in r['ex']) if r['ex'] else '')
     steps="\n".join(f"{j+1}. {s}" for j,s in enumerate(r['schritte']))
@@ -16,7 +16,7 @@ for i,r in enumerate(G.R):
     if r['suess']: fc+="Schmeckt nach Sünde, zählt wie Salat 😉\n"
     fc+=f"Bleib satt! 💪\n\n{r['frage']}"
     low=(text+fc).lower()
-    assert 'abnehm' not in low and ' esn' not in low and 'höflich' not in low and '#' not in fc, key
+    assert 'gta 6' not in low and 'abnehm' not in low and ' esn' not in low and 'höflich' not in low and '#' not in fc, key
     date=f"2026-11-19T{zeit}:00"
     out.append(dict(n=i+1,key=key,zeit=zeit,text=text,fc=fc,media=URL.format(key),alt=G.NAME[key],kcal=k,suess=r['suess'],hook=r['hook']))
     sched.append(dict(n=i+1,key=key,date=date,info={"autoPublish":True,"draft":False,"firstCommentText":fc,"hasNotReadNotes":False,"media":[URL.format(key)],
