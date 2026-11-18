@@ -5,7 +5,8 @@ Kachelspalte, Titel, Badge und Vorher-Nachher-Foto liegt. Ränder werden aus der
 Danach wird der Freisteller neu berechnet (Text-Maske liegt dann in den richtigen Koordinaten)."""
 import cv2, numpy as np, json, os, sys
 D=os.path.dirname(os.path.abspath(__file__))
-KEYS=['KeyLimeBowl','Cubano','OfenNachos']
+import gta_data as _G
+KEYS=[r['key'] for r in _G.R]
 T={k:dict(s=0.72) for k in KEYS}
 T.update({})
 def prep(key):
