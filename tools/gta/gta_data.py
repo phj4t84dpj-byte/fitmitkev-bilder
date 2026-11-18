@@ -170,7 +170,7 @@ R=[
   schritte=['Die Tortillas in je 8 Dreiecke schneiden, auf einem Backblech mit Backpapier verteilen und bei 200 °C Ober-/Unterhitze 6–8 Minuten knusprig backen.',
             'Das Hack in einer beschichteten Pfanne krümelig braten, Paprikawürfel und Mais 3 Minuten mitbraten und mit Salz, Pfeffer, Paprikapulver und Kreuzkümmel würzen.',
             'Die Hack-Mischung über die Chips verteilen, mit Käse bestreuen und 5 Minuten überbacken. Passierte Tomaten mit Salz und Pfeffer als Salsa und Skyr mit Salz, Pfeffer und Schnittlauch als Dip dazu reichen.'],
-  frage='Wer sieht seinen Mann oder Sohn heute Abend nicht mehr? 🙋‍♀️', tags='#gta6 #nachos #fitmitkev',
+  frage='Nachos: mit Salsa oder mit Dip?', tags='#gta6 #nachos #fitmitkev',
   prompt='A black baking tray piled with homemade crispy oven-baked tortilla chip triangles topped with browned ground beef, golden melted cheese, small red bell pepper cubes, yellow sweet corn and fresh chopped green chives, a small white bowl of thick white yogurt dip and a small white bowl of red tomato salsa beside the tray.'),
  # 16 · 18:50
  alt('Doener', hook='Für den GTA-VI-Abend:', tags='#gta6 #döner #hähnchen #abendessen #fitmitkev',

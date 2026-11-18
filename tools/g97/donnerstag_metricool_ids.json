@@ -2,128 +2,149 @@
  {
   "n": 1,
   "key": "PizzaWaffeln",
-  "zeit": "2026-11-19T06:50:00",
-  "metricool_id": 432891077
+  "zeit": "2026-11-20T06:50:00",
+  "metricool_id": 433477004,
+  "hinweis": "am 18.11. auf Freitag 20.11. verschoben (Do 19.11. = GTA-VI-Tag)"
  },
  {
   "n": 2,
   "key": "ZimtschneckenOats",
-  "zeit": "2026-11-19T07:30:00",
-  "metricool_id": 432891182
+  "zeit": "2026-11-20T07:30:00",
+  "metricool_id": 433477117,
+  "hinweis": "am 18.11. auf Freitag 20.11. verschoben (Do 19.11. = GTA-VI-Tag)"
  },
  {
   "n": 3,
   "key": "KFFladen",
-  "zeit": "2026-11-19T08:15:00",
-  "metricool_id": 432891355
+  "zeit": "2026-11-20T08:15:00",
+  "metricool_id": 433477243,
+  "hinweis": "am 18.11. auf Freitag 20.11. verschoben (Do 19.11. = GTA-VI-Tag)"
  },
  {
   "n": 4,
   "key": "NusseckenBowl",
-  "zeit": "2026-11-19T08:55:00",
-  "metricool_id": 432891500
+  "zeit": "2026-11-20T08:55:00",
+  "metricool_id": 433477387,
+  "hinweis": "am 18.11. auf Freitag 20.11. verschoben (Do 19.11. = GTA-VI-Tag)"
  },
  {
   "n": 5,
   "key": "CheeseburgerBowl",
-  "zeit": "2026-11-19T09:35:00",
-  "metricool_id": 432891679
+  "zeit": "2026-11-20T09:35:00",
+  "metricool_id": 433477515,
+  "hinweis": "am 18.11. auf Freitag 20.11. verschoben (Do 19.11. = GTA-VI-Tag)"
  },
  {
   "n": 6,
   "key": "KalterHundBowl",
-  "zeit": "2026-11-19T10:15:00",
-  "metricool_id": 432891809
+  "zeit": "2026-11-20T10:15:00",
+  "metricool_id": 433477674,
+  "hinweis": "am 18.11. auf Freitag 20.11. verschoben (Do 19.11. = GTA-VI-Tag)"
  },
  {
   "n": 7,
   "key": "KFKaesenudeln",
-  "zeit": "2026-11-19T10:55:00",
-  "metricool_id": 432891941
+  "zeit": "2026-11-20T10:55:00",
+  "metricool_id": 433477798,
+  "hinweis": "am 18.11. auf Freitag 20.11. verschoben (Do 19.11. = GTA-VI-Tag)"
  },
  {
   "n": 8,
   "key": "SpekKaeseBowl",
-  "zeit": "2026-11-19T11:40:00",
-  "metricool_id": 432892039
+  "zeit": "2026-11-20T11:40:00",
+  "metricool_id": 433477920,
+  "hinweis": "am 18.11. auf Freitag 20.11. verschoben (Do 19.11. = GTA-VI-Tag)"
  },
  {
   "n": 9,
   "key": "Lasagne",
-  "zeit": "2026-11-19T12:20:00",
-  "metricool_id": 432892141
+  "zeit": "2026-11-20T12:20:00",
+  "metricool_id": 433478035,
+  "hinweis": "am 18.11. auf Freitag 20.11. verschoben (Do 19.11. = GTA-VI-Tag)"
  },
  {
   "n": 10,
   "key": "PizzaAuflauf",
-  "zeit": "2026-11-19T13:40:00",
-  "metricool_id": 432892266
+  "zeit": "2026-11-20T13:40:00",
+  "metricool_id": 433478130,
+  "hinweis": "am 18.11. auf Freitag 20.11. verschoben (Do 19.11. = GTA-VI-Tag)"
  },
  {
   "n": 11,
   "key": "Kokosmakronen",
-  "zeit": "2026-11-19T14:15:00",
-  "metricool_id": 432894211
+  "zeit": "2026-11-20T14:15:00",
+  "metricool_id": 433478318,
+  "hinweis": "am 18.11. auf Freitag 20.11. verschoben (Do 19.11. = GTA-VI-Tag)"
  },
  {
   "n": 12,
   "key": "ChowMein",
-  "zeit": "2026-11-19T14:55:00",
-  "metricool_id": 432894369
+  "zeit": "2026-11-20T14:55:00",
+  "metricool_id": 433478455,
+  "hinweis": "am 18.11. auf Freitag 20.11. verschoben (Do 19.11. = GTA-VI-Tag)"
  },
  {
   "n": 13,
   "key": "ZimtstreuselSkyr",
-  "zeit": "2026-11-19T15:35:00",
-  "metricool_id": 432894523
+  "zeit": "2026-11-20T15:35:00",
+  "metricool_id": 433478572,
+  "hinweis": "am 18.11. auf Freitag 20.11. verschoben (Do 19.11. = GTA-VI-Tag)"
  },
  {
   "n": 14,
   "key": "LasagneRoellchen",
-  "zeit": "2026-11-19T16:15:00",
-  "metricool_id": 433177173,
-  "status": "Entwurf – am 18.11. rausgenommen (Stufe zurück auf 22, Kev)"
+  "zeit": "2026-11-20T16:15:00",
+  "metricool_id": 433478678,
+  "status": "Entwurf – am 18.11. rausgenommen (Stufe zurück auf 22, Kev)",
+  "hinweis": "am 18.11. auf Freitag 20.11. verschoben (Do 19.11. = GTA-VI-Tag)"
  },
  {
   "n": 15,
   "key": "SchwarzwaelderSkyr",
-  "zeit": "2026-11-19T16:50:00",
-  "metricool_id": 432894873
+  "zeit": "2026-11-20T16:50:00",
+  "metricool_id": 433478829,
+  "hinweis": "am 18.11. auf Freitag 20.11. verschoben (Do 19.11. = GTA-VI-Tag)"
  },
  {
   "n": 16,
   "key": "MaulwurfBowl",
-  "zeit": "2026-11-19T18:10:00",
-  "metricool_id": 432895185
+  "zeit": "2026-11-20T18:10:00",
+  "metricool_id": 433479000,
+  "hinweis": "am 18.11. auf Freitag 20.11. verschoben (Do 19.11. = GTA-VI-Tag)"
  },
  {
   "n": 17,
   "key": "CheeseburgerLasagne",
-  "zeit": "2026-11-19T18:50:00",
-  "metricool_id": 432895423
+  "zeit": "2026-11-20T18:50:00",
+  "metricool_id": 433479288,
+  "hinweis": "am 18.11. auf Freitag 20.11. verschoben (Do 19.11. = GTA-VI-Tag)"
  },
  {
   "n": 18,
   "key": "KFKaesekuchen",
-  "zeit": "2026-11-19T19:25:00",
-  "metricool_id": 432895610
+  "zeit": "2026-11-20T19:25:00",
+  "metricool_id": 433479302,
+  "hinweis": "am 18.11. auf Freitag 20.11. verschoben (Do 19.11. = GTA-VI-Tag)"
  },
  {
   "n": 19,
   "key": "Kaesespaetzle",
-  "zeit": "2026-11-19T20:05:00",
-  "metricool_id": 432895743
+  "zeit": "2026-11-20T20:05:00",
+  "metricool_id": 433479325,
+  "hinweis": "am 18.11. auf Freitag 20.11. verschoben (Do 19.11. = GTA-VI-Tag)"
  },
  {
   "n": 20,
   "key": "KFPancakes",
-  "zeit": "2026-11-19T20:45:00",
-  "metricool_id": 432895875
+  "zeit": "2026-11-20T20:45:00",
+  "metricool_id": 433479412,
+  "hinweis": "am 18.11. auf Freitag 20.11. verschoben (Do 19.11. = GTA-VI-Tag)"
  },
  {
   "n": "MW8",
   "key": "Mehrwert Körniger Frischkäse",
-  "zeit": "2026-11-19T17:30:00",
-  "metricool_id": 432898362
+  "zeit": "2026-11-20T17:30:00",
+  "metricool_id": 433480148,
+  "hinweis": "am 18.11. auf Freitag 20.11. verschoben (Do 19.11. = GTA-VI-Tag)"
  }
 ]
