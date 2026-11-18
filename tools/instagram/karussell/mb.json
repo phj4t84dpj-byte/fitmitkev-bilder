@@ -1,0 +1,56 @@
+{
+ "slug": "IG-Mandarinen-Bowl",
+ "name": "Mandarinen-Käsekuchen-Bowl",
+ "info": "Einkaufsliste · 1 Bowl · Glasform 15 × 10 cm",
+ "zutaten": [
+  [
+   "150 g",
+   "Skyr"
+  ],
+  [
+   "1",
+   "Ei"
+  ],
+  [
+   "10 g",
+   "Vanillepudding-Pulver"
+  ],
+  [
+   "15 g",
+   "Erythrit"
+  ],
+  [
+   "80 g",
+   "Mandarinen (Dose)"
+  ],
+  [
+   "1",
+   "Butterkeks"
+  ]
+ ],
+ "naehr": "Die ganze Bowl: 290 kcal · 25 g Eiweiß",
+ "listen_bild": "mb0_hook",
+ "pos": "50% 45%",
+ "slides": [
+  {
+   "img": "mb0_hook",
+   "text": "Omas Mandarinen-Kuchen.\nNur als Bowl\nfür dich allein."
+  },
+  {
+   "img": "mb1_boden",
+   "text": "Butterkeks zerbröseln\nund in die Form drücken."
+  },
+  {
+   "img": "mb2_creme",
+   "text": "Skyr, Ei, Puddingpulver\nund Erythrit\nglatt rühren."
+  },
+  {
+   "img": "mb3_glas",
+   "text": "Auf den Boden geben.\n180 °C, 20 Minuten."
+  },
+  {
+   "img": "mb4_mandarinen",
+   "text": "Abkühlen lassen,\nMandarinen drauf."
+  }
+ ]
+}

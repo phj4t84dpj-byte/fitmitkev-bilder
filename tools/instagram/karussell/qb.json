@@ -1,0 +1,56 @@
+{
+ "slug": "IG-Quarkbaellchen",
+ "name": "Quarkbällchen ohne Fritteuse",
+ "info": "Einkaufsliste · 12 Stück · Backblech",
+ "zutaten": [
+  [
+   "250 g",
+   "Magerquark"
+  ],
+  [
+   "1",
+   "Ei"
+  ],
+  [
+   "150 g",
+   "Dinkelmehl"
+  ],
+  [
+   "60 g",
+   "Erythrit"
+  ],
+  [
+   "2 TL",
+   "Backpulver"
+  ],
+  [
+   "1 TL",
+   "Zimt"
+  ]
+ ],
+ "naehr": "Pro Stück: 65 kcal · 5 g Eiweiß",
+ "listen_bild": "qb0_hook",
+ "pos": "50% 45%",
+ "slides": [
+  {
+   "img": "qb0_hook",
+   "text": "Quarkbällchen\nwie von der Kirmes.\nNur ohne Fritteuse."
+  },
+  {
+   "img": "qb1_zutaten",
+   "text": "Quark, Ei, Mehl,\nErythrit und Backpulver\nin eine Schüssel."
+  },
+  {
+   "img": "qb2_teig",
+   "text": "Zu einem weichen\nTeig verrühren."
+  },
+  {
+   "img": "qb3_blech",
+   "text": "12 Bällchen formen.\n180 °C, 15–18 Minuten."
+  },
+  {
+   "img": "qb4_zimt",
+   "text": "Noch warm\nin Zimt und Erythrit\nwälzen."
+  }
+ ]
+}

@@ -1,0 +1,56 @@
+{
+ "slug": "IG-Zitronenkuchen",
+ "name": "Zitronenkuchen ohne Mehl und Butter",
+ "info": "Einkaufsliste · 8 Stück · Springform 20 cm",
+ "zutaten": [
+  [
+   "150 g",
+   "Gemahlene Mandeln"
+  ],
+  [
+   "3",
+   "Eier"
+  ],
+  [
+   "200 g",
+   "Skyr"
+  ],
+  [
+   "70 g",
+   "Erythrit"
+  ],
+  [
+   "1",
+   "Bio-Zitrone"
+  ],
+  [
+   "1 TL",
+   "Backpulver"
+  ]
+ ],
+ "naehr": "Pro Stück: 160 kcal · 10 g Eiweiß",
+ "listen_bild": "zk0_hook",
+ "pos": "50% 45%",
+ "slides": [
+  {
+   "img": "zk0_hook",
+   "text": "Zitronenkuchen\nohne Mehl\nund ohne Butter."
+  },
+  {
+   "img": "zk1_zutaten",
+   "text": "Mandeln, Eier, Skyr\nund Zitronenschale.\nNur 6 Zutaten."
+  },
+  {
+   "img": "zk2_teig",
+   "text": "Eier schaumig schlagen,\nalles unterheben."
+  },
+  {
+   "img": "zk3_form",
+   "text": "In die Form.\n170 °C, 35–40 Minuten."
+  },
+  {
+   "img": "zk4_guss",
+   "text": "Zitronensaft und Erythrit\nals Guss darüber."
+  }
+ ]
+}
