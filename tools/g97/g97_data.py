@@ -176,6 +176,14 @@ GRUPPE_A={1,2,5,6,9,11,14,15,17,18}
 HASHTAG_SOLL={i+1:len(r['tags'].split()) for i,r in enumerate(R)}
 OHNE_BOX=set(range(1,21))
 VORHANDEN=set()
+# Kev 18.11., 13:28: Käsespätzle-Bild sah aus wie Knöpfle → neues Bild mit langen Spätzle, „Knöpfle“ aus Zutat und Text raus
+for _r in R:
+    if _r['key']=='Kaesespaetzle':
+        for _z in _r['zutaten']:
+            if _z['name']=='Spätzle oder Knöpfle': _z['name']='Spätzle (Kühlregal)'
+        _r['intro']=_r['intro'].replace('Mit Spätzle oder Knöpfle aus dem Kühlregal','Mit Spätzle aus dem Kühlregal')
+        _r['schritte']=[x.replace('Spätzle oder Knöpfle nach Packung','Spätzle nach Packung') for x in _r['schritte']]
+
 if __name__=='__main__':
     assert len(R)==20 and len({r['key'] for r in R})==20 and len(ZEITEN)==20
     SW=[False,True,False,True,False,True,False,True,False,False,True,False,True,False,True,True,False,True,False,True]

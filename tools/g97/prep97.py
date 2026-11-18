@@ -5,7 +5,7 @@ Kachelspalte, Titel, Badge und Vorher-Nachher-Foto liegt. Ränder werden aus der
 Danach wird der Freisteller neu berechnet (Text-Maske liegt dann in den richtigen Koordinaten)."""
 import cv2, numpy as np, json, os, sys
 D=os.path.dirname(os.path.abspath(__file__))
-KEYS=['KFFladen','KFKaesenudeln','KFKaesekuchen','PizzaWaffeln','KalterHundBowl','LasagneRoellchen','PizzaAuflauf','ChowMein','KFPancakes','CheeseburgerBowl']
+KEYS=['KFFladen','KFKaesenudeln','KFKaesekuchen','PizzaWaffeln','KalterHundBowl','LasagneRoellchen','PizzaAuflauf','ChowMein','KFPancakes','CheeseburgerBowl','Kaesespaetzle']
 T={k:dict(s=0.72) for k in KEYS}
 T.update({'KFKaesenudeln':dict(s=0.68,dy=15),'LasagneRoellchen':dict(s=0.68,dy=15),'PizzaAuflauf':dict(s=0.68,dy=15),'ChowMein':dict(s=0.68,dy=15),'KalterHundBowl':dict(s=0.74,dy=10)})
 def prep(key):
