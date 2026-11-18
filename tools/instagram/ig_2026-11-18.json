@@ -43,7 +43,9 @@
    }
   },
   "karussell": true,
-  "quelle": "Mo 16.11. Plätze 1–3"
+  "quelle": "Mo 16.11. Plätze 1–3",
+  "metricool_id": 432642885,
+  "uuid": "3573579858673746642"
  },
  {
   "key": "Zitronenkuchen",
@@ -89,7 +91,9 @@
    }
   },
   "karussell": true,
-  "quelle": "Mo 16.11. Plätze 1–3"
+  "quelle": "Mo 16.11. Plätze 1–3",
+  "metricool_id": 432644943,
+  "uuid": "-2242962021858263005"
  },
  {
   "key": "MandarinenBowl",
@@ -135,6 +139,8 @@
    }
   },
   "karussell": true,
-  "quelle": "Mo 16.11. Plätze 1–3"
+  "quelle": "Mo 16.11. Plätze 1–3",
+  "metricool_id": 432643050,
+  "uuid": "8190983933053976813"
  }
 ]
