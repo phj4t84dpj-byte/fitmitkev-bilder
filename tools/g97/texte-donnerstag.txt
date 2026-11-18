@@ -10,7 +10,7 @@ Pizza-Waffeln
 
 Pizza aus dem Waffeleisen: Skyr-Teig mit Salami und Käse direkt im Teig, außen knusprig, innen saftig, zum Dippen eine schnelle Tomatensoße. Fertig in 15 Minuten und perfekt für die Brotdose: 190 kcal und 15 g Eiweiß pro Waffel statt 280 für ein Stück Pizza vom Blech!
 
-Zutaten (6 Waffeln):
+Zutaten (6 Waffeln, Waffeleisen):
 • 150 g Dinkelmehl
 • 200 g Skyr
 • 2 Stück Eier
@@ -74,7 +74,7 @@ BILD: https://raw.githubusercontent.com/phj4t84dpj-byte/fitmitkev-bilder/main/bo
 ===== 03 · 08:15 · Fladenbrot aus nur 2 Zutaten
 
 TITEL:
-290 kcal die ganze Bowl 😋 Rezept im 1. Kommentar ⤵️
+290 kcal pro Wrap 😋 Rezept im 1. Kommentar ⤵️
 
 #körnigerfrischkäse #hüttenkäse #wrap #ohnemehl #fitmitkev
 
@@ -83,7 +83,7 @@ Fladenbrot aus nur 2 Zutaten
 
 Das Fladenbrot, das gerade überall im Netz auftaucht: nur körniger Frischkäse und Eier, glatt püriert und dünn aufs Blech gestrichen. Kein Mehl, kein Kneten, keine Gehzeit. Gefüllt mit Putenschinken, Salat und Gurke wird daraus ein Wrap: 290 kcal und 33 g Eiweiß pro Wrap statt 550 für den Wrap vom Bäcker!
 
-Zutaten (2 Stück):
+Zutaten (2 Wraps, Backblech):
 • 250 g Körniger Frischkäse
 • 2 Stück Eier
 • 1 TL Italienische Kräuter
@@ -98,7 +98,7 @@ So geht's:
 2. Die Masse auf einem Backblech mit Backpapier zu einem dünnen Rechteck (ca. 30 × 25 cm) verstreichen und 30–35 Minuten backen, bis die Oberfläche goldbraun und fest ist. Kurz abkühlen lassen und halbieren.
 3. Jede Hälfte mit Frischkäse bestreichen, mit Putenschinken, Salat und Gurkenscheiben belegen und einrollen.
 
-Nährwerte pro Bowl: ca. 290 kcal | 33 g Eiweiß | 6 g Kohlenhydrate | 15 g Fett
+Nährwerte pro Wrap: ca. 290 kcal | 33 g Eiweiß | 6 g Kohlenhydrate | 15 g Fett
 
 Bleib satt! 💪
 
@@ -338,7 +338,7 @@ Pizza-Nudelauflauf
 
 Pizza und Nudelauflauf in einer Form: Nudeln in Tomatensoße mit Champignons und Paprika, obendrauf Salami und Mozzarella wie auf der Pizza. Die Soße wird mit Skyr cremig, ganz ohne Sahne: 375 kcal und 24 g Eiweiß pro Portion statt 850 für eine Pizza vom Lieferdienst!
 
-Zutaten (4 Portionen):
+Zutaten (4 Portionen, Auflaufform 20 × 30 cm):
 • 250 g Nudeln (roh)
 • 400 g Passierte Tomaten
 • 60 g Salami
@@ -483,7 +483,7 @@ Lasagne-Röllchen
 
 Lasagne mal anders: Die Platten werden gekocht, mit Hacksoße und Skyr-Creme bestrichen und aufgerollt. Nebeneinander in der Form, Tomatensoße und Mozzarella drüber, ab in den Ofen. Sieht nach Restaurant aus, ist aber einfacher als jede Lasagne: 420 kcal und 43 g Eiweiß pro Portion statt 750 für Lasagne mit Béchamel!
 
-Zutaten (4 Portionen):
+Zutaten (4 Portionen, Auflaufform 20 × 30 cm):
 • 8 Stück Lasagneplatten
 • 400 g Rinderhack (mager)
 • 400 g Passierte Tomaten
@@ -637,7 +637,7 @@ Käsekuchen aus körnigem Frischkäse
 
 Käsekuchen aus körnigem Frischkäse: püriert wird er so cremig, dass niemand die Körnchen erkennt. Dünner Keksboden, ohne Quark, ohne Zucker, die Füllung einfach im Mixer: 185 kcal und 13 g Eiweiß pro Stück statt 350 für das Stück Käsekuchen vom Bäcker!
 
-Zutaten (8 Stück):
+Zutaten (8 Stück, Springform 20 cm):
 • 600 g Körniger Frischkäse
 • 3 Stück Eier
 • 1 Päckchen Vanillepudding-Pulver

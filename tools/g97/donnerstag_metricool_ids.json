@@ -1,0 +1,122 @@
+[
+ {
+  "n": 1,
+  "key": "PizzaWaffeln",
+  "zeit": "2026-11-19T06:50:00",
+  "metricool_id": 432891077
+ },
+ {
+  "n": 2,
+  "key": "ZimtschneckenOats",
+  "zeit": "2026-11-19T07:30:00",
+  "metricool_id": 432891182
+ },
+ {
+  "n": 3,
+  "key": "KFFladen",
+  "zeit": "2026-11-19T08:15:00",
+  "metricool_id": 432891355
+ },
+ {
+  "n": 4,
+  "key": "NusseckenBowl",
+  "zeit": "2026-11-19T08:55:00",
+  "metricool_id": 432891500
+ },
+ {
+  "n": 5,
+  "key": "CheeseburgerBowl",
+  "zeit": "2026-11-19T09:35:00",
+  "metricool_id": 432891679
+ },
+ {
+  "n": 6,
+  "key": "KalterHundBowl",
+  "zeit": "2026-11-19T10:15:00",
+  "metricool_id": 432891809
+ },
+ {
+  "n": 7,
+  "key": "KFKaesenudeln",
+  "zeit": "2026-11-19T10:55:00",
+  "metricool_id": 432891941
+ },
+ {
+  "n": 8,
+  "key": "SpekKaeseBowl",
+  "zeit": "2026-11-19T11:40:00",
+  "metricool_id": 432892039
+ },
+ {
+  "n": 9,
+  "key": "Lasagne",
+  "zeit": "2026-11-19T12:20:00",
+  "metricool_id": 432892141
+ },
+ {
+  "n": 10,
+  "key": "PizzaAuflauf",
+  "zeit": "2026-11-19T13:40:00",
+  "metricool_id": 432892266
+ },
+ {
+  "n": 11,
+  "key": "Kokosmakronen",
+  "zeit": "2026-11-19T14:15:00",
+  "metricool_id": 432894211
+ },
+ {
+  "n": 12,
+  "key": "ChowMein",
+  "zeit": "2026-11-19T14:55:00",
+  "metricool_id": 432894369
+ },
+ {
+  "n": 13,
+  "key": "ZimtstreuselSkyr",
+  "zeit": "2026-11-19T15:35:00",
+  "metricool_id": 432894523
+ },
+ {
+  "n": 14,
+  "key": "LasagneRoellchen",
+  "zeit": "2026-11-19T16:15:00",
+  "metricool_id": 432894700
+ },
+ {
+  "n": 15,
+  "key": "SchwarzwaelderSkyr",
+  "zeit": "2026-11-19T16:50:00",
+  "metricool_id": 432894873
+ },
+ {
+  "n": 16,
+  "key": "MaulwurfBowl",
+  "zeit": "2026-11-19T18:10:00",
+  "metricool_id": 432895185
+ },
+ {
+  "n": 17,
+  "key": "CheeseburgerLasagne",
+  "zeit": "2026-11-19T18:50:00",
+  "metricool_id": 432895423
+ },
+ {
+  "n": 18,
+  "key": "KFKaesekuchen",
+  "zeit": "2026-11-19T19:25:00",
+  "metricool_id": 432895610
+ },
+ {
+  "n": 19,
+  "key": "Kaesespaetzle",
+  "zeit": "2026-11-19T20:05:00",
+  "metricool_id": 432895743
+ },
+ {
+  "n": 20,
+  "key": "KFPancakes",
+  "zeit": "2026-11-19T20:45:00",
+  "metricool_id": 432895875
+ }
+]

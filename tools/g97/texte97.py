@@ -7,11 +7,11 @@ D=os.path.dirname(os.path.abspath(__file__)); os.makedirs(f"{D}/out",exist_ok=Tr
 URL="https://raw.githubusercontent.com/phj4t84dpj-byte/fitmitkev-bilder/main/boards/G97-{}.jpg"
 NAME={'ZimtschneckenOats': 'Zimtschnecken-Overnight-Oats', 'Fruehstuecksbroetchen': 'Frühstücksbrötchen ohne Hefe', 'StrammerMax': 'Strammer Max', 'NusseckenBowl': 'Nussecken-Bowl nur für dich', 'Senfeier': 'Senfeier mit Kartoffelpüree', 'Engelsaugen': 'Engelsaugen wie bei Oma', 'KaeseLauchSuppe': 'Käse-Lauch-Suppe mit Hack', 'SpekKaeseBowl': 'Spekulatius-Käsekuchen-Bowl nur für dich', 'Lasagne': 'Lasagne in leicht', 'CordonBleu': 'Cordon bleu aus dem Ofen', 'Kokosmakronen': 'Kokosmakronen aus 3 Zutaten', 'SchinkenLauchQuiche': 'Schinken-Lauch-Quiche mit Skyr-Teig', 'ZimtstreuselSkyr': 'Skyr-Kuchen mit Zimt-Streuseln', 'GnocchiAuflauf': 'Gnocchi-Auflauf mit Hack', 'SchwarzwaelderSkyr': 'Schwarzwälder Skyr-Kuchen', 'MaulwurfBowl': 'Maulwurfkuchen-Bowl nur für dich', 'CheeseburgerLasagne': 'Cheeseburger-Lasagne', 'Kaesespaetzle': 'Käsespätzle wie auf der Hütte', 'BratapfelSkyrKuchen': 'Bratapfel-Skyr-Kuchen', 'MohnStreuselkuchen': 'Mohn-Streuselkuchen vom Blech'}
 NAME.update({'PizzaWaffeln':'Pizza-Waffeln','KFFladen':'Fladenbrot aus nur 2 Zutaten','CheeseburgerBowl':'Cheeseburger-Bowl nur für dich','KalterHundBowl':'Kalter-Hund-Bowl nur für dich','KFKaesenudeln':'Käsenudeln mit körnigem Frischkäse','PizzaAuflauf':'Pizza-Nudelauflauf','ChowMein':'Gebratene Nudeln wie vom Asia-Imbiss','LasagneRoellchen':'Lasagne-Röllchen','KFKaesekuchen':'Käsekuchen aus körnigem Frischkäse','KFPancakes':'Pancakes aus körnigem Frischkäse'})
-FORM={'Fruehstuecksbroetchen': 'Backblech', 'Engelsaugen': 'Backblech', 'Lasagne': 'Auflaufform 20 × 30 cm', 'CordonBleu': 'Backblech', 'Kokosmakronen': 'Backblech', 'SchinkenLauchQuiche': 'Tarte- oder Springform 26 cm', 'ZimtstreuselSkyr': 'Springform 20 cm', 'GnocchiAuflauf': 'Auflaufform 20 × 30 cm', 'CheeseburgerLasagne': 'Auflaufform 20 × 30 cm', 'Kaesespaetzle': 'Auflaufform 20 × 30 cm', 'SchwarzwaelderSkyr': 'Springform 26 cm', 'BratapfelSkyrKuchen': 'Springform 26 cm', 'MohnStreuselkuchen': 'Blech 25 × 35 cm'}
+FORM={'KFKaesekuchen':'Springform 20 cm','PizzaAuflauf':'Auflaufform 20 × 30 cm','LasagneRoellchen':'Auflaufform 20 × 30 cm','PizzaWaffeln':'Waffeleisen','Fruehstuecksbroetchen': 'Backblech', 'Engelsaugen': 'Backblech', 'Lasagne': 'Auflaufform 20 × 30 cm', 'CordonBleu': 'Backblech', 'Kokosmakronen': 'Backblech', 'SchinkenLauchQuiche': 'Tarte- oder Springform 26 cm', 'ZimtstreuselSkyr': 'Springform 20 cm', 'GnocchiAuflauf': 'Auflaufform 20 × 30 cm', 'CheeseburgerLasagne': 'Auflaufform 20 × 30 cm', 'Kaesespaetzle': 'Auflaufform 20 × 30 cm', 'SchwarzwaelderSkyr': 'Springform 26 cm', 'BratapfelSkyrKuchen': 'Springform 26 cm', 'MohnStreuselkuchen': 'Blech 25 × 35 cm'}
 EINZELN={'Fruehstuecksbroetchen','Engelsaugen','Kokosmakronen'}
 def portion_label(r):
     p=r['portion']
-    for k in ('pro Stück','pro Portion','pro Glas','pro Teller','pro Pizza','pro Scheibe','pro Kugel','pro Waffel'):
+    for k in ('pro Stück','pro Portion','pro Glas','pro Teller','pro Pizza','pro Scheibe','pro Kugel','pro Waffel','pro Wrap'):
         if p.startswith(k): return k
     return 'pro Bowl'
 def _anzahl_base(r):
@@ -23,6 +23,7 @@ def _anzahl_base(r):
     if p.startswith('pro Scheibe'): return f'1 Zopf, {n} Scheiben' if r['key']=='Hefezopf' else f'{n} Scheiben'
     if p.startswith('pro Waffel'): return f'{n} Waffeln'
     if p.startswith('pro Kugel'): return f'{n} Kugeln'
+    if p.startswith('pro Wrap'): return f'{n} Wraps, Backblech'
     if p.startswith('pro Portion'): return '1 Portion' if n==1 else f'{n} Portionen'
     return f'{n} Stück' if (r['key'] in EINZELN or n<12) else f'{n} Stücke'
 def anzahl_label(r):
@@ -32,7 +33,7 @@ EMO=['🤤','😍','😋','🥰','🤗']
 posts=[]
 for i,r in enumerate(G.R):
     k,p,c,f=G.macros4(r); key=r['key']; n=i+1
-    lab={'pro Stück':'pro Stück','pro Portion':'pro Portion','pro Glas':'pro Glas','pro Teller':'pro Teller','pro Pizza':'pro Pizza','pro Scheibe':'pro Scheibe','pro Kugel':'pro Kugel','pro Waffel':'pro Waffel','pro Bowl':'die ganze Bowl'}[portion_label(r)]
+    lab={'pro Stück':'pro Stück','pro Portion':'pro Portion','pro Glas':'pro Glas','pro Teller':'pro Teller','pro Pizza':'pro Pizza','pro Scheibe':'pro Scheibe','pro Kugel':'pro Kugel','pro Waffel':'pro Waffel','pro Wrap':'pro Wrap','pro Bowl':'die ganze Bowl'}[portion_label(r)]
     title=f"{k} kcal {lab} {EMO[i%5]} Rezept im 1. Kommentar ⤵️"
     text=title+"\n\n"+r['tags']
     zut="\n".join(f"• {z['menge']} {z['name']}" for z in r['zutaten'])
