@@ -28,7 +28,9 @@ def card_rows(d):
 def card_prod(d):
     pic=lambda x: f'<img src="{img(x)}">' if x.endswith(('.png','.jpg')) else f'<div class="pe">{x}</div>'
     return '<div class="pw">'+''.join(f'<div class="pc">{pic(p[0])}<div class="p1">{H.escape(p[1])}</div><div class="p2">{p[2]}</div></div>' for p in d)+'</div>'
-CARD={'vs':card_vs,'rows':card_rows,'prod':card_prod}
+def card_foto(d):
+    return f'<img class="fo" src="{img(d["img"])}"><div class="foc">{H.escape(d["cap"])}</div>'+card_rows(d['rows'])
+CARD={'vs':card_vs,'rows':card_rows,'prod':card_prod,'foto':card_foto}
 SPEC={
  # K1/K2 (Kev 19.11., 17:45): Ankündigung Sa 21.11. und Start So 22.11. auch im Info-Design, nur ein Bild je Beitrag.
  'K1':dict(out='ESN-K1-Ankuendigung', hook='Oft gefragt:', title=['DAS NEHME','ICH SELBST'], size=92,
@@ -136,6 +138,17 @@ SPEC={
    mid='Den Link mit meinem Code findest du im ersten Kommentar.',
    msg='Noch eine Frage?<br><span>Schreib sie mir in die Kommentare.</span>',
    css='.ri{background:#12213f;color:#fff;font-family:A;font-size:70px}'),
+ # P12 (Kev 19.11., 18:50): eigener Beitrag zur Designer Bar – „wie kann man sich die Designer Bars vorstellen?“. Do 26.11., 9:00 (Platz von P5).
+ 'P12':dict(out='ESN-P12-Designer-Bar', hook='So kannst du sie dir vorstellen:', title=['DIE DESIGNER BAR','VON INNEN'], size=88,
+   secs=[dict(lab='WIE EIN SCHOKORIEGEL, NUR MIT ANDEREN WERTEN', col=BLUE, type='foto', d=dict(
+      img='kev/wide-Kev-Riegel-angeschnitten.jpg', cap='6 von 24 Sorten, frisch angeschnitten in meiner Küche',
+      rows=[('kev/sq-Kev-Riegel-Kern.jpg','Außen Schokolade mit Crunch','innen ein weicher Kern mit Füllung','✓'),
+            ('2 g','Ohne Zuckerzusatz','höchstens 2 g Zucker je Riegel','✓'),
+            ('15 g','Bis zu 15 g Eiweiß','je Riegel (45 g), unter 200 kcal','✓'),
+            ('24','24 Sorten','z. B. Spekulatius, Lebkuchen, Dark Chocolate Mint','✓')]))],
+   mid='In der Black Week: <span>12er Box mit -30 %.</span>',
+   msg='Code FITMITKEV: <span>Black-Week-Rabatte sichern.</span><br>Link im 1. Kommentar 👇',
+   css='.fo{width:100%;border-radius:16px;display:block}.foc{font-size:23px;font-weight:600;color:#5a4a3a;text-align:center;margin:8px 0 2px}.ri{width:94px;height:94px;background:#12213f;color:#fff;font-family:A;font-size:44px;overflow:hidden}.ri img{max-width:none;max-height:none;width:94px;height:94px;object-fit:cover}.rw{padding:6px 0}.lab{font-size:33px}.msg{font-size:27px;line-height:1.3}'),
  'P11':dict(out='ESN-P11-Letzter-Tag', hook='Letzte Chance:', title=['HEUTE BIS','17:30 UHR'], size=96,
    secs=[dict(lab='DAS HOLE ICH MIR NOCH · NUR SOLANGE DER VORRAT REICHT', col=RED, type='prod', d=[
       ('extra-creamy-black-edition-ultra-dark.png','Ultra Dark Chocolate','neu, für Schokopudding<br><b>19,53 €</b>'),

@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 # Baut die Prüfseite „ESN-Black-Week-Beiträge“: alle Beiträge ab Sa 21.11. in der geplanten Reihenfolge –
-# 5 persönliche (K1–K5, Kevs Fotos) und die Infobeiträge (P1–P11 ohne P5). Unter jedem Bild ein Feld für Kevs Änderungswünsche
+# 5 persönliche (K1–K5, Kevs Fotos) und die Infobeiträge (P1–P12 ohne P5). Unter jedem Bild ein Feld für Kevs Änderungswünsche
 # (db-Sammlung „anmerkungen“, je Beitrag ein Dokument mit text, ok, erledigt, stand).
 import json, os, re, glob, datetime
 from PIL import Image
@@ -36,7 +36,7 @@ info = [dict(datum="2026-11-22", zeit="11:00", datei="ESN-P1-Einkaufszettel", te
 for p in info:
     num = re.match(r"ESN-(P\d+)-", p["datei"]).group(1)
     data.append(dict(id=num, art="info", titel=p["alt"], slot=slot(p["datum"], p["zeit"].lstrip("0")), wann=p["datum"] + "T" + p["zeit"],
-                     bilder=[bild(f"{REPO}/esn/posts/{p['datei']}.jpg", num, 1080)], text=p["text"], fc=p["fc"], fest=True))
+                     bilder=[bild(f"{REPO}/esn/posts/{p['datei']}.jpg", num, 1080)], text=p["text"], fc=p["fc"], fest=num != "P12"))
 # Persönliche Beiträge mit Kevs Fotos
 # K1 und K2 seit 19.11. (Kev: „auch im Info-Design, nur ein Bild pro Beitrag“) als Board aus esn_board.py
 K = [("K1", "2) SA 21.11., 11:00", "2026-11-21", "11:00", "Ankündigung: Das nehme ich selbst", "ESN-K1-Ankuendigung", "", True),
@@ -53,7 +53,7 @@ for kid, kopf, datum, zeit, titel, fotos, hinweis, fest in K:
     data.append(dict(id=kid, art=art, titel=titel, slot=slot(datum, zeit.lstrip("0")), wann=datum + "T" + zeit, bilder=bs, text=txt, fc=fc, hinweis=hinweis, fest=fest))
 data.sort(key=lambda x: x["wann"])
 ids = [x["id"] for x in data]
-assert len(ids) == 16 and "P5" not in ids, ids
+assert len(ids) == 17 and "P5" not in ids, ids
 blob = json.dumps(data, ensure_ascii=False).replace("</", "<\\/")
 html = open(f"{D}/vorlage.html").read().replace("/*__POSTS__*/[]", blob)
 open(f"{D}/index.html", "w").write(html)
