@@ -30,7 +30,11 @@ def card_prod(d):
     return '<div class="pw">'+''.join(f'<div class="pc">{pic(p[0])}<div class="p1">{H.escape(p[1])}</div><div class="p2">{p[2]}</div></div>' for p in d)+'</div>'
 def card_foto(d):
     return f'<img class="fo" src="{img(d["img"])}"><div class="foc">{H.escape(d["cap"])}</div>'+card_rows(d['rows'])
-CARD={'vs':card_vs,'rows':card_rows,'prod':card_prod,'foto':card_foto}
+def card_sorten(d):
+    return ''.join(f'<div class="sr"><img class="sp" src="{img("bars/"+k+"-pack.jpg")}"><img class="sf" src="{img("bars/"+k+"-food.jpg")}"><div class="st"><div class="sn">{H.escape(n)}</div><div class="sd">{H.escape(t)}</div></div></div>' for k,n,t in d)
+CARD={'vs':card_vs,'rows':card_rows,'prod':card_prod,'foto':card_foto,'sorten':card_sorten}
+SORTEN_CSS='.card{padding:8px 20px}.sr{display:flex;align-items:center;gap:14px;height:71px;border-bottom:1.5px solid #eee4d6}.sr:last-child{border-bottom:none}.sp{height:62px;border-radius:8px;flex:none}.sf{height:62px;width:76px;object-fit:cover;border-radius:10px;flex:none}.sn{font-size:19px;font-weight:700;letter-spacing:1.5px;color:#c1202b;text-transform:uppercase;line-height:1.2}.sd{font-size:30px;font-weight:700;color:#12213f;line-height:1.15;white-space:nowrap}.lab{font-size:36px}.msg{font-size:27px;line-height:1.3}'
+SORTEN_MSG='Code FITMITKEV: <span>Black-Week-Rabatte sichern.</span><br>Link im 1. Kommentar 👇'
 SPEC={
  # K1/K2 (Kev 19.11., 17:45): Ankündigung Sa 21.11. und Start So 22.11. auch im Info-Design, nur ein Bild je Beitrag.
  'K1':dict(out='ESN-K1-Ankuendigung', hook='Oft gefragt:', title=['DAS NEHME','ICH SELBST'], size=92,
@@ -138,8 +142,38 @@ SPEC={
    mid='Den Link mit meinem Code findest du im ersten Kommentar.',
    msg='Noch eine Frage?<br><span>Schreib sie mir in die Kommentare.</span>',
    css='.ri{background:#12213f;color:#fff;font-family:A;font-size:70px}'),
- # P12 (Kev 19.11., 18:50): eigener Beitrag zur Designer Bar – „wie kann man sich die Designer Bars vorstellen?“. Do 26.11., 9:00 (Platz von P5).
- 'P12':dict(out='ESN-P12-Designer-Bar', hook='So kannst du sie dir vorstellen:', title=['DIE DESIGNER BAR','VON INNEN'], size=88,
+ # P12/P13 (Kev 19.11., 18:50): „Wie kann man sich die Designer Bars vorstellen?“ – Sorten und Vergleiche 1:1 aus Kevs zwei Story-Grafiken
+ # (Packungs- und Geschmacksbilder daraus ausgeschnitten: esn/bilder/bars/). 22 Sorten in 2 Teilen, je ein Bild.
+ 'P12':dict(out='ESN-P12-Designer-Bar-Sorten-1', hook='Teil 1 von 2:', title=['SO SCHMECKEN DIE','DESIGNER BARS'], size=84,
+   secs=[dict(lab='IN DER BLACK WEEK: 12ER BOX MIT -30 %', col=RED, type='sorten', d=[
+      ('maple-walnut','Maple Walnut','Pancakes mit Ahornsirup & Walnuss'),
+      ('caramel-latte','Caramel Latte','Karamell-Latte-Macchiato'),
+      ('dark-chocolate-mocha','Dark Chocolate Mocha','Mokka mit Zartbitter'),
+      ('spekulatius','Spekulatius','Klassischer Spekulatius'),
+      ('cookie-dough','Cookie Dough','Roher Keksteig'),
+      ('peanut-caramel','Peanut Caramel','Erdnuss-Karamell-Schokoriegel'),
+      ('cinnamon-cereal','Cinnamon Cereal','Zimt-Cerealien'),
+      ('peanut-butter-pretzel','Peanut Butter Pretzel','Schoko-Brezeln mit Erdnussbutter'),
+      ('tropical-vanilla','Tropical Vanilla','Vanilleeis mit Mango & Kokos'),
+      ('hazelnut-nougat','Hazelnut Nougat','Haselnuss-Nougat-Praline'),
+      ('fudge-brownie','Fudge Brownie','Fudge-Brownie')])],
+   mid='', msg=SORTEN_MSG, css=SORTEN_CSS),
+ 'P13':dict(out='ESN-P13-Designer-Bar-Sorten-2', hook='Teil 2 von 2:', title=['SO SCHMECKEN DIE','DESIGNER BARS'], size=84,
+   secs=[dict(lab='IN DER BLACK WEEK: 12ER BOX MIT -30 %', col=RED, type='sorten', d=[
+      ('speculoos','Speculoos','Karamell-Kekse mit Kekscreme'),
+      ('strawberry-white-chocolate','Strawberry White Chocolate','Erdbeeren in weißer Schokolade'),
+      ('dark-chocolate-raspberry','Dark Chocolate Raspberry','Schoko-Himbeer-Torte'),
+      ('white-chocolate-raspberry','White Chocolate Raspberry','Weiße Schoki mit Himbeeren'),
+      ('dark-chocolate-salted-almond','Dark Chocolate Salted Almond','Zartbitter mit Mandeln & Meersalz'),
+      ('strawberry-yogurt','Strawberry Yogurt','Erdbeer-Joghurt-Schokoriegel'),
+      ('dark-cookie-white-choc','Dark Cookie White Choc','Schoko-Doppelkeks in weißer Schokolade'),
+      ('almond-coconut','Almond Coconut','Kokos-Mandel-Praline'),
+      ('white-chocolate-pistachio','White Chocolate Pistachio','Dubai-Schokolade'),
+      ('lebkuchen','Lebkuchen','Schoko-Lebkuchen'),
+      ('lemon-cheesecake','Lemon Cheesecake','Zitronen-Käsekuchen')])],
+   mid='', msg=SORTEN_MSG, css=SORTEN_CSS),
+ # P14: erster Entwurf „Designer Bar von innen“ (19.11.), Kev nicht gezeigt, nicht eingeplant – nur als Reserve.
+ 'P14':dict(out='ESN-P14-Designer-Bar-innen', hook='So kannst du sie dir vorstellen:', title=['DIE DESIGNER BAR','VON INNEN'], size=88,
    secs=[dict(lab='WIE EIN SCHOKORIEGEL, NUR MIT ANDEREN WERTEN', col=BLUE, type='foto', d=dict(
       img='kev/wide-Kev-Riegel-angeschnitten.jpg', cap='6 von 24 Sorten, frisch angeschnitten in meiner Küche',
       rows=[('kev/sq-Kev-Riegel-Kern.jpg','Außen Schokolade mit Crunch','innen ein weicher Kern mit Füllung','✓'),
@@ -196,7 +230,7 @@ body{{margin:0;width:1080px;height:1350px;overflow:hidden;position:relative;font
 .pe{{height:300px;display:flex;align-items:center;justify-content:center;font-size:170px}}
 .pc img{{height:300px;max-width:100%;object-fit:contain}}
 .p1{{font-family:A;font-size:33px;color:{NAVY};line-height:1.1;margin-top:6px}} .p2{{font-size:24px;font-weight:600;color:#5a4a3a;line-height:1.3;margin-top:4px}} .p2 b{{color:{RED};font-family:A;font-size:34px;font-weight:400}}
-.mid{{font-size:29px;font-weight:700;color:{NAVY};line-height:1.3;text-align:center;padding:0 10px}} .mid span{{color:{RED}}}
+.mid{{font-size:29px;font-weight:700;color:{NAVY};line-height:1.3;text-align:center;padding:0 10px}} .mid span{{color:{RED}}} .mid:empty{{display:none}}
 .foot{{position:absolute;left:40px;top:1196px;width:1000px;height:128px;display:flex;align-items:center;gap:22px}}
 .ig{{font-family:K;font-size:40px;color:{NAVY};flex:none;padding-left:8px}}
 .msg{{flex:1;background:{NAVY};color:#fff;border-radius:22px;height:118px;display:flex;align-items:center;justify-content:center;text-align:center;font-size:31px;font-weight:700;line-height:1.2;padding:0 20px}}
