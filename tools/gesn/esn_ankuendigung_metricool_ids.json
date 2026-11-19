@@ -11,7 +11,7 @@
   "key": "K2",
   "beitrag": "Start-Tag „Heute um 12 Uhr: ESN Black Week“",
   "zeit": "2026-11-22T06:50:00",
-  "metricool_id": 434492671,
+  "metricool_id": 434519483,
   "uuid": "-5685165688080940960",
   "bild": "esn/posts/ESN-K2-Start.jpg",
   "hinweis": "6:50 statt 6:10, weil um 6:10 das ESN-Rezept Spekulatius-Mousse (430301173) läuft"
@@ -19,9 +19,10 @@
  {
   "key": "P1",
   "beitrag": "Mein Einkaufszettel für die Black Week",
-  "zeit": "2026-11-22T12:00:00",
-  "metricool_id": 434515051,
+  "zeit": "2026-11-22T11:00:00",
+  "metricool_id": 434519428,
   "uuid": "7640066348257070360",
-  "bild": "esn/posts/ESN-P1-Einkaufszettel.jpg"
+  "bild": "esn/posts/ESN-P1-Einkaufszettel.jpg",
+  "hinweis": "am 19.11. 18:25 von 12:00 auf 11:00 verschoben (Kev), Hook „Gleich geht's los“"
  }
 ]

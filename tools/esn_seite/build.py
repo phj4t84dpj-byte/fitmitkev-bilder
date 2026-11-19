@@ -29,8 +29,10 @@ def bild(src, name, breit):
 
 data = []
 # Infobeiträge
-p1t, p1fc = abschnitt("4) SO 22.11., 12:00")
-info = [dict(datum="2026-11-22", zeit="12:00", datei="ESN-P1-Einkaufszettel", text=p1t, fc=p1fc, alt="Mein Einkaufszettel")] + json.load(open(f"{REPO}/tools/esn_produkt/esn_produkt_posts.json"))
+p1t, p1fc = abschnitt("4) SO 22.11., 11:00")
+p0t, p0fc = abschnitt("4b) SO 22.11., 12:00")
+info = [dict(datum="2026-11-22", zeit="11:00", datei="ESN-P1-Einkaufszettel", text=p1t, fc=p1fc, alt="Mein Einkaufszettel"),
+        dict(datum="2026-11-22", zeit="12:00", datei="ESN-P0-Jetzt-gehts-los", text=p0t, fc=p0fc, alt="Jetzt geht's los: die Rabatte im Überblick")] + json.load(open(f"{REPO}/tools/esn_produkt/esn_produkt_posts.json"))
 for p in info:
     num = re.match(r"ESN-(P\d+)-", p["datei"]).group(1)
     data.append(dict(id=num, art="info", titel=p["alt"], slot=slot(p["datum"], p["zeit"]), wann=p["datum"] + "T" + p["zeit"],
@@ -51,7 +53,7 @@ for kid, kopf, datum, zeit, titel, fotos, hinweis, fest in K:
     data.append(dict(id=kid, art=art, titel=titel, slot=slot(datum, zeit.lstrip("0")), wann=datum + "T" + zeit, bilder=bs, text=txt, fc=fc, hinweis=hinweis, fest=fest))
 data.sort(key=lambda x: x["wann"])
 ids = [x["id"] for x in data]
-assert len(ids) == 15 and "P5" not in ids, ids
+assert len(ids) == 16 and "P5" not in ids, ids
 blob = json.dumps(data, ensure_ascii=False).replace("</", "<\\/")
 html = open(f"{D}/vorlage.html").read().replace("/*__POSTS__*/[]", blob)
 open(f"{D}/index.html", "w").write(html)
