@@ -37,18 +37,18 @@ for p in info:
                      bilder=[bild(f"{REPO}/esn/posts/{p['datei']}.jpg", num, 1080)], text=p["text"], fc=p["fc"]))
 # Persönliche Beiträge mit Kevs Fotos
 # K1 und K2 seit 19.11. (Kev: „auch im Info-Design, nur ein Bild pro Beitrag“) als Board aus esn_board.py
-K = [("K1", "2) SA 21.11., 11:00", "2026-11-21", "11:00", "Ankündigung: Das nehme ich selbst", "ESN-K1-Ankuendigung", ""),
-     ("K2", "3) SO 22.11., 6:10", "2026-11-22", "06:10", "Start-Tag: Heute um 12 Uhr geht's los", "ESN-K2-Start", ""),
-     ("K3", "5) FR 27.11., 18:30", "2026-11-27", "18:30", "Black Friday: mein Vorrat", ["Kev-Riegel-6-Sorten-schraeg"], "Im Text fehlt noch, was du selbst bestellt hast. Schreib es mir hier ins Feld."),
-     ("K4", "6) MI 2.12., 6:10", "2026-12-02", "06:10", "Letzter Tag: nur noch bis 17:30 Uhr", ["Kev-Riegel-angeschnitten"], ""),
-     ("K5", "7) MI 2.12., 15:30", "2026-12-02", "15:30", "Erinnerung: noch 2 Stunden", ["Kev-Isoclear-3-Glaeser-schraeg"], "")]
-for kid, kopf, datum, zeit, titel, fotos, hinweis in K:
+K = [("K1", "2) SA 21.11., 11:00", "2026-11-21", "11:00", "Ankündigung: Das nehme ich selbst", "ESN-K1-Ankuendigung", "", True),
+     ("K2", "3) SO 22.11., 6:50", "2026-11-22", "06:50", "Start-Tag: Heute um 12 Uhr geht's los", "ESN-K2-Start", "", True),
+     ("K3", "5) FR 27.11., 18:30", "2026-11-27", "18:30", "Black Friday: mein Vorrat", ["Kev-Riegel-6-Sorten-schraeg"], "Im Text fehlt noch, was du selbst bestellt hast. Schreib es mir hier ins Feld.", False),
+     ("K4", "6) MI 2.12., 6:10", "2026-12-02", "06:10", "Letzter Tag: nur noch bis 17:30 Uhr", ["Kev-Riegel-angeschnitten"], "", False),
+     ("K5", "7) MI 2.12., 15:30", "2026-12-02", "15:30", "Erinnerung: noch 2 Stunden", ["Kev-Isoclear-3-Glaeser-schraeg"], "", False)]
+for kid, kopf, datum, zeit, titel, fotos, hinweis, fest in K:
     txt, fc = abschnitt(kopf)
     if isinstance(fotos, str):
         bs = [bild(f"{REPO}/esn/posts/{fotos}.jpg", kid, 1080)]; art = "info"
     else:
         bs = [bild(f"{REPO}/esn/bilder/kev/{f}.jpg", kid + ("abc"[i] if len(fotos) > 1 else ""), 1280) for i, f in enumerate(fotos)]; art = "persoenlich"
-    data.append(dict(id=kid, art=art, titel=titel, slot=slot(datum, zeit.lstrip("0")), wann=datum + "T" + zeit, bilder=bs, text=txt, fc=fc, hinweis=hinweis))
+    data.append(dict(id=kid, art=art, titel=titel, slot=slot(datum, zeit.lstrip("0")), wann=datum + "T" + zeit, bilder=bs, text=txt, fc=fc, hinweis=hinweis, fest=fest))
 data.sort(key=lambda x: x["wann"])
 ids = [x["id"] for x in data]
 assert len(ids) == 15 and "P5" not in ids, ids
