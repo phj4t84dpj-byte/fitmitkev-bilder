@@ -1,0 +1,77 @@
+{
+ "hinweis": "Eingeplant am 19.11.2026 nach Kevs Go („Ja, einfügen aber um 9 Uhr statt 12“). Täglich 9:00 Uhr von Mo 23.11. bis Mi 2.12., Do 26.11. ohne Infobeitrag (P5 gestrichen). Bilder aus Commit 7f63fda.",
+ "posts": [
+  {
+   "key": "P2",
+   "beitrag": "Mein Frühstück unterwegs",
+   "zeit": "2026-11-23T09:00:00",
+   "metricool_id": 434535672,
+   "uuid": "-7640052711220886399",
+   "bild": "esn/posts/ESN-P2-Morgen.jpg"
+  },
+  {
+   "key": "P3",
+   "beitrag": "Schokoriegel oder Proteinriegel",
+   "zeit": "2026-11-24T09:00:00",
+   "metricool_id": 434535756,
+   "uuid": "6325020212178275668",
+   "bild": "esn/posts/ESN-P3-Riegel.jpg"
+  },
+  {
+   "key": "P4",
+   "beitrag": "3 neue Sorten, 3 Rezepte",
+   "zeit": "2026-11-25T09:00:00",
+   "metricool_id": 434535830,
+   "uuid": "-7217657497635896903",
+   "bild": "esn/posts/ESN-P4-NeueSorten.jpg"
+  },
+  {
+   "key": "P6",
+   "beitrag": "Black Friday: meine Top 3",
+   "zeit": "2026-11-27T09:00:00",
+   "metricool_id": 434535907,
+   "uuid": "-2986278839189877401",
+   "bild": "esn/posts/ESN-P6-Top3.jpg"
+  },
+  {
+   "key": "P7",
+   "beitrag": "4 Eiweiß-Snacks unter 200 kcal",
+   "zeit": "2026-11-28T09:00:00",
+   "metricool_id": 434535970,
+   "uuid": "544677399514401984",
+   "bild": "esn/posts/ESN-P7-Abendsnacks.jpg"
+  },
+  {
+   "key": "P8",
+   "beitrag": "Proteinpulver ohne Klumpen",
+   "zeit": "2026-11-29T09:00:00",
+   "metricool_id": 434536104,
+   "uuid": "4800277156312926206",
+   "bild": "esn/posts/ESN-P8-Klumpen.jpg"
+  },
+  {
+   "key": "P9",
+   "beitrag": "3 Shakes unter 250 kcal",
+   "zeit": "2026-11-30T09:00:00",
+   "metricool_id": 434536203,
+   "uuid": "706860928212812645",
+   "bild": "esn/posts/ESN-P9-Shakes.jpg"
+  },
+  {
+   "key": "P10",
+   "beitrag": "ESN Black Week kurz erklärt",
+   "zeit": "2026-12-01T09:00:00",
+   "metricool_id": 434536314,
+   "uuid": "8737226226078007884",
+   "bild": "esn/posts/ESN-P10-Fragen.jpg"
+  },
+  {
+   "key": "P11",
+   "beitrag": "Letzte Chance: heute bis 17:30 Uhr",
+   "zeit": "2026-12-02T09:00:00",
+   "metricool_id": 434536408,
+   "uuid": "260392497298621372",
+   "bild": "esn/posts/ESN-P11-Letzter-Tag.jpg"
+  }
+ ]
+}
