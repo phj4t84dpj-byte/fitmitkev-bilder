@@ -1,0 +1,60 @@
+{
+ "slug": "IG-Gewuerzkuchen",
+ "name": "Omas Gewürzkuchen vom Blech",
+ "info": "Einkaufsliste · 16 Stücke · Blech 30 × 40 cm",
+ "zutaten": [
+  [
+   "250 g",
+   "Dinkelmehl, 1 Pck. Backpulver"
+  ],
+  [
+   "200 g",
+   "Skyr"
+  ],
+  [
+   "3",
+   "Eier"
+  ],
+  [
+   "100 g",
+   "Erythrit"
+  ],
+  [
+   "100 g",
+   "Apfelmus"
+  ],
+  [
+   "20 g",
+   "Backkakao, 3 TL Lebkuchengewürz"
+  ],
+  [
+   "80 g",
+   "Zartbitterschokolade"
+  ]
+ ],
+ "naehr": "Pro Stück: 110 kcal · 5 g Eiweiß",
+ "listen_bild": "gk0_hook",
+ "pos": "50% 45%",
+ "slides": [
+  {
+   "img": "gk0_hook",
+   "text": "Omas Gewürzkuchen\nvom Blech.\n110 kcal pro Stück."
+  },
+  {
+   "img": "gk1_eier",
+   "text": "Eier schaumig schlagen,\nSkyr und Apfelmus\ndazu."
+  },
+  {
+   "img": "gk2_teig",
+   "text": "Mehl, Kakao und\nLebkuchengewürz\nunterheben."
+  },
+  {
+   "img": "gk3_blech",
+   "text": "Aufs Blech streichen.\n180 °C, 20–25 Minuten."
+  },
+  {
+   "img": "gk4_glasur",
+   "text": "Schokolade schmelzen\nund darüber streichen."
+  }
+ ]
+}

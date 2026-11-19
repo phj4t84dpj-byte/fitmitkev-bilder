@@ -1,0 +1,52 @@
+{
+ "slug": "IG-Zimtsterne",
+ "name": "Zimtsterne aus Haferflocken",
+ "info": "Einkaufsliste · 30 Stück · Backblech",
+ "zutaten": [
+  [
+   "250 g",
+   "Zarte Haferflocken"
+  ],
+  [
+   "2",
+   "Eiweiß"
+  ],
+  [
+   "120 g",
+   "Erythrit"
+  ],
+  [
+   "2 TL",
+   "Zimt"
+  ],
+  [
+   "50 g",
+   "Skyr"
+  ]
+ ],
+ "naehr": "Pro Stück: 35 kcal · 2 g Eiweiß",
+ "listen_bild": "zs0_hook",
+ "pos": "50% 45%",
+ "slides": [
+  {
+   "img": "zs0_hook",
+   "text": "Zimtsterne\nohne Mandeln.\n35 kcal pro Stück."
+  },
+  {
+   "img": "zs1_zutaten",
+   "text": "Haferflocken mahlen.\nEiweiß, Erythrit, Zimt\nund Skyr dazu."
+  },
+  {
+   "img": "zs2_teig",
+   "text": "Zu einem festen Teig\nkneten. 30 Minuten\nkalt stellen."
+  },
+  {
+   "img": "zs3_sterne",
+   "text": "7 mm dick ausrollen,\nSterne ausstechen."
+  },
+  {
+   "img": "zs4_guss",
+   "text": "Mit Eiweiß-Guss\nbestreichen.\n150 °C, 15 Minuten."
+  }
+ ]
+}

@@ -1,0 +1,60 @@
+{
+ "slug": "IG-Milchschnitte-Bowl",
+ "name": "Milchschnitte-Bowl nur für dich",
+ "info": "Einkaufsliste · 1 Bowl · Glasform 15 × 10 cm",
+ "zutaten": [
+  [
+   "130 g",
+   "Skyr"
+  ],
+  [
+   "1",
+   "Ei"
+  ],
+  [
+   "10 g",
+   "Backkakao"
+  ],
+  [
+   "15 g",
+   "Dinkelmehl, ½ TL Backpulver"
+  ],
+  [
+   "10 g",
+   "Erythrit"
+  ],
+  [
+   "30 g",
+   "Frischkäse light"
+  ],
+  [
+   "10 g",
+   "Honig, etwas Vanille"
+  ]
+ ],
+ "naehr": "Die ganze Bowl: 335 kcal · 29 g Eiweiß",
+ "listen_bild": "ms0_hook",
+ "pos": "50% 45%",
+ "slides": [
+  {
+   "img": "ms0_hook",
+   "text": "Milchschnitte.\nNur als Bowl\nfür dich allein."
+  },
+  {
+   "img": "ms1_teig",
+   "text": "Ei, Kakao, Mehl, Skyr\nund Erythrit\nglatt rühren."
+  },
+  {
+   "img": "ms2_form",
+   "text": "In die Glasform.\n180 °C, 12 Minuten."
+  },
+  {
+   "img": "ms3_creme",
+   "text": "Skyr, Frischkäse\nund Honig\ncremig rühren."
+  },
+  {
+   "img": "ms4_fertig",
+   "text": "Creme auf den Biskuit.\n30 Minuten kalt stellen."
+  }
+ ]
+}
