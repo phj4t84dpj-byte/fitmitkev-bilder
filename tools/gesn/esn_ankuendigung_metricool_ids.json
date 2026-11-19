@@ -35,11 +35,12 @@
  },
  {
   "key": "K3",
-  "beitrag": "Black Friday am Abend: nur Kevs Top 5, ohne „bestellt“ (Kev 19.11.)",
+  "beitrag": "Black Friday am Abend: Infobild „Meine Top 5 Produkte“",
   "zeit": "2026-11-27T18:30:00",
-  "metricool_id": 434561013,
+  "metricool_id": 434639012,
   "uuid": "-3336799488490649948",
-  "bild": "esn/bilder/kev/Kev-Riegel-6-Sorten-schraeg.jpg"
+  "bild": "esn/posts/ESN-K3-Black-Friday-Top5.jpg",
+  "hinweis": "19.11., 20:06: auf Kevs Wunsch (Prüfseite) Infobild statt Riegel-Foto; vorherige ID 434561013"
  },
  {
   "key": "K4",
@@ -54,8 +55,10 @@
   "key": "K5",
   "beitrag": "Erinnerung: noch 2 Stunden",
   "zeit": "2026-12-02T15:30:00",
-  "metricool_id": 434632613,
+  "metricool_id": 434639065,
   "uuid": "5118346209004962667",
-  "bild": "esn/bilder/kev/Kev-Isoclear-3-Glaeser-schraeg.jpg"
+  "bild": "esn/bilder/kev/Kev-Isoclear-3-Glaeser-schraeg.jpg",
+  "status": "ENTWURF (geparkt, wird nicht veröffentlicht)",
+  "hinweis": "19.11., 20:07: Kev auf der Prüfseite: „den Beitrag können wir allgemein raus nehmen“. Löschen geht über die Schnittstelle nicht, deshalb als Entwurf geparkt; vorherige ID 434632613"
  }
 ]

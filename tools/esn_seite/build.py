@@ -41,9 +41,9 @@ for p in info:
 # K1 und K2 seit 19.11. (Kev: „auch im Info-Design, nur ein Bild pro Beitrag“) als Board aus esn_board.py
 K = [("K1", "2) SA 21.11., 11:00", "2026-11-21", "11:00", "Ankündigung: Das nehme ich selbst", "ESN-K1-Ankuendigung", "", True),
      ("K2", "3) SO 22.11., 6:50", "2026-11-22", "06:50", "Start-Tag: Heute um 12 Uhr geht's los", "ESN-K2-Start", "", True),
-     ("K3", "5) FR 27.11., 18:30", "2026-11-27", "18:30", "Black Friday: meine Top 5", ["Kev-Riegel-6-Sorten-schraeg"], "", True),
-     ("K4", "6) MI 2.12., 6:50", "2026-12-02", "06:50", "Letzter Tag: nur noch bis 17:30 Uhr", ["Kev-Riegel-angeschnitten"], "", True),
-     ("K5", "7) MI 2.12., 15:30", "2026-12-02", "15:30", "Erinnerung: noch 2 Stunden", ["Kev-Isoclear-3-Glaeser-schraeg"], "", True)]
+     ("K3", "5) FR 27.11., 18:30", "2026-11-27", "18:30", "Black Friday: meine Top 5 Produkte", "ESN-K3-Black-Friday-Top5", "", True),
+     ("K4", "6) MI 2.12., 6:50", "2026-12-02", "06:50", "Letzter Tag: nur noch bis 17:30 Uhr", ["Kev-Riegel-angeschnitten"], "", True)]
+# K5 „Noch 2 Stunden“ (Mi 2.12., 15:30): von Kev am 19.11. gestrichen.
 for kid, kopf, datum, zeit, titel, fotos, hinweis, fest in K:
     txt, fc = abschnitt(kopf)
     if isinstance(fotos, str):
@@ -53,7 +53,7 @@ for kid, kopf, datum, zeit, titel, fotos, hinweis, fest in K:
     data.append(dict(id=kid, art=art, titel=titel, slot=slot(datum, zeit.lstrip("0")), wann=datum + "T" + zeit, bilder=bs, text=txt, fc=fc, hinweis=hinweis, fest=fest))
 data.sort(key=lambda x: x["wann"])
 ids = [x["id"] for x in data]
-assert len(ids) == 18 and "P5" not in ids, ids
+assert len(ids) == 17 and "K5" not in ids and "P5" not in ids, ids
 blob = json.dumps(data, ensure_ascii=False).replace("</", "<\\/")
 html = open(f"{D}/vorlage.html").read().replace("/*__POSTS__*/[]", blob)
 open(f"{D}/index.html", "w").write(html)
