@@ -1,8 +1,13 @@
 # Prüfseite „ESN-Black-Week-Beiträge“ (19.11.2026)
 
-Kev wollte alle ESN-Black-Week-Infobeiträge (P1–P11) auf einer Seite sehen und direkt unter jedem Bild schreiben, was anders sein soll.
+Kev prüft hier alle ESN-Black-Week-Beiträge ab Sa 21.11. und schreibt direkt unter jedes Bild, was anders sein soll.
 
 - Seite: https://claude.ai/artifact/Wp6rMK53G8j7hi8TVUFEZe (privat, nur Kev)
-- Kevs Anmerkungen liegen in der Datenbank der Seite, Sammlung `anmerkungen`, je Beitrag ein Dokument `P1` … `P11` mit `text`, `ok` (true = „Passt so“) und `stand`. Auslesen mit dem Werkzeug ArtifactData (`list`, Sammlung `anmerkungen`).
-- Bauen: `build.py` neben `vorlage.html` und `esn_produkt_posts.json` (aus `tools/esn_produkt/produkt_texte.py`) legen, Ordner `img/` anlegen, ausführen; ergibt `index.html` und `img/P1.jpg` … `img/P11.jpg` (1080 × 1350). Veröffentlichen mit denselben Dateipfaden, Fähigkeit `db`.
-- Nach Änderungen an einem Board: Bild neu rendern, `build.py` laufen lassen, Seite neu veröffentlichen. Die Anmerkungen bleiben erhalten.
+- Inhalt in der geplanten Reihenfolge: 5 persönliche Beiträge mit Kevs Fotos (K1 Sa 21.11. Ankündigung · K2 So 22.11. Start · K3 Fr 27.11. Black Friday · K4/K5 Mi 2.12.) und 10 Infobeiträge (P1–P11 ohne P5).
+- Kevs Anmerkungen liegen in der Datenbank der Seite, Sammlung `anmerkungen`, je Beitrag ein Dokument (`P1`, `K1`, …) mit `text` (offener Wunsch), `ok` (true = „Passt so“), `erledigt` (was zuletzt umgesetzt wurde, erscheint grün auf der Karte) und `stand`. Auslesen mit dem Werkzeug ArtifactData (`list`, Sammlung `anmerkungen`). Nach dem Umsetzen: `text` leeren und `erledigt` setzen (Schreibvorgänge mit `if_version`).
+- Bauen: `build.py` neben `vorlage.html` legen, Ordner `img/` anlegen, ausführen; ergibt `index.html`, `img/*.jpg` und `_files.json` (Dateiliste fürs Veröffentlichen). Fähigkeit `db`.
+- Nach Änderungen an einem Board: `tools/esn_produkt/esn_board.py <P…>` rendern, Bild nach `esn/posts/` kopieren, `build.py` laufen lassen, Seite neu veröffentlichen.
+
+## Runde 1 (19.11., 17:23 „fertig“)
+P1 Extra Creamy Protein, Isoclear = Protein-Eistee, Code im blauen Feld · P2 Flexpresso + Mandelmilch (145 kcal, 24 g Eiweiß), doppelte Portion, Code im blauen Feld · P3 „unter 200 kcal“ · P4 „Extra Creamy Protein“ im Balken · **P5 gestrichen** · P6 Codes kombinieren, Kevs Flexpresso-Foto, „nur 1x im Jahr“ · P7 Riegel 190 kcal (eigene Korrektur) · P10 „ESN Black Week“ · P11 „nur solange der Vorrat reicht“.
+Per Dialog entschieden: blaues Feld = „Code FITMITKEV: Black-Week-Rabatte sichern“ (nicht „maximal sparen“, der Code gibt keinen Extra-Rabatt) · für Fr 20.11. kein Ankündigungsbeitrag, erste Ankündigung bleibt Sa 21.11., 11 Uhr.

@@ -63,6 +63,12 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
 
 .shot { display: block; padding: 0; border: 0; background: var(--bg); border-radius: 10px; overflow: hidden; cursor: zoom-in; width: 100% }
 .shot img { display: block; width: 100%; height: auto; aspect-ratio: 4 / 5; object-fit: cover }
+.shot.nat img { aspect-ratio: auto; object-fit: contain }
+.gal { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 6px }
+.gal .shot img { aspect-ratio: 1 / 1 }
+.hint { margin: 0; font-size: 14px; color: var(--chg) }
+.done-note { background: var(--ok-bg); border-radius: 10px; padding: 8px 12px; font-size: 14px; white-space: pre-wrap; overflow-wrap: anywhere }
+.done-note b { display: block; color: var(--ok); font-size: 12.5px; letter-spacing: .05em; text-transform: uppercase }
 .ask { display: flex; flex-direction: column; gap: 6px }
 .ask label { font-weight: 700; font-size: 15px }
 textarea { font: inherit; width: 100%; min-height: 104px; resize: vertical; padding: 10px 12px; border-radius: 10px;
@@ -93,14 +99,14 @@ details h3 { font-size: 12.5px; letter-spacing: .06em; text-transform: uppercase
 <div class="wrap">
   <header class="head">
     <span class="window">Black Week · So 22.11., 12 Uhr bis Mi 2.12., 17:30 Uhr</span>
-    <h1>ESN Black Week: deine 11 Infobeiträge</h1>
-    <p>Alle Beiträge sind fertig gebaut, aber noch nicht eingeplant. Schreib unter jedes Bild, was anders sein soll. Es speichert von selbst. Tippe auf ein Bild, um es groß zu sehen.</p>
+    <h1>ESN Black Week: alle Beiträge ab Samstag</h1>
+    <p>In der geplanten Reihenfolge: 5 persönliche Beiträge mit deinen Fotos und 10 Infobeiträge. Eingeplant ist davon noch nichts. Schreib unter jedes Bild, was anders sein soll. Es speichert von selbst. Tippe auf ein Bild, um es groß zu sehen.</p>
   </header>
 
   <div class="bar" id="bar">
     <div class="count"><b id="c-chg">0</b><span>mit Änderung</span></div>
     <div class="count"><b id="c-ok">0</b><span>passt so</span></div>
-    <div class="count"><b id="c-open">11</b><span>offen</span></div>
+    <div class="count"><b id="c-open">15</b><span>offen</span></div>
     <div class="sync" id="sync" role="status">Verbinde mit dem Speicher …</div>
     <button class="btn" id="copy" type="button">Alle Anmerkungen kopieren</button>
   </div>
@@ -120,7 +126,7 @@ details h3 { font-size: 12.5px; letter-spacing: .06em; text-transform: uppercase
   var KEY = 'esn-bw-anmerkungen-v1';
   var S = {};          // id -> {text, ok}
   var saved = {};      // id -> zuletzt bestätigter Stand als JSON
-  var timers = {}, busy = {}, again = {}, touched = {};
+  var timers = {}, busy = {}, again = {}, touched = {}, DONE = {};
   var db = null, dbReadOnly = false, firstSnap = false, loadTimer = null, connecting = true;
   var el = {};
 
@@ -141,14 +147,22 @@ details h3 { font-size: 12.5px; letter-spacing: .06em; text-transform: uppercase
     top.appendChild(make('span', 'num', p.id));
     top.appendChild(make('h2', '', p.titel));
     var chip = make('span', 'chip', 'Offen'); top.appendChild(chip);
-    top.appendChild(make('p', 'slot', 'Geplant: ' + p.slot));
+    top.appendChild(make('p', 'slot', (p.art === 'persoenlich' ? 'Persönlich, dein Foto' : 'Infobeitrag') + ' · ' + p.slot));
     art.appendChild(top);
 
-    var shot = make('button', 'shot'); shot.type = 'button'; shot.setAttribute('aria-label', p.id + ' groß ansehen: ' + p.titel);
-    var img = document.createElement('img'); img.src = p.bild; img.alt = 'Beitragsbild ' + p.id + ': ' + p.titel; img.width = 1080; img.height = 1350;
-    if (POSTS.indexOf(p) > 1) img.loading = 'lazy';
-    shot.appendChild(img); art.appendChild(shot);
-    shot.addEventListener('click', function () { openZoom(p); });
+    var holder = p.bilder.length > 1 ? make('div', 'gal') : null;
+    p.bilder.forEach(function (b, bi) {
+      var shot = make('button', 'shot' + (p.art === 'persoenlich' && !holder ? ' nat' : '')); shot.type = 'button';
+      var name = 'Bild zu ' + p.id + ': ' + p.titel + (holder ? ', Foto ' + (bi + 1) : '');
+      shot.setAttribute('aria-label', name + ' groß ansehen');
+      var img = document.createElement('img'); img.src = b.src; img.alt = name; img.width = b.w; img.height = b.h;
+      if (POSTS.indexOf(p) > 1) img.loading = 'lazy';
+      shot.appendChild(img); (holder || art).appendChild(shot);
+      shot.addEventListener('click', function () { openZoom(b.src, name); });
+    });
+    if (holder) art.appendChild(holder);
+    if (p.hinweis) art.appendChild(make('p', 'hint', p.hinweis));
+    var dn = make('div', 'done-note'); dn.hidden = true; art.appendChild(dn);
 
     var ask = make('div', 'ask');
     var lab = make('label', '', 'Was soll anders sein?'); lab.htmlFor = 'note-' + p.id;
@@ -168,7 +182,7 @@ details h3 { font-size: 12.5px; letter-spacing: .06em; text-transform: uppercase
     art.appendChild(det);
 
     grid.appendChild(art);
-    el[p.id] = { art: art, chip: chip, ta: ta, ok: ok, sv: sv };
+    el[p.id] = { art: art, chip: chip, ta: ta, ok: ok, sv: sv, dn: dn };
 
     ta.addEventListener('input', function () {
       touched[p.id] = true;
@@ -187,6 +201,11 @@ details h3 { font-size: 12.5px; letter-spacing: .06em; text-transform: uppercase
   function paint(id) {
     var e = el[id], st = stateOf(id);
     e.art.dataset.state = st; e.chip.textContent = LABEL[st];
+    var d = DONE[id] || '';
+    if (e.dn.dataset.shown !== d) {
+      e.dn.dataset.shown = d; e.dn.textContent = ''; e.dn.hidden = !d;
+      if (d) { e.dn.appendChild(make('b', '', 'Umgesetzt')); e.dn.appendChild(document.createTextNode(d)); }
+    }
     if (document.activeElement !== e.ta && e.ta.value !== S[id].text) e.ta.value = S[id].text;
     e.ok.setAttribute('aria-pressed', S[id].ok && st === 'passt' ? 'true' : 'false');
     e.ok.disabled = !!S[id].text.trim();
@@ -222,6 +241,7 @@ details h3 { font-size: 12.5px; letter-spacing: .06em; text-transform: uppercase
     if (want === saved[id]) { touched[id] = false; return; }
     busy[id] = true; note(id, 'Speichert …');
     var body = { text: S[id].text, ok: S[id].ok, stand: new Date().toISOString() };
+    if (DONE[id]) body.erledigt = DONE[id];
     db.doc('anmerkungen/' + id).set(body).then(function () {
       saved[id] = want; if (snapOf(id) === want) touched[id] = false;
       note(id, 'Gespeichert, ' + clock());
@@ -241,6 +261,8 @@ details h3 { font-size: 12.5px; letter-spacing: .06em; text-transform: uppercase
       var id = d.id, v = d.data() || {};
       if (!S[id]) return;
       seen[id] = true;
+      var dnew = String(v.erledigt || '');
+      if (dnew !== (DONE[id] || '')) { DONE[id] = dnew; paint(id); }
       var remote = JSON.stringify({ text: String(v.text || ''), ok: !!v.ok });
       if (touched[id] || busy[id]) { if (saved[id] === undefined) saved[id] = remote; return; }   // eigene, noch offene Eingabe nie überschreiben
       saved[id] = remote;
@@ -252,7 +274,7 @@ details h3 { font-size: 12.5px; letter-spacing: .06em; text-transform: uppercase
       POSTS.forEach(function (p) {
         var id = p.id;
         if (!seen[id]) {
-          if (later && !touched[id] && !busy[id] && saved[id] !== undefined && saved[id] !== EMPTY) { S[id] = { text: '', ok: false }; paint(id); note(id, ''); }
+          if (later && !touched[id] && !busy[id] && saved[id] !== undefined && saved[id] !== EMPTY) { S[id] = { text: '', ok: false }; DONE[id] = ''; paint(id); note(id, ''); }
           saved[id] = EMPTY;
         }
         if (snapOf(id) !== saved[id]) schedule(id, 0);   // lokale Entwürfe nachreichen
@@ -299,7 +321,7 @@ details h3 { font-size: 12.5px; letter-spacing: .06em; text-transform: uppercase
 
   // Großansicht
   var zoom = document.getElementById('zoom'), zimg = document.getElementById('zoom-img'), lastShot = null;
-  function openZoom(p) { lastShot = document.activeElement; zimg.src = p.bild; zimg.alt = 'Beitragsbild ' + p.id + ': ' + p.titel; zoom.hidden = false; document.getElementById('zoom-x').focus(); }
+  function openZoom(src, name) { lastShot = document.activeElement; zimg.src = src; zimg.alt = name; zoom.hidden = false; document.getElementById('zoom-x').focus(); }
   function closeZoom() { zoom.hidden = true; zimg.removeAttribute('src'); if (lastShot && lastShot.focus) lastShot.focus(); }
   zoom.addEventListener('click', closeZoom);
   document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && !zoom.hidden) closeZoom(); });

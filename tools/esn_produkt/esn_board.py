@@ -33,52 +33,49 @@ SPEC={
  'P1':dict(out='ESN-P1-Einkaufszettel', hook="Jetzt geht's los:", title=['MEIN EINKAUFSZETTEL','FÜR DIE BLACK WEEK'], size=76,
    secs=[dict(lab='DAS KOMMT BEI MIR IN DEN WARENKORB', col=RED, type='rows', d=[
       ('kev/sq-Kev-Flexpresso-3-Sorten.jpg','Flexpresso für morgens','White & Dark Chocolate Mocha, Chocolate','-25 %'),
-      ('kev/sq-Kev-ExtraCreamy-3-Dosen.jpg','Extra Creamy für meine Rezepte','Vanilla Milk, Cinnamon Cereal, neue Black Edition','-30 %'),
+      ('kev/sq-Kev-ExtraCreamy-3-Dosen.jpg','Extra Creamy Protein für meine Rezepte','Vanilla Milk, Cinnamon Cereal, neue Black Edition','-30 %'),
       ('kev/sq-Kev-Riegel-angeschnitten.jpg','Designer Bar als 12er Box','quer durch die Sorten, neu: Dark Chocolate Mint','-30 %'),
-      ('kev/sq-Kev-Isoclear-3-Glaeser-vorn.jpg','Isoclear nach dem Training','Peach Iced Tea, Green Apple, Fresh Cherry','-25 %'),
+      ('kev/sq-Kev-Isoclear-3-Glaeser-vorn.jpg','Isoclear = Protein-Eistee mit Geschmack','Peach Iced Tea, Green Apple, Fresh Cherry','-25 %'),
       ('kev/sq-Kev-FlavorPowder-oben.jpg','Designer Flavor Powder','zum Süßen von Skyr und Quark','-40 %')])],
    mid='Dazu täglich neue Daily Deals mit bis zu -70 %.<br><span>Läuft bis Mittwoch, 2.12., 17:30 Uhr.</span>',
-   msg='Zum Speichern:<br><span>mein Vorrat für den Winter.</span>',
+   msg='Code FITMITKEV:<br><span>Black-Week-Rabatte sichern.</span>',
    css='.ri{width:104px;height:104px;overflow:hidden}.ri img{max-width:104px;max-height:104px;border-radius:14px}.rw{padding:9px 0}'),
  'P2':dict(out='ESN-P2-Morgen', hook='Mein Morgen:', title=['ZWEI MINUTEN','STATT BÄCKER'], size=84,
    secs=[dict(lab='DAS FRÜHSTÜCK UNTERWEGS GEGEN MEINS', col=BLUE, type='vs', d=dict(
       l=dict(title='Coffee to go + Croissant', rows=[('☕','Latte Macchiato groß','ca. 220 kcal'),('🥐','Butter-Croissant','ca. 230 kcal')], sum='ca. 450 kcal · 10 g Eiweiß'),
-      r=dict(title='Mein Protein-Kaffee', rows=[('☕','30 g Protein-Kaffeepulver','ca. 110 kcal'),('🥛','250 ml Milch (1,5 %)','ca. 120 kcal')], sum='ca. 230 kcal · 30 g Eiweiß'))),
+      r=dict(title='Mein Protein-Kaffee', rows=[('☕','30 g Flexpresso','ca. 110 kcal'),('🥛','250 ml Mandelmilch (ungesüßt)','ca. 35 kcal')], sum='ca. 145 kcal · 24 g Eiweiß'))),
    ],
-   mid='Kaffee ist schon drin: Pulver in den Shaker, Milch drauf, schütteln.<br><span>Ich trinke ihn jeden Morgen direkt nach dem Aufstehen.</span>',
-   msg='Halb so viele Kalorien,<br><span>dreimal so viel Eiweiß.</span>'),
+   mid='Ein Drittel der Kalorien, mehr als doppelt so viel Eiweiß.<br><span>Ich trinke jeden Morgen eine doppelte Portion.</span>',
+   msg='Code FITMITKEV:<br><span>Black-Week-Rabatte sichern.</span>'),
  'P3':dict(out='ESN-P3-Riegel', hook='Süßes ohne Zuckerfalle:', title=['SCHOKORIEGEL','ODER PROTEINRIEGEL?'], size=78,
    secs=[dict(lab='SO SIEHT DER VERGLEICH AUS', col=RED, type='vs', d=dict(
       l=dict(title='Schokoriegel (50 g)', rows=[('🔥','Kalorien','ca. 240 kcal'),('🍬','Zucker','ca. 25 g'),('💪','Eiweiß','ca. 3 g')], sum='8 Stück Würfelzucker'),
-      r=dict(title='Designer Bar (45 g)', img='designer-bar-mint.png', rows=[('🔥','Kalorien','ca. 200 kcal'),('🍬','Zucker','ca. 2 g'),('💪','Eiweiß','ca. 14 g')], sum='weich, mit Füllung'))),
+      r=dict(title='Designer Bar (45 g)', img='designer-bar-mint.png', rows=[('🔥','Kalorien','unter 200 kcal'),('🍬','Zucker','max. 2 g'),('💪','Eiweiß','ca. 14 g')], sum='weich, mit Füllung'))),
    ],
    mid='Werte je nach Sorte leicht unterschiedlich.<br><span>Mein Snack, wenn nachmittags die Lust auf Süßes kommt.</span>',
    msg='Süß darf sein.<br><span>Ohne die Zuckerbombe.</span>'),
  'P4':dict(out='ESN-P4-NeueSorten', hook='Neu bei ESN:', title=['3 NEUE SORTEN,','3 REZEPTE'], size=86,
-   secs=[dict(lab='DAS MACHE ICH DARAUS', col=GREEN, type='rows', d=[
+   secs=[dict(lab='EXTRA CREAMY PROTEIN: DAS MACHE ICH DARAUS', col=GREEN, type='rows', d=[
       ('extra-creamy-480g-vanilla-speculoos.png','Vanilla Speculoos','Spekulatius-Mousse in 5 Minuten','295<br><small>kcal</small>'),
       ('extra-creamy-480g-cinnamon-cereal.png','Cinnamon Cereal','Zimtschnecken-Overnight-Oats','430<br><small>kcal</small>'),
       ('extra-creamy-480g-strawberry-cream.png','Strawberry Cream','Erdbeer-Quark-Bowl nur für dich','335<br><small>kcal</small>')])],
    mid='Alle drei Rezepte findest du hier auf der Seite.<br><span>Ohne Backen, jeweils mit über 30 g Eiweiß.</span>',
    msg='Neue Sorten heißt bei mir:<br><span>neue Rezepte.</span>'),
- 'P5':dict(out='ESN-P5-Dose', hook='Gerechnet:', title=['SO WEIT REICHT','EINE DOSE'], size=86,
-   secs=[dict(lab='480 G DOSE = 16 PORTIONEN À 30 G', col=BLUE, type='rows', d=[
-      ('🥣','Morgens','Overnight Oats, Porridge, Skyr-Bowl','×5'),('🍮','Dessert','Mousse, Pudding, Tiramisu im Glas','×6'),('🥤','Unterwegs','Shake mit Milch oder Wasser','×5'),('🛒','ca. 1,22 € pro Portion','ca. 23 g Eiweiß · 480 g für 19,53 € statt 27,90 € (neue Sorten)','-30 %')])],
-   mid='Preise laut ESN für die Black Week, bis Mi 2.12., 17:30 Uhr.',
-   msg='16 Rezepte<br><span>aus einer Dose.</span>'),
+ # P5 „So weit reicht eine Dose“: am 19.11. von Kev gestrichen.
  'P6':dict(out='ESN-P6-Top3', hook='Black Friday:', title=['MEINE TOP 3','FÜR DEN VORRAT'], size=86,
    secs=[dict(lab='DAS KOMMT BEI MIR IN DEN WARENKORB', col=RED, type='prod', d=[
       ('extra-creamy-480g-cinnamon-cereal.png','Designer Protein Extra Creamy','für Rezepte<br><b>-30 %</b>'),
       ('designer-bar-mint-box.png','Designer Bar 12er Box','als Snack<br><b>-30 %</b>'),
-      ('☕','Protein-Kaffee Flexpresso','für morgens<br><b>-25 %</b>')])],
-   mid='Tipp: Ab der 2. Bestellung in der Black Week ist der Versand ab 30 € kostenlos<br><span>mit dem Code SHIPAGAIN.</span>',
-   msg='Einmal im Jahr<br><span>fülle ich den Vorrat auf.</span>'),
+      ('kev/sq-Kev-Flexpresso-3-Sorten.jpg','Protein-Kaffee Flexpresso','für morgens<br><b>-25 %</b>')])],
+   mid='Tipp: Ab der 2. Bestellung ist der Versand ab 30 € kostenlos.<br><span>Einfach die Codes FITMITKEV und SHIPAGAIN kombinieren.</span>',
+   msg='ESN Black Week:<br><span>nur 1x im Jahr.</span>',
+   css='.pc img[src*="kev/"]{border-radius:18px;height:270px;margin:15px 0}'),
  'P7':dict(out='ESN-P7-Abendsnacks', hook='Abends Hunger?', title=['4 EIWEISS-SNACKS','UNTER 200 KCAL'], size=80,
    secs=[dict(lab='MEINE SNACKS FÜR DEN ABEND', col=BLUE, type='rows', d=[
       ('🥤','Shake','30 g Proteinpulver + 300 ml Wasser','115<br><small>kcal</small>'),
       ('🍮','Schoko-Creme','200 g Skyr + 15 g Proteinpulver Schoko','185<br><small>kcal</small>'),
       ('🍨','Schoko-Eis','1 Portion Eis aus Hüttenkäse','195<br><small>kcal</small>'),
-      ('🍫','Proteinriegel','1 Riegel (45 g)','200<br><small>kcal</small>')])],
+      ('🍫','Proteinriegel','1 Riegel (45 g)','190<br><small>kcal</small>')])],
    mid='Alle mit 14 bis 33 g Eiweiß.<br><span>Kalorien im Blick, Genuss inklusive.</span>',
    msg='Snacken ja.<br><span>Aber mit Plan.</span>'),
  'P8':dict(out='ESN-P8-Klumpen', hook='Tipp aus meiner Küche:', title=['PROTEINPULVER','OHNE KLUMPEN'], size=86,
@@ -96,7 +93,7 @@ SPEC={
       ('extra-creamy-30g-milk-chocolate.png','Schoko-Banane','30 g Milk Chocolate + ½ Banane + 250 ml Wasser (Mixer)','170<br><small>kcal</small>')])],
    mid='Jeweils mit 24 bis 32 g Eiweiß.<br><span>Eiskalt schmecken sie am besten.</span>',
    msg='Kein Shake muss<br><span>nach Pappe schmecken.</span>'),
- 'P10':dict(out='ESN-P10-Fragen', hook='Eure Fragen:', title=['BLACK WEEK','KURZ ERKLÄRT'], size=90,
+ 'P10':dict(out='ESN-P10-Fragen', hook='Eure Fragen:', title=['ESN BLACK WEEK','KURZ ERKLÄRT'], size=88,
    secs=[dict(lab='DAS WERDE ICH AM HÄUFIGSTEN GEFRAGT', col=BLUE, type='rows', d=[
       ('❓','Wie lange läuft die Black Week?','bis Mittwoch, 2.12., um 17:30 Uhr','2.12.'),
       ('❓','Wie viel Rabatt gibt es?','bis zu -70 %, Riegel und Extra Creamy -30 %, Whey und Isoclear -25 %','-70 %'),
@@ -105,12 +102,13 @@ SPEC={
    mid='Den Link mit meinem Code findest du im ersten Kommentar.',
    msg='Noch eine Frage?<br><span>Schreib sie mir in die Kommentare.</span>'),
  'P11':dict(out='ESN-P11-Letzter-Tag', hook='Letzte Chance:', title=['HEUTE BIS','17:30 UHR'], size=96,
-   secs=[dict(lab='DAS HOLE ICH MIR NOCH', col=RED, type='prod', d=[
+   secs=[dict(lab='DAS HOLE ICH MIR NOCH · NUR SOLANGE DER VORRAT REICHT', col=RED, type='prod', d=[
       ('extra-creamy-black-edition-ultra-dark.png','Ultra Dark Chocolate','neu, für Schokopudding<br><b>19,53 €</b>'),
       ('extra-creamy-480g-vanilla-speculoos.png','Vanilla Speculoos','neu, für Spekulatius-Desserts<br><b>-30 %</b>'),
       ('designer-bar-mint.png','Designer Bar Mint','neu, als Snack<br><b>-30 %</b>')])],
    mid='Danach gibt es diese Preise erst wieder in einem Jahr.',
-   msg='Nur einmal im Jahr.<br><span>Heute ist der letzte Tag.</span>'),
+   msg='Nur einmal im Jahr.<br><span>Heute ist der letzte Tag.</span>',
+   css='.lab{font-size:31px}'),
 }
 CSS=f"""@font-face{{font-family:A;src:url('{F}/anton/Anton-Regular.ttf')}}
 @font-face{{font-family:K;src:url('{F}/kaushanscript/KaushanScript-Regular.ttf')}}
