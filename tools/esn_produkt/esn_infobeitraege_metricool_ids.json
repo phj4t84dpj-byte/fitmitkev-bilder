@@ -1,6 +1,22 @@
 {
- "hinweis": "Eingeplant am 19.11.2026 nach Kevs Go („Ja, einfügen aber um 9 Uhr statt 12“). Täglich 9:00 Uhr von Mo 23.11. bis Mi 2.12., Do 26.11. ohne Infobeitrag (P5 gestrichen). Bilder aus Commit 7f63fda.",
+ "hinweis": "Eingeplant am 19.11.2026 nach Kevs Go („Ja, einfügen aber um 9 Uhr statt 12“). Täglich 9:00 Uhr von Mo 23.11. bis Mi 2.12., Do 26.11. ohne Infobeitrag (P5 gestrichen). Bilder aus Commit 7f63fda. Nachtrag 19.11., 19:00: P12 und P13 „So schmecken die Designer Bars“ (Kevs Idee, aus seinen Story-Grafiken) laufen auf seinen Wunsch schon Sa 21.11. um 9:00 und 18:30 Uhr, vor dem Start; Bilder aus Commit 46f444a.",
  "posts": [
+  {
+   "key": "P12",
+   "beitrag": "So schmecken die Designer Bars (Teil 1)",
+   "zeit": "2026-11-21T09:00:00",
+   "metricool_id": 434560751,
+   "uuid": "4192015113158281092",
+   "bild": "esn/posts/ESN-P12-Designer-Bar-Sorten-1.jpg"
+  },
+  {
+   "key": "P13",
+   "beitrag": "So schmecken die Designer Bars (Teil 2)",
+   "zeit": "2026-11-21T18:30:00",
+   "metricool_id": 434560881,
+   "uuid": "2471517067234983999",
+   "bild": "esn/posts/ESN-P13-Designer-Bar-Sorten-2.jpg"
+  },
   {
    "key": "P2",
    "beitrag": "Mein Frühstück unterwegs",
