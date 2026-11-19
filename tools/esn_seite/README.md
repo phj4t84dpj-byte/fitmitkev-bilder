@@ -14,3 +14,8 @@ Per Dialog entschieden: blaues Feld = „Code FITMITKEV: Black-Week-Rabatte sich
 
 ## Runde 2 (19.11., 17:45, per Chat)
 Kev: Samstag und Sonntag „auch im Info-Design und nur ein Bild pro Beitrag, das wird besser ausgestrahlt“. K1 (Sa 21.11., 11:00) und K2 (So 22.11., 6:10) sind jetzt Boards aus `esn_board.py` (`ESN-K1-Ankuendigung.jpg`, `ESN-K2-Start.jpg`); die Foto-Galerie für Samstag entfällt. K1 zeigt bewusst keine Neuheiten (die starten erst So 12 Uhr), deshalb der Ausschnitt `kev/sq-Kev-ExtraCreamy-VanillaMilk.jpg`. K3–K5 sind weiter Einzelfotos.
+
+## Runde 3 (19.11., 18:00–18:40, per Chat)
+- K1: „Meine Top 5“, Rabatte statt Emojis. K1, K2, P0, P1, P2: im blauen Feld zusätzlich „Link im 1. Kommentar 👇“.
+- Sonntag: Einkaufszettel (P1) auf 11:00 Uhr mit „Gleich geht's los“; neuer Beitrag P0 „Jetzt geht's los“ mit Rabattübersicht um 12:00 Uhr. K1, K2, P1, P0 sind eingeplant (IDs: `tools/gesn/esn_ankuendigung_metricool_ids.json`).
+- Kev: „so wenig Emojis wie möglich, lieber Produkte“. P0, P2, P3, P7, P8, P10 nutzen jetzt Produktbilder (`esn/bilder/shop/`, `esn/bilder/`) oder Text-Kacheln (%, ?, 1–4) statt Emojis. Zeilen-Emojis in der Vergleichskarte entfallen (leeres Emoji wird ausgeblendet).

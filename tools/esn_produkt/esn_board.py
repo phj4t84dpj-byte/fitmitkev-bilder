@@ -74,15 +74,16 @@ SPEC={
    css='.ri{width:104px;height:104px;overflow:hidden}.ri img{max-width:104px;max-height:104px;border-radius:14px}.rw{padding:9px 0}.msg{font-size:27px;line-height:1.3}'),
  'P2':dict(out='ESN-P2-Morgen', hook='Mein Morgen:', title=['ZWEI MINUTEN','STATT BÄCKER'], size=84,
    secs=[dict(lab='DAS FRÜHSTÜCK UNTERWEGS GEGEN MEINS', col=BLUE, type='vs', d=dict(
-      l=dict(title='Coffee to go + Croissant', rows=[('☕','Latte Macchiato groß','ca. 220 kcal'),('🥐','Butter-Croissant','ca. 230 kcal')], sum='ca. 450 kcal · 10 g Eiweiß'),
-      r=dict(title='Mein Protein-Kaffee', rows=[('☕','30 g Flexpresso','ca. 110 kcal'),('🥛','250 ml Mandelmilch (ungesüßt)','ca. 35 kcal')], sum='ca. 145 kcal · 24 g Eiweiß'))),
+      l=dict(title='Coffee to go + Croissant', rows=[('','Latte Macchiato groß','ca. 220 kcal'),('','Butter-Croissant','ca. 230 kcal')], sum='ca. 450 kcal · 10 g Eiweiß'),
+      r=dict(title='Mein Protein-Kaffee', img='shop/flexpresso.png', rows=[('','30 g Flexpresso','ca. 110 kcal'),('','250 ml Mandelmilch (ungesüßt)','ca. 35 kcal')], sum='ca. 145 kcal · 24 g Eiweiß'))),
    ],
    mid='Ein Drittel der Kalorien, mehr als doppelt so viel Eiweiß.<br><span>Ich trinke jeden Morgen eine doppelte Portion.</span>',
-   msg='Code FITMITKEV:<br><span>Black-Week-Rabatte sichern.</span>'),
+   msg='Code FITMITKEV: <span>Black-Week-Rabatte sichern.</span><br>Link im 1. Kommentar 👇',
+   css='.msg{font-size:27px;line-height:1.3}.vimg{height:170px}'),
  'P3':dict(out='ESN-P3-Riegel', hook='Süßes ohne Zuckerfalle:', title=['SCHOKORIEGEL','ODER PROTEINRIEGEL?'], size=78,
    secs=[dict(lab='SO SIEHT DER VERGLEICH AUS', col=RED, type='vs', d=dict(
-      l=dict(title='Schokoriegel (50 g)', rows=[('🔥','Kalorien','ca. 240 kcal'),('🍬','Zucker','ca. 25 g'),('💪','Eiweiß','ca. 3 g')], sum='8 Stück Würfelzucker'),
-      r=dict(title='Designer Bar (45 g)', img='designer-bar-mint.png', rows=[('🔥','Kalorien','unter 200 kcal'),('🍬','Zucker','max. 2 g'),('💪','Eiweiß','ca. 14 g')], sum='weich, mit Füllung'))),
+      l=dict(title='Schokoriegel (50 g)', rows=[('','Kalorien','ca. 240 kcal'),('','Zucker','ca. 25 g'),('','Eiweiß','ca. 3 g')], sum='8 Stück Würfelzucker'),
+      r=dict(title='Designer Bar (45 g)', img='designer-bar-mint.png', rows=[('','Kalorien','unter 200 kcal'),('','Zucker','max. 2 g'),('','Eiweiß','ca. 14 g')], sum='weich, mit Füllung'))),
    ],
    mid='Werte je nach Sorte leicht unterschiedlich.<br><span>Mein Snack, wenn nachmittags die Lust auf Süßes kommt.</span>',
    msg='Süß darf sein.<br><span>Ohne die Zuckerbombe.</span>'),
@@ -104,20 +105,21 @@ SPEC={
    css='.pc img[src*="kev/"]{border-radius:18px;height:270px;margin:15px 0}'),
  'P7':dict(out='ESN-P7-Abendsnacks', hook='Abends Hunger?', title=['4 EIWEISS-SNACKS','UNTER 200 KCAL'], size=80,
    secs=[dict(lab='MEINE SNACKS FÜR DEN ABEND', col=BLUE, type='rows', d=[
-      ('🥤','Shake','30 g Proteinpulver + 300 ml Wasser','115<br><small>kcal</small>'),
-      ('🍮','Schoko-Creme','200 g Skyr + 15 g Proteinpulver Schoko','185<br><small>kcal</small>'),
-      ('🍨','Schoko-Eis','1 Portion Eis aus Hüttenkäse','195<br><small>kcal</small>'),
-      ('🍫','Proteinriegel','1 Riegel (45 g)','190<br><small>kcal</small>')])],
+      ('shaker-black.png','Shake','30 g Proteinpulver + 300 ml Wasser','115<br><small>kcal</small>'),
+      ('extra-creamy-30g-milk-chocolate.png','Schoko-Creme','200 g Skyr + 15 g Proteinpulver Schoko','185<br><small>kcal</small>'),
+      ('extra-creamy-black-edition-ultra-dark.png','Schoko-Eis','1 Portion Eis aus Hüttenkäse','195<br><small>kcal</small>'),
+      ('shop/designerbar.png','Proteinriegel','1 Riegel (45 g)','190<br><small>kcal</small>')])],
    mid='Alle mit 14 bis 33 g Eiweiß.<br><span>Kalorien im Blick, Genuss inklusive.</span>',
    msg='Snacken ja.<br><span>Aber mit Plan.</span>'),
  'P8':dict(out='ESN-P8-Klumpen', hook='Tipp aus meiner Küche:', title=['PROTEINPULVER','OHNE KLUMPEN'], size=86,
    secs=[dict(lab='SO RÜHRE ICH ES EIN', col=GREEN, type='rows', d=[
-      ('1️⃣','Erst das Pulver, dann wenig Flüssigkeit','zu einer glatten Paste rühren, dann den Rest dazu','✓'),
-      ('2️⃣','In Skyr und Quark: Schneebesen','30 Sekunden kräftig, dann wird es cremig wie Mousse','✓'),
-      ('3️⃣','Pudding und Grießbrei: erst abkühlen lassen','2 Minuten vom Herd, dann einrühren','✓'),
-      ('4️⃣','Shake: Flüssigkeit zuerst in den Shaker','dann Pulver drauf, 20 Sekunden schütteln','✓')])],
+      ('1','Erst das Pulver, dann wenig Flüssigkeit','zu einer glatten Paste rühren, dann den Rest dazu','✓'),
+      ('2','In Skyr und Quark: Schneebesen','30 Sekunden kräftig, dann wird es cremig wie Mousse','✓'),
+      ('3','Pudding und Grießbrei: erst abkühlen lassen','2 Minuten vom Herd, dann einrühren','✓'),
+      ('4','Shake: Flüssigkeit zuerst in den Shaker','dann Pulver drauf, 20 Sekunden schütteln','✓')])],
    mid='Kochend heiß flockt Eiweiß aus. Deshalb kommt es bei mir immer zum Schluss rein.',
-   msg='Cremig statt klumpig:<br><span>Reihenfolge macht\'s.</span>'),
+   msg='Cremig statt klumpig:<br><span>Reihenfolge macht\'s.</span>',
+   css='.ri{background:#12213f;color:#fff;font-family:A;font-size:66px}'),
  'P9':dict(out='ESN-P9-Shakes', hook='Shake, aber richtig:', title=['3 SHAKES UNTER','250 KCAL'], size=86,
    secs=[dict(lab='EINFACH IN DEN SHAKER', col=BLUE, type='rows', d=[
       ('extra-creamy-30g-vanilla-speculoos.png','Spekulatius-Shake','30 g Vanilla Speculoos + 250 ml Milch (1,5 %) + Prise Zimt','230<br><small>kcal</small>'),
@@ -127,12 +129,13 @@ SPEC={
    msg='Kein Shake muss<br><span>nach Pappe schmecken.</span>'),
  'P10':dict(out='ESN-P10-Fragen', hook='Eure Fragen:', title=['ESN BLACK WEEK','KURZ ERKLÄRT'], size=88,
    secs=[dict(lab='DAS WERDE ICH AM HÄUFIGSTEN GEFRAGT', col=BLUE, type='rows', d=[
-      ('❓','Wie lange läuft die Black Week?','bis Mittwoch, 2.12., um 17:30 Uhr','2.12.'),
-      ('❓','Wie viel Rabatt gibt es?','bis zu -70 %, Riegel und Extra Creamy -30 %, Whey und Isoclear -25 %','-70 %'),
-      ('❓','Welche Sorte für deine Rezepte?','Vanilla Milk passt fast überall, für Desserts die neuen Sorten','🥄'),
-      ('❓','Und der Versand?','ab der 2. Bestellung ab 30 € kostenlos mit SHIPAGAIN','📦')])],
+      ('?','Wie lange läuft die Black Week?','bis Mittwoch, 2.12., um 17:30 Uhr','2.12.'),
+      ('?','Wie viel Rabatt gibt es?','bis zu -70 %, Riegel und Extra Creamy -30 %, Whey und Isoclear -25 %','-70 %'),
+      ('?','Welche Sorte für deine Rezepte?','Vanilla Milk passt fast überall, für Desserts die neuen Sorten',f'<img src="{B}/shop/extracreamy-vanilla.png" style="height:104px">'),
+      ('?','Und der Versand?','ab der 2. Bestellung ab 30 € kostenlos mit SHIPAGAIN','30 €')])],
    mid='Den Link mit meinem Code findest du im ersten Kommentar.',
-   msg='Noch eine Frage?<br><span>Schreib sie mir in die Kommentare.</span>'),
+   msg='Noch eine Frage?<br><span>Schreib sie mir in die Kommentare.</span>',
+   css='.ri{background:#12213f;color:#fff;font-family:A;font-size:70px}'),
  'P11':dict(out='ESN-P11-Letzter-Tag', hook='Letzte Chance:', title=['HEUTE BIS','17:30 UHR'], size=96,
    secs=[dict(lab='DAS HOLE ICH MIR NOCH · NUR SOLANGE DER VORRAT REICHT', col=RED, type='prod', d=[
       ('extra-creamy-black-edition-ultra-dark.png','Ultra Dark Chocolate','neu, für Schokopudding<br><b>19,53 €</b>'),
@@ -166,7 +169,7 @@ body{{margin:0;width:1080px;height:1350px;overflow:hidden;position:relative;font
 .vh{{font-family:A;font-size:38px;color:{NAVY};text-align:center;margin-bottom:6px;line-height:1.1}}
 .vimg{{height:200px;object-fit:contain;margin:0 auto 4px}}
 .vr2{{display:flex;align-items:center;gap:10px;font-size:27px;font-weight:600;color:#3d3128;padding:10px 0;border-bottom:1.5px solid rgba(0,0,0,.08)}}
-.vr2 .e{{font-size:34px}} .vr2 .n{{flex:1}} .vr2 .w{{font-weight:700;color:{NAVY};white-space:nowrap}}
+.vr2 .e{{font-size:34px}} .vr2 .e:empty{{display:none}} .vr2 .n{{flex:1}} .vr2 .w{{font-weight:700;color:{NAVY};white-space:nowrap}}
 .vs{{margin-top:auto;padding-top:14px;font-family:A;font-size:36px;text-align:center}}
 .vc.l .vs{{color:{RED}}} .vc.r .vs{{color:{GREEN}}}
 .vsmid{{align-self:center;font-family:A;font-size:38px;color:#fff;background:{NAVY};border-radius:50%;width:74px;height:74px;display:flex;align-items:center;justify-content:center;flex:none}}
