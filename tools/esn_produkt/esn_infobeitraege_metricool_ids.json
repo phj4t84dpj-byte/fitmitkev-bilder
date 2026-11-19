@@ -1,5 +1,5 @@
 {
- "hinweis": "Eingeplant am 19.11.2026 nach Kevs Go („Ja, einfügen aber um 9 Uhr statt 12“). Täglich 9:00 Uhr von Mo 23.11. bis Mi 2.12., Do 26.11. ohne Infobeitrag (P5 gestrichen). Bilder aus Commit 7f63fda. Nachtrag 19.11., 19:00: P12 und P13 „So schmecken die Designer Bars“ (Kevs Idee, aus seinen Story-Grafiken) laufen auf seinen Wunsch schon Sa 21.11. um 9:00 und 18:30 Uhr, vor dem Start; Bilder aus Commit 46f444a.",
+ "hinweis": "Eingeplant am 19.11.2026 nach Kevs Go („Ja, einfügen aber um 9 Uhr statt 12“). Täglich 9:00 Uhr von Mo 23.11. bis Mi 2.12., Do 26.11. ohne Infobeitrag (P5 gestrichen). Bilder aus Commit 7f63fda. Nachtrag 19.11., 19:00: P12 und P13 „So schmecken die Designer Bars“ (Kevs Idee, aus seinen Story-Grafiken) laufen auf seinen Wunsch schon Sa 21.11. um 9:00 und 18:30 Uhr, vor dem Start; Bilder aus Commit 46f444a. Nachtrag 19.11., 20:33: Kev will ESN minimieren – nur Sa 21.11. und So 22.11. bleiben. P2–P11 (Mo 23.11.–Mi 2.12.) sind als Entwurf geparkt; P12 und P13 (Sa) bleiben eingeplant.",
  "posts": [
   {
    "key": "P12",
@@ -7,7 +7,8 @@
    "zeit": "2026-11-21T09:00:00",
    "metricool_id": 434560751,
    "uuid": "4192015113158281092",
-   "bild": "esn/posts/ESN-P12-Designer-Bar-Sorten-1.jpg"
+   "bild": "esn/posts/ESN-P12-Designer-Bar-Sorten-1.jpg",
+   "status": "eingeplant"
   },
   {
    "key": "P13",
@@ -15,79 +16,107 @@
    "zeit": "2026-11-21T18:30:00",
    "metricool_id": 434560881,
    "uuid": "2471517067234983999",
-   "bild": "esn/posts/ESN-P13-Designer-Bar-Sorten-2.jpg"
+   "bild": "esn/posts/ESN-P13-Designer-Bar-Sorten-2.jpg",
+   "status": "eingeplant"
   },
   {
    "key": "P2",
    "beitrag": "Mein Frühstück unterwegs",
    "zeit": "2026-11-23T09:00:00",
-   "metricool_id": 434535672,
+   "metricool_id": 434667980,
    "uuid": "-7640052711220886399",
-   "bild": "esn/posts/ESN-P2-Morgen.jpg"
+   "bild": "esn/posts/ESN-P2-Morgen.jpg",
+   "vorherige_id": 434535672,
+   "status": "ENTWURF (geparkt)",
+   "hinweis": "19.11., 20:33: Kev „ESN bitte doch minimieren, Samstag und Sonntag stehen lassen und alles andere bitte löschen“ → als Entwurf geparkt (Löschen geht über die Schnittstelle nicht), wird nicht veröffentlicht. Nicht wieder aktivieren ohne Kev."
   },
   {
    "key": "P3",
    "beitrag": "Schokoriegel oder Proteinriegel",
    "zeit": "2026-11-24T09:00:00",
-   "metricool_id": 434535756,
+   "metricool_id": 434668075,
    "uuid": "6325020212178275668",
-   "bild": "esn/posts/ESN-P3-Riegel.jpg"
+   "bild": "esn/posts/ESN-P3-Riegel.jpg",
+   "vorherige_id": 434535756,
+   "status": "ENTWURF (geparkt)",
+   "hinweis": "19.11., 20:33: Kev „ESN bitte doch minimieren, Samstag und Sonntag stehen lassen und alles andere bitte löschen“ → als Entwurf geparkt (Löschen geht über die Schnittstelle nicht), wird nicht veröffentlicht. Nicht wieder aktivieren ohne Kev."
   },
   {
    "key": "P4",
    "beitrag": "3 neue Sorten, 3 Rezepte",
    "zeit": "2026-11-25T09:00:00",
-   "metricool_id": 434535830,
+   "metricool_id": 434668185,
    "uuid": "-7217657497635896903",
-   "bild": "esn/posts/ESN-P4-NeueSorten.jpg"
+   "bild": "esn/posts/ESN-P4-NeueSorten.jpg",
+   "vorherige_id": 434535830,
+   "status": "ENTWURF (geparkt)",
+   "hinweis": "19.11., 20:33: Kev „ESN bitte doch minimieren, Samstag und Sonntag stehen lassen und alles andere bitte löschen“ → als Entwurf geparkt (Löschen geht über die Schnittstelle nicht), wird nicht veröffentlicht. Nicht wieder aktivieren ohne Kev."
   },
   {
    "key": "P6",
    "beitrag": "Black Friday: meine Top 3",
    "zeit": "2026-11-27T09:00:00",
-   "metricool_id": 434535907,
+   "metricool_id": 434668287,
    "uuid": "-2986278839189877401",
-   "bild": "esn/posts/ESN-P6-Top3.jpg"
+   "bild": "esn/posts/ESN-P6-Top3.jpg",
+   "vorherige_id": 434535907,
+   "status": "ENTWURF (geparkt)",
+   "hinweis": "19.11., 20:33: Kev „ESN bitte doch minimieren, Samstag und Sonntag stehen lassen und alles andere bitte löschen“ → als Entwurf geparkt (Löschen geht über die Schnittstelle nicht), wird nicht veröffentlicht. Nicht wieder aktivieren ohne Kev."
   },
   {
    "key": "P7",
    "beitrag": "4 Eiweiß-Snacks unter 200 kcal",
    "zeit": "2026-11-28T09:00:00",
-   "metricool_id": 434535970,
+   "metricool_id": 434668371,
    "uuid": "544677399514401984",
-   "bild": "esn/posts/ESN-P7-Abendsnacks.jpg"
+   "bild": "esn/posts/ESN-P7-Abendsnacks.jpg",
+   "vorherige_id": 434535970,
+   "status": "ENTWURF (geparkt)",
+   "hinweis": "19.11., 20:33: Kev „ESN bitte doch minimieren, Samstag und Sonntag stehen lassen und alles andere bitte löschen“ → als Entwurf geparkt (Löschen geht über die Schnittstelle nicht), wird nicht veröffentlicht. Nicht wieder aktivieren ohne Kev."
   },
   {
    "key": "P8",
    "beitrag": "Proteinpulver ohne Klumpen",
    "zeit": "2026-11-29T09:00:00",
-   "metricool_id": 434536104,
+   "metricool_id": 434668459,
    "uuid": "4800277156312926206",
-   "bild": "esn/posts/ESN-P8-Klumpen.jpg"
+   "bild": "esn/posts/ESN-P8-Klumpen.jpg",
+   "vorherige_id": 434536104,
+   "status": "ENTWURF (geparkt)",
+   "hinweis": "19.11., 20:33: Kev „ESN bitte doch minimieren, Samstag und Sonntag stehen lassen und alles andere bitte löschen“ → als Entwurf geparkt (Löschen geht über die Schnittstelle nicht), wird nicht veröffentlicht. Nicht wieder aktivieren ohne Kev."
   },
   {
    "key": "P9",
    "beitrag": "3 Shakes unter 250 kcal",
    "zeit": "2026-11-30T09:00:00",
-   "metricool_id": 434536203,
+   "metricool_id": 434668580,
    "uuid": "706860928212812645",
-   "bild": "esn/posts/ESN-P9-Shakes.jpg"
+   "bild": "esn/posts/ESN-P9-Shakes.jpg",
+   "vorherige_id": 434536203,
+   "status": "ENTWURF (geparkt)",
+   "hinweis": "19.11., 20:33: Kev „ESN bitte doch minimieren, Samstag und Sonntag stehen lassen und alles andere bitte löschen“ → als Entwurf geparkt (Löschen geht über die Schnittstelle nicht), wird nicht veröffentlicht. Nicht wieder aktivieren ohne Kev."
   },
   {
    "key": "P10",
    "beitrag": "ESN Black Week kurz erklärt",
    "zeit": "2026-12-01T09:00:00",
-   "metricool_id": 434536314,
+   "metricool_id": 434668677,
    "uuid": "8737226226078007884",
-   "bild": "esn/posts/ESN-P10-Fragen.jpg"
+   "bild": "esn/posts/ESN-P10-Fragen.jpg",
+   "vorherige_id": 434536314,
+   "status": "ENTWURF (geparkt)",
+   "hinweis": "19.11., 20:33: Kev „ESN bitte doch minimieren, Samstag und Sonntag stehen lassen und alles andere bitte löschen“ → als Entwurf geparkt (Löschen geht über die Schnittstelle nicht), wird nicht veröffentlicht. Nicht wieder aktivieren ohne Kev."
   },
   {
    "key": "P11",
    "beitrag": "Letzte Chance: heute bis 17:30 Uhr",
    "zeit": "2026-12-02T09:00:00",
-   "metricool_id": 434536408,
+   "metricool_id": 434668766,
    "uuid": "260392497298621372",
-   "bild": "esn/posts/ESN-P11-Letzter-Tag.jpg"
+   "bild": "esn/posts/ESN-P11-Letzter-Tag.jpg",
+   "vorherige_id": 434536408,
+   "status": "ENTWURF (geparkt)",
+   "hinweis": "19.11., 20:33: Kev „ESN bitte doch minimieren, Samstag und Sonntag stehen lassen und alles andere bitte löschen“ → als Entwurf geparkt (Löschen geht über die Schnittstelle nicht), wird nicht veröffentlicht. Nicht wieder aktivieren ohne Kev."
   }
  ]
 }

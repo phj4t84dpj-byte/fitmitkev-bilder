@@ -51,6 +51,10 @@ for kid, kopf, datum, zeit, titel, fotos, hinweis, fest in K:
     else:
         bs = [bild(f"{REPO}/esn/bilder/kev/{f}.jpg", kid + ("abc"[i] if len(fotos) > 1 else ""), 1280) for i, f in enumerate(fotos)]; art = "persoenlich"
     data.append(dict(id=kid, art=art, titel=titel, slot=slot(datum, zeit.lstrip("0")), wann=datum + "T" + zeit, bilder=bs, text=txt, fc=fc, hinweis=hinweis, fest=fest))
+# 19.11., 20:33: Kev will ESN minimieren – nur Sa/So bleiben, der Rest ist in Metricool als Entwurf geparkt.
+for x in data:
+    x["raus"] = x["id"] in ("P2", "P3", "P4", "P6", "P7", "P8", "P9", "P10", "P11", "K3", "K4")
+    if x["raus"]: x["fest"] = False
 data.sort(key=lambda x: x["wann"])
 ids = [x["id"] for x in data]
 assert len(ids) == 17 and "K5" not in ids and "P5" not in ids, ids

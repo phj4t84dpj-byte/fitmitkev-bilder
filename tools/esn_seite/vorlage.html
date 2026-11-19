@@ -100,7 +100,7 @@ details h3 { font-size: 12.5px; letter-spacing: .06em; text-transform: uppercase
   <header class="head">
     <span class="window">Black Week · So 22.11., 12 Uhr bis Mi 2.12., 17:30 Uhr</span>
     <h1>ESN Black Week: alle Beiträge ab Samstag</h1>
-    <p>In der geplanten Reihenfolge: 16 Infobeiträge und ein Beitrag mit deinem Foto. Alle 17 Beiträge sind eingeplant: Samstag 9:00, 11:00 und 18:30 Uhr, Sonntag 6:50, 11:00 und 12:00 Uhr, ab Montag 23.11. jeden Morgen um 9:00 Uhr ein Infobeitrag (Donnerstag 26.11. ohne), am Black Friday zusätzlich 18:30 Uhr und am letzten Tag (Mi 2.12.) zusätzlich 6:50 Uhr. Die Erinnerung um 15:30 Uhr am letzten Tag ist auf deinen Wunsch raus. Schreib unter jedes Bild, was anders sein soll. Es speichert von selbst. Tippe auf ein Bild, um es groß zu sehen.</p>
+    <p>In der geplanten Reihenfolge: 16 Infobeiträge und ein Beitrag mit deinem Foto. Eingeplant sind nur noch Samstag (9:00, 11:00, 18:30 Uhr) und Sonntag (6:50, 11:00, 12:00 Uhr). Alle Beiträge ab Montag 23.11. sind auf deinen Wunsch herausgenommen und liegen in Metricool nur noch als Entwurf. Schreib unter jedes Bild, was anders sein soll. Es speichert von selbst. Tippe auf ein Bild, um es groß zu sehen.</p>
   </header>
 
   <div class="bar" id="bar">
@@ -147,7 +147,7 @@ details h3 { font-size: 12.5px; letter-spacing: .06em; text-transform: uppercase
     top.appendChild(make('span', 'num', p.id));
     top.appendChild(make('h2', '', p.titel));
     var chip = make('span', 'chip', 'Offen'); top.appendChild(chip);
-    top.appendChild(make('p', 'slot', (p.art === 'persoenlich' ? 'Persönlich, dein Foto' : 'Infobeitrag') + ' · ' + p.slot + (p.fest ? ' · eingeplant' : '')));
+    top.appendChild(make('p', 'slot', (p.art === 'persoenlich' ? 'Persönlich, dein Foto' : 'Infobeitrag') + ' · ' + p.slot + (p.raus ? ' · herausgenommen' : p.fest ? ' · eingeplant' : '')));
     art.appendChild(top);
 
     var holder = p.bilder.length > 1 ? make('div', 'gal') : null;
