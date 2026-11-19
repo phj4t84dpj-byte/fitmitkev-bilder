@@ -40,5 +40,22 @@
   "metricool_id": 434561013,
   "uuid": "-3336799488490649948",
   "bild": "esn/bilder/kev/Kev-Riegel-6-Sorten-schraeg.jpg"
+ },
+ {
+  "key": "K4",
+  "beitrag": "Letzter Tag: nur noch bis 17:30 Uhr",
+  "zeit": "2026-12-02T06:50:00",
+  "metricool_id": 434632513,
+  "uuid": "6219580015242527250",
+  "bild": "esn/bilder/kev/Kev-Riegel-angeschnitten.jpg",
+  "hinweis": "6:50 statt 6:10, weil um 6:10 ein ESN-Rezept läuft (Kev 19.11.: ja)"
+ },
+ {
+  "key": "K5",
+  "beitrag": "Erinnerung: noch 2 Stunden",
+  "zeit": "2026-12-02T15:30:00",
+  "metricool_id": 434632613,
+  "uuid": "5118346209004962667",
+  "bild": "esn/bilder/kev/Kev-Isoclear-3-Glaeser-schraeg.jpg"
  }
 ]
