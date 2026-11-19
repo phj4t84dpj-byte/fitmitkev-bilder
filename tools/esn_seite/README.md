@@ -11,3 +11,6 @@ Kev prüft hier alle ESN-Black-Week-Beiträge ab Sa 21.11. und schreibt direkt u
 ## Runde 1 (19.11., 17:23 „fertig“)
 P1 Extra Creamy Protein, Isoclear = Protein-Eistee, Code im blauen Feld · P2 Flexpresso + Mandelmilch (145 kcal, 24 g Eiweiß), doppelte Portion, Code im blauen Feld · P3 „unter 200 kcal“ · P4 „Extra Creamy Protein“ im Balken · **P5 gestrichen** · P6 Codes kombinieren, Kevs Flexpresso-Foto, „nur 1x im Jahr“ · P7 Riegel 190 kcal (eigene Korrektur) · P10 „ESN Black Week“ · P11 „nur solange der Vorrat reicht“.
 Per Dialog entschieden: blaues Feld = „Code FITMITKEV: Black-Week-Rabatte sichern“ (nicht „maximal sparen“, der Code gibt keinen Extra-Rabatt) · für Fr 20.11. kein Ankündigungsbeitrag, erste Ankündigung bleibt Sa 21.11., 11 Uhr.
+
+## Runde 2 (19.11., 17:45, per Chat)
+Kev: Samstag und Sonntag „auch im Info-Design und nur ein Bild pro Beitrag, das wird besser ausgestrahlt“. K1 (Sa 21.11., 11:00) und K2 (So 22.11., 6:10) sind jetzt Boards aus `esn_board.py` (`ESN-K1-Ankuendigung.jpg`, `ESN-K2-Start.jpg`); die Foto-Galerie für Samstag entfällt. K1 zeigt bewusst keine Neuheiten (die starten erst So 12 Uhr), deshalb der Ausschnitt `kev/sq-Kev-ExtraCreamy-VanillaMilk.jpg`. K3–K5 sind weiter Einzelfotos.

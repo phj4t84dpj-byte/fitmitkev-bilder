@@ -30,6 +30,27 @@ def card_prod(d):
     return '<div class="pw">'+''.join(f'<div class="pc">{pic(p[0])}<div class="p1">{H.escape(p[1])}</div><div class="p2">{p[2]}</div></div>' for p in d)+'</div>'
 CARD={'vs':card_vs,'rows':card_rows,'prod':card_prod}
 SPEC={
+ # K1/K2 (Kev 19.11., 17:45): Ankündigung Sa 21.11. und Start So 22.11. auch im Info-Design, nur ein Bild je Beitrag.
+ 'K1':dict(out='ESN-K1-Ankuendigung', hook='Oft gefragt:', title=['DAS NEHME','ICH SELBST'], size=92,
+   secs=[dict(lab='MEINE EHRLICHE LISTE', col=BLUE, type='rows', d=[
+      ('kev/sq-Kev-Flexpresso-3-Sorten.jpg','Flexpresso','mein Protein-Kaffee am Morgen','☕'),
+      ('kev/sq-Kev-Riegel-angeschnitten.jpg','Designer Bar','wenn die Lust auf Süßes kommt, ohne Zuckerzusatz','🍫'),
+      ('kev/sq-Kev-ExtraCreamy-VanillaMilk.jpg','Extra Creamy Protein','für Mousse, Pudding und Oats','🥄'),
+      ('kev/sq-Kev-Isoclear-3-Glaeser-vorn.jpg','Isoclear','Protein-Eistee mit Geschmack','🥤'),
+      ('kev/sq-Kev-FlavorPowder-oben.jpg','Designer Flavor Powder','zum Süßen von Skyr und Quark','✨')])],
+   mid='Morgen um 12 Uhr startet die ESN Black Week<br><span>mit bis zu -70 %. Nur 1x im Jahr.</span>',
+   msg='Code FITMITKEV:<br><span>Black-Week-Rabatte sichern.</span>',
+   css='.ri{width:104px;height:104px;overflow:hidden}.ri img{max-width:104px;max-height:104px;border-radius:14px}.rw{padding:9px 0}.rv{font-size:52px;min-width:90px}'),
+ 'K2':dict(out='ESN-K2-Start', hook='Es ist so weit:', title=['HEUTE UM 12 UHR:','ESN BLACK WEEK'], size=84,
+   secs=[dict(lab='DAS ERWARTET DICH', col=RED, type='rows', d=[
+      ('🔥','Bis zu -70 %','mit den Daily Deals, jeden Tag neu ab 8 Uhr','-70 %'),
+      ('extra-creamy-480g-vanilla-speculoos.png','3 neue Sorten Extra Creamy Protein','Vanilla Speculoos, Cinnamon Cereal, Strawberry Cream','neu'),
+      ('kev/sq-Kev-ExtraCreamy-3-Dosen.jpg','Black Edition','Extra Creamy Protein Ultra Dark Chocolate','neu'),
+      ('designer-bar-mint.png','Designer Bar Dark Chocolate Mint','die neue Riegel-Sorte','neu'),
+      ('⏰','Läuft bis Mittwoch, 2.12.','Ende um 17:30 Uhr','2.12.')])],
+   mid='Um 12 Uhr zeige ich dir hier meinen Einkaufszettel.<br><span>Die ESN Black Week gibt es nur 1x im Jahr.</span>',
+   msg='Code FITMITKEV:<br><span>Black-Week-Rabatte sichern.</span>',
+   css='.ri{width:104px;height:104px;overflow:hidden;font-size:50px}.ri img{max-width:104px;max-height:104px;border-radius:14px}.rw{padding:9px 0}'),
  'P1':dict(out='ESN-P1-Einkaufszettel', hook="Jetzt geht's los:", title=['MEIN EINKAUFSZETTEL','FÜR DIE BLACK WEEK'], size=76,
    secs=[dict(lab='DAS KOMMT BEI MIR IN DEN WARENKORB', col=RED, type='rows', d=[
       ('kev/sq-Kev-Flexpresso-3-Sorten.jpg','Flexpresso für morgens','White & Dark Chocolate Mocha, Chocolate','-25 %'),
