@@ -39,7 +39,7 @@ for d,z,f,alt,t,fc in P:
     out.append(dict(datum=d,zeit=z,datei=f,date=f"{d}T{z}:00",text=t,fc=fc,media=URL.format(f),alt=alt))
 json.dump(out,open(f"{D}/esn_produkt_posts.json","w"),ensure_ascii=False,indent=1)
 with open(f"{D}/texte-esn-produkt-beitraege.txt","w") as h:
-    h.write("ESN BLACK WEEK – PRODUKT-BEITRÄGE (je 9:00 Uhr, Kev 19.11.: „um 9 Uhr statt 12“)\nBeitrag 1 „Mein Einkaufszettel“ (So 22.11., 12:00): Text in tools/gesn/ESN-persoenliche-Beitraege-Entwurf.txt. Beitrag 5 (Do 26.11.) ist gestrichen.\n\n")
+    h.write("ESN BLACK WEEK – PRODUKT-BEITRÄGE (je 9:00 Uhr, Kev 19.11.: „um 9 Uhr statt 12“)\nBeitrag 1 „Mein Einkaufszettel“ (So 22.11., 11:00): Text in tools/gesn/ESN-persoenliche-Beitraege-Entwurf.txt. Beitrag 5 (Do 26.11.) ist gestrichen.\n\n")
     for p in out:
         h.write(f"===== {p['datum'][8:10]}.{p['datum'][5:7]}. · {p['zeit']} · Bild {p['datei']}.jpg\n\nTEXT:\n{p['text']}\n\n1. KOMMENTAR:\n{p['fc']}\n\n\n")
 print(len(out))
