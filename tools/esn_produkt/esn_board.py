@@ -18,7 +18,7 @@ def card_vs(d):
         rows=''.join(f'<div class="vr2"><span class="e">{e}</span><span class="n">{H.escape(n)}</span><span class="w">{H.escape(w)}</span></div>' for e,n,w in c['rows'])
         pic=f'<img class="vimg" src="{img(c["img"])}">' if c.get('img') else ''
         return f'<div class="vc {cls}"><div class="vh">{H.escape(c["title"])}</div>{pic}{rows}<div class="vs">{c["sum"]}</div></div>'
-    return f'<div class="vsw">{col(d["l"],"l")}<div class="vsmid">VS</div>{col(d["r"],"r")}</div>'
+    return f'<div class="vsw">{col(d["l"],"l")}<div class="vsmid">{d.get("mid","VS")}</div>{col(d["r"],"r")}</div>'
 def card_rows(d):
     out=''
     for r in d:
@@ -153,6 +153,35 @@ SPEC={
    mid='Den Link mit meinem Code findest du im ersten Kommentar.',
    msg='Noch eine Frage?<br><span>Schreib sie mir in die Kommentare.</span>',
    css='.ri{background:#12213f;color:#fff;font-family:A;font-size:70px}'),
+ # B1–B3 (Kev 19.11., 20:22): Buch-Beiträge Fr 20.–So 22.11., je 20:15 Uhr, im Info-Design, ein Bild. Ausgabe nach verkaufsseite/.
+ # Kalorien: Wohlfühlküche laut Buch (Lasagne 340 von der Buchseite, übrige aus claude/rezept-archiv-und-ebooks.md), Plätzchen aus archiv/rezepte.json (Schlüssel der Buchrezepte).
+ 'B1':dict(out='Buch-Fr-Welches-Buch', hook='Süß oder herzhaft?', title=['WELCHES BUCH','PASST ZU DIR?'], size=90,
+   secs=[dict(lab='MEINE ZWEI REZEPTBÜCHER', col=BLUE, type='vs', d=dict(mid='ODER',
+      l=dict(title='Weihnachtsbäckerei', img='../../verkaufsseite/cover-weihnachten.jpg', rows=[('','36 süße Rezepte',''),('','Plätzchen, Stollen, Kuchen',''),('','Quarkbällchen ohne Fritteuse','')], sum='9,99 €'),
+      r=dict(title='Wohlfühlküche', img='../../verkaufsseite/cover-wohlfuehlkueche.jpg', rows=[('','36 herzhafte Gerichte',''),('','Lasagne, Gulasch, Aufläufe',''),('','alle unter 500 kcal','')], sum='9,99 €')))],
+   mid='Du kannst dich nicht entscheiden?<br><span>Beide zusammen für 14,99 € statt 19,98 €.</span>',
+   msg='Sofort als PDF aufs Handy.<br><span>Link im 1. Kommentar 👇</span>',
+   css='.vimg{height:318px;border-radius:8px;box-shadow:0 6px 16px rgba(0,0,0,.28)}.vc.l{background:#f7e9ea}.vc.r{background:#f8ecdf}.vc.l .vs{color:#8C1C24}.vc.r .vs{color:#A2462B}.vsmid{font-size:24px;width:86px;height:86px}.vr2{justify-content:center;text-align:center}.vr2 .n{flex:none}.vh{margin-bottom:12px}'),
+ 'B2':dict(out='Buch-Sa-Plaetzchen', hook='Bald ist 1. Advent:', title=['5 PLÄTZCHEN','UNTER 75 KCAL'], size=96,
+   secs=[dict(lab='AUS MEINER WEIHNACHTSBÄCKEREI', col='#8C1C24', type='rows', d=[
+      ('../../archiv/fotos/g78_G78Vanillekipferl.jpg','Vanillekipferl','Rezept für 30 Stück','70<br><small>kcal</small>'),
+      ('../../archiv/fotos/g27_G27Zimtsterne.jpg','Zimtsterne','Rezept für 30 Stück','50<br><small>kcal</small>'),
+      ('../../archiv/fotos/g78_G78SpekPlaetzchen.jpg','Spekulatius','Rezept für 30 Stück','65<br><small>kcal</small>'),
+      ('../../archiv/fotos/g79_G79Butterplaetzchen.jpg','Butterplätzchen','zum Ausstechen, Rezept für 40 Stück','50<br><small>kcal</small>'),
+      ('../../archiv/fotos/g78_G78Kokosmakronen.jpg','Kokosmakronen','Rezept für 20 Stück','65<br><small>kcal</small>')])],
+   mid='Kalorien pro Stück. Alle 5 Rezepte stehen in meinem Buch<br><span>„Weihnachtsbäckerei in leicht“, mit 31 weiteren.</span>',
+   msg='Sofort als PDF: 9,99 €.<br><span>Link im 1. Kommentar 👇</span>',
+   css='.ri{width:108px;height:108px;overflow:hidden}.ri img{max-width:none;max-height:none;width:108px;height:108px;object-fit:cover}.rw{padding:9px 0}.msg{font-size:27px;line-height:1.3}.mid{font-size:27px}'),
+ 'B3':dict(out='Buch-So-Wochenplan', hook='Plan für deine Woche:', title=['5 ABENDESSEN','UNTER 500 KCAL'], size=96,
+   secs=[dict(lab='AUS MEINER WOHLFÜHLKÜCHE', col='#A2462B', type='rows', d=[
+      ('../../verkaufsseite/lasagne.jpg','Montag: Lasagne','mit Skyr-Creme statt Béchamel','340<br><small>kcal</small>'),
+      ('../../verkaufsseite/butter-chicken.jpg','Dienstag: Butter Chicken','mit Reis','445<br><small>kcal</small>'),
+      ('../../archiv/fotos/g40_G40Koenigsberger.jpg','Mittwoch: Königsberger Klopse','mit Kartoffeln und Roter Bete','420<br><small>kcal</small>'),
+      ('../../archiv/fotos/g80_G80CheeseburgerPfanne.jpg','Donnerstag: Cheeseburger-Pfanne','alles aus einer Pfanne','405<br><small>kcal</small>'),
+      ('../../verkaufsseite/doener.jpg','Freitag: Döner','im Skyr-Fladenbrot','445<br><small>kcal</small>')])],
+   mid='Kalorien pro Portion. Alle 5 Rezepte stehen in meinem Buch<br><span>„Wohlfühlküche in leicht“, mit 31 weiteren.</span>',
+   msg='Sofort als PDF: 9,99 €.<br><span>Link im 1. Kommentar 👇</span>',
+   css='.ri{width:108px;height:108px;overflow:hidden}.ri img{max-width:none;max-height:none;width:108px;height:108px;object-fit:cover}.rw{padding:9px 0}.msg{font-size:27px;line-height:1.3}.mid{font-size:27px}.r1{font-size:32px}'),
  # P12/P13 (Kev 19.11., 18:50): „Wie kann man sich die Designer Bars vorstellen?“ – Sorten und Vergleiche 1:1 aus Kevs zwei Story-Grafiken
  # (Packungs- und Geschmacksbilder daraus ausgeschnitten: esn/bilder/bars/). 22 Sorten in 2 Teilen, je ein Bild.
  # Kev 19.11., 19:00: „lieber schon vor der Black Week, am Samstag“ → Sa 21.11., 9:00 und 18:30, Balken deshalb „Ab morgen 12 Uhr“.
