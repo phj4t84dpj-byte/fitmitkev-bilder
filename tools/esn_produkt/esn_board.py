@@ -33,7 +33,7 @@ def card_foto(d):
 def card_sorten(d):
     return ''.join(f'<div class="sr"><img class="sp" src="{img("bars/"+k+"-pack.jpg")}"><img class="sf" src="{img("bars/"+k+"-food.jpg")}"><div class="st"><div class="sn">{H.escape(n)}</div><div class="sd">{H.escape(t)}</div></div></div>' for k,n,t in d)
 CARD={'vs':card_vs,'rows':card_rows,'prod':card_prod,'foto':card_foto,'sorten':card_sorten}
-SORTEN_CSS='.card{padding:8px 20px}.sr{display:flex;align-items:center;gap:14px;height:71px;border-bottom:1.5px solid #eee4d6}.sr:last-child{border-bottom:none}.sp{height:62px;border-radius:8px;flex:none}.sf{height:62px;width:76px;object-fit:cover;border-radius:10px;flex:none}.sn{font-size:19px;font-weight:700;letter-spacing:1.5px;color:#c1202b;text-transform:uppercase;line-height:1.2}.sd{font-size:30px;font-weight:700;color:#12213f;line-height:1.15;white-space:nowrap}.lab{font-size:36px}.msg{font-size:27px;line-height:1.3}'
+SORTEN_CSS='.card{padding:8px 20px}.sr{display:flex;align-items:center;gap:14px;height:71px;border-bottom:1.5px solid #eee4d6}.sr:last-child{border-bottom:none}.sp{height:62px;border-radius:8px;flex:none}.sf{height:62px;width:76px;object-fit:cover;border-radius:10px;flex:none}.sn{font-size:19px;font-weight:700;letter-spacing:1.5px;color:#c1202b;text-transform:uppercase;line-height:1.2}.sd{font-size:30px;font-weight:700;color:#12213f;line-height:1.15;white-space:nowrap}.lab{font-size:34px}.msg{font-size:27px;line-height:1.3}'
 SORTEN_MSG='Code FITMITKEV: <span>Black-Week-Rabatte sichern.</span><br>Link im 1. Kommentar 👇'
 SPEC={
  # K1/K2 (Kev 19.11., 17:45): Ankündigung Sa 21.11. und Start So 22.11. auch im Info-Design, nur ein Bild je Beitrag.
@@ -144,8 +144,9 @@ SPEC={
    css='.ri{background:#12213f;color:#fff;font-family:A;font-size:70px}'),
  # P12/P13 (Kev 19.11., 18:50): „Wie kann man sich die Designer Bars vorstellen?“ – Sorten und Vergleiche 1:1 aus Kevs zwei Story-Grafiken
  # (Packungs- und Geschmacksbilder daraus ausgeschnitten: esn/bilder/bars/). 22 Sorten in 2 Teilen, je ein Bild.
+ # Kev 19.11., 19:00: „lieber schon vor der Black Week, am Samstag“ → Sa 21.11., 9:00 und 18:30, Balken deshalb „Ab morgen 12 Uhr“.
  'P12':dict(out='ESN-P12-Designer-Bar-Sorten-1', hook='Teil 1 von 2:', title=['SO SCHMECKEN DIE','DESIGNER BARS'], size=84,
-   secs=[dict(lab='IN DER BLACK WEEK: 12ER BOX MIT -30 %', col=RED, type='sorten', d=[
+   secs=[dict(lab='AB MORGEN 12 UHR IN DER BLACK WEEK: 12ER BOX -30 %', col=RED, type='sorten', d=[
       ('maple-walnut','Maple Walnut','Pancakes mit Ahornsirup & Walnuss'),
       ('caramel-latte','Caramel Latte','Karamell-Latte-Macchiato'),
       ('dark-chocolate-mocha','Dark Chocolate Mocha','Mokka mit Zartbitter'),
@@ -159,7 +160,7 @@ SPEC={
       ('fudge-brownie','Fudge Brownie','Fudge-Brownie')])],
    mid='', msg=SORTEN_MSG, css=SORTEN_CSS),
  'P13':dict(out='ESN-P13-Designer-Bar-Sorten-2', hook='Teil 2 von 2:', title=['SO SCHMECKEN DIE','DESIGNER BARS'], size=84,
-   secs=[dict(lab='IN DER BLACK WEEK: 12ER BOX MIT -30 %', col=RED, type='sorten', d=[
+   secs=[dict(lab='AB MORGEN 12 UHR IN DER BLACK WEEK: 12ER BOX -30 %', col=RED, type='sorten', d=[
       ('speculoos','Speculoos','Karamell-Kekse mit Kekscreme'),
       ('strawberry-white-chocolate','Strawberry White Chocolate','Erdbeeren in weißer Schokolade'),
       ('dark-chocolate-raspberry','Dark Chocolate Raspberry','Schoko-Himbeer-Torte'),
