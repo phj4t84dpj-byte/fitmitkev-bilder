@@ -102,8 +102,10 @@
   "n": 15,
   "key": "SchwarzwaelderSkyr",
   "zeit": "2026-11-20T16:50:00",
-  "metricool_id": 433478829,
-  "hinweis": "am 18.11. auf Freitag 20.11. verschoben (Do 19.11. = GTA-VI-Tag)"
+  "metricool_id": 433900112,
+  "hinweis": "am 18.11. auf Freitag 20.11. verschoben (Do 19.11. = GTA-VI-Tag) · 19.11. 9:27 auf Kevs Ansage geparkt (Entwurf), weil am Fr 13:00 schon das ESN-Rezept „Schwarzwälder Kirsch im Glas“ läuft",
+  "uuid": "-404509889795110930",
+  "entwurf": true
  },
  {
   "n": 16,
