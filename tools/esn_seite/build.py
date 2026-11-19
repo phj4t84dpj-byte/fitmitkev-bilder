@@ -36,7 +36,7 @@ info = [dict(datum="2026-11-22", zeit="11:00", datei="ESN-P1-Einkaufszettel", te
 for p in info:
     num = re.match(r"ESN-(P\d+)-", p["datei"]).group(1)
     data.append(dict(id=num, art="info", titel=p["alt"], slot=slot(p["datum"], p["zeit"]), wann=p["datum"] + "T" + p["zeit"],
-                     bilder=[bild(f"{REPO}/esn/posts/{p['datei']}.jpg", num, 1080)], text=p["text"], fc=p["fc"], fest=num in ("P1",)))
+                     bilder=[bild(f"{REPO}/esn/posts/{p['datei']}.jpg", num, 1080)], text=p["text"], fc=p["fc"], fest=num in ("P0", "P1")))
 # Persönliche Beiträge mit Kevs Fotos
 # K1 und K2 seit 19.11. (Kev: „auch im Info-Design, nur ein Bild pro Beitrag“) als Board aus esn_board.py
 K = [("K1", "2) SA 21.11., 11:00", "2026-11-21", "11:00", "Ankündigung: Das nehme ich selbst", "ESN-K1-Ankuendigung", "", True),
