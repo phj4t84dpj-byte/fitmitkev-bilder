@@ -1,5 +1,5 @@
 {
- "hinweis": "Buch-Beiträge Fr 20.–So 22.11.2026, je 20:15 Uhr (Kev 19.11., 20:22: je 1 Beitrag zu den Büchern, Link im 1. Kommentar; „Schon 150 Mal bestellt“ abgelehnt: zu persönlich, Verkaufszahlen nicht öffentlich nennen). Bilder: Specs B1–B3 in tools/esn_produkt/esn_board.py. Stand: Entwurf, noch nicht eingeplant.",
+ "hinweis": "Buch-Beiträge Fr 20.–So 22.11.2026, je 20:15 Uhr (Kev 19.11., 20:22: je 1 Beitrag zu den Büchern, Link im 1. Kommentar; „Schon 150 Mal bestellt“ abgelehnt: zu persönlich, Verkaufszahlen nicht öffentlich nennen). Bilder: Specs B1–B3 in tools/esn_produkt/esn_board.py. Stand 19.11., 20:30: von Kev gesehen und per Dialog freigegeben („Ja, alle drei einplanen“), eingeplant. Bilder aus Commit 97455ef. Fr 20.11.: Käsespätzle dafür von 20:05 auf 21:30 verschoben (neue ID 434666065).",
  "posts": [
   {
    "key": "B1",
@@ -8,7 +8,9 @@
    "alt": "Welches Rezeptbuch passt zu dir: Weihnachtsbäckerei oder Wohlfühlküche",
    "text": "Süß oder herzhaft: Welches Buch passt zu dir? 📖\n\n🎄 Weihnachtsbäckerei in leicht: 36 süße Rezepte, von Vanillekipferl über Stollen bis zu Quarkbällchen ohne Fritteuse\n🍲 Wohlfühlküche in leicht: 36 herzhafte Gerichte wie bei Oma, alle unter 500 kcal pro Portion\n\nJedes Rezept hat eine eigene Seite mit Foto, Kalorien und Eiweiß. Alle Zutaten bekommst du im normalen Supermarkt.\n\nEin Buch kostet 9,99 €, beide zusammen 14,99 €. Du bekommst sie sofort als PDF aufs Handy oder Tablet.\n\nDen Link findest du im 1. Kommentar ⤵️\n\nTeam süß oder Team herzhaft?\n\nBleib satt! 💪\nKev\n\n#rezeptbuch #fitmitkev",
    "fc": "Hier geht's zu den Rezeptbüchern 👉 https://fitmitkev.de/rezeptbuecher\nBeide zusammen für 14,99 € statt 19,98 €.",
-   "media": "https://raw.githubusercontent.com/phj4t84dpj-byte/fitmitkev-bilder/main/verkaufsseite/Buch-Fr-Welches-Buch.jpg"
+   "media": "https://raw.githubusercontent.com/phj4t84dpj-byte/fitmitkev-bilder/main/verkaufsseite/Buch-Fr-Welches-Buch.jpg",
+   "metricool_id": 434665752,
+   "uuid": "-6504891606059826607"
   },
   {
    "key": "B2",
@@ -17,7 +19,9 @@
    "alt": "5 Plätzchen unter 75 kcal aus der Weihnachtsbäckerei in leicht",
    "text": "Bald ist 1. Advent: 5 Plätzchen unter 75 kcal pro Stück 🎄\n\nVanillekipferl: 70 kcal\nZimtsterne: 50 kcal\nSpekulatius: 65 kcal\nButterplätzchen zum Ausstechen: 50 kcal\nKokosmakronen: 65 kcal\n\nAlle fünf stehen in meinem Rezeptbuch „Weihnachtsbäckerei in leicht“, zusammen mit 31 weiteren Rezepten: Stollen, Lebkuchen, Quarkbällchen ohne Fritteuse und mehr. Jedes Rezept mit Foto, Kalorien und Eiweiß.\n\nDas Buch kostet 9,99 € und kommt sofort als PDF aufs Handy oder Tablet. Den Link findest du im 1. Kommentar ⤵️\n\nWelche Plätzchen backst du zuerst?\n\nBleib satt! 💪\nKev\n\n#plätzchen #weihnachtsbäckerei #rezeptbuch #fitmitkev",
    "fc": "Hier geht's zur Weihnachtsbäckerei 👉 https://fitmitkev.de/rezeptbuecher\n9,99 €, zusammen mit der Wohlfühlküche 14,99 € statt 19,98 €.",
-   "media": "https://raw.githubusercontent.com/phj4t84dpj-byte/fitmitkev-bilder/main/verkaufsseite/Buch-Sa-Plaetzchen.jpg"
+   "media": "https://raw.githubusercontent.com/phj4t84dpj-byte/fitmitkev-bilder/main/verkaufsseite/Buch-Sa-Plaetzchen.jpg",
+   "metricool_id": 434665884,
+   "uuid": "-8073292718106718771"
   },
   {
    "key": "B3",
@@ -26,7 +30,9 @@
    "alt": "5 Abendessen unter 500 kcal aus der Wohlfühlküche in leicht",
    "text": "Plan für deine Woche: 5 Abendessen unter 500 kcal 🍲\n\nMontag: Lasagne, 340 kcal\nDienstag: Butter Chicken mit Reis, 445 kcal\nMittwoch: Königsberger Klopse mit Kartoffeln und Roter Bete, 420 kcal\nDonnerstag: Cheeseburger-Pfanne, 405 kcal\nFreitag: Döner im Skyr-Fladenbrot, 445 kcal\n\nAlle fünf stehen in meinem Rezeptbuch „Wohlfühlküche in leicht“, zusammen mit 31 weiteren Gerichten wie bei Oma: Gulasch, Rouladen, Aufläufe und Suppen. Jedes Rezept mit Foto, Kalorien und Eiweiß.\n\nDas Buch kostet 9,99 € und kommt sofort als PDF aufs Handy oder Tablet. Den Link findest du im 1. Kommentar ⤵️\n\nWas gibt's bei dir am Montag?\n\nBleib satt! 💪\nKev\n\n#abendessen #wochenplan #rezeptbuch #fitmitkev",
    "fc": "Hier geht's zur Wohlfühlküche 👉 https://fitmitkev.de/rezeptbuecher\n9,99 €, zusammen mit der Weihnachtsbäckerei 14,99 € statt 19,98 €.",
-   "media": "https://raw.githubusercontent.com/phj4t84dpj-byte/fitmitkev-bilder/main/verkaufsseite/Buch-So-Wochenplan.jpg"
+   "media": "https://raw.githubusercontent.com/phj4t84dpj-byte/fitmitkev-bilder/main/verkaufsseite/Buch-So-Wochenplan.jpg",
+   "metricool_id": 434666008,
+   "uuid": "-8596624205362216020"
   }
  ]
 }
