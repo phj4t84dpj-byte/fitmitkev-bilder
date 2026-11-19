@@ -32,7 +32,7 @@ CARD={'vs':card_vs,'rows':card_rows,'prod':card_prod}
 SPEC={
  # K1/K2 (Kev 19.11., 17:45): Ankündigung Sa 21.11. und Start So 22.11. auch im Info-Design, nur ein Bild je Beitrag.
  'K1':dict(out='ESN-K1-Ankuendigung', hook='Oft gefragt:', title=['DAS NEHME','ICH SELBST'], size=92,
-   secs=[dict(lab='MEINE EHRLICHE LISTE', col=BLUE, type='rows', d=[
+   secs=[dict(lab='MEINE TOP 5', col=BLUE, type='rows', d=[
       ('kev/sq-Kev-Flexpresso-3-Sorten.jpg','Flexpresso','mein Protein-Kaffee am Morgen','-25 %'),
       ('kev/sq-Kev-Riegel-angeschnitten.jpg','Designer Bar','wenn die Lust auf Süßes kommt, ohne Zuckerzusatz','-30 %'),
       ('kev/sq-Kev-ExtraCreamy-VanillaMilk.jpg','Extra Creamy Protein','für Mousse, Pudding und Oats','-30 %'),
