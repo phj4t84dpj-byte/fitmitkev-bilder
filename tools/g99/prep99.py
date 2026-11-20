@@ -5,14 +5,24 @@ Kachelspalte, Titel, Badge und Vorher-Nachher-Foto liegt. Ränder werden aus der
 Danach wird der Freisteller neu berechnet (Text-Maske liegt dann in den richtigen Koordinaten)."""
 import cv2, numpy as np, json, os, sys
 D=os.path.dirname(os.path.abspath(__file__))
-KEYS=['NutellaBanane','DoenerKuchen','PizzaKartoffeln']
-T={'NutellaBanane':dict(s=0.76,dx=20,dy=30),'DoenerKuchen':dict(s=0.74),'PizzaKartoffeln':dict(s=0.74,mirror=True,cl=(250,0,540))}
+KEYS=['NutellaBanane','DoenerKuchen','PizzaKartoffeln','EinTeig','QuarkWoelkchen','Sonntagsbraten','Blumenkohlsuppe']
+T={'NutellaBanane':dict(s=0.76,dx=20,dy=30),'DoenerKuchen':dict(s=0.74),'PizzaKartoffeln':dict(s=0.74,mirror=True,cl=(250,0,540)),
+   'EinTeig':dict(s=0.72),'QuarkWoelkchen':dict(s=0.72),'Sonntagsbraten':dict(s=0.74,dy=70),'Blumenkohlsuppe':dict(s=0.74,mirror=True,dx=30,cl=(116,452,540),vf=(0,87,539,696),keil=(87,[(539,115),(550,106),(560,99),(570,94),(580,91),(590,89),(600,88)]))}
 def prep(key):
     sel=json.load(open(f'{D}/hero/_auswahl.json'))[key]
     im=cv2.imread(f'{D}/raw/{sel}.jpg'); t=T.get(key,{})
     if t.get('mirror'): im=np.ascontiguousarray(im[:,::-1])
     if t.get('cl'):                      # (n, y0, y1) in Rohbild-Pixeln: Gegenstand/Licht am linken Bildrand entfernen (Spalte n nach links fortsetzen)
         n,y0,y1=t['cl']; im=im.copy(); im[y0:y1,:n]=im[y0:y1,n:n+1]
+    if t.get('vf'):                      # (x0, x1, y0, y1) in Rohbild-Pixeln (nach dem Spiegeln): Gegenstand übermalen – jede Spalte läuft gerade von Zeile y0 nach Zeile y1 (für Reste am Bildrand, die `cl` nicht greift, weil daneben schon das Gericht liegt)
+        x0_,x1_,y0_,y1_=t['vf']; im=im.copy().astype(np.float32); w_=np.linspace(0,1,y1_-y0_)[:,None,None]
+        im[y0_:y1_,x0_:x1_]=im[y0_:y0_+1,x0_:x1_]*(1-w_)+im[y1_:y1_+1,x0_:x1_]*w_
+        im[y0_:y1_,x0_:x1_]=cv2.GaussianBlur(im[y0_:y1_,x0_:x1_],(0,0),5); im=im.astype(np.uint8)
+    if t.get('keil'):                    # (x_von, [(y, x_kante), …]): Rest zwischen übermalter Fläche und Rand des Gerichts zeilenweise mit der Farbe links daneben füllen (Kante des Gerichts als Stützpunkte)
+        xf,kn=t['keil']; im=im.copy(); ys=[k[0] for k in kn]; xs=[k[1] for k in kn]
+        for y in range(ys[0],ys[-1]+1):
+            xe=int(np.interp(y,ys,xs))-2
+            if xe>xf: im[y,xf:xe]=im[y,xf-1]
     h,w=im.shape[:2]; f=w/1080; s=t.get('s',1.0)
     rw,rh=round(w*s),round(h*s)
     rs=im if s==1.0 else cv2.resize(im,(rw,rh),interpolation=cv2.INTER_AREA if s<1 else cv2.INTER_LANCZOS4)
