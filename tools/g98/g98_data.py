@@ -4,8 +4,8 @@
 #   06:10 ESN-Rezept Vanillepudding mit Zimtpflaumen · 09:00 ESN „So schmecken die Designer Bars“ Teil 1 · 11:00 ESN K1 ·
 #   13:00 ESN-Rezept Schoko-Kugeln · 18:30 ESN Designer Bars Teil 2 · 20:15 Buch-Beitrag „5 Plätzchen unter 75 kcal“.
 # Auswahl (Reichweite ÷ Tagesmedian, Stand 16.11.):
-#   7-Tage-Regel Samstag 14.11. (G92): Rotweinkuchen 23,1 · Vanillekipferl 3,3 · Pizza Hawaii 3,0 · Rumkugeln 2,4 · Curry 1,7 · Schinken-Käse-Nudeln 1,4 ·
-#     Reispfanne 1,1 · Süß-sauer 0,9 · Cevapcici 0,8.  Raus: Pastitsio, Hörnchen, Zwiebelkuchen, Lava-Cookies (0,4–0,5), Kartoffelsalat 0,7.
+#   7-Tage-Regel Samstag 14.11. (G92): Rotweinkuchen 23,1 · Vanillekipferl 3,3 · Pizza Hawaii 3,0 · Crossies 2,6 · Curry 1,7 · Schinken-Käse-Nudeln 1,4 ·
+#     Reispfanne 1,1 · Süß-sauer 0,9 · Cevapcici 0,8.  Raus: Pastitsio, Hörnchen, Zwiebelkuchen, Lava-Cookies (0,4–0,5), Kartoffelsalat 0,7; Rumkugeln (2,4) pausieren, weil um 13:00 die ESN-Schoko-Kugeln laufen.
 #   Ausgeruht seit Freitag 13.11. (G91, 8 Tage): Marmorkuchen-Bowl 5,4 · Milchreis 3,7 · Reibekuchen 1,1.
 #   4 Fast-Food-Klassiker neu im hellen Look (GTA-Tag 19.11.: süßes Fast Food lief am besten – Donuts 54,6k, Erdbeer-Milchshake 48,6k):
 #     Schoko-Milchshake, Churros aus dem Ofen, Crispy-Chicken-Burger, Ofen-Tacos. Nichts, was seit 14.11. schon lief
@@ -92,7 +92,7 @@ R=[
  NEU['SchokoShake'],                                                                          # 13 A süß  17:00  Fast Food
  alt('SuessSauer','#süßsauer #hähnchen #asiatisch #fitmitkev'),                               # 14 B herz 17:45
  alt('Cevapcici','#cevapcici #balkan #fitmitkev'),                                            # 15 A herz 19:15
- alt('Rumkugeln','#rumkugeln #weihnachten #fitmitkev'),                                       # 16 A süß  20:45
+ alt('Crossies','#crossies #ohnebacken #fitmitkev'),                                          # 16 A süß  20:45  (statt Rumkugeln: um 13:00 laufen schon die ESN-Schoko-Kugeln)
 ]
 ZEITEN=['06:50','07:35','08:20','09:40','10:20','11:40','12:20','13:40','14:20','15:00','15:40','16:20','17:00','17:45','19:15','20:45']
 FEST={'06:10':'ESN-Rezept Vanillepudding mit Zimtpflaumen','09:00':'ESN Designer Bars Teil 1','11:00':'ESN K1','13:00':'ESN-Rezept Schoko-Kugeln',

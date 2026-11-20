@@ -7,10 +7,10 @@ D=os.path.dirname(os.path.abspath(__file__)); os.makedirs(f"{D}/out",exist_ok=Tr
 URL="https://raw.githubusercontent.com/phj4t84dpj-byte/fitmitkev-bilder/main/boards/G98-{}.jpg"
 NAME={'Reibekuchen':'Reibekuchen aus dem Ofen','Milchreis':'Milchreis mit Zimt wie bei Oma','Reispfanne':'Paprika-Hack-Reis-Pfanne','Vanillekipferl':'Vanillekipferl in leicht',
       'MarmorBowl':'Marmorkuchen-Bowl nur für dich','PizzaHawaii':'Pizza Hawaii aus Skyr-Teig','Curry':'Hähnchen-Curry mit Reis','Rotweinkuchen':'Rotweinkuchen in leicht',
-      'KaeseNudeln':'Schinken-Käse-Nudeln aus einem Topf','SuessSauer':'Hähnchen süß-sauer aus dem Ofen','Cevapcici':'Cevapcici mit Ofen-Pommes','Rumkugeln':'Rumkugeln ohne Zucker',
+      'KaeseNudeln':'Schinken-Käse-Nudeln aus einem Topf','SuessSauer':'Hähnchen süß-sauer aus dem Ofen','Cevapcici':'Cevapcici mit Ofen-Pommes','Crossies':'Zimt-Schoko-Crossies',
       'CrispyBurger':'Crispy-Chicken-Burger aus dem Ofen','OfenTacos':'Ofen-Tacos mit Hack','SchokoShake':'Schoko-Milchshake wie im Diner','Churros':'Churros aus dem Ofen'}
 FORM={'Reibekuchen':'Backblech','Vanillekipferl':'Backblech','Rotweinkuchen':'Kastenform 25 cm','CrispyBurger':'Backblech','OfenTacos':'Auflaufform 20 × 30 cm','Churros':'20 Churros, Backblech'}
-EINZELN={'Vanillekipferl'}
+EINZELN={'Vanillekipferl','Crossies'}
 LABELS=('pro Stück','pro Portion','pro Glas','pro Teller','pro Pizza','pro Scheibe','pro Kugel','pro Burger')
 def portion_label(r):
     p=r['portion']

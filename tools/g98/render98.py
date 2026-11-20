@@ -17,7 +17,7 @@ NAVY="#12213f"; BLUE="#163b7d"; DARK="#0d1d42"; RED="#c1202b"; BADGE="#c61f27"
 HERO_SHIFT={}   # bleibt leer: Verschieben/Skalieren/Spiegeln passiert jetzt in prep.py direkt am Bild (keine Naht, Maske stimmt)
 # Kachel-Reihenfolge nur fürs Board (Rezepttext bleibt in Zubereitungs-Reihenfolge): kurze Beschriftungen in die Pfeil-Zeile
 ORDER={'Reispfanne':[0,1,2,4,5,6,3,7], 'Vanillekipferl':[0,1,2,3,4,6,5], 'PizzaHawaii':[0,1,2,3,4,5,7,6], 'Milchreis':[0,1,2,3,5,4,6], 'SchokoShake':[0,1,2,3,5,4,6]}
-PLURAL={'Vanillekipferl','KaeseNudeln','Rumkugeln','Cevapcici','Reibekuchen','Churros','OfenTacos'}
+PLURAL={'Vanillekipferl','KaeseNudeln','Crossies','Cevapcici','Reibekuchen','Churros','OfenTacos'}
 XMP='''<?xpacket begin="﻿" id="W5M0MpCehiHzreSzNTczkc9d"?><x:xmpmeta xmlns:x="adobe:ns:meta/"><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"><rdf:Description rdf:about="" xmlns:Iptc4xmpExt="http://iptc.org/std/Iptc4xmpExt/2008-02-29/" xmlns:photoshop="http://ns.adobe.com/photoshop/1.0/" xmlns:dc="http://purl.org/dc/elements/1.1/" photoshop:Credit="Fitmitkev"><Iptc4xmpExt:DigitalSourceType>http://cv.iptc.org/newscodes/digitalsourcetype/trainedAlgorithmicMedia</Iptc4xmpExt:DigitalSourceType><dc:creator><rdf:Seq><rdf:li>Fitmitkev</rdf:li></rdf:Seq></dc:creator><dc:description><rdf:Alt><rdf:li xml:lang="x-default">Rezeptgrafik, Foto KI-generiert</rdf:li></rdf:Alt></dc:description></rdf:Description></rdf:RDF></x:xmpmeta><?xpacket end="w"?>'''
 
 def tile_img(tile, scale):
