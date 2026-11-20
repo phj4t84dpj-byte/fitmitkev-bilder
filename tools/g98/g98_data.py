@@ -67,7 +67,7 @@ NEU=dict(
            Z('2 Stück','Eier','eier','ei',st=2), Z('20 g','Erythrit','erythrit','erythrit',20), Z('1 TL','Zimt','zimt','zimt',0),
            Z('40 g','Zartbitterschokolade','zartbitterschokolade','schokolade',40)],
   ex=['100 ml Wasser, 1 Prise Salz'],
-  intro='Churros wie von der Kirmes, nur aus dem Ofen statt aus dem heißen Fett: außen knusprig, innen weich, in Zimt gewälzt und in warme Schokosoße getunkt. Der Teig ist in 10 Minuten gerührt, ganz ohne Zucker. 5 Churros mit Soße: {k} kcal und {p} g Eiweiß pro Portion statt 500 für die Tüte von der Kirmes!',
+  intro='Churros wie von der Kirmes, nur aus dem Ofen statt aus dem heißen Fett: außen knusprig, innen weich, in Zimt gewälzt und in warme Schokosoße getunkt. Der Teig kommt ganz ohne Zucker aus und ist in 10 Minuten gerührt. 5 Churros mit Soße: {k} kcal und {p} g Eiweiß pro Portion statt 500 für die Tüte von der Kirmes!',
   schritte=['150 ml Milch, 100 ml Wasser, 30 g Butter und eine Prise Salz aufkochen. Das Mehl auf einmal zugeben und kräftig rühren, bis sich der Teig als Kloß vom Topfboden löst. 5 Minuten abkühlen lassen, dann die Eier einzeln unterrühren.',
             'Den Teig in einen Spritzbeutel mit Sterntülle füllen, 20 Stangen (je 10 cm) auf ein Backblech mit Backpapier spritzen und bei 200 °C Ober-/Unterhitze 20–22 Minuten goldbraun backen.',
             'Die heißen Churros dünn mit 10 g geschmolzener Butter bepinseln und in Erythrit und Zimt wälzen. Die Schokolade mit 50 ml Milch schmelzen und als Soße dazu reichen.'],
