@@ -5,7 +5,10 @@
 #   seit 10.11. umgebautes Fast Food (Döner-Kuchen 147 Reaktionen / 102 geteilt, Pizza-Kartoffeln 75 / 63). Siehe Projekt-Dokument `claude/mitbewerber-analyse.md`.
 #   Das vierte „Melly-Rezept“ ist unser Spekulatius-Kirsch-Glas vom So 15.11. (G93N, 5,0 × Tagesmedian) – genau 7 Tage später, gleiches Bild.
 #   „Schwarzwälder Kirsch im Glas“ entfällt: am Fr 20.11. 13:00 lief das ESN-Rezept „Schwarzwälder im Glas“, und mehr als 2 Gläser am Tag nutzen das Format ab.
-# Der Rest des Sonntags (12 ausgeruhte Treffer, Zeiten, Hashtag-Gruppen) wird am Sa 21.11. früh mit Kev und den Freitagszahlen festgelegt.
+# Nachtrag 20.11., 16 Uhr: Kev hat vier weitere Mitbewerber-Seiten hinzugefügt (Unsere Weihnachtsbäckerei, Leicht & Lecker Zuhause, Lecker Zuhause, Leckeria).
+#   Dort vorn: weiche Plätzchen/„Wölkchen“, „1 Teig – viele Sorten“, Sonntagsbraten mit Rotkohl und Klößen, Blumenkohlsuppe. Kev per Dialog: „Alle 4 am Sonntag“.
+#   → 4 weitere neue Rezepte: EinTeig (Grundteig = Butterplätzchen aus dem Buch, G79/G35), QuarkWoelkchen, Sonntagsbraten, Blumenkohlsuppe. Damit 7 neue + SpekKirsch fest, 8 Plätze offen.
+# Der Rest des Sonntags (8 ausgeruhte Treffer, Zeiten, Hashtag-Gruppen) wird am Sa 21.11. früh mit Kev und den Freitagszahlen festgelegt.
 # Feste Beiträge am Sonntag: 06:10 ESN-Rezept Spekulatius-Mousse · 06:50 ESN K2 · 11:00 ESN P1 · 12:00 ESN P0 · 13:00 ESN-Rezept Erdbeer-Bowl · 20:15 Buch-Beitrag.
 import sys, os, copy
 _D=os.path.dirname(os.path.abspath(__file__))
@@ -19,7 +22,7 @@ def alt(key, tags, **kw):
     r=copy.deepcopy(_A[key]); r['tags']=tags; r['kurz']=r.get('kurz') or ['–','–','–']
     for x in ('fb','hinweis','n','buch','vorhanden'): r.pop(x,None)
     r.update(kw); return r
-for _k,_v in {'eisbergsalat':(14,1,2,0.2), 'nussnougatcreme':(540,6,57,31)}.items(): NUT.setdefault(_k,_v)   # bestehende Werte nicht überschreiben
+for _k,_v in {'eisbergsalat':(14,1,2,0.2), 'nussnougatcreme':(540,6,57,31), 'blumenkohl':(25,2,2.5,0.3), 'kloesse':(105,2,22.5,0.5)}.items(): NUT.setdefault(_k,_v)   # bestehende Werte nicht überschreiben
 
 NEU=dict(
  NutellaBanane=dict(key='NutellaBanane', suess=True, hook='Nur 3 Zutaten:', titel=['NUTELLA-BANANE','IM GLAS'], portion='pro Glas', anzahl=1, vs=550,
@@ -54,17 +57,65 @@ NEU=dict(
             'Die Kartoffeln in eine Auflaufform (20 × 30 cm) geben, Soße und Paprika in der Mitte verteilen, mit Käse und Salami belegen und 10–12 Minuten überbacken. Am Rand ein paar Kartoffeln ohne Soße lassen, die bleiben knusprig.'],
   frage='Pizza-Kartoffeln: mit Salami oder mit Schinken?', tags='#pizzakartoffeln #kartoffeln #ofengericht #familienessen #fitmitkev',
   prompt='Close view of a rectangular white ceramic baking dish filled to the top with many small golden brown crispy roasted potato cubes, the middle of the dish covered with a blanket of golden browned bubbling melted mozzarella cheese, round slices of red salami lying on top of the cheese, a little red tomato sauce showing under the cheese, small red bell pepper cubes, crispy bare potato cubes clearly visible all around the edge of the dish, sprinkled with dried oregano. In front a white plate with one portion of crispy potato cubes with stretchy melted cheese and two salami slices, a fork beside the plate.'),
+ EinTeig=dict(key='EinTeig', suess=True, hook='Nur 1 Teig:', titel=['5 SORTEN','PLÄTZCHEN'], portion='pro Stück', anzahl=50, vs=70,
+  zutaten=[Z('300 g','Dinkelmehl','dinkelmehl','dinkelmehl',300), Z('100 g','Butter (kalt)','butter','butter',100), Z('100 g','Skyr','skyr','skyr',100),
+           Z('100 g','Erythrit','erythrit','erythrit',100), Z('1 Stück','Ei','ei','ei',st=1), Z('1 EL','Backkakao','backkakao','kakao',10),
+           Z('15 g','Kokosraspel','kokosraspel','kokosraspel',15), Z('40 g','Fruchtaufstrich','fruchtaufstrich','fruchtaufstrich',40)],
+  ex=['1 TL Vanilleextrakt, 1 TL Zimt, 1 Prise Salz'],
+  intro='Ein Teig, fünf Sorten: Butterplätzchen, Zimt-Plätzchen, Schoko-Plätzchen, Kokos-Taler und Engelsaugen. Du knetest nur einmal, teilst den Teig durch fünf, und der Plätzchenteller ist voll. Der Teig mit Skyr braucht nur 100 g Butter und bleibt trotzdem mürbe. 50 Plätzchen: {k} kcal pro Stück statt 70 für ein klassisches Butterplätzchen!',
+  schritte=['Mehl, Butter in Stücken, Skyr, 80 g Erythrit, Ei, Vanille und Salz rasch zu einem glatten Teig kneten. In 5 gleich große Portionen teilen, in Folie wickeln und 30 Minuten kalt stellen.',
+            'Sorte 1 und 2: Zwei Portionen 4 mm dick ausrollen und ausstechen. Eine Sorte bleibt pur. Für die zweite 1 TL Zimt mit dem restlichen Erythrit mischen und die Plätzchen vor dem Backen damit bestreuen.',
+            'Sorte 3: Den Backkakao mit 1 TL Wasser unter die dritte Portion kneten, ausrollen und ausstechen. Sorte 4: Aus der vierten Portion 10 Kugeln formen, in den Kokosraspeln wälzen und flach drücken.',
+            'Sorte 5: Aus der letzten Portion 10 Kugeln formen, mit einem Kochlöffelstiel eine Mulde eindrücken und mit Fruchtaufstrich füllen. Alle Plätzchen auf Blechen mit Backpapier bei 175 °C Ober-/Unterhitze 10–12 Minuten hell backen und auf dem Blech abkühlen lassen.'],
+  frage='Welche der 5 Sorten wäre bei euch zuerst weg?', tags='#plätzchen #weihnachtsbäckerei #backen #weihnachten #fitmitkev',
+  prompt='A large round white plate piled with five different kinds of small homemade Christmas cookies arranged in five neat groups: pale golden star-shaped butter cookies, star-shaped cookies sprinkled with brown cinnamon, dark brown chocolate heart-shaped cut-out cookies, round cookies coated in white shredded coconut, and round thumbprint cookies with a glossy red jam center. A few cookies lying on the table in front of the plate, a small star-shaped metal cookie cutter beside.'),
+ QuarkWoelkchen=dict(key='QuarkWoelkchen', suess=True, hook='Zergehen auf der Zunge:', titel=['QUARK-','WÖLKCHEN'], portion='pro Stück', anzahl=40, vs=70,
+  zutaten=[Z('150 g','Dinkelmehl','dinkelmehl','dinkelmehl',150), Z('100 g','Speisestärke','speisestaerke','speisestaerke',100), Z('150 g','Magerquark','magerquark','quark',150),
+           Z('70 g','Butter (weich)','butter','butter',70), Z('80 g','Erythrit','erythrit','erythrit',80), Z('1 Stück','Eigelb','eigelb','eigelb',st=1),
+           Z('1 TL','Vanilleextrakt','vanilleextrakt','vanille',0)],
+  ex=['1 TL Backpulver, 1 Prise Salz'],
+  intro='Wölkchen sind die Plätzchen, die auf der Zunge zergehen: weich, zart und weiß bestäubt wie frisch gefallener Schnee. Das Geheimnis ist die Speisestärke im Teig. Bei mir kommt Magerquark dazu, dafür reichen 70 g Butter. Kugeln formen, mit der Gabel andrücken, fertig, ganz ohne Ausstechen. 40 Stück vom Blech: {k} kcal pro Wölkchen statt 70 für die Sorte mit viel Butter!',
+  schritte=['Butter, 60 g Erythrit, Eigelb und Vanille cremig rühren, dann den Quark unterrühren. Mehl, Speisestärke, Backpulver und Salz mischen und kurz unterkneten, bis ein weicher Teig entsteht. 30 Minuten kalt stellen.',
+            'Mit bemehlten Händen 40 kleine Kugeln formen, mit Abstand auf zwei Bleche mit Backpapier setzen und mit einer Gabel leicht flach drücken.',
+            'Bei 170 °C Ober-/Unterhitze 12–14 Minuten backen. Die Wölkchen sollen hell bleiben. Das restliche Erythrit im Mixer zu Puder mahlen und die abgekühlten Wölkchen damit bestäuben.'],
+  frage='Wölkchen: pur oder mit einem Klecks Marmelade in der Mitte?', tags='#wölkchen #plätzchen #weihnachtsbäckerei #fitmitkev',
+  prompt='A white plate piled high with many small round pale cream-colored soft melt-in-the-mouth cookies, each cookie a slightly flattened ball with fork tine marks pressed on top, thickly dusted with white powdered sugar like snow, a few cookies lying on the table in front of the plate, one cookie broken in half showing the soft tender pale crumb inside, a small metal sieve with powdered sugar beside.'),
+ Sonntagsbraten=dict(key='Sonntagsbraten', suess=False, hook='Wie früher bei Oma:', titel=['SONNTAGSBRATEN','MIT ROTKOHL'], portion='pro Portion', anzahl=4, vs=900,
+  zutaten=[Z('600 g','Rinderbraten (mager)','rinderbraten','rind',600), Z('600 g','Rotkohl (Glas)','rotkohl','rotkohl',600), Z('500 g','Kloßteig (Kühlregal)','kartoffelkloesse','kloesse',500),
+           Z('2 Stück','Zwiebeln','zwiebeln','zwiebel',st=2), Z('2 Stück','Karotten','karotten','karotten',150), Z('2 EL','Tomatenmark','tomatenmark','tomatenmark',30),
+           Z('500 ml','Rinderbrühe','rinderbruehe','bruehe',0), Z('1 EL','Speisestärke','speisestaerke','speisestaerke',10)],
+  ex=['1 EL Öl, 2 Lorbeerblätter, 1 TL Senf', 'Salz, Pfeffer'],
+  intro='Sonntags gab es bei Oma Braten, und das ganze Haus hat danach gerochen. So mache ich ihn heute: mageres Rindfleisch, zwei Stunden im Ofen geschmort, bis es fast von allein zerfällt. Die dunkle Soße wird mit dem Schmorgemüse püriert und braucht weder Sahne noch Butter. Dazu Rotkohl und zwei Klöße: {k} kcal und {p} g Eiweiß pro Teller statt 900 im Gasthaus!',
+  schritte=['Den Braten rundum salzen und pfeffern und in einem Bräter im heißen Öl von allen Seiten kräftig anbraten, dann herausnehmen. Zwiebeln und Karotten grob würfeln und im Bräter 3 Minuten anrösten. Das Tomatenmark 1 Minute mitrösten, mit der Brühe ablöschen, Lorbeer und Senf zugeben.',
+            'Den Braten wieder einlegen und zugedeckt bei 160 °C Ober-/Unterhitze 2 bis 2,5 Stunden im Ofen schmoren, bis er weich ist. Nach der Hälfte der Zeit wenden.',
+            'Aus dem Kloßteig 8 kleine Klöße formen und nach Packungsangabe in siedendem Salzwasser gar ziehen lassen (ca. 20 Minuten). Den Rotkohl erwärmen.',
+            'Den Braten herausnehmen und 10 Minuten ruhen lassen. Den Lorbeer entfernen und die Soße mit dem Gemüse fein pürieren. Die Speisestärke in 2 EL kaltem Wasser anrühren, einrühren und kurz aufkochen. Den Braten in Scheiben schneiden und mit Soße, Rotkohl und Klößen servieren.'],
+  frage='Sonntagsbraten: mit Klößen oder mit Salzkartoffeln?', tags='#sonntagsbraten #rinderbraten #rotkohl #omasrezepte #fitmitkev',
+  prompt='A white dinner plate with three thick slices of tender braised beef roast covered with glossy dark brown gravy, beside the meat a portion of shiny purple braised red cabbage and two round pale yellow German potato dumplings with a little chopped parsley on top. Behind the plate a small white gravy boat filled with dark brown gravy.'),
+ Blumenkohlsuppe=dict(key='Blumenkohlsuppe', suess=False, hook='Cremig wie bei Oma:', titel=['BLUMENKOHL-','SUPPE'], portion='pro Portion', anzahl=4, vs=480,
+  zutaten=[Z('1 Kopf','Blumenkohl (ca. 800 g)','blumenkohl','blumenkohl',800), Z('300 g','Kartoffeln','kartoffeln','kartoffeln',300), Z('1 Stück','Zwiebel','zwiebel','zwiebel',st=1),
+           Z('1 l','Gemüsebrühe','gemuesebruehe','bruehe',0), Z('100 ml','Kochsahne (15 %)','kochsahne','kochsahne',100), Z('4 Stück','Geflügelwürstchen','gefluegel_wiener','wiener',200),
+           Z('10 g','Butter','butter','butter',10), Z('½ Bund','Petersilie','petersilie','petersilie',0)],
+  ex=['Salz, Pfeffer, Muskat'],
+  intro='Blumenkohlsuppe wie bei Oma: cremig, mild und mit Würstchen drin, damit alle am Tisch zufrieden sind. Die Kartoffeln machen sie sämig, darum reicht ein Schuss Kochsahne. In 30 Minuten steht der Topf auf dem Tisch: {k} kcal und {p} g Eiweiß pro Teller statt 480 für die Suppe mit viel Sahne und Mettwurst!',
+  schritte=['Die Zwiebel fein würfeln und in der Butter glasig dünsten. Den Blumenkohl in Röschen teilen, die Kartoffeln schälen und würfeln. Beides zugeben, mit der Brühe aufgießen und zugedeckt 15–20 Minuten weich kochen.',
+            'Eine Kelle Röschen herausnehmen und beiseitestellen. Die Suppe fein pürieren, die Kochsahne einrühren und mit Salz, Pfeffer und Muskat abschmecken.',
+            'Die Würstchen in Scheiben schneiden und mit den Röschen in der Suppe 5 Minuten heiß werden lassen. Mit gehackter Petersilie bestreuen.'],
+  frage='Blumenkohlsuppe: mit Würstchen oder ganz ohne?', tags='#blumenkohlsuppe #suppe #omasrezepte #abendessen #fitmitkev',
+  prompt='A deep white soup bowl filled with creamy pale ivory cauliflower soup, in the soup several small white cauliflower florets and many round slices of pink sausage, sprinkled with fresh chopped green parsley and a little black pepper, a spoon lying beside the bowl, a slice of rustic bread on a small wooden board, a small whole white cauliflower in the background.'),
 )
 for _k,_r in NEU.items(): _r['kurz']=['–','–','–']; _r['exnut']=[]
 NEU['DoenerKuchen']['exnut']=[(72,1,5,5)]   # 1 TL Öl + 2 Tomaten
+NEU['Sonntagsbraten']['exnut']=[(95,0.5,0.5,10)]   # 1 EL Öl + 1 TL Senf
 GLAS=alt('SpekKirschGlas','#spekulatius #kirschen #dessertimglas #weihnachten #fitmitkev', frage='Team Spekulatius-Kirsch oder Team Nutella-Banane?')
-R=[NEU['NutellaBanane'], NEU['DoenerKuchen'], NEU['PizzaKartoffeln'], GLAS]     # vorläufig: nur die 4 „Melly-Rezepte“
+R=[NEU['NutellaBanane'], NEU['DoenerKuchen'], NEU['PizzaKartoffeln'], GLAS,     # die 4 „Melly-Rezepte“
+   NEU['EinTeig'], NEU['QuarkWoelkchen'], NEU['Sonntagsbraten'], NEU['Blumenkohlsuppe']]   # 4 weitere nach Auswertung der neuen Seiten (Reihenfolge vorläufig)
 REZEPT_IM_BEITRAG={'NutellaBanane','SpekKirschGlas'}   # Test: Rezept im Beitragstext statt im 1. Kommentar
 
 if __name__=='__main__':
     for r in R:
         k,p,c,f=macros4(r); assert r['vs']>k and len(r['zutaten'])<=8 and k<=500, r['key']
         txt=r['intro']+' '.join(r['schritte'])+r['frage']
-        for w in ('abnehm','esn','melly','gta'): assert w not in txt.lower(), (r['key'],w)
+        for w in ('abnehm','esn ','melly','gta','ohne zucker','satt'): assert w not in txt.lower(), (r['key'],w)
         print(f"{r['key']:16s} {'süß ' if r['suess'] else 'herz'} {k:4d} kcal {p:3d}P {c:3d}K {f:2d}F {r['portion']} × {r['anzahl']} vs {r['vs']}")
     print('ok')
