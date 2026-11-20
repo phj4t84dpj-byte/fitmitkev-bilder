@@ -53,7 +53,7 @@ NEU=dict(
             'Passierte Tomaten mit dem körnigen Frischkäse, den Pizza-Kräutern, Salz und Pfeffer glatt pürieren. Die Paprika klein würfeln.',
             'Die Kartoffeln in eine Auflaufform (20 × 30 cm) geben, Soße und Paprika in der Mitte verteilen, mit Käse und Salami belegen und 10–12 Minuten überbacken. Am Rand ein paar Kartoffeln ohne Soße lassen, die bleiben knusprig.'],
   frage='Pizza-Kartoffeln: mit Salami oder mit Schinken?', tags='#pizzakartoffeln #kartoffeln #ofengericht #familienessen #fitmitkev',
-  prompt='A rectangular white ceramic baking dish filled with golden brown crispy roasted potato cubes, topped like a pizza: red tomato sauce in the middle, golden browned bubbling melted cheese, round slices of red salami and small red bell pepper cubes, crispy potato cubes without sauce visible around the edge, sprinkled with dried oregano, one portion served on a white plate in front, a fork beside.'),
+  prompt='Close view of a rectangular white ceramic baking dish filled to the top with many small golden brown crispy roasted potato cubes, the middle of the dish covered with a blanket of golden browned bubbling melted mozzarella cheese, round slices of red salami lying on top of the cheese, a little red tomato sauce showing under the cheese, small red bell pepper cubes, crispy bare potato cubes clearly visible all around the edge of the dish, sprinkled with dried oregano. In front a white plate with one portion of crispy potato cubes with stretchy melted cheese and two salami slices, a fork beside the plate.'),
 )
 for _k,_r in NEU.items(): _r['kurz']=['–','–','–']; _r['exnut']=[]
 NEU['DoenerKuchen']['exnut']=[(72,1,5,5)]   # 1 TL Öl + 2 Tomaten
