@@ -1,0 +1,52 @@
+{
+ "slug": "IG-Erdbeer-Milchshake",
+ "name": "Erdbeer-Milchshake wie im Diner",
+ "info": "Einkaufsliste · 2 Gläser · Mixer",
+ "zutaten": [
+  [
+   "300 g",
+   "Erdbeeren (TK)"
+  ],
+  [
+   "300 g",
+   "Skyr"
+  ],
+  [
+   "300 ml",
+   "Milch (1,5 %)"
+  ],
+  [
+   "20 g",
+   "Erythrit"
+  ],
+  [
+   "1 TL",
+   "Vanilleextrakt"
+  ]
+ ],
+ "naehr": "Pro Glas: 215 kcal · 23 g Eiweiß",
+ "listen_bild": "sh0_hook",
+ "pos": "50% 45%",
+ "slides": [
+  {
+   "img": "sh0_hook",
+   "text": "Erdbeer-Milchshake\nwie im Diner.\nOhne Eis, ohne Sahne."
+  },
+  {
+   "img": "sh1_erdbeeren",
+   "text": "TK-Erdbeeren\n5 Minuten antauen lassen."
+  },
+  {
+   "img": "sh2_mixer",
+   "text": "Mit Skyr, Milch, Erythrit\nund Vanille in den Mixer."
+  },
+  {
+   "img": "sh3_puriert",
+   "text": "1 Minute\ncremig pürieren."
+  },
+  {
+   "img": "sh4_glaeser",
+   "text": "In 2 Gläser füllen.\nSofort genießen."
+  }
+ ]
+}

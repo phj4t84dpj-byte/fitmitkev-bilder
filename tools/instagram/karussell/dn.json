@@ -1,0 +1,60 @@
+{
+ "slug": "IG-Donuts",
+ "name": "Donuts aus dem Ofen",
+ "info": "Einkaufsliste · 6 Stück · Donutform",
+ "zutaten": [
+  [
+   "150 g",
+   "Dinkelmehl"
+  ],
+  [
+   "200 g",
+   "Skyr"
+  ],
+  [
+   "1",
+   "Ei"
+  ],
+  [
+   "50 g",
+   "Erythrit"
+  ],
+  [
+   "2 TL",
+   "Backpulver, 1 TL Vanilleextrakt"
+  ],
+  [
+   "40 g",
+   "Zartbitterschokolade"
+  ],
+  [
+   "1 TL",
+   "Bunte Zuckerstreusel"
+  ]
+ ],
+ "naehr": "Pro Donut: 160 kcal · 8 g Eiweiß",
+ "listen_bild": "dn0_hook",
+ "pos": "50% 45%",
+ "slides": [
+  {
+   "img": "dn0_hook",
+   "text": "Donuts aus dem Ofen.\nOhne Fritteuse,\n160 kcal pro Stück."
+  },
+  {
+   "img": "dn1_teig",
+   "text": "Mehl, Skyr, Ei, Erythrit,\nBackpulver und Vanille\nglatt rühren."
+  },
+  {
+   "img": "dn2_form",
+   "text": "In die gefettete\nDonutform füllen."
+  },
+  {
+   "img": "dn3_gebacken",
+   "text": "180 °C, 12–14 Minuten.\nKurz abkühlen lassen."
+  },
+  {
+   "img": "dn4_glasur",
+   "text": "In Schokolade tunken,\nStreusel drauf."
+  }
+ ]
+}

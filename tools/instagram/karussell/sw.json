@@ -1,0 +1,60 @@
+{
+ "slug": "IG-Smash-Burger-Wrap",
+ "name": "Smash-Burger-Wrap",
+ "info": "Einkaufsliste · 4 Wraps · Pfanne",
+ "zutaten": [
+  [
+   "4",
+   "Weizentortillas"
+  ],
+  [
+   "400 g",
+   "Rinderhack (mager)"
+  ],
+  [
+   "4 Scheiben",
+   "Cheddar light"
+  ],
+  [
+   "2",
+   "Gewürzgurken + 1 Zwiebel"
+  ],
+  [
+   "60 g",
+   "Skyr"
+  ],
+  [
+   "1 EL",
+   "Ketchup + 1 TL Senf"
+  ],
+  [
+   "1 Handvoll",
+   "Salat"
+  ]
+ ],
+ "naehr": "Pro Wrap: 385 kcal · 33 g Eiweiß",
+ "listen_bild": "sw0_hook",
+ "pos": "50% 45%",
+ "slides": [
+  {
+   "img": "sw0_hook",
+   "text": "Smash-Burger-Wrap.\nKross aus der Pfanne,\n385 kcal."
+  },
+  {
+   "img": "sw1_hack",
+   "text": "Hack dünn auf\ndie Tortilla streichen.\nSalzen und pfeffern."
+  },
+  {
+   "img": "sw2_pfanne",
+   "text": "Hackseite nach unten,\n3–4 Minuten kross braten."
+  },
+  {
+   "img": "sw3_belag",
+   "text": "Wenden. Cheddar, Zwiebel\nund Gurke drauf."
+  },
+  {
+   "img": "sw4_sosse",
+   "text": "Skyr, Ketchup und Senf\nverrühren. Soße und Salat\ndrauf, zuklappen."
+  }
+ ]
+}
