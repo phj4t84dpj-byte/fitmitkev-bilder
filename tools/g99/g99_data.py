@@ -62,11 +62,11 @@ NEU=dict(
            Z('100 g','Erythrit','erythrit','erythrit',100), Z('1 Stück','Ei','ei','ei',st=1), Z('1 EL','Backkakao','backkakao','kakao',10),
            Z('15 g','Kokosraspel','kokosraspel','kokosraspel',15), Z('40 g','Fruchtaufstrich','fruchtaufstrich','fruchtaufstrich',40)],
   ex=['1 TL Vanilleextrakt, 1 TL Zimt, 1 Prise Salz'],
-  intro='Ein Teig, fünf Sorten: Butterplätzchen, Zimt-Plätzchen, Schoko-Plätzchen, Kokos-Taler und Engelsaugen. Du knetest nur einmal, teilst den Teig durch fünf, und der Plätzchenteller ist voll. Der Teig mit Skyr braucht nur 100 g Butter und bleibt trotzdem mürbe. 50 Plätzchen: {k} kcal pro Stück statt 70 für ein klassisches Butterplätzchen!',
-  schritte=['Mehl, Butter in Stücken, Skyr, 80 g Erythrit, Ei, Vanille und Salz rasch zu einem glatten Teig kneten. In 5 gleich große Portionen teilen, in Folie wickeln und 30 Minuten kalt stellen.',
-            'Sorte 1 und 2: Zwei Portionen 4 mm dick ausrollen und ausstechen. Eine Sorte bleibt pur. Für die zweite 1 TL Zimt mit dem restlichen Erythrit mischen und die Plätzchen vor dem Backen damit bestreuen.',
-            'Sorte 3: Den Backkakao mit 1 TL Wasser unter die dritte Portion kneten, ausrollen und ausstechen. Sorte 4: Aus der vierten Portion 10 Kugeln formen, in den Kokosraspeln wälzen und flach drücken.',
-            'Sorte 5: Aus der letzten Portion 10 Kugeln formen, mit einem Kochlöffelstiel eine Mulde eindrücken und mit Fruchtaufstrich füllen. Alle Plätzchen auf Blechen mit Backpapier bei 175 °C Ober-/Unterhitze 10–12 Minuten hell backen und auf dem Blech abkühlen lassen.'],
+  intro='Ein Teig, fünf Sorten: Butter-Sterne, Sterne mit Zimt, Schoko-Sterne, Engelsaugen im Kokosmantel und Schoko-Engelsaugen. Du knetest nur einmal, teilst den Teig durch fünf, und der Plätzchenteller ist voll. Der Teig mit Skyr braucht nur 100 g Butter und bleibt trotzdem mürbe. 50 Plätzchen: {k} kcal pro Stück statt 70 für ein klassisches Butterplätzchen!',
+  schritte=['Mehl, Butter in Stücken, Skyr, 80 g Erythrit, Ei, Vanille und Salz rasch zu einem glatten Teig kneten und in 5 gleich große Portionen teilen. Unter zwei Portionen den Backkakao mit 2 TL Wasser kneten. Alles in Folie wickeln und 30 Minuten kalt stellen.',
+            'Sorte 1 bis 3: Zwei helle Portionen und eine Schoko-Portion 4 mm dick ausrollen und Sterne ausstechen. 1 TL Zimt mit dem restlichen Erythrit mischen und die Hälfte der hellen Sterne vor dem Backen damit bestreuen.',
+            'Sorte 4 und 5: Aus der letzten hellen und der zweiten Schoko-Portion je 10 Kugeln formen. Die hellen Kugeln in den Kokosraspeln wälzen. In jede Kugel mit einem Kochlöffelstiel eine Mulde drücken und mit Fruchtaufstrich füllen.',
+            'Alle Plätzchen auf Blechen mit Backpapier bei 175 °C Ober-/Unterhitze 10–12 Minuten hell backen und auf dem Blech abkühlen lassen.'],
   frage='Welche der 5 Sorten wäre bei euch zuerst weg?', tags='#plätzchen #weihnachtsbäckerei #backen #weihnachten #fitmitkev',
   prompt='A large round white plate piled with five different kinds of small homemade Christmas cookies arranged in five neat groups: pale golden star-shaped butter cookies, star-shaped cookies sprinkled with brown cinnamon, dark brown chocolate heart-shaped cut-out cookies, round cookies coated in white shredded coconut, and round thumbprint cookies with a glossy red jam center. A few cookies lying on the table in front of the plate, a small star-shaped metal cookie cutter beside.'),
  QuarkWoelkchen=dict(key='QuarkWoelkchen', suess=True, hook='Zergehen auf der Zunge:', titel=['QUARK-','WÖLKCHEN'], portion='pro Stück', anzahl=40, vs=70,
@@ -102,7 +102,7 @@ NEU=dict(
             'Eine Kelle Röschen herausnehmen und beiseitestellen. Die Suppe fein pürieren, die Kochsahne einrühren und mit Salz, Pfeffer und Muskat abschmecken.',
             'Die Würstchen in Scheiben schneiden und mit den Röschen in der Suppe 5 Minuten heiß werden lassen. Mit gehackter Petersilie bestreuen.'],
   frage='Blumenkohlsuppe: mit Würstchen oder ganz ohne?', tags='#blumenkohlsuppe #suppe #omasrezepte #abendessen #fitmitkev',
-  prompt='A deep white soup bowl filled with creamy pale ivory cauliflower soup, in the soup several small white cauliflower florets and many round slices of pink sausage, sprinkled with fresh chopped green parsley and a little black pepper, a spoon lying beside the bowl, a slice of rustic bread on a small wooden board, a small whole white cauliflower in the background.'),
+  prompt='A deep white soup bowl standing on a flat white plate, filled with creamy pale ivory cauliflower soup, in the soup several small white cauliflower florets and many round slices of pink sausage, sprinkled with fresh chopped green parsley and a little black pepper, a spoon lying on the plate beside the bowl. On the right side behind the bowl one small whole white cauliflower. The left side of the table is empty.'),
 )
 for _k,_r in NEU.items(): _r['kurz']=['–','–','–']; _r['exnut']=[]
 NEU['DoenerKuchen']['exnut']=[(72,1,5,5)]   # 1 TL Öl + 2 Tomaten
