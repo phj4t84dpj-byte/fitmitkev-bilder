@@ -1,0 +1,48 @@
+{
+ "slug": "IG-Kokosmakronen",
+ "name": "Kokosmakronen aus 3 Zutaten",
+ "info": "Einkaufsliste · 25 Stück · Backblech",
+ "zutaten": [
+  [
+   "200 g",
+   "Kokosraspel"
+  ],
+  [
+   "3",
+   "Eiweiß"
+  ],
+  [
+   "80 g",
+   "Erythrit"
+  ],
+  [
+   "1 Prise",
+   "Salz"
+  ]
+ ],
+ "naehr": "Pro Stück: 55 kcal · 1 g Eiweiß",
+ "listen_bild": "km0_hook",
+ "pos": "50% 45%",
+ "slides": [
+  {
+   "img": "km0_hook",
+   "text": "Kokosmakronen\naus 3 Zutaten.\n55 kcal pro Stück."
+  },
+  {
+   "img": "km1_eischnee",
+   "text": "Eiweiß mit Salz steif\nschlagen, Erythrit\neinrieseln lassen."
+  },
+  {
+   "img": "km2_kokos",
+   "text": "Kokosraspel\nvorsichtig unterheben."
+  },
+  {
+   "img": "km3_blech",
+   "text": "Mit zwei Teelöffeln\n25 Häufchen\naufs Blech setzen."
+  },
+  {
+   "img": "km4_gebacken",
+   "text": "15 Minuten bei 160 °C,\nbis die Spitzen\ngoldbraun sind."
+  }
+ ]
+}

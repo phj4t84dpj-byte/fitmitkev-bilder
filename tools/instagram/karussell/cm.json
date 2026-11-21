@@ -1,0 +1,60 @@
+{
+ "slug": "IG-Gebratene-Nudeln",
+ "name": "Gebratene Nudeln mit Hähnchen",
+ "info": "Einkaufsliste · 4 Portionen · Pfanne",
+ "zutaten": [
+  [
+   "250 g",
+   "Mie-Nudeln"
+  ],
+  [
+   "400 g",
+   "Hähnchenbrust"
+  ],
+  [
+   "2",
+   "Karotten + 1 Paprika"
+  ],
+  [
+   "200 g",
+   "Weißkohl"
+  ],
+  [
+   "4 EL",
+   "Sojasauce + 1 EL Öl"
+  ],
+  [
+   "2 Zehen",
+   "Knoblauch + 1 TL Ingwer"
+  ],
+  [
+   "2",
+   "Frühlingszwiebeln"
+  ]
+ ],
+ "naehr": "Pro Portion: 390 kcal · 33 g Eiweiß",
+ "listen_bild": "cm0_hook",
+ "pos": "50% 45%",
+ "slides": [
+  {
+   "img": "cm0_hook",
+   "text": "Gebratene Nudeln\nwie vom Asia-Imbiss.\n390 kcal."
+  },
+  {
+   "img": "cm1_nudeln",
+   "text": "Mie-Nudeln nach\nPackung garen\nund abgießen."
+  },
+  {
+   "img": "cm2_haehnchen",
+   "text": "Hähnchen in Streifen\nscharf anbraten."
+  },
+  {
+   "img": "cm3_gemuese",
+   "text": "Karotten, Paprika, Kohl,\nKnoblauch und Ingwer\n4 Minuten mitbraten."
+  },
+  {
+   "img": "cm4_fertig",
+   "text": "Nudeln und Sojasauce\ndazu, 2 Minuten\ndurchschwenken."
+  }
+ ]
+}

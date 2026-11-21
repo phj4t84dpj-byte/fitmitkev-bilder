@@ -1,0 +1,60 @@
+{
+ "slug": "IG-Frischkaese-Wrap",
+ "name": "Wrap aus körnigem Frischkäse",
+ "info": "Einkaufsliste · 2 Wraps · Backblech",
+ "zutaten": [
+  [
+   "250 g",
+   "Körniger Frischkäse"
+  ],
+  [
+   "2",
+   "Eier"
+  ],
+  [
+   "1 TL",
+   "Italienische Kräuter"
+  ],
+  [
+   "80 g",
+   "Putenschinken"
+  ],
+  [
+   "40 g",
+   "Frischkäse light"
+  ],
+  [
+   "50 g",
+   "Eisbergsalat"
+  ],
+  [
+   "½",
+   "Salatgurke"
+  ]
+ ],
+ "naehr": "Pro Wrap: 290 kcal · 33 g Eiweiß",
+ "listen_bild": "kw0_hook",
+ "pos": "50% 45%",
+ "slides": [
+  {
+   "img": "kw0_hook",
+   "text": "Wrap ohne Mehl.\nNur Frischkäse und Eier,\n290 kcal."
+  },
+  {
+   "img": "kw1_mixer",
+   "text": "Körnigen Frischkäse,\nEier und Kräuter\nglatt pürieren."
+  },
+  {
+   "img": "kw2_blech",
+   "text": "Dünn aufs Blech streichen\n(ca. 30 × 25 cm)."
+  },
+  {
+   "img": "kw3_gebacken",
+   "text": "30–35 Minuten bei 200 °C\ngoldbraun backen.\nAbkühlen, halbieren."
+  },
+  {
+   "img": "kw4_belegt",
+   "text": "Mit Frischkäse, Schinken,\nSalat und Gurke belegen\nund einrollen."
+  }
+ ]
+}
