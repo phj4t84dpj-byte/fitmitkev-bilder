@@ -1,0 +1,178 @@
+[
+ {
+  "n": 1,
+  "key": "Eiersalat",
+  "date": "2026-11-22T07:30:00",
+  "id": 436603428,
+  "uuid": "-5350688442355269210",
+  "media": "https://static.metricool.com/planner/202611/7765790-file-400152842900203991.jpeg",
+  "neu": false,
+  "rezept_im_beitrag": false,
+  "hashtags": 3
+ },
+ {
+  "n": 2,
+  "key": "KalterHund",
+  "date": "2026-11-22T08:15:00",
+  "id": 436603505,
+  "uuid": "6325509403902560493",
+  "media": "https://static.metricool.com/planner/202611/7765790-file-9178489019633459656.jpeg",
+  "neu": false,
+  "rezept_im_beitrag": false,
+  "hashtags": 5
+ },
+ {
+  "n": 3,
+  "key": "DoenerKuchen",
+  "date": "2026-11-22T09:00:00",
+  "id": 436603596,
+  "uuid": "4735445315953708356",
+  "media": "https://static.metricool.com/planner/202611/7765790-file-13516136326541848800.jpeg",
+  "neu": true,
+  "rezept_im_beitrag": false,
+  "hashtags": 5
+ },
+ {
+  "n": 4,
+  "key": "Hefezopf",
+  "date": "2026-11-22T09:45:00",
+  "id": 436603679,
+  "uuid": "6931594531548188392",
+  "media": "https://static.metricool.com/planner/202611/7765790-file-806506380892643043.jpeg",
+  "neu": false,
+  "rezept_im_beitrag": false,
+  "hashtags": 3
+ },
+ {
+  "n": 5,
+  "key": "ZwiebelSahne",
+  "date": "2026-11-22T10:25:00",
+  "id": 436603852,
+  "uuid": "6115345078775202880",
+  "media": "https://static.metricool.com/planner/202611/7765790-file-8169412408609567528.jpeg",
+  "neu": false,
+  "rezept_im_beitrag": false,
+  "hashtags": 3
+ },
+ {
+  "n": 6,
+  "key": "HanutaBowl",
+  "date": "2026-11-22T11:30:00",
+  "id": 436603955,
+  "uuid": "19611405943261699",
+  "media": "https://static.metricool.com/planner/202611/7765790-file-17379654026210478721.jpeg",
+  "neu": false,
+  "rezept_im_beitrag": false,
+  "hashtags": 3
+ },
+ {
+  "n": 7,
+  "key": "Sonntagsbraten",
+  "date": "2026-11-22T12:30:00",
+  "id": 436604042,
+  "uuid": "-7943500037356109335",
+  "media": "https://static.metricool.com/planner/202611/7765790-file-14721004671444033127.jpeg",
+  "neu": true,
+  "rezept_im_beitrag": false,
+  "hashtags": 5
+ },
+ {
+  "n": 8,
+  "key": "PizzaKartoffeln",
+  "date": "2026-11-22T13:40:00",
+  "id": 436604144,
+  "uuid": "24671911721124802",
+  "media": "https://static.metricool.com/planner/202611/7765790-file-1306432408211109182.jpeg",
+  "neu": true,
+  "rezept_im_beitrag": false,
+  "hashtags": 5
+ },
+ {
+  "n": 9,
+  "key": "SpekKirschGlas",
+  "date": "2026-11-22T14:20:00",
+  "id": 436604275,
+  "uuid": "2460246028465031642",
+  "media": "https://static.metricool.com/planner/202611/7765790-file-7879151875860883529.jpeg",
+  "neu": false,
+  "rezept_im_beitrag": true,
+  "hashtags": 5
+ },
+ {
+  "n": 10,
+  "key": "BamiGoreng",
+  "date": "2026-11-22T15:00:00",
+  "id": 436604358,
+  "uuid": "-5994081851153495524",
+  "media": "https://static.metricool.com/planner/202611/7765790-file-13541324158976629807.jpeg",
+  "neu": false,
+  "rezept_im_beitrag": false,
+  "hashtags": 2
+ },
+ {
+  "n": 11,
+  "key": "EinTeig",
+  "date": "2026-11-22T15:40:00",
+  "id": 436604471,
+  "uuid": "8768997503862784709",
+  "media": "https://static.metricool.com/planner/202611/7765790-file-16487257090136350609.jpeg",
+  "neu": true,
+  "rezept_im_beitrag": false,
+  "hashtags": 5
+ },
+ {
+  "n": 12,
+  "key": "Lahmacun",
+  "date": "2026-11-22T16:25:00",
+  "id": 436604593,
+  "uuid": "8701729855090412010",
+  "media": "https://static.metricool.com/planner/202611/7765790-file-10402991663073062378.jpeg",
+  "neu": false,
+  "rezept_im_beitrag": false,
+  "hashtags": 4
+ },
+ {
+  "n": 13,
+  "key": "QuarkWoelkchen",
+  "date": "2026-11-22T17:10:00",
+  "id": 436604762,
+  "uuid": "7088879335221444730",
+  "media": "https://static.metricool.com/planner/202611/7765790-file-18295972820109207601.jpeg",
+  "neu": true,
+  "rezept_im_beitrag": false,
+  "hashtags": 3
+ },
+ {
+  "n": 14,
+  "key": "Blumenkohlsuppe",
+  "date": "2026-11-22T18:00:00",
+  "id": 436604866,
+  "uuid": "-5222172462209417104",
+  "media": "https://static.metricool.com/planner/202611/7765790-file-1968006350924102149.jpeg",
+  "neu": true,
+  "rezept_im_beitrag": false,
+  "hashtags": 5
+ },
+ {
+  "n": 15,
+  "key": "Tortellini",
+  "date": "2026-11-22T19:00:00",
+  "id": 436604993,
+  "uuid": "5217504893335457186",
+  "media": "https://static.metricool.com/planner/202611/7765790-file-12870804725666214342.jpeg",
+  "neu": false,
+  "rezept_im_beitrag": false,
+  "hashtags": 3
+ },
+ {
+  "n": 16,
+  "key": "NutellaBanane",
+  "date": "2026-11-22T20:45:00",
+  "id": 436605066,
+  "uuid": "-3432415035689058268",
+  "media": "https://static.metricool.com/planner/202611/7765790-file-12691143413223903057.jpeg",
+  "neu": true,
+  "rezept_im_beitrag": true,
+  "hashtags": 3
+ }
+]
