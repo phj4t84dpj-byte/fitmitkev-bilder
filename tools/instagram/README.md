@@ -5,6 +5,13 @@ Beitrag = dasselbe Board (static.metricool.com-URL des Facebook-Beitrags), Text 
 Je Tag eine Datei ig_<Datum>.json mit info, id, uuid.
 
 
+## Ab 22.11. (Kev, 0:49 Uhr): NICHT mehr in Metricool einplanen – Karussells an Kev schicken
+- Kev: „Für Instagram ab sofort keine Karussell mehr bei Metricool planen, schick mir hier die Karussells mit Text/Caption.“ Er postet selbst.
+- **Kein `createScheduledPost` mit network instagram mehr.** Alles bis zum Rendern bleibt gleich (Top 3 des Vortags, Bild-Job, `schneiden.py`, `ig_karussell.py`).
+- Danach je Karussell im Chat schicken: Paket A = Slide 1–3, Paket B = Slide 4–6 + Caption als TXT (höchstens 5 Dateien je Sendung, einzeln, kein ZIP); die Caption zusätzlich als Text in der Nachricht, damit er sie direkt kopieren kann. Caption wie bisher: „Na, Hunger? <Hook>“ + Rezepttext + 8 Hashtags (#fitmitkev zuletzt, nie #abnehmen), ohne Buch-Zeile und ohne Link.
+- So früh wie möglich im Morgen-Check schicken, das erste Karussell zuerst. `karussell/ig_plan.py` dient nur noch dazu, die Caption zu erzeugen.
+- Die Abschnitte darunter beschreiben den Stand bis 21.11. (automatisch eingeplant).
+
 ## Ab 16.11. (Kev, 12:29): Top 3 als Karussell „Schritt für Schritt“
 - 6 Slides (3:4, 1080 × 1440): 1 Hook mit fertigem Gericht · 4 Schritte · 6 Einkaufsliste im Notiz-Look mit Folgen-Leiste.
 - Bilder: Qwen-Image-Edit-2511 über ZeroGPU (kostenlos, ~20 Bilder am Tag) im HF-Job, Basis = Kevs Hand mit Schüssel in seiner Küche (`fitmitkev-karussells/cheeseburger-taschen/roh/v2/base_A.jpg`), Pfannenschritte = Kevs Pfanne auf dem Bora-Herd (`misc/karussell_pfanne_kev.jpg`). Job-Muster `scripts/jobs_ig1.py` im Dataset `kevrsztorm/fitmitkev-bilder`, Ergebnisse `fitmitkev-karussells/ig-<Datum>/roh/`.
