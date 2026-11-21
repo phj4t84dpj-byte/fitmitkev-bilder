@@ -9,6 +9,9 @@
 #   Dort vorn: weiche Plätzchen/„Wölkchen“, „1 Teig – viele Sorten“, Sonntagsbraten mit Rotkohl und Klößen, Blumenkohlsuppe. Kev per Dialog: „Alle 4 am Sonntag“.
 #   → 4 weitere neue Rezepte: EinTeig (Grundteig = Butterplätzchen aus dem Buch, G79/G35), QuarkWoelkchen, Sonntagsbraten, Blumenkohlsuppe. Damit 7 neue + SpekKirsch fest, 8 Plätze offen.
 # Der Rest des Sonntags (8 ausgeruhte Treffer, Zeiten, Hashtag-Gruppen) wird am Sa 21.11. früh mit Kev und den Freitagszahlen festgelegt.
+# Nachtrag 21.11. (Morgen-Check): Kev hat alle 7 neuen Bilder freigegeben („Ja, alle passen“). Die übrigen 8 Plätze = bewährte Treffer vom So 15.11. (7-Tage-Regel, ausgereift):
+#   Kalter Hund 5,0 × Tagesmedian · Hanuta-Bowl 2,8 · Lahmacun 2,2 · Hefezopf 1,6 · Tortellini 1,6 · Zwiebel-Sahne-Schnitzel 1,5 · Eiersalat 1,4 · Bami Goreng 0,9 (Verwandter des Freitags-Siegers „Gebratene Nudeln“).
+#   Texte und Bilder dieser 8 kommen unverändert aus tools/g93/sonntag_posts.json bzw. tools/g93n/sonntag_neu_posts.json; Reihenfolge, Uhrzeiten und Hashtag-Gruppen stehen in plan99.py.
 # Feste Beiträge am Sonntag: 06:10 ESN-Rezept Spekulatius-Mousse · 06:50 ESN K2 · 11:00 ESN P1 · 12:00 ESN P0 · 13:00 ESN-Rezept Erdbeer-Bowl · 20:15 Buch-Beitrag.
 import sys, os, copy
 _D=os.path.dirname(os.path.abspath(__file__))
@@ -78,7 +81,7 @@ NEU=dict(
   schritte=['Butter, 60 g Erythrit, Eigelb und Vanille cremig rühren, dann den Quark unterrühren. Mehl, Speisestärke, Backpulver und Salz mischen und kurz unterkneten, bis ein weicher Teig entsteht. 30 Minuten kalt stellen.',
             'Mit bemehlten Händen 40 kleine Kugeln formen, mit Abstand auf zwei Bleche mit Backpapier setzen und mit einer Gabel leicht flach drücken.',
             'Bei 170 °C Ober-/Unterhitze 12–14 Minuten backen. Die Wölkchen sollen hell bleiben. Das restliche Erythrit im Mixer zu Puder mahlen und die abgekühlten Wölkchen damit bestäuben.'],
-  frage='Wölkchen: pur oder mit einem Klecks Marmelade in der Mitte?', tags='#wölkchen #plätzchen #weihnachtsbäckerei #fitmitkev',
+  frage='Wölkchen: pur oder mit einem Klecks Marmelade in der Mitte?', tags='#wölkchen #plätzchen #fitmitkev',
   prompt='A white plate piled high with many small round pale cream-colored soft melt-in-the-mouth cookies, each cookie a slightly flattened ball with fork tine marks pressed on top, thickly dusted with white powdered sugar like snow, a few cookies lying on the table in front of the plate, one cookie broken in half showing the soft tender pale crumb inside, a small metal sieve with powdered sugar beside.'),
  Sonntagsbraten=dict(key='Sonntagsbraten', suess=False, hook='Wie früher bei Oma:', titel=['SONNTAGSBRATEN','MIT ROTKOHL'], portion='pro Portion', anzahl=4, vs=900,
   zutaten=[Z('600 g','Rinderbraten','rinderbraten','rind',600), Z('600 g','Rotkohl (Glas)','rotkohl','rotkohl',600), Z('500 g','Kloßteig (Kühlregal)','kartoffelkloesse','kloesse',500),
