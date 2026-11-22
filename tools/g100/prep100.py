@@ -6,7 +6,7 @@ Danach wird der Freisteller neu berechnet (Text-Maske liegt dann in den richtige
 import cv2, numpy as np, json, os, sys
 D=os.path.dirname(os.path.abspath(__file__))
 KEYS=['KokosWoelkchen','Schichtsalat','HackNudeln','PizzaWrap','Frikassee','KlossPaprika','KlossGulasch','KlossTomMozz']
-T={'KlossPaprika':dict(s=0.70,dy=40,glatt=True),'KlossGulasch':dict(s=0.80,dy=110,ct=40,cl=(50,0,700),glatt=True),'KlossTomMozz':dict(s=0.70,ct=40,cl=(45,0,690),glatt=True),
+T={'KlossPaprika':dict(s=0.70,dy=40,glatt=True),'KlossGulasch':dict(s=0.80,dy=110,ct=40,cl=(50,0,700),glatt=True),'KlossTomMozz':dict(s=0.66,dy=40,glatt=True,cl=(75,30,175),vf=(0,20,530,792),keil=(20,[(535,76),(560,72),(640,62),(700,50),(760,35),(790,24)])),
    'KokosWoelkchen':dict(s=0.72),'Schichtsalat':dict(s=0.74,mirror=True),'HackNudeln':dict(s=0.74),'PizzaWrap':dict(s=0.74),'Frikassee':dict(s=0.74,mirror=True,holz=([(0,958),(60,985),(100,1012),(150,1042),(200,1068),(250,1090),(300,1108),(335,1125),(338,1280),(0,1280)],340,1190))}
 def prep(key):
     sel=json.load(open(f'{D}/hero/_auswahl.json'))[key]
