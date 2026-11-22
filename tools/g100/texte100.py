@@ -4,9 +4,9 @@ import json, os
 import g100_data as G
 D=os.path.dirname(os.path.abspath(__file__)); os.makedirs(f"{D}/out",exist_ok=True)
 URL="https://raw.githubusercontent.com/phj4t84dpj-byte/fitmitkev-bilder/main/boards/{}.jpg"
-NAME={'KokosWoelkchen':'Kokos-Wölkchen aus 5 Zutaten','Schichtsalat':'Schichtsalat über Nacht','HackNudeln':'Gebratene Nudeln mit Hack','PizzaWrap':'Pizza-Wrap aus körnigem Frischkäse'}
-MENGE={'KokosWoelkchen':'30 Stück, Backblech','Schichtsalat':'6 Portionen, große Glasschüssel','HackNudeln':'4 Portionen','PizzaWrap':'2 Wraps, Backblech'}
-EMO={'KokosWoelkchen':'🥰','Schichtsalat':'🤗','HackNudeln':'🤤','PizzaWrap':'😋'}
+NAME={'KokosWoelkchen':'Kokos-Wölkchen aus 5 Zutaten','Schichtsalat':'Schichtsalat über Nacht','HackNudeln':'Gebratene Nudeln mit Hack','PizzaWrap':'Pizza-Wrap aus körnigem Frischkäse','Frikassee':'Hühnerfrikassee mit Knödeln'}
+MENGE={'KokosWoelkchen':'30 Stück, Backblech','Schichtsalat':'6 Portionen, große Glasschüssel','HackNudeln':'4 Portionen','PizzaWrap':'2 Wraps, Backblech','Frikassee':'4 Portionen'}
+EMO={'KokosWoelkchen':'🥰','Schichtsalat':'🤗','HackNudeln':'🤤','PizzaWrap':'😋','Frikassee':'🤗'}
 posts=[]
 for r in G.R:
     k,p,c,f=G.macros4(r); key=r['key']; lab=r['portion']
