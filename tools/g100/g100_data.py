@@ -12,7 +12,7 @@ import sys, os
 _D=os.path.dirname(os.path.abspath(__file__))
 for g in ('g87','g88','g89','g90','g91','g92','g93','g93n','g99'): sys.path.insert(0, os.path.join(_D, '..', g))
 from g90_data import NUT, PIECE, nut, Z, macros4
-for _k,_v in {'eisbergsalat':(14,1,2,0.2), 'weisskohl':(25,1.3,4,0.2), 'sojasauce':(60,8,6,0)}.items(): NUT.setdefault(_k,_v)   # bestehende Werte nicht überschreiben
+for _k,_v in {'eisbergsalat':(14,1,2,0.2), 'weisskohl':(25,1.3,4,0.2), 'sojasauce':(60,8,6,0), 'kloesse':(105,2,22.5,0.5)}.items(): NUT.setdefault(_k,_v)   # bestehende Werte nicht überschreiben
 
 NEU=dict(
  KokosWoelkchen=dict(key='KokosWoelkchen', suess=True, hook='Nur 5 Zutaten:', titel=['KOKOS-','WÖLKCHEN'], portion='pro Stück', anzahl=30, vs=95,
