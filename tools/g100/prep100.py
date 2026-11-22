@@ -6,7 +6,7 @@ Danach wird der Freisteller neu berechnet (Text-Maske liegt dann in den richtige
 import cv2, numpy as np, json, os, sys
 D=os.path.dirname(os.path.abspath(__file__))
 KEYS=['KokosWoelkchen','Schichtsalat','HackNudeln','PizzaWrap','Frikassee']
-T={'KokosWoelkchen':dict(s=0.72),'Schichtsalat':dict(s=0.74,mirror=True),'HackNudeln':dict(s=0.74),'PizzaWrap':dict(s=0.74),'Frikassee':dict(s=0.74)}
+T={'KokosWoelkchen':dict(s=0.72),'Schichtsalat':dict(s=0.74,mirror=True),'HackNudeln':dict(s=0.74),'PizzaWrap':dict(s=0.74),'Frikassee':dict(s=0.74,mirror=True,holz=([(0,958),(60,985),(100,1012),(150,1042),(200,1068),(250,1090),(300,1108),(335,1125),(338,1280),(0,1280)],340,1190))}
 def prep(key):
     sel=json.load(open(f'{D}/hero/_auswahl.json'))[key]
     im=cv2.imread(f'{D}/raw/{sel}.jpg'); t=T.get(key,{})
@@ -17,6 +17,12 @@ def prep(key):
         x0_,x1_,y0_,y1_=t['vf']; im=im.copy().astype(np.float32); w_=np.linspace(0,1,y1_-y0_)[:,None,None]
         im[y0_:y1_,x0_:x1_]=im[y0_:y0_+1,x0_:x1_]*(1-w_)+im[y1_:y1_+1,x0_:x1_]*w_
         im[y0_:y1_,x0_:x1_]=cv2.GaussianBlur(im[y0_:y1_,x0_:x1_],(0,0),5); im=im.astype(np.uint8)
+    if t.get('holz'):                    # (Polygon, x_achse, y_achse) in Rohbild-Pixeln (nach dem Spiegeln): Serviette/Tuch am unteren Bildrand durch Tischholz ersetzen –
+        poly,xa,ya=t['holz']; hh,ww=im.shape[:2]; src=im.copy()   # unterhalb y_achse wird das Holz rechts von x_achse nach links gespiegelt, darüber die gefüllten Zeilen nach oben (Maserung läuft senkrecht weiter)
+        sx=np.clip(2*xa-1-np.arange(xa),0,ww-1); src[ya:,:xa]=im[ya:,sx]
+        n=hh-ya; k=(ya-1-np.arange(ya))%(2*n); sy=ya+np.where(k<n,k,2*n-1-k); src[:ya,:xa]=src[sy][:,:xa]
+        m=np.zeros((hh,ww),np.float32); cv2.fillPoly(m,[np.array(poly,np.int32)],1.0); m=cv2.GaussianBlur(m,(0,0),3)[:,:,None]
+        im=(im*(1-m)+src*m).astype(np.uint8)
     if t.get('keil'):                    # (x_von, [(y, x_kante), …]): Rest zwischen übermalter Fläche und Rand des Gerichts zeilenweise mit der Farbe links daneben füllen (Kante des Gerichts als Stützpunkte)
         xf,kn=t['keil']; im=im.copy(); ys=[k[0] for k in kn]; xs=[k[1] for k in kn]
         for y in range(ys[0],ys[-1]+1):
