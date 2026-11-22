@@ -73,29 +73,30 @@ NEU=dict(
 for _k,_r in NEU.items(): _r['kurz']=['–','–','–']; _r['exnut']=[]
 NEU['Frikassee']['exnut']=[(75,0,0,8)]   # 10 g Butter
 # ---- Kloßteig-Reihe (Kev 22.11., 16:06: „ab morgen eine Rezeptreihe mit Kloßteig-Rezepten … fertiger Kloßteig“; seine drei Vorgaben für den Start) ----
+# Bilder: KlossPaprika Seed 4 (erster Prompt; ganzes Filet statt Stücke → Rezept angepasst), KlossGulasch Seed 7 und KlossTomMozz Seed 7 (zweiter Prompt „whole plate fully visible … empty table space left and right“).
 # Einheitlicher Auftakt „Klöße mit“ als Schreibschrift-Zeile, der Titel nennt die Variante → die Reihe ist auf einen Blick erkennbar. 4 kleine Klöße pro Teller (Kev 15:57).
 KLOSS=dict(
  KlossPaprika=dict(key='KlossPaprika', suess=False, hook='Klöße mit', titel=['PAPRIKA-SAHNE-','HÄHNCHEN'], portion='pro Portion', anzahl=4, vs=780,
   zutaten=[Z('500 g','Hähnchenbrust','haehnchenbrust','haehnchen',500), Z('500 g','Kloßteig (Kühlregal)','kartoffelkloesse','kloesse',500), Z('2 Stück','Rote Paprika','rote_paprika','paprika_st',st=2),
            Z('1 Stück','Zwiebel','zwiebel','zwiebel',st=1), Z('200 ml','Kochsahne (15 %)','kochsahne','kochsahne',200), Z('200 ml','Gemüsebrühe','gemuesebruehe','bruehe',0),
            Z('2 EL','Tomatenmark','tomatenmark','tomatenmark',30), Z('1 EL','Paprikapulver','paprikapulver','vanille',0)],
-  ex=['1 EL Öl, 1 TL Speisestärke', 'Salz, Pfeffer, Petersilie'],
-  intro='Paprika-Sahne-Hähnchen kennt ihr mit Reis. Probiert es mal mit Klößen: Die nehmen die cremige Paprikasoße auf wie nichts anderes. Mit fertigem Kloßteig aus dem Kühlregal steht alles in 30 Minuten auf dem Tisch, und für die Soße reicht ein Becher Kochsahne: {k} kcal und {p} g Eiweiß pro Teller statt 780 für die Variante mit Schlagsahne!',
+  ex=['1 EL Öl, 1 TL Speisestärke', 'Salz, Pfeffer, frische Kräuter (Thymian oder Petersilie)'],
+  intro='Paprika-Sahne-Hähnchen kennt ihr mit Reis. Probiert es mal mit Klößen: Die nehmen die cremige Paprikasoße auf wie nichts anderes. Mit fertigem Kloßteig aus dem Kühlregal steht alles in gut 30 Minuten auf dem Tisch, und für die Soße reicht ein Becher Kochsahne: {k} kcal und {p} g Eiweiß pro Teller statt 780 für die Variante mit Schlagsahne!',
   schritte=['Aus dem Kloßteig 16 kleine Klöße formen (4 pro Teller) und nach Packungsangabe in siedendem Salzwasser gar ziehen lassen (ca. 15 Minuten).',
-            'Die Hähnchenbrust in mundgerechte Stücke schneiden, salzen, pfeffern und im heißen Öl in einer großen Pfanne rundum goldbraun anbraten. Herausnehmen.',
+            'Die Hähnchenbrust in 4 gleich große Stücke teilen (dicke Filets flach halbieren), salzen, pfeffern und im heißen Öl in einer großen Pfanne von beiden Seiten goldbraun anbraten. Herausnehmen.',
             'Die Zwiebel würfeln, die Paprika in Streifen schneiden und beides in derselben Pfanne 4 Minuten anbraten. Tomatenmark und Paprikapulver 1 Minute mitrösten, mit Brühe und Kochsahne ablöschen und 8 Minuten köcheln lassen. Die Speisestärke in 2 EL kaltem Wasser anrühren, einrühren und kurz aufkochen.',
-            'Das Hähnchen zurück in die Soße geben und 3 Minuten heiß werden lassen. Mit Salz und Pfeffer abschmecken und mit den Klößen und gehackter Petersilie servieren.'],
+            'Das Hähnchen zurück in die Soße legen und zugedeckt 8 Minuten gar ziehen lassen. Mit Salz und Pfeffer abschmecken und mit den Klößen und frischen Kräutern servieren.'],
   frage='Paprika-Sahne-Hähnchen: mit Klößen, Reis oder Nudeln?', tags='#paprikasahnehähnchen #klöße #fitmitkev',
   prompt='A round white dinner plate, the whole plate fully visible with empty table space left and right of it, with one golden seared chicken breast fillet and red bell pepper strips in a creamy orange-red paprika cream sauce, sprinkled with fresh chopped green parsley, and beside it on the same plate exactly four small round pale yellow matte German potato dumplings, each about the size of a golf ball, lying close together in a group, all four clearly visible.'),
  KlossGulasch=dict(key='KlossGulasch', suess=False, hook='Klöße klassisch mit', titel=['ROTKOHL','UND GULASCH'], portion='pro Portion', anzahl=4, vs=900,
   zutaten=[Z('500 g','Rindergulasch (mager)','rindergulasch','rind',500), Z('500 g','Kloßteig (Kühlregal)','kartoffelkloesse','kloesse',500), Z('600 g','Rotkohl (Glas)','rotkohl','rotkohl',600),
            Z('2 Stück','Zwiebeln','zwiebeln','zwiebel',st=2), Z('2 EL','Tomatenmark','tomatenmark','tomatenmark',30), Z('500 ml','Rinderbrühe','rinderbruehe','bruehe',0),
            Z('1 EL','Paprikapulver','paprikapulver','vanille',0), Z('1 EL','Speisestärke','speisestaerke','speisestaerke',10)],
-  ex=['1 EL Öl, 2 Lorbeerblätter', 'Salz, Pfeffer, Majoran'],
+  ex=['1 EL Öl, 2 Lorbeerblätter', 'Salz, Pfeffer, Majoran, Petersilie'],
   intro='Klöße, Rotkohl und Gulasch: Mehr Winter passt nicht auf einen Teller. Das Gulasch schmort mit vielen Zwiebeln, bis das Fleisch zerfällt, und die Soße braucht weder Mehlschwitze noch Sahne. Die Klöße sind aus fertigem Kloßteig in 15 Minuten gemacht, der Rotkohl kommt aus dem Glas: {k} kcal und {p} g Eiweiß pro Teller statt 900 im Gasthaus!',
   schritte=['Das Rindergulasch in kleine Würfel (ca. 2 cm) schneiden, dann wird es schneller weich. Im heißen Öl in einem Topf portionsweise kräftig anbraten. Die Zwiebeln würfeln und 5 Minuten mitbraten. Tomatenmark und Paprikapulver 1 Minute mitrösten.',
             'Mit der Brühe ablöschen, Lorbeer und Majoran zugeben und zugedeckt bei kleiner Hitze 75–90 Minuten schmoren, bis das Fleisch zart ist. Die Speisestärke in 2 EL kaltem Wasser anrühren, einrühren und kurz aufkochen. Mit Salz und Pfeffer abschmecken.',
-            'Aus dem Kloßteig 16 kleine Klöße formen (4 pro Teller) und nach Packungsangabe in siedendem Salzwasser gar ziehen lassen (ca. 15 Minuten). Den Rotkohl erwärmen und alles zusammen anrichten.'],
+            'Aus dem Kloßteig 16 kleine Klöße formen (4 pro Teller) und nach Packungsangabe in siedendem Salzwasser gar ziehen lassen (ca. 15 Minuten). Den Rotkohl erwärmen und alles zusammen anrichten, etwas Petersilie darüber.'],
   frage='Zum Gulasch: Klöße, Nudeln oder Kartoffeln?', tags='#gulasch #rotkohl #klöße #omasrezepte #fitmitkev',
   prompt='A round white dinner plate, the whole plate fully visible with empty table space left and right of it, with a portion of dark red-brown beef goulash with tender beef chunks in glossy dark brown gravy, beside it a portion of shiny purple braised red cabbage, and on the same plate exactly four small round pale yellow matte German potato dumplings, each about the size of a golf ball, lying close together in a group, all four clearly visible, a little chopped green parsley on the dumplings.'),
  KlossTomMozz=dict(key='KlossTomMozz', suess=False, hook='Klöße mit', titel=['TOMATE-MOZZARELLA','ÜBERBACKEN'], portion='pro Portion', anzahl=4, vs=700,
@@ -106,7 +107,7 @@ KLOSS=dict(
   intro='Klöße mal ganz anders: in fruchtiger Tomatensoße, mit Tomatenscheiben und Mozzarella belegt und im Ofen überbacken, bis der Käse goldgelb zerläuft. Schmeckt wie Gnocchi-Auflauf, ist aber aus fertigem Kloßteig in 15 Minuten vorbereitet, den Rest macht der Ofen: {k} kcal und {p} g Eiweiß pro Portion statt 700 für den Gnocchi-Auflauf beim Italiener!',
   schritte=['Den Ofen auf 200 °C Ober-/Unterhitze vorheizen. Aus dem Kloßteig 12 Klöße formen (3 pro Portion) und in siedendem Salzwasser 10 Minuten vorgaren.',
             'Zwiebel und Knoblauch fein würfeln und im Olivenöl 3 Minuten anschwitzen. Passierte Tomaten und Kräuter zugeben, mit Salz und Pfeffer würzen und 5 Minuten köcheln lassen. Die Soße in eine Auflaufform (ca. 20 × 30 cm) geben.',
-            'Die Klöße in die Soße setzen. Tomaten und Mozzarella in Scheiben schneiden und darauf verteilen. 15–20 Minuten überbacken, bis der Käse goldgelb ist, und mit Basilikum bestreuen.'],
+            'Tomaten und Mozzarella in Scheiben schneiden. Die Tomatenscheiben und die Klöße in die Soße setzen, alles mit dem Mozzarella belegen und 15–20 Minuten überbacken, bis der Käse goldgelb ist. Mit Basilikum bestreuen.'],
   frage='Klöße: lieber überbacken oder klassisch mit Soße?', tags='#klöße #tomatemozzarella #fitmitkev',
   prompt='A white rectangular ceramic baking dish with two handles, both handles fully visible, the whole dish centered with empty table space left and right of it, seen from above at a 45 degree angle, filled with round pale yellow German potato dumplings sitting in bright red tomato sauce, between and on the dumplings slices of red tomato topped with round slices of melted white mozzarella cheese with golden brown spots from the oven, fresh green basil leaves scattered on top. In front of the baking dish a small white plate with exactly three round potato dumplings in red tomato sauce, topped with a slice of tomato and melted mozzarella.'),
 )

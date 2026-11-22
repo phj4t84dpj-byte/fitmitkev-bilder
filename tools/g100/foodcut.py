@@ -36,7 +36,7 @@ def table_mask(rgb,a):
     X=(np.arange(w)/sx)[None,:]
     t=t*np.clip((560-X)/40,0,1)
     return cv2.GaussianBlur(t,(0,0),10)
-RECT={}
+RECT={'KlossPaprika':(250,860,1080,1325),'KlossGulasch':(225,940,1068,1290),'KlossTomMozz':(350,850,1072,1335)}   # Teller/Form liegen klein im unteren Drittel: enger Rahmen, sonst nimmt GrabCut die Wand mit den Lichtern mit (senkrechte Kante im Bild)
 def food_cut(key):
     dst=f'{D}/hero_cut_m/{key}.png'
     os.makedirs(f'{D}/hero_cut_m',exist_ok=True)

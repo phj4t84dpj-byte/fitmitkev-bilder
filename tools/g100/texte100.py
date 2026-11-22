@@ -1,12 +1,14 @@
 # -*- coding: utf-8 -*-
-# G100 – Montag 23.11.2026: Texte für die 4 neuen Rezepte -> out/montag_neu_posts.json
+# G100 – Montag 23.11.2026: Texte für die neuen Rezepte (ab 22.11. nachmittags mit der Kloßteig-Reihe) -> out/montag_neu_posts.json
 import json, os
 import g100_data as G
 D=os.path.dirname(os.path.abspath(__file__)); os.makedirs(f"{D}/out",exist_ok=True)
 URL="https://raw.githubusercontent.com/phj4t84dpj-byte/fitmitkev-bilder/main/boards/{}.jpg"
-NAME={'KokosWoelkchen':'Kokos-Wölkchen aus 5 Zutaten','Schichtsalat':'Schichtsalat über Nacht','HackNudeln':'Gebratene Nudeln mit Hack','PizzaWrap':'Pizza-Wrap aus körnigem Frischkäse','Frikassee':'Hühnerfrikassee mit Knödeln'}
-MENGE={'KokosWoelkchen':'30 Stück, Backblech','Schichtsalat':'6 Portionen, große Glasschüssel','HackNudeln':'4 Portionen','PizzaWrap':'2 Wraps, Backblech','Frikassee':'4 Portionen'}
-EMO={'KokosWoelkchen':'🥰','Schichtsalat':'🤗','HackNudeln':'🤤','PizzaWrap':'😋','Frikassee':'🤗'}
+NAME={'KokosWoelkchen':'Kokos-Wölkchen aus 5 Zutaten','Schichtsalat':'Schichtsalat über Nacht','HackNudeln':'Gebratene Nudeln mit Hack','PizzaWrap':'Pizza-Wrap aus körnigem Frischkäse','Frikassee':'Hühnerfrikassee mit Knödeln',
+      'KlossPaprika':'Klöße mit Paprika-Sahne-Hähnchen','KlossGulasch':'Klöße mit Rotkohl und Gulasch','KlossTomMozz':'Klöße mit Tomate-Mozzarella überbacken'}
+MENGE={'KokosWoelkchen':'30 Stück, Backblech','Schichtsalat':'6 Portionen, große Glasschüssel','HackNudeln':'4 Portionen','PizzaWrap':'2 Wraps, Backblech','Frikassee':'4 Portionen',
+       'KlossPaprika':'4 Portionen','KlossGulasch':'4 Portionen','KlossTomMozz':'4 Portionen, Auflaufform 20 × 30 cm'}
+EMO={'KokosWoelkchen':'🥰','Schichtsalat':'🤗','HackNudeln':'🤤','PizzaWrap':'😋','Frikassee':'🤗','KlossPaprika':'😍','KlossGulasch':'🥰','KlossTomMozz':'🤤'}
 posts=[]
 for r in G.R:
     k,p,c,f=G.macros4(r); key=r['key']; lab=r['portion']

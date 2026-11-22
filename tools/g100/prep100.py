@@ -5,12 +5,15 @@ Kachelspalte, Titel, Badge und Vorher-Nachher-Foto liegt. Ränder werden aus der
 Danach wird der Freisteller neu berechnet (Text-Maske liegt dann in den richtigen Koordinaten)."""
 import cv2, numpy as np, json, os, sys
 D=os.path.dirname(os.path.abspath(__file__))
-KEYS=['KokosWoelkchen','Schichtsalat','HackNudeln','PizzaWrap','Frikassee']
-T={'KokosWoelkchen':dict(s=0.72),'Schichtsalat':dict(s=0.74,mirror=True),'HackNudeln':dict(s=0.74),'PizzaWrap':dict(s=0.74),'Frikassee':dict(s=0.74,mirror=True,holz=([(0,958),(60,985),(100,1012),(150,1042),(200,1068),(250,1090),(300,1108),(335,1125),(338,1280),(0,1280)],340,1190))}
+KEYS=['KokosWoelkchen','Schichtsalat','HackNudeln','PizzaWrap','Frikassee','KlossPaprika','KlossGulasch','KlossTomMozz']
+T={'KlossPaprika':dict(s=0.70,dy=40,glatt=True),'KlossGulasch':dict(s=0.80,dy=110,ct=40,cl=(50,0,700),glatt=True),'KlossTomMozz':dict(s=0.70,ct=40,cl=(45,0,690),glatt=True),
+   'KokosWoelkchen':dict(s=0.72),'Schichtsalat':dict(s=0.74,mirror=True),'HackNudeln':dict(s=0.74),'PizzaWrap':dict(s=0.74),'Frikassee':dict(s=0.74,mirror=True,holz=([(0,958),(60,985),(100,1012),(150,1042),(200,1068),(250,1090),(300,1108),(335,1125),(338,1280),(0,1280)],340,1190))}
 def prep(key):
     sel=json.load(open(f'{D}/hero/_auswahl.json'))[key]
     im=cv2.imread(f'{D}/raw/{sel}.jpg'); t=T.get(key,{})
     if t.get('mirror'): im=np.ascontiguousarray(im[:,::-1])
+    if t.get('ct'):                      # n: die obersten n Zeilen des Rohbilds durch Zeile n ersetzen (dunkler Gegenstand am oberen Bildrand, der sonst als Streifen hinter den Titel verlängert würde)
+        im=im.copy(); im[:t['ct']]=im[t['ct']:t['ct']+1]
     if t.get('cl'):                      # (n, y0, y1) in Rohbild-Pixeln: Gegenstand/Licht am linken Bildrand entfernen (Spalte n nach links fortsetzen)
         n,y0,y1=t['cl']; im=im.copy(); im[y0:y1,:n]=im[y0:y1,n:n+1]
     if t.get('vf'):                      # (x0, x1, y0, y1) in Rohbild-Pixeln (nach dem Spiegeln): Gegenstand übermalen – jede Spalte läuft gerade von Zeile y0 nach Zeile y1 (für Reste am Bildrand, die `cl` nicht greift, weil daneben schon das Gericht liegt)
@@ -48,6 +51,11 @@ def prep(key):
     if a.min()<1:
         bl=cv2.GaussianBlur(out,(0,0),28)
         out=(out*a[:,:,None]+bl*(1-a[:,:,None])).astype(np.uint8)
+    if t.get('glatt') and y0>0:          # oben angesetzter Rand ohne Lichter-Streifen: die erste echte Zeile wird von hellen Punkten befreit (Öffnung über 220 px) und stark geglättet,
+        row=out[y0:y0+1].copy(); k=int(220*f)|1                       # damit füllt sich der Rand; die obersten 70 px des echten Bildes blenden weich hinein (angeschnittene Lichter laufen aus)
+        row=cv2.GaussianBlur(cv2.morphologyEx(row,cv2.MORPH_OPEN,np.ones((1,k),np.uint8)),(0,0),sigmaX=60*f,sigmaY=0.1)
+        ramp=np.clip((np.arange(h)-y0)/(70*f),0,1)[:,None,None]
+        out=(out*ramp+np.repeat(row,h,axis=0)*(1-ramp)).astype(np.uint8)
     cv2.imwrite(f'{D}/hero/{key}.jpg',out,[cv2.IMWRITE_JPEG_QUALITY,95])
     mp=f'{D}/hero/_meta.json'; M=json.load(open(mp)) if os.path.exists(mp) else {}
     M[key]=dict(x0=round(x0/f,1),x1=round((x0+rw)/f,1),y0=round(y0/f,1),y1=round((y0+rh)/f,1))   # echte Bildfläche in Board-Pixeln (außerhalb = angesetzter Rand)
