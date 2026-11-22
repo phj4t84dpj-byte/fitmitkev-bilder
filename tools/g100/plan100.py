@@ -27,12 +27,12 @@ PLAN=[('06:50','Quarkbroetchen','g94','G94-Quarkbroetchen-ohneBox','#quarkbrötc
       ('17:45','Gulasch','g91','G91-Gulasch-ohneBox','#gulasch #rindergulasch #omasrezepte #eintopf #fitmitkev','13.11. · 9.129 · 1,0-fach'),
       ('18:30','Spritzgebaeck','g93','G93-Spritzgebaeck-ohneBox','#spritzgebäck #plätzchen #fitmitkev','16.11. · 15.968 · 1,1-fach'),
       ('19:15','Senfeier','g88','G88-Senfeier','#senfeier #omasrezepte #fitmitkev','10.11. · 10.434 · 0,9-fach'),
-      ('20:15','Plaetzchen','g91','G91-Plaetzchen-ohneBox','#plätzchen #weihnachtsbäckerei #backen #fitmitkev','13.11. · 16.758 · 1,8-fach'),
-      ('20:45','Flammkuchen','g89','G89-Flammkuchen','#flammkuchen #skyrteig #fitmitkev','11.11. · 10.642 · 0,7-fach')]
-FEST={'06:10':'ESN-Rezept Zimtschnecken-Overnight-Oats (ohne ESN-Zeile)','13:00':'ESN-Rezept Schokopudding (ohne ESN-Zeile)'}
-GRUPPE_A={1,2,4,8,9,12,13,17,18,20}          # 2–3 Hashtags; übrige 4–5
+      ('20:45','Plaetzchen','g91','G91-Plaetzchen-ohneBox','#plätzchen #weihnachtsbäckerei #backen #fitmitkev','13.11. · 16.758 · 1,8-fach')]
+# Kev 22.11., 10:20 per Dialog: „Ja go“ und „Buch-Beitrag täglich weiter“ → 20:15 gehört dem Buch-Beitrag, Flammkuchen (0,7-fach) entfällt, Ausstech-Plätzchen rücken auf 20:45.
+FEST={'06:10':'ESN-Rezept Zimtschnecken-Overnight-Oats (ohne ESN-Zeile)','13:00':'ESN-Rezept Schokopudding (ohne ESN-Zeile)','20:15':'Buch-Beitrag (neu, wird Kev vorher gezeigt)'}
+GRUPPE_A={1,2,4,8,9,12,13,17,18}          # 2–3 Hashtags; übrige 4–5
 BUCH={'Plaetzchen':'📖 Diese Plätzchen findest du auch in meinem Rezeptbuch „Weihnachtsbäckerei in leicht“, zusammen mit 35 weiteren Rezepten: https://fitmitkev.de/rezeptbuecher'}
-SW=[False,True,False,True,False,True,False,True,False, False,True,False,True,False,True,False,True,False,True,False]   # zwischen Platz 9 und 10 liegt das feste süße ESN-Rezept um 13:00
+SW=[False,True,False,True,False,True,False,True,False, False,True,False,True,False,True,False,True,False,True]   # zwischen Platz 9 und 10 liegt das feste süße ESN-Rezept um 13:00
 posts=[]
 for n,(zeit,key,src,bild,tags,zuletzt) in enumerate(PLAN,1):
     if src is None:
@@ -50,15 +50,15 @@ for n,(zeit,key,src,bild,tags,zuletzt) in enumerate(PLAN,1):
     assert zeit not in FEST and 'Rezept im 1. Kommentar' in text, key
     posts.append(dict(n=n,key=key,date=f'2026-11-23T{zeit}:00',text=text,fc=fc,media=media,alt=alt,bild=bild,box=False,kcal=kcal,suess=bool(suess),hashtags=nt,
                       gruppe='A (2–3)' if nt<=3 else 'B (4–5)',neu=src is None,buch=key in BUCH,zuletzt=zuletzt))
-assert len(posts)==20 and len({p['date'] for p in posts})==20 and len({p['key'] for p in posts})==20
-assert sum(p['gruppe'][0]=='A' for p in posts)==10 and sum(p['suess'] for p in posts)==9 and sum(p['buch'] for p in posts)==1
+assert len(posts)==19 and len({p['date'] for p in posts})==19 and len({p['key'] for p in posts})==19
+assert sum(p['gruppe'][0]=='A' for p in posts)==9 and sum(p['suess'] for p in posts)==9 and sum(p['buch'] for p in posts)==1
 assert all(p['kcal']<=500 for p in posts)
 json.dump(posts,open(f"{D}/out/montag_posts.json","w"),ensure_ascii=False,indent=1)
 alle=[(p['date'][11:16],f"{p['n']:02d} · {'süß ' if p['suess'] else 'herz'} · {p['alt']} · {p['kcal']} kcal · {p['hashtags']} Hashtags · {'NEU' if p['neu'] else 'zuletzt '+p['zuletzt']}{' · BUCH-ZEILE' if p['buch'] else ''}") for p in posts]
-alle+=[(t,f"–– · schon eingeplant · {x}") for t,x in FEST.items()]
+alle+=[(t,f"–– · fest · {x}") for t,x in FEST.items()]
 with open(f"{D}/out/posting-plan-montag.txt","w") as fh:
-    fh.write("Posting-Plan Montag 23.11.2026 – 22 Beiträge: 20 Rezepte (neu anzulegen) + 2 feste ESN-Rezepte (schon eingeplant, ohne ESN-Zeile).\n")
-    fh.write("4 neue Rezepte, 16 bewährte (7-Tage-Regel). Alle Boards ohne Box. Kein eigener Werbe-Beitrag, eine Buch-Zeile (20:15 Ausstech-Plätzchen).\nHinter jedem Wiederholer: letzter Lauf · Reichweite · Vielfaches des Tagesmittels.\n\n")
+    fh.write("Posting-Plan Montag 23.11.2026 – 22 Beiträge: 19 Rezepte + 2 feste ESN-Rezepte (schon eingeplant, ohne ESN-Zeile) + Buch-Beitrag 20:15.\n")
+    fh.write("4 neue Rezepte, 15 bewährte (7-Tage-Regel). Alle Boards ohne Box. Ein Werbe-Beitrag (Buch, 20:15), eine Buch-Zeile (20:45 Ausstech-Plätzchen).\nHinter jedem Wiederholer: letzter Lauf · Reichweite · Vielfaches des Tagesmittels.\n\n")
     for t,x in sorted(alle): fh.write(f"{t} · {x}\n")
 with open(f"{D}/out/texte-montag.txt","w") as fh:
     for p in posts:

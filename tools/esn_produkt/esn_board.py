@@ -182,6 +182,18 @@ SPEC={
    mid='Kalorien pro Portion. Alle 5 Rezepte stehen in meinem Buch<br><span>„Wohlfühlküche in leicht“, mit 31 weiteren.</span>',
    msg='Sofort als PDF: 9,99 €.<br><span>Link im 1. Kommentar 👇</span>',
    css='.ri{width:108px;height:108px;overflow:hidden}.ri img{max-width:none;max-height:none;width:108px;height:108px;object-fit:cover}.rw{padding:9px 0}.msg{font-size:27px;line-height:1.3}.mid{font-size:27px}.r1{font-size:32px}'),
+ # B4 (Kev 22.11., 10:20 per Dialog: „Buch-Beitrag täglich weiter“): Mo 23.11., 20:15. Kalorien aus archiv/rezepte.json (Buch-Schlüssel G80SpekKuchenNah, G80Nussecken,
+ # G49SpekBiskuitrolle, G78RiesenZimtschnecke, G67EierGugelhupf) – Kev prüft die fünf Werte gegen sein PDF.
+ 'B4':dict(out='Buch-Mo-Adventskuchen', hook='Für den Adventskaffee:', title=['5 KUCHEN','UNTER 140 KCAL'], size=96,
+   secs=[dict(lab='AUS MEINER WEIHNACHTSBÄCKEREI', col='#8C1C24', type='rows', d=[
+      ('../../archiv/fotos/g80_G80SpekKuchenNah.jpg','Skyr-Kuchen mit Spekulatius','Rezept für 8 Stücke','125<br><small>kcal</small>'),
+      ('../../archiv/fotos/g80_G80Nussecken.jpg','Nussecken','Rezept für 16 Stück','125<br><small>kcal</small>'),
+      ('../../archiv/fotos/g49_G49SpekBiskuitrolle.jpg','Spekulatius-Biskuitrolle','Rezept für 12 Stücke','130<br><small>kcal</small>'),
+      ('../../archiv/fotos/g78_G78RiesenZimtschnecke.jpg','Zimtschnecken-Kuchen','Rezept für 12 Stücke','135<br><small>kcal</small>'),
+      ('../../archiv/fotos/g67_G67EierGugelhupf.jpg','Eierlikör-Gugelhupf','Rezept für 16 Stücke','135<br><small>kcal</small>')])],
+   mid='Kalorien pro Stück. Alle 5 Rezepte stehen in meinem Buch<br><span>„Weihnachtsbäckerei in leicht“, mit 31 weiteren.</span>',
+   msg='Sofort als PDF: 9,99 €.<br><span>Link im 1. Kommentar 👇</span>',
+   css='.ri{width:108px;height:108px;overflow:hidden}.ri img{max-width:none;max-height:none;width:108px;height:108px;object-fit:cover}.rw{padding:9px 0}.msg{font-size:27px;line-height:1.3}.mid{font-size:27px}.r1{font-size:32px}'),
  # P12/P13 (Kev 19.11., 18:50): „Wie kann man sich die Designer Bars vorstellen?“ – Sorten und Vergleiche 1:1 aus Kevs zwei Story-Grafiken
  # (Packungs- und Geschmacksbilder daraus ausgeschnitten: esn/bilder/bars/). 22 Sorten in 2 Teilen, je ein Bild.
  # Kev 19.11., 19:00: „lieber schon vor der Black Week, am Samstag“ → Sa 21.11., 9:00 und 18:30, Balken deshalb „Ab morgen 12 Uhr“.

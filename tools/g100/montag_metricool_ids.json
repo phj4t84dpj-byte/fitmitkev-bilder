@@ -1,0 +1,211 @@
+[
+ {
+  "n": 1,
+  "key": "Quarkbroetchen",
+  "date": "2026-11-23T06:50:00",
+  "id": 437394380,
+  "uuid": "-9114140649682613361",
+  "media": "https://static.metricool.com/planner/202611/7765790-file-10335810174323558365.jpeg",
+  "neu": false,
+  "buch": false,
+  "hashtags": 3
+ },
+ {
+  "n": 2,
+  "key": "Nussecken",
+  "date": "2026-11-23T07:35:00",
+  "id": 437394460,
+  "uuid": "-7258481580030210682",
+  "media": "https://static.metricool.com/planner/202611/7765790-file-10167076940018094790.jpeg",
+  "neu": false,
+  "buch": false,
+  "hashtags": 3
+ },
+ {
+  "n": 3,
+  "key": "Schichtsalat",
+  "date": "2026-11-23T08:20:00",
+  "id": 437394526,
+  "uuid": "1245887055216789215",
+  "media": "https://static.metricool.com/planner/202611/7765790-file-2647706452454628742.jpeg",
+  "neu": true,
+  "buch": false,
+  "hashtags": 5
+ },
+ {
+  "n": 4,
+  "key": "Zitronenkuchen",
+  "date": "2026-11-23T09:00:00",
+  "id": 437394591,
+  "uuid": "2592066127135919801",
+  "media": "https://static.metricool.com/planner/202611/7765790-file-12203369045313596121.jpeg",
+  "neu": false,
+  "buch": false,
+  "hashtags": 2
+ },
+ {
+  "n": 5,
+  "key": "CheeseburgerAuflauf",
+  "date": "2026-11-23T09:40:00",
+  "id": 437394642,
+  "uuid": "-2126578532473810952",
+  "media": "https://static.metricool.com/planner/202611/7765790-file-4213968363976851875.jpeg",
+  "neu": false,
+  "buch": false,
+  "hashtags": 4
+ },
+ {
+  "n": 6,
+  "key": "KokosWoelkchen",
+  "date": "2026-11-23T10:20:00",
+  "id": 437394774,
+  "uuid": "-7195169281443872127",
+  "media": "https://static.metricool.com/planner/202611/7765790-file-13493397539469034284.jpeg",
+  "neu": true,
+  "buch": false,
+  "hashtags": 5
+ },
+ {
+  "n": 7,
+  "key": "HackNudeln",
+  "date": "2026-11-23T11:00:00",
+  "id": 437394833,
+  "uuid": "-6351034238787436217",
+  "media": "https://static.metricool.com/planner/202611/7765790-file-3627659362326074540.jpeg",
+  "neu": true,
+  "buch": false,
+  "hashtags": 5
+ },
+ {
+  "n": 8,
+  "key": "ZimtBowl",
+  "date": "2026-11-23T11:40:00",
+  "id": 437394912,
+  "uuid": "-5516427210095112700",
+  "media": "https://static.metricool.com/planner/202611/7765790-file-13261997339107934408.jpeg",
+  "neu": false,
+  "buch": false,
+  "hashtags": 3
+ },
+ {
+  "n": 9,
+  "key": "Rouladen",
+  "date": "2026-11-23T12:20:00",
+  "id": 437394987,
+  "uuid": "-5471176313748634419",
+  "media": "https://static.metricool.com/planner/202611/7765790-file-17718081389751146677.jpeg",
+  "neu": false,
+  "buch": false,
+  "hashtags": 3
+ },
+ {
+  "n": 10,
+  "key": "PizzaWrap",
+  "date": "2026-11-23T13:40:00",
+  "id": 437395073,
+  "uuid": "3514036104262993880",
+  "media": "https://static.metricool.com/planner/202611/7765790-file-6416700483530544809.jpeg",
+  "neu": true,
+  "buch": false,
+  "hashtags": 5
+ },
+ {
+  "n": 11,
+  "key": "MandarinenBowl",
+  "date": "2026-11-23T14:20:00",
+  "id": 437395239,
+  "uuid": "3978622832493414518",
+  "media": "https://static.metricool.com/planner/202611/7765790-file-10402784086827519546.jpeg",
+  "neu": false,
+  "buch": false,
+  "hashtags": 5
+ },
+ {
+  "n": 12,
+  "key": "Champignons",
+  "date": "2026-11-23T15:00:00",
+  "id": 437395299,
+  "uuid": "2059751288445944673",
+  "media": "https://static.metricool.com/planner/202611/7765790-file-10569988875894630191.jpeg",
+  "neu": false,
+  "buch": false,
+  "hashtags": 3
+ },
+ {
+  "n": 13,
+  "key": "Rumkugeln",
+  "date": "2026-11-23T15:40:00",
+  "id": 437395349,
+  "uuid": "-3413514049351237037",
+  "media": "https://static.metricool.com/planner/202611/7765790-file-9135786716352390686.jpeg",
+  "neu": false,
+  "buch": false,
+  "hashtags": 3
+ },
+ {
+  "n": 14,
+  "key": "Souvlaki",
+  "date": "2026-11-23T16:20:00",
+  "id": 437395437,
+  "uuid": "-8101809681887572596",
+  "media": "https://static.metricool.com/planner/202611/7765790-file-14168214726560561201.jpeg",
+  "neu": false,
+  "buch": false,
+  "hashtags": 5
+ },
+ {
+  "n": 15,
+  "key": "Waffeln",
+  "date": "2026-11-23T17:00:00",
+  "id": 437395525,
+  "uuid": "-1068889273551927827",
+  "media": "https://static.metricool.com/planner/202611/7765790-file-6125017094008183114.jpeg",
+  "neu": false,
+  "buch": false,
+  "hashtags": 4
+ },
+ {
+  "n": 16,
+  "key": "Gulasch",
+  "date": "2026-11-23T17:45:00",
+  "id": 437395665,
+  "uuid": "3350055007696341934",
+  "media": "https://static.metricool.com/planner/202611/7765790-file-16884567187618938073.jpeg",
+  "neu": false,
+  "buch": false,
+  "hashtags": 5
+ },
+ {
+  "n": 17,
+  "key": "Spritzgebaeck",
+  "date": "2026-11-23T18:30:00",
+  "id": 437395761,
+  "uuid": "-3061269056306590786",
+  "media": "https://static.metricool.com/planner/202611/7765790-file-434398904628727847.jpeg",
+  "neu": false,
+  "buch": false,
+  "hashtags": 3
+ },
+ {
+  "n": 18,
+  "key": "Senfeier",
+  "date": "2026-11-23T19:15:00",
+  "id": 437395826,
+  "uuid": "2162331870411375048",
+  "media": "https://static.metricool.com/planner/202611/7765790-file-16190520904929453830.jpeg",
+  "neu": false,
+  "buch": false,
+  "hashtags": 3
+ },
+ {
+  "n": 19,
+  "key": "Plaetzchen",
+  "date": "2026-11-23T20:45:00",
+  "id": 437395907,
+  "uuid": "2901031194560316462",
+  "media": "https://static.metricool.com/planner/202611/7765790-file-10481473364088860906.jpeg",
+  "neu": false,
+  "buch": true,
+  "hashtags": 4
+ }
+]

@@ -1,0 +1,14 @@
+{
+ "hinweis": "Buch-Beiträge ab Mo 23.11.2026, täglich 20:15 (Kev 22.11., 10:20 per Dialog: „Ja, täglich weiter“). Bild-Specs ab B4 in tools/esn_produkt/esn_board.py. Kalorien aus archiv/rezepte.json; Kev prüft sie gegen sein PDF.",
+ "posts": [
+  {
+   "key": "B4",
+   "date": "2026-11-23T20:15:00",
+   "datei": "Buch-Mo-Adventskuchen",
+   "alt": "5 Kuchen unter 140 kcal aus der Weihnachtsbäckerei in leicht",
+   "text": "Am Sonntag ist 1. Advent: 5 Kuchen für den Adventskaffee unter 140 kcal pro Stück 🎄\n\nSkyr-Kuchen mit Spekulatius: 125 kcal\nNussecken: 125 kcal\nSpekulatius-Biskuitrolle: 130 kcal\nZimtschnecken-Kuchen: 135 kcal\nEierlikör-Gugelhupf: 135 kcal\n\nAlle fünf stehen in meinem Rezeptbuch „Weihnachtsbäckerei in leicht“, zusammen mit 31 weiteren Rezepten: Plätzchen, Stollen, Quarkbällchen ohne Fritteuse und mehr. Jedes Rezept mit Foto, Kalorien und Eiweiß.\n\nDas Buch kostet 9,99 € und kommt sofort als PDF aufs Handy oder Tablet. Den Link findest du im 1. Kommentar ⤵️\n\nWelchen Kuchen gibt's bei dir am 1. Advent?\n\nBleib satt! 💪\nKev\n\n#adventskaffee #kuchen #rezeptbuch #fitmitkev",
+   "fc": "Hier geht's zur Weihnachtsbäckerei 👉 https://fitmitkev.de/rezeptbuecher\n9,99 €, zusammen mit der Wohlfühlküche 14,99 € statt 19,98 €.",
+   "media": "https://raw.githubusercontent.com/phj4t84dpj-byte/fitmitkev-bilder/main/verkaufsseite/Buch-Mo-Adventskuchen.jpg"
+  }
+ ]
+}
