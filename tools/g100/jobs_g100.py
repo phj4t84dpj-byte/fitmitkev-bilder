@@ -1,7 +1,7 @@
 # /// script
 # dependencies = ["huggingface_hub>=0.30", "pillow"]
 # ///
-# G100 (Mo 23.11.2026): FLUX.1-dev-Bilder (1024x1280) fuer 4 neue Rezepte (Kokos-Woelkchen, Schichtsalat ueber Nacht, Gebratene Nudeln mit Hack, Pizza-Wrap); keine neuen Kacheln
+# G100 (Mo 23.11.2026): FLUX.1-dev-Bilder (1024x1280) fuer die neuen Rezepte; ab 22.11. nachmittags dazu die Klossteig-Reihe (KlossPaprika, KlossGulasch, KlossTomMozz) und 2 Kacheln (frische_tomaten, basilikum; TILES=1)
 import io, os, sys, time, json
 from huggingface_hub import InferenceClient, HfApi
 TOK=os.environ["HF_TOKEN"]; cl=InferenceClient(api_key=TOK); api=HfApi(token=TOK); REPO="kevrsztorm/fitmitkev-bilder"
@@ -11,9 +11,15 @@ P=json.loads(r"""{
 "Schichtsalat": "A large straight-sided clear glass salad bowl seen from the side, filled with clearly separated horizontal layers visible through the glass: at the bottom finely shredded pale green iceberg lettuce, then thin green and white leek rings, yellow sweet corn, small diced apple, pink diced cooked ham, round slices of hard-boiled egg pressed against the glass, on top a thick smooth white creamy dressing layer covered with finely grated pale yellow cheese. A large serving spoon lies beside the bowl.",
 "HackNudeln": "A black wok with Chinese stir-fried egg noodles mixed with plenty of browned crumbled minced beef, thin orange carrot strips, red bell pepper strips and pale green cabbage strips, glossy with soy sauce, sprinkled with green spring onion rings, one portion served in a white bowl in front with chopsticks resting on it.",
 "PizzaWrap": "Two rolled wraps made of thin golden brown baked flatbread with a slightly blistered speckled surface, each cut in half diagonally, the halves stacked on a wooden board with the cut sides facing the camera, showing a filling of red tomato sauce, stretchy melted white mozzarella cheese and round slices of red salami, a little melted cheese pulling between the halves, a few dried oregano flakes on top, a small white bowl of red tomato sauce beside.",
-"Frikassee": "A deep white plate with creamy chicken fricassee: tender white chicken breast pieces, sliced mushrooms, green peas and round orange carrot slices in a light ivory cream sauce, sprinkled with fresh chopped green parsley, and beside the fricassee on the same plate exactly four small round pale yellow German potato dumplings, each about the size of a golf ball, lying close together in a group, all four clearly visible. One small lemon wedge lying on the rim of the plate."
+"Frikassee": "A deep white plate with creamy chicken fricassee: tender white chicken breast pieces, sliced mushrooms, green peas and round orange carrot slices in a light ivory cream sauce, sprinkled with fresh chopped green parsley, and beside the fricassee on the same plate exactly four small round pale yellow German potato dumplings, each about the size of a golf ball, lying close together in a group, all four clearly visible. One small lemon wedge lying on the rim of the plate.",
+"KlossPaprika": "A deep white plate with paprika cream chicken: golden seared chicken breast pieces and red bell pepper strips in a creamy orange-red paprika cream sauce, sprinkled with fresh chopped green parsley, and beside it on the same plate exactly four small round pale yellow German potato dumplings, each about the size of a golf ball, lying close together in a group, all four clearly visible.",
+"KlossGulasch": "A white dinner plate with a portion of dark red-brown beef goulash with tender beef chunks in glossy dark brown gravy, beside it a portion of shiny purple braised red cabbage, and on the same plate exactly four small round pale yellow German potato dumplings, each about the size of a golf ball, lying close together in a group, all four clearly visible, a little chopped green parsley on the dumplings.",
+"KlossTomMozz": "A white rectangular ceramic baking dish seen from above at a 45 degree angle, filled with twelve round pale yellow German potato dumplings sitting in bright red tomato sauce, each dumpling topped with a slice of red tomato and a slice of melted white mozzarella cheese with golden brown spots from the oven, fresh green basil leaves scattered on top. One portion of three dumplings with tomato sauce and melted mozzarella served on a small white plate in front of the baking dish."
 }""")
-T={}
+T=json.loads(r"""{
+"frische_tomaten": "Three fresh ripe red round tomatoes with small green stems, lying close together, seen from above at a slight angle, product photo, soft studio light, isolated on a pure white background, nothing else, no plate, no bowl.",
+"basilikum": "A small loose bunch of fresh bright green basil leaves on their stems, lying flat, seen from above at a slight angle, product photo, soft studio light, isolated on a pure white background, nothing else, no plate, no bowl, no pot."
+}""")
 def gen(prompt,path,w,h,seed):
     for a in range(3):
         try:
