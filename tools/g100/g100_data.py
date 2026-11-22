@@ -57,9 +57,22 @@ NEU=dict(
             'Jede Hälfte mit passierten Tomaten bestreichen, mit den restlichen Kräutern würzen, mit geriebenem Mozzarella und Salami belegen und einrollen. Die Wraps mit der Naht nach unten 5 Minuten zurück in den Ofen geben, bis der Käse geschmolzen ist.'],
   frage='Pizza-Wrap: mit Salami oder mit Schinken?', tags='#pizzawrap #körnigerfrischkäse #ohnemehl #pizza #fitmitkev',
   prompt='Two rolled wraps made of thin golden brown baked flatbread with a slightly blistered speckled surface, each cut in half diagonally, the halves stacked on a wooden board with the cut sides facing the camera, showing a filling of red tomato sauce, stretchy melted white mozzarella cheese and round slices of red salami, a little melted cheese pulling between the halves, a few dried oregano flakes on top, a small white bowl of red tomato sauce beside.'),
+ Frikassee=dict(key='Frikassee', suess=False, hook='Wie bei Oma:', titel=['HÜHNERFRIKASSEE','MIT KNÖDELN'], portion='pro Portion', anzahl=4, vs=750,
+  zutaten=[Z('500 g','Hähnchenbrust','haehnchenbrust','haehnchen',500), Z('500 g','Kloßteig (Kühlregal)','kartoffelkloesse','kloesse',500), Z('250 g','Champignons','champignons','champignons',250),
+           Z('150 g','Erbsen (TK)','erbsen','erbsen',150), Z('2 Stück','Karotten','karotten','karotten',150), Z('500 ml','Hühnerbrühe','huehnerbruehe','bruehe',0),
+           Z('100 ml','Kochsahne (15 %)','kochsahne','kochsahne',100), Z('2 EL','Speisestärke','speisestaerke','speisestaerke',20)],
+  ex=['10 g Butter, 1 EL Zitronensaft', 'Salz, Pfeffer, Muskat, Petersilie'],
+  intro='Hühnerfrikassee wie bei Oma: zartes Hähnchen, Champignons, Erbsen und Karotten in heller, cremiger Soße mit einem Spritzer Zitrone. Dazu gibt es Knödel statt Reis, die nehmen die Soße so schön auf. Ein Schuss Kochsahne reicht, den Rest macht die Brühe: {k} kcal und {p} g Eiweiß pro Teller statt 750 im Gasthaus!',
+  schritte=['Die Hähnchenbrust in der Brühe 15 Minuten leise gar ziehen lassen, herausnehmen und in mundgerechte Stücke schneiden. Die Brühe aufheben.',
+            'Aus dem Kloßteig 8 kleine Knödel formen und nach Packungsangabe in siedendem Salzwasser gar ziehen lassen (ca. 20 Minuten).',
+            'Champignons und Karotten in Scheiben schneiden und in der Butter 5 Minuten anbraten. Mit 400 ml der Brühe und der Kochsahne aufgießen und 5 Minuten köcheln lassen. Die Speisestärke in 3 EL kaltem Wasser anrühren, einrühren und kurz aufkochen.',
+            'Hähnchen und Erbsen zugeben und 3 Minuten heiß werden lassen. Mit Zitronensaft, Salz, Pfeffer und Muskat abschmecken und mit den Knödeln und gehackter Petersilie servieren.'],
+  frage='Hühnerfrikassee: mit Knödeln oder mit Reis?', tags='#hühnerfrikassee #omasrezepte #fitmitkev',
+  prompt='A deep white plate with creamy chicken fricassee: tender white chicken breast pieces, sliced mushrooms, green peas and round orange carrot slices in a light ivory cream sauce, sprinkled with fresh chopped green parsley, and beside the fricassee on the same plate two round pale yellow German potato dumplings. One small lemon wedge lying on the rim of the plate.'),
 )
 for _k,_r in NEU.items(): _r['kurz']=['–','–','–']; _r['exnut']=[]
-R=[NEU['KokosWoelkchen'], NEU['Schichtsalat'], NEU['HackNudeln'], NEU['PizzaWrap']]
+NEU['Frikassee']['exnut']=[(75,0,0,8)]   # 10 g Butter
+R=[NEU['KokosWoelkchen'], NEU['Schichtsalat'], NEU['HackNudeln'], NEU['PizzaWrap'], NEU['Frikassee']]   # Frikassee: Kev 22.11., 15:49 „Rinder Rouladen bitte raus – dafür Knödel mit Hühnerfrikassee rein“
 
 if __name__=='__main__':
     for r in R:
