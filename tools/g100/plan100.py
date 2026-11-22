@@ -20,21 +20,23 @@ PLAN=[('06:50','Quarkbroetchen','g94','G94-Quarkbroetchen-ohneBox','#quarkbrötc
       ('12:20','Frikassee',None,None,None,'neu'),   # Kev 22.11., 15:49: „Rinder Rouladen bitte raus – dafür Knödel mit Hühnerfrikassee rein“
       ('13:40','PizzaWrap',None,None,None,'neu'),
       ('14:20','MandarinenBowl','g94','G94-MandarinenBowl-ohneBox-neu','#käsekuchen #mandarinen #bowl #omasrezepte #fitmitkev','16.11. · 44.817 · 3,0-fach'),
-      ('15:00','KlossPaprika',None,None,None,'neu'),   # Kloßteig-Reihe (Kev 22.11., 16:06); vorher Champignons mit Knoblauchsoße (13.11. · 7.331 · 0,8-fach)   # statt Käse-Lauch-Suppe: deren altes Board (G88) hat eine trübe Schüssel unter der Zutatenspalte und Brot im Bild
+      ('15:00',None,'fest',None,None,'YouTube'),   # Platz 12 gehört seit 22.11., 21:50 dem YouTube-Beitrag „Überbackene Klöße“ (Kev per Dialog: „Montag 15:00 Uhr“); Paprika-Sahne-Hähnchen rückt auf 19:15, Tomate-Mozzarella auf Dienstag. Davor:   # Kloßteig-Reihe (Kev 22.11., 16:06); vorher Champignons mit Knoblauchsoße (13.11. · 7.331 · 0,8-fach)   # statt Käse-Lauch-Suppe: deren altes Board (G88) hat eine trübe Schüssel unter der Zutatenspalte und Brot im Bild
       ('15:40','Rumkugeln','g92','G92-Rumkugeln-ohneBox','#rumkugeln #weihnachten #fitmitkev','14.11. · 34.136 · 3,1-fach'),
       ('16:20','Souvlaki','g91','G91-Souvlaki-ohneBox','#souvlaki #griechisch #hähnchen #tzatziki #fitmitkev','13.11. · 7.962 · 0,9-fach'),
       ('17:00','Waffeln','g93','G93-Waffeln-ohneBox','#waffeln #wiebeioma #backen #fitmitkev','16.11. · 18.865 · 1,3-fach'),
       ('17:45','KlossGulasch',None,None,None,'neu'),   # Kloßteig-Reihe; vorher Rindergulasch mit Kartoffeln (13.11. · 9.129 · 1,0-fach) – sonst zwei Gulasch am selben Tag
       ('18:30','Spritzgebaeck','g93','G93-Spritzgebaeck-ohneBox','#spritzgebäck #plätzchen #fitmitkev','16.11. · 15.968 · 1,1-fach'),
-      ('19:15','KlossTomMozz',None,None,None,'neu'),   # Kloßteig-Reihe; vorher Senfeier (10.11. · 10.434 · 0,9-fach)
+      ('19:15','KlossPaprika',None,None,None,'neu'),   # Kloßteig-Reihe; vorher Senfeier (10.11. · 10.434 · 0,9-fach)
       ('20:45','Plaetzchen','g91','G91-Plaetzchen-ohneBox','#plätzchen #weihnachtsbäckerei #backen #fitmitkev','13.11. · 16.758 · 1,8-fach')]
 # Kev 22.11., 10:20 per Dialog: „Ja go“ und „Buch-Beitrag täglich weiter“ → 20:15 gehört dem Buch-Beitrag, Flammkuchen (0,7-fach) entfällt, Ausstech-Plätzchen rücken auf 20:45.
-FEST={'06:10':'ESN-Rezept Zimtschnecken-Overnight-Oats (ohne ESN-Zeile)','13:00':'ESN-Rezept Schokopudding (ohne ESN-Zeile)','20:15':'Buch-Beitrag (neu, wird Kev vorher gezeigt)'}
+FEST={'06:10':'ESN-Rezept Zimtschnecken-Overnight-Oats (ohne ESN-Zeile)','13:00':'ESN-Rezept Schokopudding (ohne ESN-Zeile)','20:15':'Buch-Beitrag „5 Kuchen unter 140 kcal“',
+      '15:00':'YouTube-Beitrag „Überbackene Klöße mit Hack und Käse“ (Bild yt/Facebook_Kloesse.jpg, Video-Link im 1. Kommentar)'}
 GRUPPE_A={1,2,4,8,9,12,13,17,18}          # 2–3 Hashtags; übrige 4–5
 BUCH={'Plaetzchen':'📖 Diese Plätzchen findest du auch in meinem Rezeptbuch „Weihnachtsbäckerei in leicht“, zusammen mit 35 weiteren Rezepten: https://fitmitkev.de/rezeptbuecher'}
 SW=[False,True,False,True,False,True,False,True,False, False,True,False,True,False,True,False,True,False,True]   # zwischen Platz 9 und 10 liegt das feste süße ESN-Rezept um 13:00
 posts=[]
 for n,(zeit,key,src,bild,tags,zuletzt) in enumerate(PLAN,1):
+    if key is None: assert zeit in FEST; continue      # fester Platz (zählt in der Nummerierung mit, damit Hashtag-Gruppen und süß/herzhaft der übrigen Plätze gleich bleiben)
     if src is None:
         q=NEU[key]; text,fc,media,alt,kcal,suess=q['text'],q['fc'],q['media'],q['alt'],q['kcal'],q['suess']; bild=media.split('/')[-1][:-4]
     else:
@@ -50,15 +52,15 @@ for n,(zeit,key,src,bild,tags,zuletzt) in enumerate(PLAN,1):
     assert zeit not in FEST and 'Rezept im 1. Kommentar' in text, key
     posts.append(dict(n=n,key=key,date=f'2026-11-23T{zeit}:00',text=text,fc=fc,media=media,alt=alt,bild=bild,box=False,kcal=kcal,suess=bool(suess),hashtags=nt,
                       gruppe='A (2–3)' if nt<=3 else 'B (4–5)',neu=src is None,buch=key in BUCH,zuletzt=zuletzt))
-assert len(posts)==19 and len({p['date'] for p in posts})==19 and len({p['key'] for p in posts})==19
-assert sum(p['gruppe'][0]=='A' for p in posts)==9 and sum(p['suess'] for p in posts)==9 and sum(p['buch'] for p in posts)==1
+assert len(posts)==18 and len({p['date'] for p in posts})==18 and len({p['key'] for p in posts})==18
+assert sum(p['gruppe'][0]=='A' for p in posts)==8 and sum(p['suess'] for p in posts)==9 and sum(p['buch'] for p in posts)==1
 assert all(p['kcal']<=500 for p in posts)
 json.dump(posts,open(f"{D}/out/montag_posts.json","w"),ensure_ascii=False,indent=1)
 alle=[(p['date'][11:16],f"{p['n']:02d} · {'süß ' if p['suess'] else 'herz'} · {p['alt']} · {p['kcal']} kcal · {p['hashtags']} Hashtags · {'NEU' if p['neu'] else 'zuletzt '+p['zuletzt']}{' · BUCH-ZEILE' if p['buch'] else ''}") for p in posts]
 alle+=[(t,f"–– · fest · {x}") for t,x in FEST.items()]
 with open(f"{D}/out/posting-plan-montag.txt","w") as fh:
-    fh.write("Posting-Plan Montag 23.11.2026 – 22 Beiträge: 19 Rezepte + 2 feste ESN-Rezepte (schon eingeplant, ohne ESN-Zeile) + Buch-Beitrag 20:15.\n")
-    fh.write("8 neue Rezepte (4 davon aus der Kloßteig-Reihe: 12:20, 15:00, 17:45, 19:15), 11 bewährte (7-Tage-Regel). Alle Boards ohne Box. Ein Werbe-Beitrag (Buch, 20:15), eine Buch-Zeile (20:45 Ausstech-Plätzchen).\nHinter jedem Wiederholer: letzter Lauf · Reichweite · Vielfaches des Tagesmittels.\n\n")
+    fh.write("Posting-Plan Montag 23.11.2026 – 22 Beiträge: 18 Rezepte + 2 feste ESN-Rezepte (ohne ESN-Zeile) + YouTube-Beitrag 15:00 + Buch-Beitrag 20:15.\n")
+    fh.write("7 neue Rezepte (3 davon aus der Kloßteig-Reihe: 12:20, 17:45, 19:15; dazu der YouTube-Beitrag mit überbackenen Klößen um 15:00), 11 bewährte (7-Tage-Regel). Alle Boards ohne Box. Ein Werbe-Beitrag (Buch, 20:15), eine Buch-Zeile (20:45 Ausstech-Plätzchen).\nHinter jedem Wiederholer: letzter Lauf · Reichweite · Vielfaches des Tagesmittels.\n\n")
     for t,x in sorted(alle): fh.write(f"{t} · {x}\n")
 with open(f"{D}/out/texte-montag.txt","w") as fh:
     for p in posts:
