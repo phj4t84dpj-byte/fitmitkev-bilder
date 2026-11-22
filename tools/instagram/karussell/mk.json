@@ -1,0 +1,60 @@
+{
+ "slug": "IG-Marmorkuchen-Bowl",
+ "name": "Marmorkuchen-Bowl nur für dich",
+ "info": "Einkaufsliste · 1 Bowl · Glasform 15 × 10 cm",
+ "zutaten": [
+  [
+   "40 g",
+   "Zarte Haferflocken"
+  ],
+  [
+   "100 g",
+   "Skyr"
+  ],
+  [
+   "1",
+   "Ei"
+  ],
+  [
+   "15 g",
+   "Erythrit"
+  ],
+  [
+   "½ TL",
+   "Backpulver"
+  ],
+  [
+   "8 g",
+   "Backkakao"
+  ],
+  [
+   "1 TL",
+   "Vanilleextrakt"
+  ]
+ ],
+ "naehr": "Die ganze Bowl: 330 kcal · 25 g Eiweiß",
+ "listen_bild": "mk0_hook",
+ "pos": "50% 45%",
+ "slides": [
+  {
+   "img": "mk0_hook",
+   "text": "Marmorkuchen.\nNur als Bowl\nfür dich allein."
+  },
+  {
+   "img": "mk1_teig",
+   "text": "Haferflocken, Skyr, Ei,\nErythrit, Backpulver und\nVanille verrühren."
+  },
+  {
+   "img": "mk2_form",
+   "text": "Die Hälfte in eine\nkleine Glasform füllen."
+  },
+  {
+   "img": "mk3_marmor",
+   "text": "Den Rest mit Kakao\nverrühren, darauf geben,\nmit Gabel durchziehen."
+  },
+  {
+   "img": "mk4_gebacken",
+   "text": "20 Minuten bei 180 °C.\nLauwarm löffeln."
+  }
+ ]
+}

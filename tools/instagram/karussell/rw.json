@@ -1,0 +1,60 @@
+{
+ "slug": "IG-Rotweinkuchen",
+ "name": "Rotweinkuchen in leicht",
+ "info": "Einkaufsliste · 12 Stücke · Kastenform 25 cm",
+ "zutaten": [
+  [
+   "250 g",
+   "Dinkelmehl, 1 Pck. Backpulver"
+  ],
+  [
+   "200 g",
+   "Skyr"
+  ],
+  [
+   "3",
+   "Eier"
+  ],
+  [
+   "100 g",
+   "Erythrit"
+  ],
+  [
+   "125 ml",
+   "Rotwein"
+  ],
+  [
+   "20 g",
+   "Backkakao, 2 TL Zimt"
+  ],
+  [
+   "50 g",
+   "Zartbitterschokolade"
+  ]
+ ],
+ "naehr": "Pro Stück: 140 kcal · 7 g Eiweiß",
+ "listen_bild": "rw0_hook",
+ "pos": "50% 45%",
+ "slides": [
+  {
+   "img": "rw0_hook",
+   "text": "Rotweinkuchen\nwie früher bei Oma.\n140 kcal pro Stück."
+  },
+  {
+   "img": "rw1_eier",
+   "text": "Eier und Erythrit\nschaumig schlagen,\nSkyr und Rotwein dazu."
+  },
+  {
+   "img": "rw2_teig",
+   "text": "Mehl, Kakao und Zimt\nunterheben, gehackte\nSchokolade dazu."
+  },
+  {
+   "img": "rw3_form",
+   "text": "In die Kastenform\nmit Backpapier füllen."
+  },
+  {
+   "img": "rw4_gebacken",
+   "text": "45–50 Minuten\nbei 175 °C backen."
+  }
+ ]
+}
