@@ -64,15 +64,15 @@ NEU=dict(
   ex=['10 g Butter, 1 EL Zitronensaft', 'Salz, Pfeffer, Muskat, Petersilie'],
   intro='Hühnerfrikassee wie bei Oma: zartes Hähnchen, Champignons, Erbsen und Karotten in heller, cremiger Soße mit einem Spritzer Zitrone. Dazu gibt es Knödel statt Reis, die nehmen die Soße so schön auf. Ein Schuss Kochsahne reicht, den Rest macht die Brühe: {k} kcal und {p} g Eiweiß pro Teller statt 750 im Gasthaus!',
   schritte=['Die Hähnchenbrust in der Brühe 15 Minuten leise gar ziehen lassen, herausnehmen und in mundgerechte Stücke schneiden. Die Brühe aufheben.',
-            'Aus dem Kloßteig 8 kleine Knödel formen und nach Packungsangabe in siedendem Salzwasser gar ziehen lassen (ca. 20 Minuten).',
+            'Aus dem Kloßteig 16 kleine Knödel formen (4 pro Teller) und nach Packungsangabe in siedendem Salzwasser gar ziehen lassen (ca. 15 Minuten).',
             'Champignons und Karotten in Scheiben schneiden und in der Butter 5 Minuten anbraten. Mit 400 ml der Brühe und der Kochsahne aufgießen und 5 Minuten köcheln lassen. Die Speisestärke in 3 EL kaltem Wasser anrühren, einrühren und kurz aufkochen.',
             'Hähnchen und Erbsen zugeben und 3 Minuten heiß werden lassen. Mit Zitronensaft, Salz, Pfeffer und Muskat abschmecken und mit den Knödeln und gehackter Petersilie servieren.'],
   frage='Hühnerfrikassee: mit Knödeln oder mit Reis?', tags='#hühnerfrikassee #omasrezepte #fitmitkev',
-  prompt='A deep white plate with creamy chicken fricassee: tender white chicken breast pieces, sliced mushrooms, green peas and round orange carrot slices in a light ivory cream sauce, sprinkled with fresh chopped green parsley, and beside the fricassee on the same plate two round pale yellow German potato dumplings. One small lemon wedge lying on the rim of the plate.'),
+  prompt='A deep white plate with creamy chicken fricassee: tender white chicken breast pieces, sliced mushrooms, green peas and round orange carrot slices in a light ivory cream sauce, sprinkled with fresh chopped green parsley, and beside the fricassee on the same plate exactly four small round pale yellow German potato dumplings, each about the size of a golf ball, lying close together in a group, all four clearly visible. One small lemon wedge lying on the rim of the plate.'),
 )
 for _k,_r in NEU.items(): _r['kurz']=['–','–','–']; _r['exnut']=[]
 NEU['Frikassee']['exnut']=[(75,0,0,8)]   # 10 g Butter
-R=[NEU['KokosWoelkchen'], NEU['Schichtsalat'], NEU['HackNudeln'], NEU['PizzaWrap'], NEU['Frikassee']]   # Frikassee: Kev 22.11., 15:49 „Rinder Rouladen bitte raus – dafür Knödel mit Hühnerfrikassee rein“
+R=[NEU['KokosWoelkchen'], NEU['Schichtsalat'], NEU['HackNudeln'], NEU['PizzaWrap'], NEU['Frikassee']]   # Frikassee: Kev 22.11., 15:49 „Rinder Rouladen bitte raus – dafür Knödel mit Hühnerfrikassee rein“; 15:57 „Bitte auf dem Teller 4 Knödel“ → 16 kleine Knödel aus 500 g Kloßteig, 4 pro Teller
 
 if __name__=='__main__':
     for r in R:
