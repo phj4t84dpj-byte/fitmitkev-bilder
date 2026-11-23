@@ -17,7 +17,7 @@ for _k,_v in {'kloesse':(105,2,22.5,0.5), 'rind':(120,21,0,4), 'semmelbroesel':(
 KLOESSE4='exactly four small round pale yellow matte German potato dumplings, each about the size of a golf ball, lying close together in a group, all four clearly visible'
 TELLER='A round white dinner plate, the whole plate fully visible with empty table space left and right of it, with '
 NEU=dict(
- KlossJaeger=dict(key='KlossJaeger', suess=False, hook='Klöße mit', titel=['JÄGERSCHNITZEL','IN PILZRAHMSOSSE'], portion='pro Portion', anzahl=4, vs=850,
+ KlossJaeger=dict(key='KlossJaeger', suess=False, hook='Klöße mit', titel=['JÄGER-','SCHNITZEL'], portion='pro Portion', anzahl=4, vs=850,
   zutaten=[Z('500 g','Hähnchenbrust','haehnchenbrust','haehnchen',500), Z('500 g','Kloßteig (Kühlregal)','kartoffelkloesse','kloesse',500), Z('400 g','Champignons','champignons','champignons',400),
            Z('1 Stück','Zwiebel','zwiebel','zwiebel',st=1), Z('150 ml','Kochsahne (15 %)','kochsahne','kochsahne',150), Z('300 ml','Gemüsebrühe','gemuesebruehe','bruehe',0),
            Z('1 EL','Tomatenmark','tomatenmark','tomatenmark',15), Z('1 EL','Speisestärke','speisestaerke','speisestaerke',10)],
@@ -28,7 +28,7 @@ NEU=dict(
             'Die Zwiebel würfeln, die Champignons in Scheiben schneiden und beides in derselben Pfanne 6 Minuten kräftig anbraten. Tomatenmark und Paprikapulver kurz mitrösten, mit Brühe und Kochsahne ablöschen und 5 Minuten köcheln lassen. Die Speisestärke in 2 EL kaltem Wasser anrühren, einrühren und kurz aufkochen.',
             'Die Schnitzel in die Soße legen, 2 Minuten heiß werden lassen und mit den Klößen und gehackter Petersilie servieren.'],
   frage='Jägerschnitzel: paniert oder natur?', tags='#jägerschnitzel #pilzrahmsoße #klöße #omasrezepte #fitmitkev',
-  prompt=TELLER+'one thin golden-brown seared chicken cutlet covered with a creamy light brown mushroom cream sauce with many sliced browned mushrooms, sprinkled with fresh chopped green parsley, and beside it on the same plate '+KLOESSE4+'.'),
+  prompt=TELLER+'one thin flat pan-seared natural chicken breast fillet without any breading, its surface smooth and glossy golden brown like grilled chicken breast, half covered with a creamy light brown mushroom cream sauce with many sliced browned mushrooms, sprinkled with fresh chopped green parsley, and beside it on the same plate '+KLOESSE4+'.'),   # Job-Schlüssel KlossJaegerB, Seed 14 (erster Prompt malte das Schnitzel paniert)
  KlossSauerbraten=dict(key='KlossSauerbraten', suess=False, hook='Klöße mit', titel=['SCHNELLEM','SAUERBRATEN'], portion='pro Portion', anzahl=4, vs=900,
   zutaten=[Z('500 g','Rinderhüfte (mager)','rinderbraten','rind',500), Z('500 g','Kloßteig (Kühlregal)','kartoffelkloesse','kloesse',500), Z('2 Stück','Zwiebeln','zwiebeln','zwiebel',st=2),
            Z('400 ml','Rinderbrühe','rinderbruehe','bruehe',0), Z('30 g','Rosinen','rosinen','rosinen',30), Z('1 EL','Tomatenmark','tomatenmark','tomatenmark',15),
@@ -50,15 +50,15 @@ NEU=dict(
             'Bei 170 °C Ober-/Unterhitze 12–14 Minuten backen, die Wölkchen sollen hell bleiben. Abkühlen lassen und mit Puder-Erythrit bestäuben.'],
   frage='Eierlikör-Wölkchen oder Kokos-Wölkchen: Welche backst du zuerst?', tags='#wölkchen #eierlikör #fitmitkev',
   prompt='A white plate piled high with many small round pale cream-coloured soft cookies, each cookie a smooth slightly domed mound with fine cracks, thickly dusted with white powdered sugar, the bottoms pale golden, a few cookies lying on the table in front of the plate, one cookie broken in half showing the soft pale yellow crumb inside, a small glass of thick pale yellow egg liqueur beside the plate.'),
- Buletten=dict(key='Buletten', suess=False, hook='Wie in Berlin:', titel=['BULETTEN MIT WARMEM','KARTOFFELSALAT'], portion='pro Portion', anzahl=4, vs=820,
+ Buletten=dict(key='Buletten', suess=False, hook='Wie in Berlin:', titel=['BULETTEN MIT','KARTOFFELSALAT'], portion='pro Portion', anzahl=4, vs=820,
   zutaten=[Z('500 g','Rinderhack (mager)','rinderhack','hack',500), Z('800 g','Kartoffeln','kartoffeln','kartoffeln',800), Z('2 Stück','Zwiebeln','zwiebeln','zwiebel',st=2),
            Z('1 Stück','Ei','ei','ei',st=1), Z('30 g','Semmelbrösel','semmelbroesel','semmelbroesel',30), Z('60 g','Putenschinken','putenschinken','putenschinken',60),
            Z('200 ml','Gemüsebrühe','gemuesebruehe','bruehe',0), Z('3 TL','Senf','senf','senf',15)],
   ex=['3 EL Essig, 1 EL Öl, Schnittlauch', 'Salz, Pfeffer, 1 TL Paprikapulver'], exnut=[(90,0,0,10)],
-  intro='Buletten wie in Berlin, außen kross und innen saftig, dazu warmer Kartoffelsalat ohne Mayo: Die Kartoffeln ziehen in heißer Brühe mit Essig, Senf und Zwiebeln, statt Speck kommen knusprige Schinkenwürfel dazu. Vier dicke Buletten und eine große Portion Salat: {k} kcal und {p} g Eiweiß pro Portion statt 820 in der Kneipe!',
-  schritte=['Die Kartoffeln mit Schale 20–25 Minuten kochen, pellen und noch warm in Scheiben schneiden. Eine Zwiebel fein würfeln, den Schinken würfeln und beides in 1 TL Öl 4 Minuten anbraten. Mit Brühe und Essig ablöschen, 2 TL Senf einrühren, aufkochen und heiß über die Kartoffeln gießen. 15 Minuten ziehen lassen, mit Salz, Pfeffer und Schnittlauch abschmecken.',
+  intro='Buletten wie in Berlin, außen kross und innen saftig, dazu warmer Kartoffelsalat ohne Mayo: Die Kartoffeln ziehen in heißer Brühe mit Essig, Senf und Zwiebeln, statt Speck kommen knusprige Schinkenwürfel dazu. Zwei dicke Buletten und eine große Portion Salat: {k} kcal und {p} g Eiweiß pro Portion statt 820 in der Kneipe!',
+  schritte=['Die Kartoffeln mit Schale 20–25 Minuten kochen, pellen und noch warm in grobe Würfel schneiden. Eine Zwiebel fein würfeln, den Schinken würfeln und beides in 1 TL Öl 4 Minuten anbraten. Mit Brühe und Essig ablöschen, 2 TL Senf einrühren, aufkochen und heiß über die Kartoffeln gießen. 15 Minuten ziehen lassen, mit Salz, Pfeffer und Schnittlauch abschmecken.',
             'Die zweite Zwiebel fein würfeln und mit Hack, Ei, Semmelbröseln, 1 TL Senf, Paprikapulver, Salz und Pfeffer verkneten. Mit nassen Händen 8 Buletten formen.',
-            'Die Buletten im restlichen Öl bei mittlerer Hitze von jeder Seite 5–6 Minuten braten und mit dem warmen Kartoffelsalat servieren.'],
+            'Die Buletten im restlichen Öl bei mittlerer Hitze von jeder Seite 5–6 Minuten braten und mit dem warmen Kartoffelsalat servieren. Wer mag, gibt einen Klecks Senf dazu.'],
   frage='Buletten, Frikadellen oder Fleischpflanzerl: Wie heißen sie bei dir?', tags='#buletten #kartoffelsalat #fitmitkev',
   prompt=TELLER+'two thick round golden-brown pan-fried German meat patties with a crisp crust and beside them a large portion of warm potato salad made of sliced boiled potatoes glistening with broth, with small diced onions, tiny browned ham cubes and chopped green chives, a small dollop of yellow mustard on the rim of the plate.'),
 )

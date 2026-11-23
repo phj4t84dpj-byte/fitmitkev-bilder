@@ -1,0 +1,60 @@
+{
+ "slug": "IG-Doener-Kuchen",
+ "name": "Döner-Kuchen aus Skyr-Teig",
+ "info": "Einkaufsliste · 4 Stücke · Springform 24 cm",
+ "zutaten": [
+  [
+   "200 g",
+   "Dinkelmehl, 1 Pck. Backpulver"
+  ],
+  [
+   "350 g",
+   "Skyr"
+  ],
+  [
+   "500 g",
+   "Hähnchenbrust"
+  ],
+  [
+   "80 g",
+   "Reibekäse light"
+  ],
+  [
+   "1",
+   "Zwiebel, 1 Zehe Knoblauch"
+  ],
+  [
+   "100 g",
+   "Eisbergsalat, ½ Gurke, 2 Tomaten"
+  ],
+  [
+   "2 TL",
+   "Paprikapulver, Oregano, Kreuzkümmel"
+  ]
+ ],
+ "naehr": "Pro Stück: 440 kcal · 51 g Eiweiß",
+ "listen_bild": "dk0_hook",
+ "pos": "50% 45%",
+ "slides": [
+  {
+   "img": "dk0_hook",
+   "text": "Döner als Kuchen.\n440 kcal und\n51 g Eiweiß pro Stück."
+  },
+  {
+   "img": "dk1_teig",
+   "text": "Mehl, Skyr und\nBackpulver zu einem\nglatten Teig kneten."
+  },
+  {
+   "img": "dk2_form",
+   "text": "In die Springform\ndrücken, Rand formen,\n8 Minuten vorbacken."
+  },
+  {
+   "img": "dk3_pfanne",
+   "text": "Hähnchen und Zwiebel\nmit Gewürzen\nkräftig anbraten."
+  },
+  {
+   "img": "dk4_gebacken",
+   "text": "Mit Käse 15–20 Minuten\nbacken, dann Salat und\nKnoblauchsoße darauf."
+  }
+ ]
+}

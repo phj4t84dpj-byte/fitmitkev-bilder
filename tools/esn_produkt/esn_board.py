@@ -194,6 +194,18 @@ SPEC={
    mid='Kalorien pro Stück. Alle 5 Rezepte stehen in meinem Buch<br><span>„Weihnachtsbäckerei in leicht“, mit 31 weiteren.</span>',
    msg='Sofort als PDF: 9,99 €.<br><span>Link im 1. Kommentar 👇</span>',
    css='.ri{width:108px;height:108px;overflow:hidden}.ri img{max-width:none;max-height:none;width:108px;height:108px;object-fit:cover}.rw{padding:9px 0}.msg{font-size:27px;line-height:1.3}.mid{font-size:27px}.r1{font-size:32px}'),
+ # B5 (Morgen-Check 23.11.): Di 24.11., 20:15. Kapitel „Lasagne & Aufläufe“ der Wohlfühlküche. Kalorien aus archiv/rezepte.json (G80KartoffelGratin, G54BlumenkohlAuflauf,
+ # G77KartoffelHack, G80GnocchiAuflauf, G80HaehnchenNudelauflauf) – Kev prüft die fünf Werte gegen sein PDF. Cordon-Bleu-Auflauf bewusst nicht dabei (läuft am selben Tag um 13:40 als Rezept mit 435 kcal).
+ 'B5':dict(out='Buch-Di-Auflaeufe', hook='Ofen an, Füße hoch:', title=['5 AUFLÄUFE','UNTER 500 KCAL'], size=96,
+   secs=[dict(lab='AUS MEINER WOHLFÜHLKÜCHE', col='#A2462B', type='rows', d=[
+      ('../../archiv/fotos/g80_G80KartoffelGratin.jpg','Kartoffelgratin','cremig, mit Käse überbacken','355<br><small>kcal</small>'),
+      ('../../archiv/fotos/g54_G54BlumenkohlAuflauf.jpg','Blumenkohl-Auflauf','mit Kartoffeln und Schinken','370<br><small>kcal</small>'),
+      ('../../archiv/fotos/g77_G77KartoffelHack.jpg','Kartoffel-Hack-Auflauf','mit Püree-Haube','390<br><small>kcal</small>'),
+      ('../../archiv/fotos/g80_G80GnocchiAuflauf.jpg','Gnocchi-Auflauf','mit Hack und Mozzarella','445<br><small>kcal</small>'),
+      ('../../archiv/fotos/g80_G80HaehnchenNudelauflauf.jpg','Hähnchen-Nudelauflauf','mit Brokkoli in cremiger Soße','470<br><small>kcal</small>')])],
+   mid='Kalorien pro Portion. Alle 5 Rezepte stehen in meinem Buch<br><span>„Wohlfühlküche in leicht“, mit 31 weiteren.</span>',
+   msg='Sofort als PDF: 9,99 €.<br><span>Link im 1. Kommentar 👇</span>',
+   css='.ri{width:108px;height:108px;overflow:hidden}.ri img{max-width:none;max-height:none;width:108px;height:108px;object-fit:cover}.rw{padding:9px 0}.msg{font-size:27px;line-height:1.3}.mid{font-size:27px}.r1{font-size:32px}'),
  # P12/P13 (Kev 19.11., 18:50): „Wie kann man sich die Designer Bars vorstellen?“ – Sorten und Vergleiche 1:1 aus Kevs zwei Story-Grafiken
  # (Packungs- und Geschmacksbilder daraus ausgeschnitten: esn/bilder/bars/). 22 Sorten in 2 Teilen, je ein Bild.
  # Kev 19.11., 19:00: „lieber schon vor der Black Week, am Samstag“ → Sa 21.11., 9:00 und 18:30, Balken deshalb „Ab morgen 12 Uhr“.

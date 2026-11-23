@@ -1,0 +1,60 @@
+{
+ "slug": "IG-Pizza-Kartoffeln",
+ "name": "Pizza-Kartoffeln aus dem Ofen",
+ "info": "Einkaufsliste · 4 Portionen · Auflaufform 20 × 30 cm",
+ "zutaten": [
+  [
+   "1 kg",
+   "Kartoffeln"
+  ],
+  [
+   "300 g",
+   "Passierte Tomaten"
+  ],
+  [
+   "200 g",
+   "Körniger Frischkäse"
+  ],
+  [
+   "100 g",
+   "Reibekäse light"
+  ],
+  [
+   "60 g",
+   "Salami"
+  ],
+  [
+   "1",
+   "Rote Paprika"
+  ],
+  [
+   "2 TL",
+   "Pizza-Kräuter, 1 EL Öl"
+  ]
+ ],
+ "naehr": "Pro Portion: 390 kcal · 24 g Eiweiß",
+ "listen_bild": "pk0_hook",
+ "pos": "50% 45%",
+ "slides": [
+  {
+   "img": "pk0_hook",
+   "text": "Pizza-Kartoffeln\naus dem Ofen.\n390 kcal pro Portion."
+  },
+  {
+   "img": "pk1_blech",
+   "text": "1 kg Kartoffeln würfeln,\nwürzen und 25 Minuten\nbei 220 °C backen."
+  },
+  {
+   "img": "pk2_sosse",
+   "text": "Passierte Tomaten mit\nkörnigem Frischkäse\nglatt pürieren."
+  },
+  {
+   "img": "pk3_belegt",
+   "text": "Kartoffeln in die Form,\nSoße, Käse, Salami\nund Paprika darauf."
+  },
+  {
+   "img": "pk4_gebacken",
+   "text": "10–12 Minuten\nüberbacken. Fertig!"
+  }
+ ]
+}

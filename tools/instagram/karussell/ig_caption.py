@@ -3,10 +3,10 @@
 # Aufruf: python3 ig_caption.py  -> out/<slug>-Caption.txt je Karussell
 import json, os
 REPO='/home/claude/fitmitkev-bilder'
-FB={p['key']:p for p in json.load(open(f'{REPO}/tools/g98/samstag_posts.json'))}
-PLAN=[('Rotweinkuchen','rw','Na, Hunger? Rotweinkuchen wie früher bei Oma. 140 kcal pro Stück.','#rotweinkuchen #kastenkuchen #kuchenliebe #backen #omasrezepte #kalorienarm #rezeptideen #fitmitkev'),
-      ('MarmorBowl','mk','Na, Hunger? Marmorkuchen als Bowl nur für dich. 330 kcal und 25 g Eiweiß.','#marmorkuchen #bowl #haferflocken #skyr #proteinreich #kalorienarm #rezeptideen #fitmitkev'),
-      ('Churros','ch','Na, Hunger? Churros wie von der Kirmes, nur aus dem Ofen. 300 kcal pro Portion.','#churros #kirmes #ofenrezept #backen #zimt #kalorienarm #rezeptideen #fitmitkev')]
+FB={p['key']:p for p in json.load(open(f'{REPO}/tools/g99/sonntag_posts.json'))}
+PLAN=[('PizzaKartoffeln','pk','Na, Hunger? Pizza-Kartoffeln aus dem Ofen, belegt wie eine Pizza. 390 kcal pro Portion.','#pizzakartoffeln #ofenkartoffeln #ofengericht #familienessen #körnigerfrischkäse #kalorienarm #rezeptideen #fitmitkev'),
+      ('EinTeig','tp','Na, Hunger? 1 Teig, 5 Sorten Plätzchen. 40 kcal pro Stück.','#plätzchen #weihnachtsbäckerei #plätzchenbacken #advent #backen #kalorienarm #rezeptideen #fitmitkev'),
+      ('DoenerKuchen','dk','Na, Hunger? Döner als Kuchen aus Skyr-Teig. 440 kcal und 51 g Eiweiß pro Stück.','#dönerkuchen #döner #skyrteig #hähnchen #proteinreich #kalorienarm #rezeptideen #fitmitkev')]
 for key,pre,hook,tags in PLAN:
     slug=json.load(open(f'{pre}.json'))['slug']
     fc=FB[key]['fc']; body=fc.split('\n\n',1)[1]

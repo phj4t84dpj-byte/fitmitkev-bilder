@@ -1,0 +1,60 @@
+{
+ "slug": "IG-1-Teig-5-Sorten",
+ "name": "1 Teig – 5 Sorten Plätzchen",
+ "info": "Einkaufsliste · 50 Plätzchen",
+ "zutaten": [
+  [
+   "300 g",
+   "Dinkelmehl"
+  ],
+  [
+   "100 g",
+   "Butter (kalt)"
+  ],
+  [
+   "100 g",
+   "Skyr"
+  ],
+  [
+   "100 g",
+   "Erythrit"
+  ],
+  [
+   "1",
+   "Ei, 1 TL Vanilleextrakt"
+  ],
+  [
+   "1 EL",
+   "Backkakao, 1 TL Zimt"
+  ],
+  [
+   "40 g",
+   "Fruchtaufstrich, 15 g Kokosraspel"
+  ]
+ ],
+ "naehr": "Pro Stück: 40 kcal",
+ "listen_bild": "tp0_hook",
+ "pos": "50% 45%",
+ "slides": [
+  {
+   "img": "tp0_hook",
+   "text": "1 Teig, 5 Sorten\nPlätzchen.\n40 kcal pro Stück."
+  },
+  {
+   "img": "tp1_teig",
+   "text": "Mehl, Butter, Skyr,\nErythrit und Ei\nzu einem Teig kneten."
+  },
+  {
+   "img": "tp2_teilen",
+   "text": "In 5 Portionen teilen,\nunter zwei davon\nBackkakao kneten."
+  },
+  {
+   "img": "tp3_blech",
+   "text": "Sterne ausstechen,\nKugeln formen und mit\nFruchtaufstrich füllen."
+  },
+  {
+   "img": "tp4_gebacken",
+   "text": "10–12 Minuten\nbei 175 °C backen."
+  }
+ ]
+}
