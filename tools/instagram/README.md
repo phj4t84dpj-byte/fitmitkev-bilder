@@ -5,6 +5,10 @@ Beitrag = dasselbe Board (static.metricool.com-URL des Facebook-Beitrags), Text 
 Je Tag eine Datei ig_<Datum>.json mit info, id, uuid.
 
 
+## Ab 23.11. (Kev, 14:44 Uhr): KEINE Instagram-Karussells mehr
+- Kev: „Plane für Instagram keine Karussells mehr bitte danke“. Seit 22.11. wurde ohnehin nichts mehr eingeplant, also heißt das: **ab sofort keine Karussells mehr bauen, schicken oder einplanen**, bis Kev es wieder wünscht. Der Instagram-Schritt im Morgen-Check entfällt.
+- Die letzten drei (Pizza-Kartoffeln, 1 Teig – 5 Sorten Plätzchen, Döner-Kuchen) hat Kev am 23.11. um 8:36–8:38 Uhr bekommen. Werkzeug und Ablauf unten bleiben zum Nachschlagen stehen.
+
 ## Ab 22.11. (Kev, 0:49 Uhr): NICHT mehr in Metricool einplanen – Karussells an Kev schicken
 - Kev: „Für Instagram ab sofort keine Karussell mehr bei Metricool planen, schick mir hier die Karussells mit Text/Caption.“ Er postet selbst.
 - **Kein `createScheduledPost` mit network instagram mehr.** Alles bis zum Rendern bleibt gleich (Top 3 des Vortags, Bild-Job, `schneiden.py`, `ig_karussell.py`).
