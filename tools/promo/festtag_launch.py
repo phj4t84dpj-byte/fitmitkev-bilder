@@ -21,7 +21,7 @@ SPEC = {
       (V + 'festtag-raclette.jpg', 'Raclette & Fondue', 'mit Guide für den leichten Abend'),
       (A + 'g11_G11Sliders.jpg', 'Silvester-Buffet', 'Mini-Burger, Laugenkonfekt & Co.')])],
    mid='Dazu ein Festtags-Planer mit Menüs<br><span>und einem Zeitplan für Heiligabend.</span>',
-   msg='Morgen um 20:15 Uhr<br><span>zeige ich dir alles.</span>',
+   msg='Morgen um 15 Uhr<br><span>zeige ich dir alles.</span>',
    css='.pc img{height:250px;width:100%;object-fit:cover;border-radius:12px}.p2{font-size:22px}.msg{font-size:30px;line-height:1.3}'),
  'F2': dict(out='Buch-Sa-Festtag-Launch', hook='Endlich da:', title=['FESTTAGSKÜCHE', 'IN LEICHT'], size=100,
    secs=[dict(lab='NEU: MEIN DRITTES REZEPTBUCH', col=NACHT, type='vs', d=dict(mid='ODER',
