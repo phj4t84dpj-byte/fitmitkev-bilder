@@ -28,7 +28,7 @@ SPEC = {
       l=dict(title='Nur das neue Buch', img=V + 'festtag-cover-gross.jpg', rows=[('', '37 Rezepte für die Feiertage', ''), ('', 'plus Festtags-Planer', ''), ('', 'Braten, Raclette, Buffet', '')], sum='9,99 €'),
       r=dict(title='3er-Bundle', img=V + 'festtag-trio-covers.png', rows=[('', '109 Rezepte', ''), ('', 'alle 3 Bücher in einer PDF', ''), ('', 'du sparst 4,98 €', '')], sum='24,99 €')))],
    mid='Du hast schon mein Paket mit 2 Büchern?<br><span>Dann hol dir einfach die Festtagsküche für 9,99 €.</span>',
-   msg='Sofort als PDF aufs Handy.<br><span>Link im 1. Kommentar 👇</span>',
+   msg='Im 3er-Bundle nur 23 Cent pro Rezept.<br><span>Jetzt sichern: Link im 1. Kommentar 👇</span>',
    css='.vimg{height:300px;max-width:100%;object-fit:contain;margin:0 auto 6px;display:block}.vc.l .vimg{border-radius:8px;box-shadow:0 6px 16px rgba(0,0,0,.28)}.vc.l{background:#e8ebf3}.vc.r{background:#f6ecdf}.vc.l .vs{color:#1E2A4A}.vc.r .vs{color:#7A2236}.vsmid{font-size:24px;width:86px;height:86px}.vr2{justify-content:center;text-align:center}.vr2 .n{flex:none}.vh{margin-bottom:12px}.msg{font-size:27px;line-height:1.3}.mid{font-size:27px}'),
  'F3': dict(out='Buch-So-Festtag-Advent-Menue', hook='Zum 1. Advent:', title=['MEIN FESTMENÜ', 'IN LEICHT'], size=100,
    secs=[dict(lab='DREI GÄNGE, PRO PERSON', col=BORDEAUX, type='rows', d=[
