@@ -206,6 +206,18 @@ SPEC={
    mid='Kalorien pro Portion. Alle 5 Rezepte stehen in meinem Buch<br><span>„Wohlfühlküche in leicht“, mit 31 weiteren.</span>',
    msg='Sofort als PDF: 9,99 €.<br><span>Link im 1. Kommentar 👇</span>',
    css='.ri{width:108px;height:108px;overflow:hidden}.ri img{max-width:none;max-height:none;width:108px;height:108px;object-fit:cover}.rw{padding:9px 0}.msg{font-size:27px;line-height:1.3}.mid{font-size:27px}.r1{font-size:32px}'),
+ # B6 (Morgen-Check 24.11.): Mi 25.11., 20:15. Kapitel „Wie vom Weihnachtsmarkt, ohne Fritteuse“ der Weihnachtsbäckerei. Kalorien aus archiv/rezepte.json (G78Mutzen, G80Quarkbaellchen,
+ # G62Spritzkuchen, G47Crepes, G77EierlikoerBerliner) – Kev prüft die fünf Werte gegen sein PDF. Am selben Tag laufen um 11:40 die „Mutzen ohne Fritteuse“ (anderes Rezept, 60 kcal) als Rezept-Beitrag.
+ 'B6':dict(out='Buch-Mi-Weihnachtsmarkt', hook='Ohne Fritteuse:', title=['5 KLASSIKER VOM','WEIHNACHTSMARKT'], size=84,
+   secs=[dict(lab='AUS MEINER WEIHNACHTSBÄCKEREI', col='#8C1C24', type='rows', d=[
+      ('../../archiv/fotos/g78_G78Mutzen.jpg','Mutzenmandeln','Rezept für 30 Stück','50<br><small>kcal</small>'),
+      ('../../archiv/fotos/g80_G80Quarkbaellchen.jpg','Quarkbällchen','Rezept für 12 Stück','65<br><small>kcal</small>'),
+      ('../../archiv/fotos/g62_G62Spritzkuchen.jpg','Spritzkuchen','Rezept für 10 Stück','100<br><small>kcal</small>'),
+      ('../../archiv/fotos/g47_G47Crepes.jpg','Crêpes mit Zimt','Rezept für 8 Crêpes','130<br><small>kcal</small>'),
+      ('../../archiv/fotos/g77_G77EierlikoerBerliner.jpg','Eierlikör-Berliner','Rezept für 8 Stück','165<br><small>kcal</small>')])],
+   mid='Kalorien pro Stück. Alle 5 Rezepte stehen in meinem Buch<br><span>„Weihnachtsbäckerei in leicht“, mit 31 weiteren.</span>',
+   msg='Sofort als PDF: 9,99 €.<br><span>Link im 1. Kommentar 👇</span>',
+   css='.ri{width:108px;height:108px;overflow:hidden}.ri img{max-width:none;max-height:none;width:108px;height:108px;object-fit:cover}.rw{padding:9px 0}.msg{font-size:27px;line-height:1.3}.mid{font-size:27px}.r1{font-size:32px}'),
  # P12/P13 (Kev 19.11., 18:50): „Wie kann man sich die Designer Bars vorstellen?“ – Sorten und Vergleiche 1:1 aus Kevs zwei Story-Grafiken
  # (Packungs- und Geschmacksbilder daraus ausgeschnitten: esn/bilder/bars/). 22 Sorten in 2 Teilen, je ein Bild.
  # Kev 19.11., 19:00: „lieber schon vor der Black Week, am Samstag“ → Sa 21.11., 9:00 und 18:30, Balken deshalb „Ab morgen 12 Uhr“.
