@@ -19,7 +19,7 @@ for b in range(3):
         f=font(24)
         while d.textlength(lab,font=f)>W-8 and f.size>15: f=font(f.size-1)
         d.text((x+4,y+H+8),lab,fill=(20,30,70),font=f)
-        lab2=("NEU" if p['neu'] else ("TEST: NEUES FOTO · " if p['bild']=='neu' else "Test: altes Bild · ")+"zuletzt "+p['zuletzt'])+(" · Buch-Zeile" if p['buch'] else "")
+        lab2=("NEU" if p['neu'] else ("TEST: NEUES FOTO · " if p['bild']=='neu' else "wiederholt · ")+"zuletzt "+p['zuletzt'])+(" · Buch-Zeile" if p['buch'] else "")
         f2=font(18)
         while d.textlength(lab2,font=f2)>W-8 and f2.size>12: f2=font(f2.size-1)
         d.text((x+4,y+H+34),lab2,fill=(193,32,43) if p['neu'] else ((20,110,60) if p['bild']=='neu' else (90,90,90)),font=f2)
