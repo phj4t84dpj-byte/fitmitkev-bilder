@@ -38,10 +38,10 @@ def lauf(*a):
     r = subprocess.run([FF, "-y", "-loglevel", "error", *a], capture_output=True, text=True)
     if r.returncode: print(r.stderr); raise SystemExit(1)
 
-VF = f"scale={W}:{H}:force_original_aspect_ratio=increase,crop={W}:{H},fps=24,setsar=1"
+VF = f"scale={W}:{H}:force_original_aspect_ratio=increase,crop={W}:{H}:(iw-{W})/2:(ih-{H})*0.85,fps=24,setsar=1"
 segs = []; DAUER = {}
 for i, (q, dauer, text) in enumerate(SPEC["clips"], 1):
-    hole(q, f"c{i}.mp4"); schrift(text, f"t{i}.png")
+    hole(q, f"c{i}.mp4"); schrift(text, f"t{i}.png", oben=SPEC.get("oben", False))
     lauf("-i", f"c{i}.mp4", "-loop", "1", "-i", f"t{i}.png", "-filter_complex", f"[0:v]{VF}[v];[v][1:v]overlay=0:0:shortest=1,format=yuv420p",
          "-t", str(dauer), "-an", "-c:v", "libx264", "-preset", "veryfast", "-crf", "20", f"s{i}.mp4")
     segs.append(f"s{i}.mp4"); DAUER[f"s{i}.mp4"] = dauer; print("Clip", i, "fertig")
