@@ -61,10 +61,10 @@ lauf("-f", "concat", "-safe", "0", "-i", "liste.txt", "-f", "lavfi", "-i", "anul
 # Kontaktbogen: je Abschnitt 3 Bilder
 bilder = []
 for x in segs:
-    for t in (0.3, 0.5, 0.85):
+    for t in SPEC.get("zeiten", (0.3, 0.5, 0.85)):
         lauf("-ss", f"{t * DAUER[x] * 0.95:.2f}", "-i", x, "-frames:v", "1", "f.jpg")
         bilder.append(Image.open("f.jpg").convert("RGB").resize((240, 300)))
-sp = 6; zeilen_n = (len(bilder) + sp - 1) // sp
+sp = 6 if len(SPEC.get("zeiten", (0, 0, 0))) == 3 else len(SPEC["zeiten"]); zeilen_n = (len(bilder) + sp - 1) // sp
 sheet = Image.new("RGB", (240 * sp, 300 * zeilen_n), "white")
 for k, b in enumerate(bilder): sheet.paste(b, ((k % sp) * 240, (k // sp) * 300))
 sheet.save("sheet.jpg", quality=88)
