@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# G103: Antworten von createScheduledPost aus dem Verlauf der Session holen und Feld für Feld mit out/mittwoch_posts.json vergleichen; schreibt out/mittwoch_metricool_ids.json.
+# G103: Antworten von createScheduledPost aus dem Verlauf der Session holen und Feld für Feld mit out/donnerstag_posts.json vergleichen; schreibt out/donnerstag_metricool_ids.json.
 import json, os
 D=os.path.dirname(os.path.abspath(__file__)); T='/root/.claude/projects/-home-claude/62a14d94-6bfc-5e5c-b2da-15988fbe030e.jsonl'
 got={}
@@ -9,16 +9,16 @@ def walk(o):
         if s.startswith('{"data":{"id":'):
             try: d=json.loads(s)['data']
             except Exception: return
-            if d.get('publicationDate',{}).get('dateTime','').startswith('2026-11-25') and d['providers'][0]['network']=='facebook': got.setdefault(d['publicationDate']['dateTime'],[]).append(d)
+            if d.get('publicationDate',{}).get('dateTime','').startswith('2026-11-26') and d['providers'][0]['network']=='facebook': got.setdefault(d['publicationDate']['dateTime'],[]).append(d)
     elif isinstance(o,list):
         for x in o: walk(x)
     elif isinstance(o,dict):
         for x in o.values(): walk(x)
 for line in open(T):
-    if '2026-11-25T' not in line or 'plannerUrl' not in line: continue
+    if '2026-11-26T' not in line or 'plannerUrl' not in line: continue
     try: walk(json.loads(line))
     except Exception: pass
-P=json.load(open(f"{D}/out/mittwoch_posts.json")); ok=0; ids=[]
+P=json.load(open(f"{D}/out/donnerstag_posts.json")); ok=0; ids=[]
 for p in P:
     L=got.get(p['date'],[]); 
     L={d['id']:d for d in L}.values()
@@ -29,5 +29,5 @@ for p in P:
     assert all(chk.values()),(p['n'],p['key'],chk)
     ok+=1; ids.append(dict(n=p['n'],key=p['key'],date=p['date'],id=d['id'],uuid=d['uuid'],media=d['media'][0],neu=p['neu'],buch=p['buch'],hashtags=p['hashtags']))
 assert len({i['id'] for i in ids})==len(P)
-json.dump(ids,open(f"{D}/out/mittwoch_metricool_ids.json","w"),ensure_ascii=False,indent=1)
+json.dump(ids,open(f"{D}/out/donnerstag_metricool_ids.json","w"),ensure_ascii=False,indent=1)
 print(ok,'von',len(P),'gleich dem Plan;',ids[0]['id'],'…',ids[-1]['id'])

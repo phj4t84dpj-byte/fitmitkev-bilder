@@ -1,79 +1,78 @@
-# G103 – Mittwoch 25.11.2026: Tagesplan aus 6 neuen Rezepten (out/mittwoch_neu_posts.json) und 13 Wiederholern (7-Tage-Regel vom Mi 18.11.).
-# WIEDERHOLER-TEST Tag 1 (Kev 23.11.): Feld `bild` je Wiederholer – 'neu' = neues Foto + neue Schreibschrift-Zeile + anderes Emoji (Board G103-…),
-#   'alt' = Board und Text unverändert wie beim letzten Lauf. 1. Kommentar und Hashtags bleiben in beiden Gruppen wie beim letzten Lauf.
-# Schreibt out/mittwoch_posts.json, out/posting-plan-mittwoch.txt, out/texte-mittwoch.txt.
+# G103 – Donnerstag 26.11.2026: Tagesplan aus 6 neuen Rezepten (out/donnerstag_neu_posts.json) und 13 Wiederholern (14-Tage-Regel, Kev 24.11.).
+# WIEDERHOLER-TEST Tag 2: Feld `bild` je Wiederholer – 'neu' = neues Foto + neue Schreibschrift-Zeile + anderes Emoji (Board G103-…),
+#   'alt' = Board vom letzten Lauf unverändert. 1. Kommentar wie beim letzten Lauf. Hashtags wie beim letzten Lauf, nur ohne #lecker/#food/#zuckerfrei
+#   und mit #fitmitkev am Ende; drei Läufe vom 9./10.11. hatten noch den Höflich-Titel – der fällt weg (Regel), der Titel wird „kcal … Rezept im 1. Kommentar“.
+# Schreibt out/donnerstag_posts.json, out/posting-plan-donnerstag.txt, out/texte-donnerstag.txt.
 import json, os
 D=os.path.dirname(os.path.abspath(__file__)); REPO=os.environ.get('REPO','/home/claude/fitmitkev-bilder')
 URL="https://raw.githubusercontent.com/phj4t84dpj-byte/fitmitkev-bilder/main/boards/{}.jpg"
-NEU={p['key']:p for p in json.load(open(f"{D}/out/mittwoch_neu_posts.json"))}
+NEU={p['key']:p for p in json.load(open(f"{D}/out/donnerstag_neu_posts.json"))}
 def lade(f): return {p['key']:p for p in json.load(open(f"{REPO}/tools/{f}"))}
-Q={'g96':lade('g96/mittwoch_posts.json'),'g88':lade('g88/dienstag_posts.json')}
-# (Uhrzeit, Schlüssel, Quelle, Board, Hashtags, zuletzt gelaufen: Datum Uhrzeit · Reichweite · × Tagesmedian, bild) – Läufe mit lauf.py gegen Metricool geprüft (FBPO03)
-PLAN=[('06:50','KoernerBroetchen','g96','G96-KoernerBroetchen-ohneBox','#körnerbrötchen #brötchen #ohnehefe #fitmitkev','18.11. 06:50 · 6.545 · 0,7-fach','alt'),
-      ('07:35','Zimtsterne','g96','G96-Zimtsterne-ohneBox','#zimtsterne #plätzchen #fitmitkev','18.11. 07:30 · 145.602 · 14,7-fach','alt'),
-      ('08:20','NudelsalatNacht',None,None,None,'neu',None),      # Verwandter vom Schichtsalat über Nacht (Mo 23.11., 8:20 Uhr, 7,0-fach)
-      ('09:00','Gewuerzkuchen','g96','G103-Gewuerzkuchen-ohneBox','#gewürzkuchen #blechkuchen #backen #fitmitkev','18.11. 08:50 · 95.863 · 9,7-fach','neu'),
-      ('09:40','DoenerKartoffeln',None,None,None,'neu',None),     # Verwandter der Pizza-Kartoffeln (So 22.11., 4,1-fach) und des Döner-Kuchens (2,1-fach)
-      ('10:20','WinterWoelkchen',None,None,None,'neu',None),      # Mitbewerber-Check 24.11.: Winterwölkchen 14,1-fach; gleicher Platz wie Kokos- (Mo) und Eierlikör-Wölkchen (Di)
-      ('11:00','KaeseLauchSuppe','g88','G103-KaeseLauchSuppe-ohneBox','#käselauchsuppe #suppe #hackfleisch #fitmitkev','10.11. 11:15 · 10.937 · 1,0-fach','neu'),   # alte Hashtags ohne #food #lecker
-      ('11:40','Mutzen','g96','G96-Mutzen-ohneBox','#mutzen #kirmes #ohnefritteuse #fitmitkev','18.11. 11:30 · 146.324 · 14,7-fach','alt'),
-      ('12:20','KlossKasseler',None,None,None,'neu',None),        # Kloßteig-Reihe, Idee 5
-      ('13:40','GebratenerReis','g96','G96-GebratenerReis-ohneBox','#gebratenerreis #asiatisch #hähnchen #mealprep #fitmitkev','18.11. 12:15 · 9.928 · 1,0-fach','alt'),
-      ('14:20','KokosMandelTiramisu','g96','G96-KokosMandelTiramisu-ohneBox','#tiramisu #kokos #dessert #fitmitkev','18.11. 14:30 · 22.568 · 2,3-fach','alt'),
-      ('15:00','KlossScheiben',None,None,None,'neu',None),        # Kloßteig-Reihe, Idee 19
-      ('15:40','MilchschnitteBowl','g96','G103-MilchschnitteBowl-ohneBox','#milchschnitte #bowl #fitmitkev','18.11. 16:07 · 256.827 · 25,9-fach','neu'),
-      ('16:20','GyrosBowl','g96','G103-GyrosBowl-ohneBox','#gyros #bowl #proteinbowl #mealprep #fitmitkev','18.11. 15:15 · 30.225 · 3,0-fach','neu'),
-      ('17:00','BlitzKaesekuchen','g96','G103-BlitzKaesekuchen-ohneBox','#käsekuchen #fitmitkev','18.11. 10:10 · 32.131 · 3,2-fach','neu'),   # einziger Wiederholer mit deutlich anderer Uhrzeit (10:20 gehört den Wölkchen)
-      ('17:45','KlossLauch',None,None,None,'neu',None),           # Kloßteig-Reihe, Idee 16
-      ('18:30','Zupfkuchen','g96','G103-Zupfkuchen-ohneBox','#zupfkuchen #käsekuchen #backen #fitmitkev','18.11. 18:13 · 12.765 · 1,3-fach','neu'),
-      ('19:15','Hackbraten','g96','G96-Hackbraten-ohneBox','#hackbraten #omasrezepte #fitmitkev','18.11. 16:45 · 8.800 · 0,9-fach','alt'),
-      ('20:45','ZimtschneckenSkyrKuchen','g96','G96-ZimtschneckenSkyrKuchen-ohneBox','#zimtschnecken #skyrkuchen #käsekuchen #backen #fitmitkev','18.11. 20:45 · 28.585 · 2,9-fach','alt')]
-FEST={'06:10':'ESN-Rezept Zimt-Grießbrei wie bei Oma, 315 kcal (ohne ESN-Zeile)','13:00':'ESN-Rezept Schoko-Eis aus Hüttenkäse, 195 kcal (ohne ESN-Zeile)','20:15':'Buch-Beitrag „5 Weihnachtsmarkt-Klassiker ohne Fritteuse“'}
-# Hashtag-Gruppen: Die Test-Wiederholer behalten die Hashtags ihres letzten Laufs (sonst mischen sich zwei Tests); die freien Plätze füllen auf 9 × A (2–3) / 10 × B (4–5) auf.
-GRUPPE_A={2,3,5,6,9,12,13,15,18}
-BUCH={'Zimtsterne':'📖 Diese Zimtsterne findest du auch in meinem Rezeptbuch „Weihnachtsbäckerei in leicht“, zusammen mit 35 weiteren Rezepten: https://fitmitkev.de/rezeptbuecher'}
-EMO_NEU={'Gewuerzkuchen':('🤗','🥰'),'KaeseLauchSuppe':('😋','🤤'),'MilchschnitteBowl':('🤗','😍'),'GyrosBowl':('🥰','🤗'),'BlitzKaesekuchen':('😍','🤤'),'Zupfkuchen':('😍','😋')}   # (Emoji beim letzten Lauf, Emoji jetzt)
-SW=[False,True,False,True,False,True,False,True,False, False,True,False,True,False,True,False,True,False,True]   # zwischen Platz 9 und 10 liegt das feste süße ESN-Rezept um 13:00
+Q={'g87':lade('g87/montag_posts.json'),'g88':lade('g88/dienstag_posts.json'),'g89':lade('g89/mittwoch_posts.json'),'g90':lade('g90/donnerstag_posts.json')}
+# (Uhrzeit, Schlüssel, Quelle, Board, Titel jetzt, Hashtags jetzt, zuletzt gelaufen: Datum Uhrzeit · Reichweite · × Tagesmedian, bild)
+PLAN=[('06:50','Fruehstuecksbroetchen','g90','G103-Fruehstuecksbroetchen-ohneBox','165 kcal pro Stück 🤤 Rezept im 1. Kommentar ⤵️','#brötchen #frühstück #ohnehefe #backen #fitmitkev','12.11. 07:10 · 17.498 · 0,6-fach','neu'),
+      ('07:35','NusseckenOats','g89','G89-NusseckenOats',None,'#overnightoats #nussecken #fitmitkev','11.11. 06:10 · 9.139 · 0,6-fach','alt'),
+      ('08:20','LaugenBrezeln','g88','G88-LaugenBrezeln',None,'#brezeln #laugengebäck #backen #ohnehefe #fitmitkev','10.11. 08:15 · 5.545 · 0,5-fach','alt'),
+      ('09:00','Apfeltaschen','g88','G103-Apfeltaschen-ohneBox','190 kcal pro Stück 🥰 Rezept im 1. Kommentar ⤵️','#apfeltaschen #apfel #backen #fitmitkev','10.11. 09:03 · 4.949 · 0,4-fach','neu'),
+      ('09:40','StrammerMax','g90','G90-StrammerMax',None,'#strammermax #spiegelei #fitmitkev','12.11. 09:05 · 7.915 · 0,3-fach','alt'),
+      ('10:20','ZimtschneckenPancakes','g87','G87-ZimtschneckenPancakes','330 kcal pro Portion 🤗 Rezept im 1. Kommentar ⤵️','#pancakes #zimtschnecken #frühstück #fitmitkev','9.11. 08:02 · 9.699 · 0,3-fach (Höflich-Titel)','alt'),
+      ('11:00','LasagneSuppe','g87','G103-LasagneSuppe-ohneBox','480 kcal pro Teller 😍 Rezept im 1. Kommentar ⤵️','#lasagne #suppe #fitmitkev','9.11. 11:03 · 10.345 · 0,3-fach (Höflich-Titel)','neu'),
+      ('11:40','Engelsaugen','g90','G90-Engelsaugen',None,'#engelsaugen #plätzchen #fitmitkev','12.11. 08:05 · 15.086 · 0,5-fach','alt'),
+      ('12:20','KlossHirsch',None,None,None,None,'neu',None),          # Kloßteig-Reihe, Idee 2
+      ('13:40','CordonBleu','g90','G103-CordonBleu-ohneBox','455 kcal pro Portion 🤤 Rezept im 1. Kommentar ⤵️','#cordonbleu #fitmitkev','12.11. 13:03 · 10.830 · 0,4-fach','neu'),
+      ('14:20','BratapfelSkyrKuchen','g87','G103-BratapfelSkyrKuchen-ohneBox','145 kcal pro Stück 😋 Rezept im 1. Kommentar ⤵️','#bratapfel #skyrkuchen #backen #fitmitkev','9.11. 14:04 · 18.752 · 0,6-fach (Höflich-Titel)','neu'),
+      ('15:00','KlossPilz',None,None,None,None,'neu',None),            # Kloßteig-Reihe, Idee 13
+      ('15:40','MandarinenSchmand','g88','G103-MandarinenSchmand-ohneBox','175 kcal pro Stück 😍 Rezept im 1. Kommentar ⤵️','#schmandkuchen #mandarinen #blechkuchen #fitmitkev','10.11. 13:31 · 8.716 · 0,8-fach (Höflich-Titel)','neu'),
+      ('16:20','GnocchiAuflauf','g90','G103-GnocchiAuflauf-ohneBox','455 kcal pro Portion 🥰 Rezept im 1. Kommentar ⤵️','#gnocchi #auflauf #fitmitkev','12.11. 16:50 · 15.531 · 0,5-fach','neu'),
+      ('17:00','Schneewittchen',None,None,None,None,'neu',None),
+      ('17:45','KlossFrikadellen',None,None,None,None,'neu',None),     # Kloßteig-Reihe, Idee 10
+      ('18:30','ToastHawaii',None,None,None,None,'neu',None),
+      ('19:15','GyrosAuflauf','g89','G89-GyrosAuflauf',None,'#gyros #auflauf #fitmitkev','11.11. 19:16 · 8.087 · 0,6-fach','alt'),
+      ('20:45','JapanKaesekuchen',None,None,None,None,'neu',None)]
+FEST={'06:10':'ESN-Rezept Schoko-Mousse, 260 kcal (schon eingeplant, Id 434673372)','13:00':'ESN-Rezept Tiramisu-Bowl, 240 kcal (schon eingeplant, Id 434673472)','20:15':'Buch-Beitrag B7 „5 Klassiker unter 500 kcal“ aus der Wohlfühlküche'}
+SW=[False,True,False,True,False,True,False,True,False, False,True,False,True,False,True,False,False,False,True]   # zwischen Platz 9 und 10 liegt das feste süße ESN-Rezept um 13:00
 posts=[]
-for n,(zeit,key,src,bild,tags,zuletzt,test) in enumerate(PLAN,1):
+for n,(zeit,key,src,bild,titel,tags,zuletzt,test) in enumerate(PLAN,1):
     if src is None:
-        q=NEU[key]; text,fc,media,alt,kcal,suess=q['text'],q['fc'],q['media'],q['alt'],q['kcal'],q['suess']; bild=media.split('/')[-1][:-4]; assert test is None
+        q=NEU[key]; text,fc,media,alt,kcal,suess=q['text'],q['fc'],q['media'],q['alt'],q['kcal'],q['suess']; bild=media.split('/')[-1][:-4]; test=None; zuletzt=None
     else:
-        q=Q[src][key]; titel=q['text'].partition('\n\n')[0]; fc=q['fc']; assert test in ('neu','alt'), key
+        q=Q[src][key]; alt_titel=q['text'].partition('\n\n')[0]; fc=q['fc']; assert test in ('neu','alt'), key
+        assert f"{q['kcal']} kcal" in alt_titel, key
+        if titel is None: titel=alt_titel
         if test=='neu':
-            a,b=EMO_NEU[key]; assert titel.count(a)==1 and a!=b, key; titel=titel.replace(a,b); assert bild==f'G103-{key}-ohneBox', key
+            assert bild==f'G103-{key}-ohneBox' and titel!=alt_titel, key
+            e_alt=[c for c in '😍🤤🥰🤗😋' if c in alt_titel]; e_neu=[c for c in '😍🤤🥰🤗😋' if c in titel]; assert len(e_alt)==1 and len(e_neu)==1 and e_alt!=e_neu, key
         else:
-            assert q['media'].endswith('/'+bild+'.jpg') and q['text']==titel+'\n\n'+tags, ('ALT muss Board und Text vom letzten Lauf behalten',key)
+            assert q['media'].endswith('/'+bild+'.jpg'), ('ALT muss das Board vom letzten Lauf behalten',key)
+            assert titel==alt_titel or 'Höfliche' in alt_titel, key
         text=titel+'\n\n'+tags
         media,alt,kcal,suess=URL.format(bild),q['alt'],q['kcal'],q['suess']
-        if key in BUCH: assert fc.endswith('\n\n'+BUCH[key]), key; fc=fc[:-len('\n\n'+BUCH[key])]
         assert '#' not in fc and '📖' not in fc, key
-        if key in BUCH: fc=fc+'\n\n'+BUCH[key]
-        if test=='alt': assert fc==q['fc'], key
     assert os.path.exists(f"{REPO}/boards/{bild}.jpg"), ('Board fehlt',bild)
     tg=[w for w in text.split() if w.startswith('#')]; nt=len(tg)
-    assert tg[-1]=='#fitmitkev' and 2<=nt<=5 and (nt<=3)==(n in GRUPPE_A), (n,key,nt)
+    assert tg[-1]=='#fitmitkev' and 2<=nt<=5, (n,key,nt)
     assert bool(suess)==SW[n-1], ('süß/herzhaft',n,key)
-    low=(text+fc.replace(BUCH.get(key,''),'')).lower()
-    for w in ('esn','abnehm','höflich','rezeptbuch','http','melly','gta','11.11','box „','food','#lecker'): assert w not in low,(key,w)
+    low=(text+fc).lower()
+    for w in ('esn','abnehm','höflich','rezeptbuch','http','melly','gta','food','#lecker','#zuckerfrei','📖'): assert w not in low,(key,w)
     assert zeit not in FEST and 'Rezept im 1. Kommentar' in text, key
-    posts.append(dict(n=n,key=key,date=f'2026-11-25T{zeit}:00',text=text,fc=fc,media=media,alt=alt,bild=test,board=bild,box=False,kcal=kcal,suess=bool(suess),hashtags=nt,
-                      gruppe='A (2–3)' if nt<=3 else 'B (4–5)',neu=src is None,buch=key in BUCH,zuletzt=zuletzt))
+    posts.append(dict(n=n,key=key,date=f'2026-11-26T{zeit}:00',text=text,fc=fc,media=media,alt=alt,bild=test,board=bild,box=False,kcal=kcal,suess=bool(suess),hashtags=nt,
+                      gruppe='A (2–3)' if nt<=3 else 'B (4–5)',neu=src is None,buch=False,zuletzt=zuletzt))
 assert len(posts)==19 and len({p['date'] for p in posts})==19 and len({p['key'] for p in posts})==19
-assert sum(p['gruppe'][0]=='A' for p in posts)==9 and sum(p['suess'] for p in posts)==9 and sum(p['buch'] for p in posts)==1
-assert sum(p['bild']=='neu' for p in posts)==6 and sum(p['bild']=='alt' for p in posts)==7 and sum(p['neu'] for p in posts)==6
+assert sum(p['gruppe'][0]=='A' for p in posts)==9 and sum(p['suess'] for p in posts)==8
+assert sum(p['bild']=='neu' for p in posts)==7 and sum(p['bild']=='alt' for p in posts)==6 and sum(p['neu'] for p in posts)==6
 assert all(p['kcal']<=500 for p in posts)
-json.dump(posts,open(f"{D}/out/mittwoch_posts.json","w"),ensure_ascii=False,indent=1)
+json.dump(posts,open(f"{D}/out/donnerstag_posts.json","w"),ensure_ascii=False,indent=1)
 def art(p): return 'NEU' if p['neu'] else ('TEST neues Foto' if p['bild']=='neu' else 'TEST altes Bild')+' · zuletzt '+p['zuletzt']
-alle=[(p['date'][11:16],f"{p['n']:02d} · {'süß ' if p['suess'] else 'herz'} · {p['alt']} · {p['kcal']} kcal · {p['hashtags']} Hashtags · {art(p)}{' · BUCH-ZEILE' if p['buch'] else ''}") for p in posts]
+alle=[(p['date'][11:16],f"{p['n']:02d} · {'süß ' if p['suess'] else 'herz'} · {p['alt']} · {p['kcal']} kcal · {p['hashtags']} Hashtags · {art(p)}") for p in posts]
 alle+=[(t,f"–– · fest · {x}") for t,x in FEST.items()]
-with open(f"{D}/out/posting-plan-mittwoch.txt","w") as fh:
-    fh.write("Posting-Plan Mittwoch 25.11.2026 – 22 Beiträge: 19 Rezepte + 2 feste ESN-Rezepte (ohne ESN-Zeile) + Buch-Beitrag 20:15.\n")
-    fh.write("6 neue Rezepte (3 davon aus der Kloßteig-Reihe: 12:20 Kasseler mit Sauerkraut, 15:00 gebratene Kloßscheiben, 17:45 Schinken und Lauch überbacken), 13 bewährte (7-Tage-Regel).\n")
-    fh.write("WIEDERHOLER-TEST Tag 1: 6 bewährte Rezepte mit NEUEM Foto und neuer Schreibschrift-Zeile, 7 unverändert mit altem Bild. Rezept, Kalorien, 1. Kommentar und Hashtags sind in beiden Gruppen wie beim letzten Lauf.\n")
-    fh.write("Alle Boards ohne Box. Ein Werbe-Beitrag (Buch, 20:15), eine Buch-Zeile (07:35 Zimtsterne, wie am 18.11.).\nHinter jedem Wiederholer: letzter Lauf · Reichweite · Vielfaches des Tagesmittels.\n\n")
+with open(f"{D}/out/posting-plan-donnerstag.txt","w") as fh:
+    fh.write("Posting-Plan Donnerstag 26.11.2026 – 22 Beiträge: 19 Rezepte + 2 feste ESN-Rezepte (schon eingeplant) + Buch-Beitrag 20:15.\n")
+    fh.write("Neue Regel: kein Rezept, das in den letzten 14 Tagen lief. Alle 13 Wiederholer liefen zuletzt am 9.–12.11.\n")
+    fh.write("6 neue Rezepte: 3 aus der Kloßteig-Reihe (12:20 Hirschgulasch mit Preiselbeeren, 15:00 Pilzrahmsoße, 17:45 Frikadellen in Zwiebelsoße), Schneewittchenkuchen, Toast Hawaii, Japanischer Käsekuchen.\n")
+    fh.write("WIEDERHOLER-TEST Tag 2: 7 Wiederholer mit NEUEM Foto und neuer Schreibschrift-Zeile, 6 mit altem Bild. Rezept, Kalorien und 1. Kommentar wie beim letzten Lauf.\n")
+    fh.write("Alle Boards ohne Box. Ein Werbe-Beitrag (Buch, 20:15), keine Buch-Zeile.\nHinter jedem Wiederholer: letzter Lauf · Reichweite · Vielfaches des Tagesmittels.\n\n")
     for t,x in sorted(alle): fh.write(f"{t} · {x}\n")
-with open(f"{D}/out/texte-mittwoch.txt","w") as fh:
+with open(f"{D}/out/texte-donnerstag.txt","w") as fh:
     for p in posts:
         fh.write(f"===== {p['n']:02d} · {p['date'][11:16]} · {p['alt']}{'  ·  NEU' if p['neu'] else ('  ·  TEST neues Foto' if p['bild']=='neu' else '  ·  TEST altes Bild')}\n\nBEITRAG:\n{p['text']}\n\n1. KOMMENTAR:\n{p['fc']}\n\nBILD: {p['media']}\n\n\n")
-print(open(f"{D}/out/posting-plan-mittwoch.txt").read())
+print(open(f"{D}/out/posting-plan-donnerstag.txt").read())

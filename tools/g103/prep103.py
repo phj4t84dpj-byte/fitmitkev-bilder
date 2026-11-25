@@ -5,10 +5,8 @@ Kachelspalte, Titel, Badge und Vorher-Nachher-Foto liegt. Ränder werden aus der
 Danach wird der Freisteller neu berechnet (Text-Maske liegt dann in den richtigen Koordinaten)."""
 import cv2, numpy as np, json, os, sys
 D=os.path.dirname(os.path.abspath(__file__))
-KEYS=['KlossKasseler','KlossScheiben','KlossLauch','WinterWoelkchen','DoenerKartoffeln','NudelsalatNacht','MilchschnitteBowl','Gewuerzkuchen','BlitzKaesekuchen','Zupfkuchen','GyrosBowl','KaeseLauchSuppe']
-T={'BlitzKaesekuchen':dict(s=0.80,glatt=True),'DoenerKartoffeln':dict(s=0.66,dy=20,glatt=True),'KlossScheiben':dict(s=0.70,glatt=True),'Gewuerzkuchen':dict(s=0.74,glatt=True),
-   'GyrosBowl':dict(s=0.72,glatt=True,cl=(150,100,500)),'KaeseLauchSuppe':dict(s=0.74,glatt=True),'MilchschnitteBowl':dict(s=0.74,glatt=True),'NudelsalatNacht':dict(s=0.72,glatt=True),
-   'Zupfkuchen':dict(s=0.72,glatt=True),'KlossKasseler':dict(s=0.78,glatt=True),'WinterWoelkchen':dict(s=0.74,glatt=True),'KlossLauch':dict(s=0.70,glatt=True)}
+KEYS=['KlossHirsch', 'KlossPilz', 'KlossFrikadellen', 'Schneewittchen', 'JapanKaesekuchen', 'ToastHawaii', 'MandarinenSchmand', 'BratapfelSkyrKuchen', 'Apfeltaschen', 'Fruehstuecksbroetchen', 'GnocchiAuflauf', 'CordonBleu', 'LasagneSuppe']
+T={k:dict(s=0.74,glatt=True) for k in KEYS}
 def prep(key):
     sel=json.load(open(f'{D}/hero/_auswahl.json'))[key]
     im=cv2.imread(f'{D}/raw/{sel}.jpg'); t=T.get(key,{})
