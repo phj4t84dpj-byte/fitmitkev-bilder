@@ -3,9 +3,11 @@
   "n": 1,
   "date": "2026-11-26T06:50:00",
   "key": "Fruehstuecksbroetchen",
-  "id": 441367237,
+  "id": 442134561,
   "uuid": "-6634232976159783935",
-  "bild": "neu"
+  "bild": "neu",
+  "board": "G103H-Fruehstuecksbroetchen-ohneBox",
+  "foto": "Higgsfield GPT Image 2.6"
  },
  {
   "n": 2,
@@ -27,9 +29,11 @@
   "n": 4,
   "date": "2026-11-26T09:00:00",
   "key": "Apfeltaschen",
-  "id": 441367536,
+  "id": 442134700,
   "uuid": "-8735515958941301585",
-  "bild": "neu"
+  "bild": "neu",
+  "board": "G103H-Apfeltaschen-ohneBox",
+  "foto": "Higgsfield GPT Image 2.6"
  },
  {
   "n": 5,
@@ -53,9 +57,11 @@
   "n": 7,
   "date": "2026-11-26T11:00:00",
   "key": "LasagneSuppe",
-  "id": 441367874,
+  "id": 442134820,
   "uuid": "1497607770741755355",
-  "bild": "neu"
+  "bild": "neu",
+  "board": "G103H-LasagneSuppe-ohneBox",
+  "foto": "Higgsfield GPT Image 2.6"
  },
  {
   "n": 8,
@@ -69,73 +75,91 @@
   "n": 9,
   "date": "2026-11-26T12:20:00",
   "key": "KlossHirsch",
-  "id": 441368071,
+  "id": 442134997,
   "uuid": "-5933654512305092785",
-  "bild": null
+  "bild": null,
+  "board": "G103H-KlossHirsch-ohneBox",
+  "foto": "Higgsfield GPT Image 2.6"
  },
  {
   "n": 10,
   "date": "2026-11-26T13:40:00",
   "key": "CordonBleu",
-  "id": 441368156,
+  "id": 442135267,
   "uuid": "5855762562946056746",
-  "bild": "neu"
+  "bild": "neu",
+  "board": "G103H-CordonBleu-ohneBox",
+  "foto": "Higgsfield GPT Image 2.6"
  },
  {
   "n": 11,
   "date": "2026-11-26T14:20:00",
   "key": "BratapfelSkyrKuchen",
-  "id": 441368324,
+  "id": 442135385,
   "uuid": "-1837656113896406065",
-  "bild": "neu"
+  "bild": "neu",
+  "board": "G103H-BratapfelSkyrKuchen-ohneBox",
+  "foto": "Higgsfield GPT Image 2.6"
  },
  {
   "n": 12,
   "date": "2026-11-26T15:00:00",
   "key": "KlossPilz",
-  "id": 441368525,
+  "id": 442135543,
   "uuid": "6354339734926806616",
-  "bild": null
+  "bild": null,
+  "board": "G103H-KlossPilz-ohneBox",
+  "foto": "Higgsfield GPT Image 2.6"
  },
  {
   "n": 13,
   "date": "2026-11-26T15:40:00",
   "key": "MandarinenSchmand",
-  "id": 441368665,
+  "id": 442135726,
   "uuid": "7477809696321979285",
-  "bild": "neu"
+  "bild": "neu",
+  "board": "G103H-MandarinenSchmand-ohneBox",
+  "foto": "Higgsfield GPT Image 2.6"
  },
  {
   "n": 14,
   "date": "2026-11-26T16:20:00",
   "key": "GnocchiAuflauf",
-  "id": 441368758,
+  "id": 442135833,
   "uuid": "-915940617944675585",
-  "bild": "neu"
+  "bild": "neu",
+  "board": "G103H-GnocchiAuflauf-ohneBox",
+  "foto": "Higgsfield GPT Image 2.6"
  },
  {
   "n": 15,
   "date": "2026-11-26T17:00:00",
   "key": "Schneewittchen",
-  "id": 441368867,
+  "id": 442136175,
   "uuid": "-843000479892222342",
-  "bild": null
+  "bild": null,
+  "board": "G103H-Schneewittchen-ohneBox",
+  "foto": "Higgsfield GPT Image 2.6"
  },
  {
   "n": 16,
   "date": "2026-11-26T17:45:00",
   "key": "KlossFrikadellen",
-  "id": 441369115,
+  "id": 442136325,
   "uuid": "8808026274890993374",
-  "bild": null
+  "bild": null,
+  "board": "G103H-KlossFrikadellen-ohneBox",
+  "foto": "Higgsfield GPT Image 2.6"
  },
  {
   "n": 17,
   "date": "2026-11-26T18:30:00",
   "key": "ToastHawaii",
-  "id": 441369217,
+  "id": 442136473,
   "uuid": "3225092859801389624",
-  "bild": null
+  "bild": null,
+  "board": "G103H-ToastHawaii-ohneBox",
+  "foto": "Higgsfield GPT Image 2.6"
  },
  {
   "n": 18,
@@ -149,8 +173,10 @@
   "n": 19,
   "date": "2026-11-26T20:45:00",
   "key": "JapanKaesekuchen",
-  "id": 441369381,
+  "id": 442136664,
   "uuid": "6685561699149237527",
-  "bild": null
+  "bild": null,
+  "board": "G103H-JapanKaesekuchen-ohneBox",
+  "foto": "Higgsfield GPT Image 2.6"
  }
 ]
