@@ -1,6 +1,6 @@
-# Läufe 10.–23.11. aus Metricool (FBPO02/03/12/23) mit den Plan-JSONs im Repo zusammenführen: welches Rezept lief wann mit welcher Reichweite?
+# Läufe 10.–24.11. aus Metricool (FBPO02/03/12/23) mit den Plan-JSONs im Repo zusammenführen: welches Rezept lief wann mit welcher Reichweite?
 import json, glob, datetime as dt, statistics as st, sys, collections
-F='/root/.claude/projects/-home-claude/62a14d94-6bfc-5e5c-b2da-15988fbe030e/tool-results/mcp-Metricool_Social_Media_Management-getAnalyticsDataByMetrics-1795504845975-xdxpvx.txt'
+F='/root/.claude/projects/-home-claude/62a14d94-6bfc-5e5c-b2da-15988fbe030e/tool-results/mcp-Metricool_Social_Media_Management-getAnalyticsDataByMetrics-1795593297308-t09lr6.txt'
 s=open(F).read(); rows=json.JSONDecoder().raw_decode(s[s.index('{"rows"'):])[0]['rows']
 R='/home/claude/fitmitkev-bilder/tools'
 PL={}
