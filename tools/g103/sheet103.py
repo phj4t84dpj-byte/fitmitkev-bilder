@@ -1,0 +1,26 @@
+# -*- coding: utf-8 -*-
+# G103: Kontaktbögen für Kev – 2 Bögen mit je 8 Boards (4 × 2), nummeriert in Posting-Reihenfolge, mit Uhrzeit.
+import json, os
+from PIL import Image, ImageDraw, ImageFont
+D=os.path.dirname(os.path.abspath(__file__)); REPO=os.environ.get('REPO','/home/claude/fitmitkev-bilder')
+P=json.load(open(f"{D}/out/mittwoch_posts.json"))
+def font(sz):
+    for f in (f"{D}/../fonts/gf/ofl/poppins/Poppins-SemiBold.ttf","/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf"):
+        if os.path.exists(f): return ImageFont.truetype(f,sz)
+    return ImageFont.load_default()
+W,H,PAD,LAB=540,675,16,58
+for b in range(3):
+    rows=2 if b<2 else 1; sh=Image.new('RGB',(4*W+5*PAD,rows*(H+LAB)+(rows+1)*PAD+70),'white'); d=ImageDraw.Draw(sh)
+    d.text((PAD,14),f"Mittwoch 25.11.2026 – Bogen {b+1} von 3 (Beiträge {b*8+1}–{min(b*8+8,19)})",fill=(20,30,70),font=font(34))
+    for i,p in enumerate(P[b*8:b*8+8]):
+        x=PAD+(i%4)*(W+PAD); y=70+PAD+(i//4)*(H+LAB+PAD)
+        im=Image.open(f"{REPO}/boards/{p['media'].rsplit('/',1)[1]}").convert('RGB').resize((W,H),Image.LANCZOS); sh.paste(im,(x,y))
+        lab=f"{p['n']:02d} · {p['date'][11:16]} · {p['alt']}"
+        f=font(24)
+        while d.textlength(lab,font=f)>W-8 and f.size>15: f=font(f.size-1)
+        d.text((x+4,y+H+8),lab,fill=(20,30,70),font=f)
+        lab2=("NEU" if p['neu'] else ("TEST: NEUES FOTO · " if p['bild']=='neu' else "wiederholt · ")+"zuletzt "+p['zuletzt'])+(" · Buch-Zeile" if p['buch'] else "")
+        f2=font(18)
+        while d.textlength(lab2,font=f2)>W-8 and f2.size>12: f2=font(f2.size-1)
+        d.text((x+4,y+H+34),lab2,fill=(193,32,43) if p['neu'] else ((20,110,60) if p['bild']=='neu' else (90,90,90)),font=f2)
+    sh.save(f"{D}/out/Mittwoch-25-11-Bogen-{b+1}.jpg",quality=90); print(sh.size)

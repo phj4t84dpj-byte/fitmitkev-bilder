@@ -218,6 +218,19 @@ SPEC={
    mid='Kalorien pro Stück. Alle 5 Rezepte stehen in meinem Buch<br><span>„Weihnachtsbäckerei in leicht“, mit 31 weiteren.</span>',
    msg='Sofort als PDF: 9,99 €.<br><span>Link im 1. Kommentar 👇</span>',
    css='.ri{width:108px;height:108px;overflow:hidden}.ri img{max-width:none;max-height:none;width:108px;height:108px;object-fit:cover}.rw{padding:9px 0}.msg{font-size:27px;line-height:1.3}.mid{font-size:27px}.r1{font-size:32px}'),
+ # B7 (Morgen-Check 25.11.): Do 26.11., 20:15. Kapitel „Omas Klassiker“ der Wohlfühlküche. Kalorien aus archiv/rezepte.json (G34Frikassee, G51GefuelltePaprika,
+ # G69Hackbraten, G78Zuercher, G67Schnitzel) – Kev prüft die fünf Werte gegen sein PDF. Nicht dabei: Frikadellen (am selben Tag 17:45 Kloß-Frikadellen),
+ # Rindergulasch (12:20 Hirschgulasch), Königsberger Klopse (lief Mi 25.11.), Rinderrouladen (nur auf Kevs Wunsch), Bratwurst mit Sauerkraut (Sauerkraut lief Mi), Jägerschnitzel (lief Di als Kloß-Rezept, heute 15:00 Pilzrahmsoße).
+ 'B7':dict(out='Buch-Do-OmasKlassiker', hook='Wie sonntags bei Oma:', title=['5 KLASSIKER','UNTER 500 KCAL'], size=96,
+   secs=[dict(lab='AUS MEINER WOHLFÜHLKÜCHE', col='#A2462B', type='rows', d=[
+      ('../../archiv/fotos/g34_G34Frikassee.jpg','Hühnerfrikassee','mit Champignons und Möhren','260<br><small>kcal</small>'),
+      ('../../archiv/fotos/g51_G51GefuelltePaprika.jpg','Gefüllte Paprika','mit Hack und Reis','365<br><small>kcal</small>'),
+      ('../../archiv/fotos/g69_G69Hackbraten.jpg','Hackbraten','mit Käsekern','415<br><small>kcal</small>'),
+      ('../../archiv/fotos/g78_G78Zuercher.jpg','Züricher Geschnetzeltes','mit Reis','430<br><small>kcal</small>'),
+      ('../../archiv/fotos/g67_G67Schnitzel.jpg','Schnitzel','mit Kartoffelsalat','455<br><small>kcal</small>')])],
+   mid='Kalorien pro Portion. Alle 5 Rezepte stehen in meinem Buch<br><span>„Wohlfühlküche in leicht“, mit 31 weiteren.</span>',
+   msg='Sofort als PDF: 9,99 €.<br><span>Link im 1. Kommentar 👇</span>',
+   css='.ri{width:108px;height:108px;overflow:hidden}.ri img{max-width:none;max-height:none;width:108px;height:108px;object-fit:cover}.rw{padding:9px 0}.msg{font-size:27px;line-height:1.3}.mid{font-size:27px}.r1{font-size:32px}'),
  # P12/P13 (Kev 19.11., 18:50): „Wie kann man sich die Designer Bars vorstellen?“ – Sorten und Vergleiche 1:1 aus Kevs zwei Story-Grafiken
  # (Packungs- und Geschmacksbilder daraus ausgeschnitten: esn/bilder/bars/). 22 Sorten in 2 Teilen, je ein Bild.
  # Kev 19.11., 19:00: „lieber schon vor der Black Week, am Samstag“ → Sa 21.11., 9:00 und 18:30, Balken deshalb „Ab morgen 12 Uhr“.
