@@ -37,7 +37,7 @@ def gen(prompt,path,w,h,seed):
 from concurrent.futures import ThreadPoolExecutor
 keys=[k for k in os.environ.get("KEYS","").split(",") if k] or list(P)
 seeds=[int(x) for x in os.environ.get("SEEDS","1,2").split(",")]
-J=[(P[k]+S,f"g103/{k}_s{sd}.jpg",1034,1280,sd) for k in keys for sd in seeds]
-if os.environ.get("TILES","0")=="1": J+=[(T[t],f"tiles/{t}.jpg",1034,1034,7) for t in T]
+J=[(P[k]+S,f"g103/{k}_s{sd}.jpg",1024,1280,sd) for k in keys for sd in seeds]
+if os.environ.get("TILES","0")=="1": J+=[(T[t],f"tiles/{t}.jpg",1024,1024,7) for t in T]
 with ThreadPoolExecutor(6) as ex: list(ex.map(lambda t: gen(*t),J))
 print("done")
