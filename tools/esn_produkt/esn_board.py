@@ -231,6 +231,19 @@ SPEC={
    mid='Kalorien pro Portion. Alle 5 Rezepte stehen in meinem Buch<br><span>„Wohlfühlküche in leicht“, mit 31 weiteren.</span>',
    msg='Sofort als PDF: 9,99 €.<br><span>Link im 1. Kommentar 👇</span>',
    css='.ri{width:108px;height:108px;overflow:hidden}.ri img{max-width:none;max-height:none;width:108px;height:108px;object-fit:cover}.rw{padding:9px 0}.msg{font-size:27px;line-height:1.3}.mid{font-size:27px}.r1{font-size:32px}'),
+ # B8 (Morgen-Check 26.11.): Fr 27.11., 20:15. Kapitel „Desserts & Bowls“ der Weihnachtsbäckerei (5 von 6; Bratapfel-Dessert im Glas fehlt, läuft am selben Tag 6:10 als ESN-Rezept).
+ # Kalorien aus archiv/rezepte.json (G60HuettenEis, G78SpekTiramisu, G67LebkuchenMousse, G46Lebkuchen, G72StollenBowl) – Kev prüft die fünf Werte gegen sein PDF.
+ # Am selben Tag 15:00 F1 (Teaser Festtagsküche) – im Text ein Satz „Morgen um 15 Uhr kommt Buch Nr. 3“.
+ 'B8':dict(out='Buch-Fr-Desserts', hook='Nachtisch im Advent:', title=['5 DESSERTS','UNTER 450 KCAL'], size=96,
+   secs=[dict(lab='AUS MEINER WEIHNACHTSBÄCKEREI', col='#8C1C24', type='rows', d=[
+      ('../../archiv/fotos/g60_G60HuettenEis.jpg','Spekulatius-Eis','cremig, aus Hüttenkäse','190<br><small>kcal</small>'),
+      ('../../archiv/fotos/g78_G78SpekTiramisu.jpg','Spekulatius-Tiramisu','im Glas, ohne Backen','215<br><small>kcal</small>'),
+      ('../../archiv/fotos/g67_G67LebkuchenMousse.jpg','Lebkuchen-Mousse','au Chocolat, im Glas','280<br><small>kcal</small>'),
+      ('../../archiv/fotos/g46_G46Lebkuchen.jpg','Lebkuchen-Bowl','die ganze Bowl nur für dich','410<br><small>kcal</small>'),
+      ('../../archiv/fotos/g72_G72StollenBowl.jpg','Stollen-Bowl','die ganze Bowl nur für dich','425<br><small>kcal</small>')])],
+   mid='Kalorien pro Portion. Alle 5 Rezepte stehen in meinem Buch<br><span>„Weihnachtsbäckerei in leicht“, mit 31 weiteren.</span>',
+   msg='Sofort als PDF: 9,99 €.<br><span>Link im 1. Kommentar 👇</span>',
+   css='.ri{width:108px;height:108px;overflow:hidden}.ri img{max-width:none;max-height:none;width:108px;height:108px;object-fit:cover}.rw{padding:9px 0}.msg{font-size:27px;line-height:1.3}.mid{font-size:27px}.r1{font-size:32px}'),
  # P12/P13 (Kev 19.11., 18:50): „Wie kann man sich die Designer Bars vorstellen?“ – Sorten und Vergleiche 1:1 aus Kevs zwei Story-Grafiken
  # (Packungs- und Geschmacksbilder daraus ausgeschnitten: esn/bilder/bars/). 22 Sorten in 2 Teilen, je ein Bild.
  # Kev 19.11., 19:00: „lieber schon vor der Black Week, am Samstag“ → Sa 21.11., 9:00 und 18:30, Balken deshalb „Ab morgen 12 Uhr“.
