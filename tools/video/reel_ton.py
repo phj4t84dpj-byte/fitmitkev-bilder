@@ -3,6 +3,7 @@
 # ///
 # Reel vertonen: Video + deutsches Voiceover + Hintergrundmusik mischen (ohne Token an fremde Adressen).
 # env JOBS = JSON [{"name":..., "video":url, "voice":url|null, "musik":url, "ziel":"ordner"}]
+# "nur_voice": true lädt nur die Voiceover-Fassung hoch.
 # Ergebnis je Video: <ziel>/<name>_voiceover.mp4 (Stimme + leise Musik) und <ziel>/<name>_musik.mp4 (nur Musik).
 import os, json, re, subprocess, requests
 from huggingface_hub import HfApi
@@ -21,7 +22,8 @@ for j in json.loads(os.environ["JOBS"]):
     fade = f"afade=t=in:d=0.5,afade=t=out:st={dv-1.2:.2f}:d=1.2"
     ff("-i", "v.mp4", "-i", "m.audio", "-filter_complex", f"[1:a]atrim=0:{dv:.2f},volume=0.9,{fade}[a]", "-map", "0:v", "-map", "[a]",
        "-c:v", "copy", "-c:a", "aac", "-b:a", "192k", "-t", f"{dv:.2f}", "-movflags", "+faststart", "musik.mp4")
-    api.upload_file(path_or_fileobj="musik.mp4", path_in_repo=f"{j['ziel']}/{n}_musik.mp4", repo_id=REPO, repo_type="dataset")
+    if not j.get("nur_voice"):
+        api.upload_file(path_or_fileobj="musik.mp4", path_in_repo=f"{j['ziel']}/{n}_musik.mp4", repo_id=REPO, repo_type="dataset")
     if j.get("voice"):
         lade(j["voice"], "s.audio"); ds = dauer("s.audio"); ziel = dv - 0.8
         tempo = max(1.0, ds / ziel) if ds > ziel else 1.0; print(n, "Stimme", ds, "Tempo", round(tempo, 3), flush=True)
