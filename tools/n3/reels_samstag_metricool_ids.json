@@ -1,0 +1,29 @@
+{
+ "hinweis": "Reel-Test Sa 28.11. 18:45 (Kev 27.11., 20:32; Go per Dialog 21:30). Higgsfield seedance_2_5, 15 s, 9:16, 720p, ohne Ton, je 105 Credits. Auswertung: FBEV21/22/25 und Beitragszahlen der Bildbeiträge vom selben Tag vergleichen.",
+ "reels": [
+  {
+   "seite": "KH",
+   "blog": "7766090",
+   "id": 444836361,
+   "uuid": "-5241790417160943911",
+   "name": "Omas Spritzgebäck",
+   "job": "1738a006-480a-42a7-bcc1-355cb45a121b"
+  },
+  {
+   "seite": "OK",
+   "blog": "7766077",
+   "id": 444836474,
+   "uuid": "-968000828428824956",
+   "name": "Omas Kartoffelpuffer",
+   "job": "31d8a6e4-8706-42df-ba38-39b08c287eae"
+  },
+  {
+   "seite": "HH",
+   "blog": "7766068",
+   "id": 444836580,
+   "uuid": "-3393370551554129114",
+   "name": "Mozzarella-Sticks aus dem Airfryer",
+   "job": "e54a3efd-956d-476d-a2da-5cd48845be05"
+  }
+ ]
+}
