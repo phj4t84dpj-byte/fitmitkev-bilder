@@ -1,0 +1,89 @@
+{
+ "hinweis": "Kev 27.11., 16:28: 14 Links, 'Ab montag jeden Tag 1'. 15:00 Uhr, gewohnter Stil (kloesse.py/langos.py). Thumbnails im HF-Datensatz yt/ytwoche/<id>.jpg, Titel in yt/ytwoche/info.json. Beschreibungen nicht abrufbar (YouTube-Bot-Sperre) -> Zutaten/kcal von Kev. Reihenfolge = Vorschlag, noch nicht freigegeben.",
+ "plan": [
+  {
+   "datum": "2026-11-30",
+   "id": "jbviLMbSITg",
+   "video": "https://youtu.be/jbviLMbSITg",
+   "notiz": "Ofenblech mit Hähnchen, Kürbis und Kichererbsen (Thumbnail: ABNEHM-BLECH 100g Protein)"
+  },
+  {
+   "datum": "2026-12-01",
+   "id": "gVKFErcJpCc",
+   "video": "https://youtu.be/gVKFErcJpCc",
+   "notiz": "Spekulatius-Cheesecake < 200 kcal (Teil 2)"
+  },
+  {
+   "datum": "2026-12-02",
+   "id": "-srhq33xMGY",
+   "video": "https://youtu.be/-srhq33xMGY",
+   "notiz": "Cheeseburger-Taschen 365 kcal 27 g Protein"
+  },
+  {
+   "datum": "2026-12-03",
+   "id": "TZUXs6jSD3c",
+   "video": "https://youtu.be/TZUXs6jSD3c",
+   "notiz": "Spätzle-Pfanne mit Pilzen und Erbsen (Thumbnail: ABNEHM-PFANNE 80g Protein)"
+  },
+  {
+   "datum": "2026-12-04",
+   "id": "w-dmnnDt7jw",
+   "video": "https://youtu.be/w-dmnnDt7jw",
+   "notiz": "3 Protein-Kuchen < 500 kcal (Kirsch, Zitrone, Apfel)"
+  },
+  {
+   "datum": "2026-12-05",
+   "id": "HjmsgKJlWzg",
+   "video": "https://youtu.be/HjmsgKJlWzg",
+   "notiz": "3 Airfryer-Rezepte unter 300 kcal (Crispy Chicken, überbackene Brötchen, Zimt-Bällchen)"
+  },
+  {
+   "datum": "2026-12-06",
+   "id": "nrhnicOIdVM",
+   "video": "https://youtu.be/nrhnicOIdVM",
+   "notiz": "Lahmacun < 200 kcal (Teil 1; Lahmacun lief als Rezept 22.11. -> frühestens 6.12.)"
+  },
+  {
+   "datum": "2026-12-07",
+   "id": "0mFJBHReQq8",
+   "video": "https://youtu.be/0mFJBHReQq8",
+   "notiz": "Butter Chicken < 600 kcal (Teil 4; Archiv G71ButterChicken 580 kcal?)"
+  },
+  {
+   "datum": "2026-12-08",
+   "id": "yyekUrb68mI",
+   "video": "https://youtu.be/yyekUrb68mI",
+   "notiz": "Pizza 87 g Protein (Teil 3; Salami-Pizza lief 24.11.)"
+  },
+  {
+   "datum": "2026-12-09",
+   "id": "HDrF1P3y8X0",
+   "video": "https://youtu.be/HDrF1P3y8X0",
+   "notiz": "Airfryer: Pide + gefüllte Paprika < 300 kcal"
+  },
+  {
+   "datum": "2026-12-10",
+   "id": "Qjecnj9RH10",
+   "video": "https://youtu.be/Qjecnj9RH10",
+   "notiz": "Orange Chicken 500 kcal (Episode 5)"
+  },
+  {
+   "datum": "2026-12-11",
+   "id": "_QwmE8IggaY",
+   "video": "https://youtu.be/_QwmE8IggaY",
+   "notiz": "Lángos 3 Sorten (Bild yt/Facebook_Langos.jpg vom 15.11. vorhanden)"
+  },
+  {
+   "datum": "2026-12-12",
+   "id": "lEpsQPmeOZM",
+   "video": "https://youtu.be/lEpsQPmeOZM",
+   "notiz": "Überbackene Klöße (Bild yt/Facebook_Kloesse.jpg vom 23.11. vorhanden)"
+  },
+  {
+   "datum": null,
+   "id": "7MlDFtuRUHg",
+   "video": "https://youtu.be/7MlDFtuRUHg",
+   "notiz": "Frosta-Test – kein Rezept, Verpackungen/Marke im Bild -> Vorschlag: weglassen"
+  }
+ ]
+}
