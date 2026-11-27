@@ -1,9 +1,19 @@
 # /// script
-# dependencies = ["huggingface_hub>=0.30", "requests", "imageio-ffmpeg", "pillow", "faster-whisper", "numpy"]
+# dependencies = ["huggingface_hub>=0.30", "requests", "imageio-ffmpeg", "pillow", "numpy", "num2words",
+#                 "torch==2.5.1", "torchaudio==2.5.1"]
+# [[tool.uv.index]]
+# name = "pytorch-cpu"
+# url = "https://download.pytorch.org/whl/cpu"
+# explicit = true
+# [tool.uv.sources]
+# torch = { index = "pytorch-cpu" }
+# torchaudio = { index = "pytorch-cpu" }
 # ///
 # Untertitel fest ins Reel schreiben (groß, mittig, 2–3 Wörter auf einmal).
-# Wortlaut kommt aus dem Sprechertext, die Zeiten aus Whisper (Wort-Zeitstempel).
-# env JOBS = JSON [{"name":..., "video":url, "text":"Sprechertext mit Ziffern", "ziel":"ordner"}]
+# Wortlaut kommt aus dem Sprechertext, die Zeiten aus einer erzwungenen Ausrichtung (torchaudio MMS_FA)
+# auf der reinen Sprachaufnahme ("voice", ohne Musik) – Whisper-Zeiten waren zu ungenau.
+# Mit "voice" wird umgerechnet wie in reel_ton.py: Video-Zeit = 0,3 s + Stimm-Zeit / Tempo.
+# env JOBS = JSON [{"name":..., "video":url, "voice":url|null, "text":"Sprechertext mit Ziffern", "ziel":"ordner"}]
 # env FONT = URL einer TTF-Schrift. Ergebnis: <ziel>/<name>_untertitel.mp4
 import os, re, json, subprocess, difflib, requests
 from PIL import Image, ImageDraw, ImageFont
@@ -78,6 +88,37 @@ def zeiten(toks, words, dauer):
     return st, words[-1]["e"]
 
 
+def gesprochen(t):
+    """Wort so schreiben, wie es gesprochen wird, nur a–z (für das Ausrichtungs-Wörterbuch)."""
+    from num2words import num2words
+    t = re.sub(r"\d+", lambda m: num2words(int(m.group()), lang="de"), t.lower())
+    for a, b in (("ä", "a"), ("ö", "o"), ("ü", "u"), ("ß", "ss")):
+        t = t.replace(a, b)
+    return re.sub(r"[^a-z]", "", t)
+
+
+def ausrichten(text, pfad, dauer_video=None):
+    """Startzeit jedes Sprechertext-Worts per MMS_FA. Bei reiner Sprachaufnahme auf Video-Zeit umrechnen."""
+    import numpy as np, torch, torchaudio
+    roh = subprocess.run([FF, "-loglevel", "error", "-i", pfad, "-vn", "-ac", "1", "-ar", "16000", "-f", "f32le", "-"],
+                         capture_output=True).stdout
+    wav = torch.from_numpy(np.frombuffer(roh, dtype=np.float32).copy())[None]
+    toks = [t for t in text.split() if norm(t)]
+    gw = [gesprochen(t) for t in toks]
+    b = torchaudio.pipelines.MMS_FA
+    model = b.get_model(with_star=False)
+    with torch.inference_mode():
+        em, _ = model(wav)
+    spans = b.get_aligner()(em[0], b.get_tokenizer()(gw))
+    r = wav.size(1) / em.size(1) / 16000
+    words = [{"w": t, "s": sp[0].start * r, "e": sp[-1].end * r} for t, sp in zip(toks, spans)]
+    if dauer_video:
+        ds = wav.size(1) / 16000; tempo = max(1.0, ds / (dauer_video - 0.8))
+        print("Stimme", round(ds, 2), "s, Tempo", round(tempo, 3), flush=True)
+        words = [{"w": w["w"], "s": 0.3 + w["s"] / tempo, "e": 0.3 + w["e"] / tempo} for w in words]
+    return words
+
+
 def bild(woerter, pfad, W, font):
     """Ein Stück als transparentes PNG (weiß mit schwarzem Rand, Zahlen gelb), bei Bedarf zweizeilig."""
     zeilen, cur = [], []
@@ -100,21 +141,13 @@ def bild(woerter, pfad, W, font):
     return img.size[1]
 
 
-def untertitel(video, text, aus, words=None, fontpfad="font.ttf"):
+def untertitel(video, text, aus, words=None, fontpfad="font.ttf", stimme=None):
     info = subprocess.run([FF, "-i", video], capture_output=True, text=True).stderr
     h, m, s = re.search(r"Duration: (\d+):(\d+):([\d.]+)", info).groups(); dauer = int(h) * 3600 + int(m) * 60 + float(s)
     W, H = map(int, re.search(r", (\d{3,4})x(\d{3,4})", info).groups())
     if words is None:
-        from faster_whisper import WhisperModel
-        import numpy as np
-        roh = subprocess.run([FF, "-loglevel", "error", "-i", video, "-vn", "-ac", "1", "-ar", "16000", "-f", "f32le", "-"],
-                             capture_output=True).stdout
-        audio = np.frombuffer(roh, dtype=np.float32)
-        # ohne initial_prompt: mit Prompt schreibt Whisper den Text ab und die Zeiten werden ungenau
-        seg, _ = WhisperModel(os.environ.get("WMODEL", "medium"), device="cpu", compute_type="int8").transcribe(
-            audio, language="de", word_timestamps=True, vad_filter=False, condition_on_previous_text=False)
-        words = [{"w": w.word.strip(), "s": w.start, "e": w.end} for sg in seg for w in sg.words]
-    print("Whisper:", " ".join(f"{w['w']}@{w['s']:.2f}" for w in words), flush=True)
+        words = ausrichten(text, stimme or video, dauer if stimme else None)
+    print("Wörter:", " ".join(f"{w['w']}@{w['s']:.2f}" for w in words), flush=True)
     toks, teile = stuecke(text)
     st, letzt = zeiten(toks, words, dauer)
     font = ImageFont.truetype(fontpfad, int(W * 0.088))
@@ -141,7 +174,10 @@ if __name__ == "__main__":
     lade(os.environ["FONT"], "font.ttf")
     for j in json.loads(os.environ["JOBS"]):
         n = j["name"]; lade(j["video"], "v.mp4"); print("==", n, flush=True)
-        untertitel("v.mp4", j["text"], "out.mp4")
+        stimme = None
+        if j.get("voice"):
+            lade(j["voice"], "s.audio"); stimme = "s.audio"
+        untertitel("v.mp4", j["text"], "out.mp4", stimme=stimme)
         if os.environ.get("DRY"):
             continue
         api.upload_file(path_or_fileobj="out.mp4", path_in_repo=f"{j['ziel']}/{n}_untertitel.mp4", repo_id=REPO, repo_type="dataset")
