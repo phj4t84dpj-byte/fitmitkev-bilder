@@ -141,5 +141,7 @@ if __name__ == "__main__":
     for j in json.loads(os.environ["JOBS"]):
         n = j["name"]; lade(j["video"], "v.mp4"); print("==", n, flush=True)
         untertitel("v.mp4", j["text"], "out.mp4")
+        if os.environ.get("DRY"):
+            continue
         api.upload_file(path_or_fileobj="out.mp4", path_in_repo=f"{j['ziel']}/{n}_untertitel.mp4", repo_id=REPO, repo_type="dataset")
         print("OK", n, flush=True)
