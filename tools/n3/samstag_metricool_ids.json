@@ -1,0 +1,86 @@
+{
+ "hinweis": "Sa 28.11., eingeplant 27.11. ~20:27 nach Kevs Go (\u201eJa, alle einplanen\u201c), getScheduledPosts: 3\u00d75 PENDING 9:00/12:00/15:00/17:30/20:00",
+ "marken": {
+  "7766068": [
+   {
+    "id": 444776786,
+    "uuid": "-4142243639517756996",
+    "key": "HHZimtschnecken"
+   },
+   {
+    "id": 444776887,
+    "uuid": "-7527082837426486871",
+    "key": "HHFrikadellen"
+   },
+   {
+    "id": 444777017,
+    "uuid": "-2871555697591367966",
+    "key": "HHQuarkbaellchen"
+   },
+   {
+    "id": 444777109,
+    "uuid": "-8192468875914162365",
+    "key": "HHSchnitzel"
+   },
+   {
+    "id": 444777247,
+    "uuid": "381411656765688880",
+    "key": "HHFlammkuchen"
+   }
+  ],
+  "7766090": [
+   {
+    "id": 444777411,
+    "uuid": "-5081554110292865367",
+    "key": "KHNusszopf"
+   },
+   {
+    "id": 444777545,
+    "uuid": "3837701861263755305",
+    "key": "KHPizzaschnecken"
+   },
+   {
+    "id": 444777674,
+    "uuid": "4036667356478326257",
+    "key": "KHFrankfurterKranz"
+   },
+   {
+    "id": 444777787,
+    "uuid": "-2612791842626057668",
+    "key": "KHKokosmakronen"
+   },
+   {
+    "id": 444777909,
+    "uuid": "-957188115885045561",
+    "key": "KHLebkuchenBlech"
+   }
+  ],
+  "7766077": [
+   {
+    "id": 444778112,
+    "uuid": "-4383147372626360965",
+    "key": "OKQuarkkeulchen"
+   },
+   {
+    "id": 444778241,
+    "uuid": "5909476699787313967",
+    "key": "OKKartoffelsalat"
+   },
+   {
+    "id": 444778383,
+    "uuid": "-4517166353119360661",
+    "key": "OKBratapfel"
+   },
+   {
+    "id": 444778513,
+    "uuid": "8081589569178455395",
+    "key": "OKHackbraten"
+   },
+   {
+    "id": 444778618,
+    "uuid": "-4913372834322431203",
+    "key": "OKGaensekeule"
+   }
+  ]
+ }
+}
