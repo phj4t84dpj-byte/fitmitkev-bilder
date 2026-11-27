@@ -1,17 +1,17 @@
 # Ranking „Die 10 besten Proteinquellen“ – Werte je 100 g (gerundet, übliche Nährwerttabellen; Linsen trocken gewogen).
-# Reihenfolge von Kev festgelegt (28.11., 0:09: „rote Linsen bitte auf Platz 10 und Lachs auf Platz 9“). Reihenfolge hier = Reihenfolge im Video (Platz 10 → 1).
+# Reihenfolge von Kev festgelegt (28.11., 0:09: „rote Linsen bitte auf Platz 10 und Lachs auf Platz 9“; 0:30: „Thunfisch auf Platz 10 (weil Schwermetalle)“). Reihenfolge hier = Reihenfolge im Video (Platz 10 → 1).
 # (key, Anzeige-Name, gesprochen, Protein g, Protein gesprochen, kcal, kcal gesprochen, Zusatz, Platz, Platz gesprochen)
 ITEMS = [
- ("linsen", "Rote Linsen", "rote Linsen", 25, "fünfundzwanzig", 330, "dreihundertdreißig", "trocken gewogen", 10, "zehn"),
- ("lachs", "Lachs", "Lachs", 20, "zwanzig", 200, "zweihundert", "", 9, "neun"),
- ("skyr", "Skyr", "Skyr", 11, "elf", 63, "dreiundsechzig", "", 8, "acht"),
- ("huettenkaese", "Hüttenkäse", "Hüttenkäse", 12, "zwölf", 95, "fünfundneunzig", "", 7, "sieben"),
- ("magerquark", "Magerquark", "Magerquark", 12, "zwölf", 67, "siebenundsechzig", "", 6, "sechs"),
- ("eier", "Eier", "Eier", 13, "dreizehn", 140, "hundertvierzig", "", 5, "fünf"),
- ("garnelen", "Garnelen", "Garnelen", 20, "zwanzig", 90, "neunzig", "", 4, "vier"),
- ("rinderhack", "Rinderhack mager", "mageres Rinderhack", 21, "einundzwanzig", 140, "hundertvierzig", "", 3, "drei"),
- ("haehnchen", "Hähnchenbrust", "Hähnchenbrust", 23, "dreiundzwanzig", 105, "hundertfünf", "", 2, "zwei"),
- ("thunfisch", "Thunfisch", "Thunfisch", 25, "fünfundzwanzig", 115, "hundertfünfzehn", "im eigenen Saft", 1, "eins"),
+ ("thunfisch", "Thunfisch", "Thunfisch", 25, "fünfundzwanzig", 115, "hundertfünfzehn", "im eigenen Saft", 10, "zehn"),
+ ("linsen", "Rote Linsen", "rote Linsen", 25, "fünfundzwanzig", 330, "dreihundertdreißig", "trocken gewogen", 9, "neun"),
+ ("lachs", "Lachs", "Lachs", 20, "zwanzig", 200, "zweihundert", "", 8, "acht"),
+ ("skyr", "Skyr", "Skyr", 11, "elf", 63, "dreiundsechzig", "", 7, "sieben"),
+ ("huettenkaese", "Hüttenkäse", "Hüttenkäse", 12, "zwölf", 95, "fünfundneunzig", "", 6, "sechs"),
+ ("magerquark", "Magerquark", "Magerquark", 12, "zwölf", 67, "siebenundsechzig", "", 5, "fünf"),
+ ("eier", "Eier", "Eier", 13, "dreizehn", 140, "hundertvierzig", "", 4, "vier"),
+ ("garnelen", "Garnelen", "Garnelen", 20, "zwanzig", 90, "neunzig", "", 3, "drei"),
+ ("rinderhack", "Rinderhack mager", "mageres Rinderhack", 21, "einundzwanzig", 140, "hundertvierzig", "", 2, "zwei"),
+ ("haehnchen", "Hähnchenbrust", "Hähnchenbrust", 23, "dreiundzwanzig", 105, "hundertfünf", "", 1, "eins"),
 ]
 INTRO = "Die zehn besten Proteinquellen im Ranking – pro hundert Gramm."
 OUTRO = "Welche isst du am liebsten?"
