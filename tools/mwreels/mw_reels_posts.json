@@ -1,0 +1,104 @@
+[
+ {
+  "name": "MW-Reel-Unsichtbare-Kalorien",
+  "date": "2026-12-02T18:45:00+01:00",
+  "info": {
+   "autoPublish": true,
+   "draft": false,
+   "hasNotReadNotes": false,
+   "media": [
+    "https://huggingface.co/datasets/kevrsztorm/fitmitkev-bilder/resolve/main/mwreels/MW-Reel-Unsichtbare-Kalorien.mp4"
+   ],
+   "mediaAltText": [
+    "Die unsichtbaren Kalorien"
+   ],
+   "publicationDate": {
+    "dateTime": "2026-12-02T18:45:00",
+    "timezone": "Europe/Berlin"
+   },
+   "shortener": false,
+   "smartLinkData": {
+    "ids": []
+   },
+   "firstCommentText": "Bleib satt! 💪 Kev",
+   "providers": [
+    {
+     "network": "facebook"
+    }
+   ],
+   "text": "Du isst kaum was und trotzdem tut sich nichts? 🤔 Dann schau mal auf die unsichtbaren Kalorien:\n\n🍳 1 EL Öl in der Pfanne: 90 kcal\n🍊 1 Glas Orangensaft: 90 kcal\n☕ 3 Kaffee mit je 2 TL Zucker: 100 kcal\n🥜 1 Handvoll Nüsse: 200 kcal\n\nZusammen fast 500 kcal und richtig satt macht davon nichts.\n\nWelche erwischt dich am häufigsten? 👇\n\n#kalorien #ernährung #fitmitkev",
+   "facebookData": {
+    "type": "REEL",
+    "title": "Die unsichtbaren Kalorien"
+   }
+  }
+ },
+ {
+  "name": "MW-Reel-Obst-Zucker",
+  "date": "2026-12-03T18:45:00+01:00",
+  "info": {
+   "autoPublish": true,
+   "draft": false,
+   "hasNotReadNotes": false,
+   "media": [
+    "https://huggingface.co/datasets/kevrsztorm/fitmitkev-bilder/resolve/main/mwreels/MW-Reel-Obst-Zucker.mp4"
+   ],
+   "mediaAltText": [
+    "Obst hat zu viel Zucker?"
+   ],
+   "publicationDate": {
+    "dateTime": "2026-12-03T18:45:00",
+    "timezone": "Europe/Berlin"
+   },
+   "shortener": false,
+   "smartLinkData": {
+    "ids": []
+   },
+   "firstCommentText": "Bleib satt! 💪 Kev",
+   "providers": [
+    {
+     "network": "facebook"
+    }
+   ],
+   "text": "Obst hat zu viel Zucker? 🍎 Stimmt so nicht:\n\n🍎 1 Apfel: 80 kcal und macht durch die Ballaststoffe satt\n🍫 1 Schokoriegel: über 250 kcal und eine halbe Stunde später ist der Hunger wieder da\n\n2 Portionen Obst am Tag sind völlig in Ordnung. Nur Saft und Smoothies sind keine Sattmacher.\n\nWas ist dein Lieblingsobst? 👇\n\n#obst #ernährung #fitmitkev",
+   "facebookData": {
+    "type": "REEL",
+    "title": "Obst hat zu viel Zucker?"
+   }
+  }
+ },
+ {
+  "name": "MW-Reel-Eiweiss-ab-50",
+  "date": "2026-12-04T18:45:00+01:00",
+  "info": {
+   "autoPublish": true,
+   "draft": false,
+   "hasNotReadNotes": false,
+   "media": [
+    "https://huggingface.co/datasets/kevrsztorm/fitmitkev-bilder/resolve/main/mwreels/MW-Reel-Eiweiss-ab-50.mp4"
+   ],
+   "mediaAltText": [
+    "Eiweiß am Morgen ab 50"
+   ],
+   "publicationDate": {
+    "dateTime": "2026-12-04T18:45:00",
+    "timezone": "Europe/Berlin"
+   },
+   "shortener": false,
+   "smartLinkData": {
+    "ids": []
+   },
+   "firstCommentText": "Bleib satt! 💪 Kev",
+   "providers": [
+    {
+     "network": "facebook"
+    }
+   ],
+   "text": "Ab 50 baut der Körper jedes Jahr ein Stück Muskeln ab. Dagegen helfen Bewegung und genug Eiweiß 💪\n\n🥐 Brötchen mit Marmelade: 5 g Eiweiß\n🥣 Skyr mit Beeren und Haferflocken: über 20 g Eiweiß\n\nGleich viel Aufwand, viermal so viel Eiweiß und du bist bis mittags satt.\n\nWas gibt es bei dir zum Frühstück? 👇\n\n#eiweiß #frühstück #fitmitkev",
+   "facebookData": {
+    "type": "REEL",
+    "title": "Eiweiß am Morgen ab 50"
+   }
+  }
+ }
+]
