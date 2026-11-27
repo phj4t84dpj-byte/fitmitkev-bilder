@@ -1,5 +1,5 @@
 # /// script
-# dependencies = ["huggingface_hub>=0.30", "requests", "imageio-ffmpeg", "pillow", "faster-whisper"]
+# dependencies = ["huggingface_hub>=0.30", "requests", "imageio-ffmpeg", "pillow", "faster-whisper", "numpy"]
 # ///
 # Untertitel fest ins Reel schreiben (groß, mittig, 2–3 Wörter auf einmal).
 # Wortlaut kommt aus dem Sprechertext, die Zeiten aus Whisper (Wort-Zeitstempel).
@@ -106,9 +106,12 @@ def untertitel(video, text, aus, words=None, fontpfad="font.ttf"):
     W, H = map(int, re.search(r", (\d{3,4})x(\d{3,4})", info).groups())
     if words is None:
         from faster_whisper import WhisperModel
-        ff("-i", video, "-vn", "-ac", "1", "-ar", "16000", "ton.wav")
+        import numpy as np
+        roh = subprocess.run([FF, "-loglevel", "error", "-i", video, "-vn", "-ac", "1", "-ar", "16000", "-f", "f32le", "-"],
+                             capture_output=True).stdout
+        audio = np.frombuffer(roh, dtype=np.float32)
         seg, _ = WhisperModel("small", device="cpu", compute_type="int8").transcribe(
-            "ton.wav", language="de", word_timestamps=True, initial_prompt=text)
+            audio, language="de", word_timestamps=True, initial_prompt=text)
         words = [{"w": w.word.strip(), "s": w.start, "e": w.end} for sg in seg for w in sg.words]
     print("Whisper:", " ".join(f"{w['w']}@{w['s']:.2f}" for w in words), flush=True)
     toks, teile = stuecke(text)
