@@ -110,8 +110,9 @@ def untertitel(video, text, aus, words=None, fontpfad="font.ttf"):
         roh = subprocess.run([FF, "-loglevel", "error", "-i", video, "-vn", "-ac", "1", "-ar", "16000", "-f", "f32le", "-"],
                              capture_output=True).stdout
         audio = np.frombuffer(roh, dtype=np.float32)
-        seg, _ = WhisperModel("small", device="cpu", compute_type="int8").transcribe(
-            audio, language="de", word_timestamps=True, initial_prompt=text)
+        # ohne initial_prompt: mit Prompt schreibt Whisper den Text ab und die Zeiten werden ungenau
+        seg, _ = WhisperModel(os.environ.get("WMODEL", "medium"), device="cpu", compute_type="int8").transcribe(
+            audio, language="de", word_timestamps=True, vad_filter=False, condition_on_previous_text=False)
         words = [{"w": w.word.strip(), "s": w.start, "e": w.end} for sg in seg for w in sg.words]
     print("Whisper:", " ".join(f"{w['w']}@{w['s']:.2f}" for w in words), flush=True)
     toks, teile = stuecke(text)
