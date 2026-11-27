@@ -31,7 +31,7 @@ P=[  # datum, id, bild, name, beitrag (2 Sätze), hashtags, frage
 ('2026-12-12','lEpsQPmeOZM','Facebook_Kloesse.jpg','Überbackene Klöße mit Hack und Käse',
  'Überbackene Klöße mit Hack und Käse 🤤 395 kcal und 33 g Eiweiß pro Portion.','Aus fertigem Kloßteig, alles in einer Form.',['#klöße','#kloßteig'],'Klöße mit Käse überbacken: schon mal probiert?'),
 ('2026-12-13','7MlDFtuRUHg','YT-FrostaTest.jpg','5 Frosta-Gerichte im Test',
- 'Diätretter oder Kalorienfalle? Ich habe 5 Frosta-Gerichte getestet 👀','Eins hat mich richtig überrascht – und eins hat 700 kcal.',['#tiefkühlkost','#frosta'],'Welches Fertiggericht isst du am liebsten?'),
+ 'Diätretter oder Kalorienfalle? Ich habe 5 Frosta-Gerichte getestet 👀','Welches lohnt sich und welches nicht? Eins davon hat 700 kcal.',['#tiefkühlkost','#frosta'],'Welches Fertiggericht isst du am liebsten?'),
 ]
 c=sys.argv[1] if len(sys.argv)>1 else 'COMMIT'
 out=[]; txt=['YOUTUBE-REIHE 30.11.–13.12.2026 – täglich 15:00 Uhr (Facebook)\n']
