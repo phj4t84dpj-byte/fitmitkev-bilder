@@ -83,7 +83,7 @@ def bild(woerter, pfad, W, font):
     zeilen, cur = [], []
     for w in woerter:
         test = " ".join(cur + [w])
-        if cur and font.getlength(test) > W * 0.86:
+        if cur and font.getlength(test) * 1.04 > W * 0.9:
             zeilen.append(cur); cur = [w]
         else:
             cur.append(w)
@@ -91,11 +91,11 @@ def bild(woerter, pfad, W, font):
     lh = int(font.size * 1.18)
     img = Image.new("RGBA", (W, lh * len(zeilen) + 40), (0, 0, 0, 0)); d = ImageDraw.Draw(img)
     for zi, z in enumerate(zeilen):
-        breite = font.getlength(" ".join(z)); x = (W - breite) / 2; y = 20 + zi * lh
+        breite = sum(font.getlength(w) for w in z) + font.getlength(" ") * 1.6 * (len(z) - 1); x = (W - breite) / 2; y = 20 + zi * lh
         for w in z:
             farbe = GELB if re.search(r"\d", w) else WEISS
             d.text((x, y), w, font=font, fill=farbe, stroke_width=max(4, font.size // 9), stroke_fill=(0, 0, 0))
-            x += font.getlength(w + " ")
+            x += font.getlength(w) + font.getlength(" ") * 1.6
     img.save(pfad)
     return img.size[1]
 
@@ -116,7 +116,7 @@ def untertitel(video, text, aus, words=None, fontpfad="font.ttf"):
     print("Whisper:", " ".join(f"{w['w']}@{w['s']:.2f}" for w in words), flush=True)
     toks, teile = stuecke(text)
     st, letzt = zeiten(toks, words, dauer)
-    font = ImageFont.truetype(fontpfad, int(W * 0.092))
+    font = ImageFont.truetype(fontpfad, int(W * 0.088))
     eingaben, filt, vor = [], [], "[0:v]"
     for k, idx in enumerate(teile):
         a = st[idx[0]]
