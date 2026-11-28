@@ -1,0 +1,75 @@
+[
+ {
+  "name": "Protein-Ranking",
+  "netz": "facebook",
+  "blog": "7765790",
+  "date": "2026-12-05T18:45:00+01:00",
+  "info": {
+   "autoPublish": true,
+   "draft": false,
+   "hasNotReadNotes": false,
+   "media": [
+    "https://huggingface.co/datasets/kevrsztorm/fitmitkev-bilder/resolve/main/mwreels/Protein-Ranking-Final.mp4"
+   ],
+   "mediaAltText": [
+    "Top 10 Proteinquellen im Ranking"
+   ],
+   "publicationDate": {
+    "dateTime": "2026-12-05T18:45:00",
+    "timezone": "Europe/Berlin"
+   },
+   "shortener": false,
+   "smartLinkData": {
+    "ids": []
+   },
+   "firstCommentText": "Die Rangliste pro 100 g:\n🥇 1. Hähnchenbrust: 23 g Eiweiß, 105 kcal\n🥈 2. Rinderhack mager: 21 g Eiweiß, 140 kcal\n🥉 3. Garnelen: 20 g Eiweiß, 90 kcal\n4. Eier: 13 g Eiweiß, 140 kcal\n5. Magerquark: 12 g Eiweiß, 67 kcal\n6. Hüttenkäse: 12 g Eiweiß, 95 kcal\n7. Skyr: 11 g Eiweiß, 63 kcal\n8. Lachs: 20 g Eiweiß, 200 kcal\n9. Rote Linsen (trocken gewogen): 25 g Eiweiß, 330 kcal\n10. Thunfisch (im eigenen Saft): 25 g Eiweiß, 115 kcal\n\nBleib satt! 💪\nKev",
+   "providers": [
+    {
+     "network": "facebook"
+    }
+   ],
+   "text": "Die 10 besten Proteinquellen im Ranking 💪 Pro 100 g, mit Eiweiß und Kalorien. Wer schafft es auf Platz 1? 🤔 Schau bis zum Ende!\n\nWelche isst du am liebsten? 👇\n\n#protein #eiweiß #fitmitkev",
+   "facebookData": {
+    "type": "REEL",
+    "title": "Top 10 Proteinquellen im Ranking"
+   }
+  }
+ },
+ {
+  "name": "Protein-Ranking",
+  "netz": "instagram",
+  "blog": "7765790",
+  "date": "2026-12-05T18:45:00+01:00",
+  "info": {
+   "autoPublish": true,
+   "draft": false,
+   "hasNotReadNotes": false,
+   "media": [
+    "https://huggingface.co/datasets/kevrsztorm/fitmitkev-bilder/resolve/main/mwreels/Protein-Ranking-Final.mp4"
+   ],
+   "mediaAltText": [
+    "Top 10 Proteinquellen im Ranking"
+   ],
+   "publicationDate": {
+    "dateTime": "2026-12-05T18:45:00",
+    "timezone": "Europe/Berlin"
+   },
+   "shortener": false,
+   "smartLinkData": {
+    "ids": []
+   },
+   "firstCommentText": "",
+   "providers": [
+    {
+     "network": "instagram"
+    }
+   ],
+   "text": "Die 10 besten Proteinquellen im Ranking 💪 Pro 100 g, mit Eiweiß und Kalorien. Wer schafft es auf Platz 1? 🤔 Schau bis zum Ende!\n\nDie Rangliste pro 100 g:\n🥇 1. Hähnchenbrust: 23 g Eiweiß, 105 kcal\n🥈 2. Rinderhack mager: 21 g Eiweiß, 140 kcal\n🥉 3. Garnelen: 20 g Eiweiß, 90 kcal\n4. Eier: 13 g Eiweiß, 140 kcal\n5. Magerquark: 12 g Eiweiß, 67 kcal\n6. Hüttenkäse: 12 g Eiweiß, 95 kcal\n7. Skyr: 11 g Eiweiß, 63 kcal\n8. Lachs: 20 g Eiweiß, 200 kcal\n9. Rote Linsen (trocken gewogen): 25 g Eiweiß, 330 kcal\n10. Thunfisch (im eigenen Saft): 25 g Eiweiß, 115 kcal\n\nWelche isst du am liebsten? 👇\n\n#protein #eiweiß #proteinquellen #ernährung #gesundessen #fitmitkev",
+   "instagramData": {
+    "type": "REEL",
+    "showReelOnFeed": true,
+    "isAiGenerated": true
+   }
+  }
+ }
+]

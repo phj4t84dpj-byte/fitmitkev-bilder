@@ -1,0 +1,71 @@
+{
+ "hinweis": "So 29.11., eingeplant 28.11. ~10:16 nach Kevs Go, 3×5 PENDING 9:00/12:00/15:00/17:30/20:00",
+ "marken": {
+  "7766068": [
+   {
+    "key": "HHQuarkbroetchen",
+    "id": 445269778
+   },
+   {
+    "key": "HHCevapcici",
+    "id": 445269841
+   },
+   {
+    "key": "HHSchokokuchen",
+    "id": 445269898
+   },
+   {
+    "key": "HHKartoffelgratin",
+    "id": 445269959
+   },
+   {
+    "key": "HHBackfisch",
+    "id": 445270014
+   }
+  ],
+  "7766090": [
+   {
+    "key": "KHButterkuchen",
+    "id": 445270120
+   },
+   {
+    "key": "KHSchinkenhoernchen",
+    "id": 445270193
+   },
+   {
+    "key": "KHEierlikoerkuchen",
+    "id": 445270267
+   },
+   {
+    "key": "KHSpritzgebaeck",
+    "id": 445270331
+   },
+   {
+    "key": "KHRotweinkuchen",
+    "id": 445270391
+   }
+  ],
+  "7766077": [
+   {
+    "key": "OKWaffeln",
+    "id": 445270509
+   },
+   {
+    "key": "OKKassler",
+    "id": 445270575
+   },
+   {
+    "key": "OKReibekuchen",
+    "id": 445270636
+   },
+   {
+    "key": "OKKaesespaetzle",
+    "id": 445270677
+   },
+   {
+    "key": "OKHuehnersuppe",
+    "id": 445270729
+   }
+  ]
+ }
+}

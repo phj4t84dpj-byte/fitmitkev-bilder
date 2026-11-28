@@ -17,7 +17,7 @@ def H(tag,slot,key,name,hook,titel,zutaten,ex,aus,zeit,intro,schritte,frage,tags
 # =============================== KUCHENHERZ (So 29.11.) ===============================
 P('KH',0,0,'KHButterkuchen','Butterkuchen vom Blech','Omas Butterkuchen',['Mit Butterseen obendrauf!','Knusprige Mandeln!','Wie vom Bäcker!'],
  ['500 g Mehl','250 ml Milch (lauwarm)','1 Würfel Hefe','175 g Zucker','1 Ei','250 g Butter','100 g Mandelblättchen'],['1 Prise Salz','1 Pck. Vanillezucker'],
- '1 Blech (ca. 20 Stücke)','ca. 45 Min. + 1 Std. Gehzeit',
+ '1 Blech, ca. 20 Stücke','ca. 45 Min. + 1 Std. Gehzeit',
  'Weicher Hefeteig vom Blech mit kleinen Butterseen, Zucker und knusprigen Mandeln obendrauf. Ein Stück davon und der Sonntagskaffee ist perfekt.',
  ['Hefe in der lauwarmen Milch auflösen. Mit Mehl, 75 g Zucker, Ei, Salz und 75 g weicher Butter 8 Minuten zu einem glatten Teig kneten und abgedeckt 45 Minuten gehen lassen.',
   'Den Teig auf einem Backblech mit Backpapier ausrollen und weitere 15 Minuten gehen lassen. Dann mit den Fingern viele tiefe Mulden in den Teig drücken.',
@@ -36,7 +36,7 @@ P('KH',0,1,'KHSchinkenhoernchen','Schinken-Käse-Hörnchen','Schinkenhörnchen',
  'Several golden brown flaky puff pastry croissant-shaped rolls sprinkled with sesame seeds on a wooden board, one cut in half in front showing a filling of pink ham cubes and melted creamy cheese.')
 P('KH',0,2,'KHEierlikoerkuchen','Omas Eierlikörkuchen','Eierlikörkuchen',['Super saftig!','Mit Schokoguss!','Der Adventsklassiker!'],
  ['5 Eier','250 g Puderzucker','250 ml Öl','250 ml Eierlikör','125 g Mehl','125 g Speisestärke','1 Pck. Backpulver','100 g Zartbitterschoko'],['2 Pck. Vanillezucker','Butter und Mehl für die Form'],
- '1 Gugelhupf (ca. 16 Stücke)','ca. 1 Std. 15 Min.',
+ '1 Gugelhupf, ca. 16 Stücke','ca. 1 Std. 15 Min.',
  'Der saftige Klassiker aus Omas Rezeptbuch: ein lockerer Gugelhupf mit Eierlikör und dunklem Schokoguss. Bleibt tagelang frisch.',
  ['Eier mit Puderzucker und Vanillezucker 5 Minuten schaumig schlagen. Öl und Eierlikör langsam unterrühren.',
   'Mehl, Speisestärke und Backpulver mischen und kurz unterrühren.',
@@ -56,7 +56,7 @@ P('KH',0,3,'KHSpritzgebaeck','Omas Spritzgebäck','Omas Spritzgebäck',['Zart un
  'Many pale golden German piped butter cookies (Spritzgebäck) shaped as rings, S-shapes and ridged sticks with star-shaped grooves, some ends dipped in dark chocolate, piled on a vintage plate and a few lying on the table in front.')
 P('KH',0,4,'KHRotweinkuchen','Rotweinkuchen mit Schokolade','Rotweinkuchen',['Saftig und schokoladig!','Mit Zimt und Kakao!','Perfekt im Advent!'],
  ['250 g Butter','200 g Zucker','4 Eier','250 g Mehl','125 ml Rotwein','100 g Schokoraspel','2 EL Kakao','1 Pck. Backpulver'],['1 Pck. Vanillezucker','1 TL Zimt','Puderzucker zum Bestäuben'],
- '1 Kastenform 30 cm (ca. 16 Scheiben)','ca. 1 Std. 15 Min.',
+ '1 Kastenform 30 cm, ca. 16 Scheiben','ca. 1 Std. 15 Min.',
  'Saftiger dunkler Rührkuchen mit Rotwein, Kakao, Zimt und Schokoraspeln. Duftet nach Advent und schmeckt nach zwei Tagen sogar noch besser.',
  ['Weiche Butter mit Zucker und Vanillezucker cremig rühren, die Eier einzeln unterrühren.',
   'Mehl, Kakao, Backpulver und Zimt mischen und abwechselnd mit dem Rotwein unterrühren. Die Schokoraspel unterheben.',
@@ -138,7 +138,7 @@ H(0,1,'HHCevapcici','Cevapcici aus dem Airfryer','Wie vom Grill:',['CEVAPCICI','
  'Many browned juicy minced meat rolls (cevapcici) with a few dark roasted marks, some in the basket and several on a plate in front with a small bowl of red ajvar pepper relish and raw onion rings.')
 H(0,2,'HHSchokokuchen','Schokokuchen aus dem Airfryer','In 25 Minuten fertig:',['SCHOKO-','KUCHEN'],
  [Z('100 g','Butter','butter'),Z('80 g','Zucker','zucker'),Z('2 Stück','Eier','eier'),Z('100 g','Mehl','mehl'),Z('2 EL','Backkakao','backkakao'),Z('1 TL','Backpulver','backpulver'),Z('80 ml','Milch','milch'),Z('50 g','Zartbitterschokolade','zartbitterschokolade')],['Puderzucker zum Bestäuben'],
- '1 kleine Springform (18 cm)','ca. 35 Minuten',
+ '1 kleine Springform, 18 cm','ca. 35 Minuten',
  'Saftiger kleiner Schokokuchen für den Sonntagskaffee, ganz ohne den großen Ofen anzuheizen. Passt in eine 18-cm-Form direkt in den Airfryer.',
  ['Butter mit Zucker cremig rühren und die Eier einzeln unterrühren.',
   'Mehl, Kakao und Backpulver mischen und abwechselnd mit der Milch unterrühren. Die gehackte Schokolade unterheben.',
