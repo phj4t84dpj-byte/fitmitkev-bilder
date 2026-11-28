@@ -151,34 +151,40 @@
   "hinweis_2": "Sa 28.11., 12:01–12:02: neues Foto, neue Schreibschrift-Zeile, neues Emoji (Kev: „kein Bild läuft zweimal“, „auch heute 13 Uhr umbauen, und alle anderen auch“; Go 12:00 „Ja, alle 9 tauschen“). Rezept, Kalorien, 1. Kommentar und Uhrzeit unverändert. Bild: Commit d035524"
  },
  {
-  "date": "2026-11-29T06:10:00",
+  "date": "2026-11-29T18:15:00",
   "key": "SpekulatiusMousseESN",
-  "id": 445336016,
+  "id": 445403680,
   "esn_zeile": false,
   "hinweis": "19.11., 20:38: ESN-Zeile aus dem 1. Kommentar entfernt (Kev: „Rezepte lassen, ESN-Zeile raus“, ab Mo 23.11.)",
   "ids_frueher": [
    430304044,
-   434674276
+   434674276,
+   445336016
   ],
   "bild": "neu",
   "board": "ESN-SpekulatiusMousseESNNeu-ohneBox.jpg",
   "emoji": "🥰",
-  "hinweis_2": "Sa 28.11., 12:01–12:02: neues Foto, neue Schreibschrift-Zeile, neues Emoji (Kev: „kein Bild läuft zweimal“, „auch heute 13 Uhr umbauen, und alle anderen auch“; Go 12:00 „Ja, alle 9 tauschen“). Rezept, Kalorien, 1. Kommentar und Uhrzeit unverändert. Bild: Commit d035524"
+  "hinweis_2": "Sa 28.11., 12:01–12:02: neues Foto, neue Schreibschrift-Zeile, neues Emoji (Kev: „kein Bild läuft zweimal“, „auch heute 13 Uhr umbauen, und alle anderen auch“; Go 12:00 „Ja, alle 9 tauschen“). Rezept, Kalorien, 1. Kommentar und Uhrzeit unverändert. Bild: Commit d035524",
+  "date_frueher": "2026-11-29T06:10:00",
+  "hinweis_3": "28.11., 13:38: auf den Abend verschoben (06:10 → 18:15, 13:00 → 20:45); 6:10 und 13:00 sind ab So 29.11. süße Plätze mit neuem Bild"
  },
  {
-  "date": "2026-11-29T13:00:00",
+  "date": "2026-11-29T20:45:00",
   "key": "ErdbeerBowlESN",
-  "id": 445336081,
+  "id": 445403746,
   "esn_zeile": false,
   "hinweis": "19.11., 20:38: ESN-Zeile aus dem 1. Kommentar entfernt (Kev: „Rezepte lassen, ESN-Zeile raus“, ab Mo 23.11.)",
   "ids_frueher": [
    430304225,
-   434674408
+   434674408,
+   445336081
   ],
   "bild": "neu",
   "board": "ESN-ErdbeerBowlESNNeu-ohneBox.jpg",
   "emoji": "🤤",
-  "hinweis_2": "Sa 28.11., 12:01–12:02: neues Foto, neue Schreibschrift-Zeile, neues Emoji (Kev: „kein Bild läuft zweimal“, „auch heute 13 Uhr umbauen, und alle anderen auch“; Go 12:00 „Ja, alle 9 tauschen“). Rezept, Kalorien, 1. Kommentar und Uhrzeit unverändert. Bild: Commit d035524"
+  "hinweis_2": "Sa 28.11., 12:01–12:02: neues Foto, neue Schreibschrift-Zeile, neues Emoji (Kev: „kein Bild läuft zweimal“, „auch heute 13 Uhr umbauen, und alle anderen auch“; Go 12:00 „Ja, alle 9 tauschen“). Rezept, Kalorien, 1. Kommentar und Uhrzeit unverändert. Bild: Commit d035524",
+  "date_frueher": "2026-11-29T13:00:00",
+  "hinweis_3": "28.11., 13:38: auf den Abend verschoben (06:10 → 18:15, 13:00 → 20:45); 6:10 und 13:00 sind ab So 29.11. süße Plätze mit neuem Bild"
  },
  {
   "date": "2026-11-30T18:15:00",

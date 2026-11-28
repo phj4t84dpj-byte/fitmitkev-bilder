@@ -1,0 +1,43 @@
+{
+ "hinweis": "Zusatz Sa 28.11./So 29.11.: vier süße Beiträge mit neuem Bild, angelegt Sa 28.11. 13:38 nach Kevs Go (Dialog „Ja, alle 4 einplanen“). Jeder Platz danach einzeln abgefragt: je genau ein aktiver Beitrag.",
+ "blogId": 7765790,
+ "beitraege": [
+  {
+   "date": "2026-11-28T18:15:00",
+   "key": "PhiladelphiaTorte",
+   "name": "Philadelphia-Torte ohne Backen",
+   "id": 445403806,
+   "uuid": "-5371277099209963498",
+   "board": "G106-PhiladelphiaTorte-ohneBox.jpg",
+   "neu": true
+  },
+  {
+   "date": "2026-11-28T20:45:00",
+   "key": "SchokoWoelkchen",
+   "name": "Schoko-Wölkchen",
+   "id": 445403885,
+   "uuid": "-950282950359954441",
+   "board": "G106-SchokoWoelkchen-ohneBox.jpg",
+   "neu": true
+  },
+  {
+   "date": "2026-11-29T06:10:00",
+   "key": "SpekSkyrNeu",
+   "name": "Skyr-Kuchen mit Spekulatius (neues Foto)",
+   "id": 445404052,
+   "uuid": "-2492721661065674394",
+   "board": "G106-SpekSkyrNeu-ohneBox.jpg",
+   "neu": false,
+   "rezept_von": "G93 SpekSkyr, zuletzt 2026-11-15"
+  },
+  {
+   "date": "2026-11-29T13:00:00",
+   "key": "Zebrakuchen",
+   "name": "Zebrakuchen",
+   "id": 445404134,
+   "uuid": "4298021772877054643",
+   "board": "G106-Zebrakuchen-ohneBox.jpg",
+   "neu": true
+  }
+ ]
+}
