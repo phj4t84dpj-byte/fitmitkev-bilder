@@ -36,7 +36,8 @@
    "facebookData": {
     "type": "POST"
    }
-  }
+  },
+  "id_neu": 445335870
  },
  {
   "key": "SpekulatiusMousseESN",
@@ -75,7 +76,8 @@
    "facebookData": {
     "type": "POST"
    }
-  }
+  },
+  "id_neu": 445336016
  },
  {
   "key": "ErdbeerBowlESN",
@@ -114,7 +116,8 @@
    "facebookData": {
     "type": "POST"
    }
-  }
+  },
+  "id_neu": 445336081
  },
  {
   "key": "ZimtschneckenOatsESN",
@@ -153,7 +156,8 @@
    "facebookData": {
     "type": "POST"
    }
-  }
+  },
+  "id_neu": 445336170
  },
  {
   "key": "DarkSchokoPuddingESN",
@@ -192,7 +196,8 @@
    "facebookData": {
     "type": "POST"
    }
-  }
+  },
+  "id_neu": 445336248
  },
  {
   "key": "SpekulatiusTiramisuESN",
@@ -231,7 +236,8 @@
    "facebookData": {
     "type": "POST"
    }
-  }
+  },
+  "id_neu": 445336381
  },
  {
   "key": "ErdbeerCheesecakeGlasESN",
@@ -270,7 +276,8 @@
    "facebookData": {
     "type": "POST"
    }
-  }
+  },
+  "id_neu": 445336469
  },
  {
   "key": "ZimtGriessbreiESN",
@@ -309,7 +316,8 @@
    "facebookData": {
     "type": "POST"
    }
-  }
+  },
+  "id_neu": 445336543
  },
  {
   "key": "SchokoEisESN",
@@ -348,6 +356,7 @@
    "facebookData": {
     "type": "POST"
    }
-  }
+  },
+  "id_neu": 445336618
  }
 ]

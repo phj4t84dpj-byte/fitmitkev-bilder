@@ -138,73 +138,136 @@
  {
   "date": "2026-11-28T13:00:00",
   "key": "SchokoKugelnESN",
-  "id": 434673941,
-  "vorherige_id": 430303907,
+  "id": 445335870,
   "esn_zeile": false,
-  "hinweis": "19.11., 20:38: ESN-Zeile aus dem 1. Kommentar entfernt (Kev: „Rezepte lassen, ESN-Zeile raus“, ab Mo 23.11.)"
+  "hinweis": "19.11., 20:38: ESN-Zeile aus dem 1. Kommentar entfernt (Kev: „Rezepte lassen, ESN-Zeile raus“, ab Mo 23.11.)",
+  "ids_frueher": [
+   430303907,
+   434673941
+  ],
+  "bild": "neu",
+  "board": "ESN-SchokoKugelnESNNeu-ohneBox.jpg",
+  "emoji": "😋",
+  "hinweis_2": "Sa 28.11., 12:01–12:02: neues Foto, neue Schreibschrift-Zeile, neues Emoji (Kev: „kein Bild läuft zweimal“, „auch heute 13 Uhr umbauen, und alle anderen auch“; Go 12:00 „Ja, alle 9 tauschen“). Rezept, Kalorien, 1. Kommentar und Uhrzeit unverändert. Bild: Commit d035524"
  },
  {
   "date": "2026-11-29T06:10:00",
   "key": "SpekulatiusMousseESN",
-  "id": 434674276,
-  "vorherige_id": 430304044,
+  "id": 445336016,
   "esn_zeile": false,
-  "hinweis": "19.11., 20:38: ESN-Zeile aus dem 1. Kommentar entfernt (Kev: „Rezepte lassen, ESN-Zeile raus“, ab Mo 23.11.)"
+  "hinweis": "19.11., 20:38: ESN-Zeile aus dem 1. Kommentar entfernt (Kev: „Rezepte lassen, ESN-Zeile raus“, ab Mo 23.11.)",
+  "ids_frueher": [
+   430304044,
+   434674276
+  ],
+  "bild": "neu",
+  "board": "ESN-SpekulatiusMousseESNNeu-ohneBox.jpg",
+  "emoji": "🥰",
+  "hinweis_2": "Sa 28.11., 12:01–12:02: neues Foto, neue Schreibschrift-Zeile, neues Emoji (Kev: „kein Bild läuft zweimal“, „auch heute 13 Uhr umbauen, und alle anderen auch“; Go 12:00 „Ja, alle 9 tauschen“). Rezept, Kalorien, 1. Kommentar und Uhrzeit unverändert. Bild: Commit d035524"
  },
  {
   "date": "2026-11-29T13:00:00",
   "key": "ErdbeerBowlESN",
-  "id": 434674408,
-  "vorherige_id": 430304225,
+  "id": 445336081,
   "esn_zeile": false,
-  "hinweis": "19.11., 20:38: ESN-Zeile aus dem 1. Kommentar entfernt (Kev: „Rezepte lassen, ESN-Zeile raus“, ab Mo 23.11.)"
+  "hinweis": "19.11., 20:38: ESN-Zeile aus dem 1. Kommentar entfernt (Kev: „Rezepte lassen, ESN-Zeile raus“, ab Mo 23.11.)",
+  "ids_frueher": [
+   430304225,
+   434674408
+  ],
+  "bild": "neu",
+  "board": "ESN-ErdbeerBowlESNNeu-ohneBox.jpg",
+  "emoji": "🤤",
+  "hinweis_2": "Sa 28.11., 12:01–12:02: neues Foto, neue Schreibschrift-Zeile, neues Emoji (Kev: „kein Bild läuft zweimal“, „auch heute 13 Uhr umbauen, und alle anderen auch“; Go 12:00 „Ja, alle 9 tauschen“). Rezept, Kalorien, 1. Kommentar und Uhrzeit unverändert. Bild: Commit d035524"
  },
  {
   "date": "2026-11-30T06:10:00",
   "key": "ZimtschneckenOatsESN",
-  "id": 434674564,
-  "vorherige_id": 430304486,
+  "id": 445336170,
   "esn_zeile": false,
-  "hinweis": "19.11., 20:38: ESN-Zeile aus dem 1. Kommentar entfernt (Kev: „Rezepte lassen, ESN-Zeile raus“, ab Mo 23.11.)"
+  "hinweis": "19.11., 20:38: ESN-Zeile aus dem 1. Kommentar entfernt (Kev: „Rezepte lassen, ESN-Zeile raus“, ab Mo 23.11.)",
+  "ids_frueher": [
+   430304486,
+   434674564
+  ],
+  "bild": "neu",
+  "board": "ESN-ZimtschneckenOatsESNNeu-ohneBox.jpg",
+  "emoji": "😍",
+  "hinweis_2": "Sa 28.11., 12:01–12:02: neues Foto, neue Schreibschrift-Zeile, neues Emoji (Kev: „kein Bild läuft zweimal“, „auch heute 13 Uhr umbauen, und alle anderen auch“; Go 12:00 „Ja, alle 9 tauschen“). Rezept, Kalorien, 1. Kommentar und Uhrzeit unverändert. Bild: Commit d035524"
  },
  {
   "date": "2026-11-30T13:00:00",
   "key": "DarkSchokoPuddingESN",
-  "id": 434674720,
-  "vorherige_id": 430304649,
+  "id": 445336248,
   "esn_zeile": false,
-  "hinweis": "19.11., 20:38: ESN-Zeile aus dem 1. Kommentar entfernt (Kev: „Rezepte lassen, ESN-Zeile raus“, ab Mo 23.11.)"
+  "hinweis": "19.11., 20:38: ESN-Zeile aus dem 1. Kommentar entfernt (Kev: „Rezepte lassen, ESN-Zeile raus“, ab Mo 23.11.)",
+  "ids_frueher": [
+   430304649,
+   434674720
+  ],
+  "bild": "neu",
+  "board": "ESN-DarkSchokoPuddingESNNeu-ohneBox.jpg",
+  "emoji": "🤤",
+  "hinweis_2": "Sa 28.11., 12:01–12:02: neues Foto, neue Schreibschrift-Zeile, neues Emoji (Kev: „kein Bild läuft zweimal“, „auch heute 13 Uhr umbauen, und alle anderen auch“; Go 12:00 „Ja, alle 9 tauschen“). Rezept, Kalorien, 1. Kommentar und Uhrzeit unverändert. Bild: Commit d035524"
  },
  {
   "date": "2026-12-01T06:10:00",
   "key": "SpekulatiusTiramisuESN",
-  "id": 434674894,
-  "vorherige_id": 430304776,
+  "id": 445336381,
   "esn_zeile": false,
-  "hinweis": "19.11., 20:38: ESN-Zeile aus dem 1. Kommentar entfernt (Kev: „Rezepte lassen, ESN-Zeile raus“, ab Mo 23.11.)"
+  "hinweis": "19.11., 20:38: ESN-Zeile aus dem 1. Kommentar entfernt (Kev: „Rezepte lassen, ESN-Zeile raus“, ab Mo 23.11.)",
+  "ids_frueher": [
+   430304776,
+   434674894
+  ],
+  "bild": "neu",
+  "board": "ESN-SpekulatiusTiramisuESNNeu-ohneBox.jpg",
+  "emoji": "😍",
+  "hinweis_2": "Sa 28.11., 12:01–12:02: neues Foto, neue Schreibschrift-Zeile, neues Emoji (Kev: „kein Bild läuft zweimal“, „auch heute 13 Uhr umbauen, und alle anderen auch“; Go 12:00 „Ja, alle 9 tauschen“). Rezept, Kalorien, 1. Kommentar und Uhrzeit unverändert. Bild: Commit d035524"
  },
  {
   "date": "2026-12-01T13:00:00",
   "key": "ErdbeerCheesecakeGlasESN",
-  "id": 434675031,
-  "vorherige_id": 430304927,
+  "id": 445336469,
   "esn_zeile": false,
-  "hinweis": "19.11., 20:38: ESN-Zeile aus dem 1. Kommentar entfernt (Kev: „Rezepte lassen, ESN-Zeile raus“, ab Mo 23.11.)"
+  "hinweis": "19.11., 20:38: ESN-Zeile aus dem 1. Kommentar entfernt (Kev: „Rezepte lassen, ESN-Zeile raus“, ab Mo 23.11.)",
+  "ids_frueher": [
+   430304927,
+   434675031
+  ],
+  "bild": "neu",
+  "board": "ESN-ErdbeerCheesecakeGlasESNNeu-ohneBox.jpg",
+  "emoji": "🥰",
+  "hinweis_2": "Sa 28.11., 12:01–12:02: neues Foto, neue Schreibschrift-Zeile, neues Emoji (Kev: „kein Bild läuft zweimal“, „auch heute 13 Uhr umbauen, und alle anderen auch“; Go 12:00 „Ja, alle 9 tauschen“). Rezept, Kalorien, 1. Kommentar und Uhrzeit unverändert. Bild: Commit d035524"
  },
  {
   "date": "2026-12-02T06:10:00",
   "key": "ZimtGriessbreiESN",
-  "id": 434675158,
-  "vorherige_id": 430305083,
+  "id": 445336543,
   "esn_zeile": false,
-  "hinweis": "19.11., 20:38: ESN-Zeile aus dem 1. Kommentar entfernt (Kev: „Rezepte lassen, ESN-Zeile raus“, ab Mo 23.11.)"
+  "hinweis": "19.11., 20:38: ESN-Zeile aus dem 1. Kommentar entfernt (Kev: „Rezepte lassen, ESN-Zeile raus“, ab Mo 23.11.)",
+  "ids_frueher": [
+   430305083,
+   434675158
+  ],
+  "bild": "neu",
+  "board": "ESN-ZimtGriessbreiESNNeu-ohneBox.jpg",
+  "emoji": "🤗",
+  "hinweis_2": "Sa 28.11., 12:01–12:02: neues Foto, neue Schreibschrift-Zeile, neues Emoji (Kev: „kein Bild läuft zweimal“, „auch heute 13 Uhr umbauen, und alle anderen auch“; Go 12:00 „Ja, alle 9 tauschen“). Rezept, Kalorien, 1. Kommentar und Uhrzeit unverändert. Bild: Commit d035524"
  },
  {
   "date": "2026-12-02T13:00:00",
   "key": "SchokoEisESN",
-  "id": 434675255,
-  "vorherige_id": 430305219,
+  "id": 445336618,
   "esn_zeile": false,
-  "hinweis": "19.11., 20:38: ESN-Zeile aus dem 1. Kommentar entfernt (Kev: „Rezepte lassen, ESN-Zeile raus“, ab Mo 23.11.)"
+  "hinweis": "19.11., 20:38: ESN-Zeile aus dem 1. Kommentar entfernt (Kev: „Rezepte lassen, ESN-Zeile raus“, ab Mo 23.11.)",
+  "ids_frueher": [
+   430305219,
+   434675255
+  ],
+  "bild": "neu",
+  "board": "ESN-SchokoEisESNNeu-ohneBox.jpg",
+  "emoji": "🤤",
+  "hinweis_2": "Sa 28.11., 12:01–12:02: neues Foto, neue Schreibschrift-Zeile, neues Emoji (Kev: „kein Bild läuft zweimal“, „auch heute 13 Uhr umbauen, und alle anderen auch“; Go 12:00 „Ja, alle 9 tauschen“). Rezept, Kalorien, 1. Kommentar und Uhrzeit unverändert. Bild: Commit d035524"
  }
 ]
