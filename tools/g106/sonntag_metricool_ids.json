@@ -1,8 +1,8 @@
 {
- "hinweis": "So 29.11., eingeplant 28.11. ~10:15 nach Kevs Go („Ja, alles einplanen“), getScheduledPosts geprüft: 20 aktive FB-Beiträge (dazu fest 06:10/13:00/15:00 und Reel 16:45); Entwürfe 434668459 und 444676253 unverändert",
+ "hinweis": "So 29.11., eingeplant 28.11. ~10:15 nach Kevs Go („Ja, alles einplanen“), getScheduledPosts geprüft: 20 aktive FB-Beiträge (dazu fest 06:10/13:00/15:00 und Reel 16:45); Entwürfe 434668459 und 444676253 unverändert · 28.11. 11:30: Kalter Hund 7:35 per updateScheduledPost auf neues Foto getauscht (boards/G106-KalterHundA-ohneBox.jpg, Commit 384fa9c, uuid -3905538463721632453, alte Id 445268374; Kev per Dialog „Bild A“). Regel seit 28.11.: kein Bild läuft zweimal.",
  "ids": {
   "Eiweissbrot": 445268322,
-  "KalterHund": 445268374,
+  "KalterHund": 445314884,
   "Kartoffelsuppe": 445268451,
   "FrankfurterKranz": 445268542,
   "Enchiladas": 445268646,
